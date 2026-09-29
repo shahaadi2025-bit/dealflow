@@ -1,0 +1,7 @@
+# Optional: only needed to TRAIN or SERVE the XGBoost model (heavy for free hosting)
+-r requirements.txt
+scikit-learn
+xgboost
+shap
+pandas
+joblib
