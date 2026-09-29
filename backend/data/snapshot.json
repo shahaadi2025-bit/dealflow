@@ -1,0 +1,3125 @@
+{
+ "CRM": {
+  "ticker": "CRM",
+  "name": "Salesforce, Inc.",
+  "price": 227.27,
+  "market_cap": 187043217408.0,
+  "shares": 823000000.0,
+  "revenue": 43938000896.0,
+  "rev_growth": 0.108,
+  "gross_margin": 0.77282,
+  "ebitda": 12899000320.0,
+  "fcf": 17731874816.0,
+  "debt": 42375999488.0,
+  "cash": 11402999808.0,
+  "beta": 1.202,
+  "hi52": 269.11,
+  "lo52": 146.32,
+  "history": [
+   {
+    "year": 2023,
+    "revenue": 31352000000.0
+   },
+   {
+    "year": 2024,
+    "revenue": 34857000000.0
+   },
+   {
+    "year": 2025,
+    "revenue": 37895000000.0
+   },
+   {
+    "year": 2026,
+    "revenue": 41525000000.0
+   }
+  ],
+  "as_of": "2026-09-29",
+  "net_debt": 30972999680.0,
+  "ev": 218016217088.0,
+  "gross_profit": 33956165852.446716,
+  "fcf_margin": 0.4035658076017351,
+  "ebitda_margin": 0.2935727629149894
+ },
+ "NOW": {
+  "ticker": "NOW",
+  "name": "ServiceNow, Inc.",
+  "price": 131.45,
+  "market_cap": 135901159424.0,
+  "shares": 1033862000.0,
+  "revenue": 14732000256.0,
+  "rev_growth": 0.24,
+  "gross_margin": 0.74768996,
+  "ebitda": 2896999936.0,
+  "fcf": 5149374976.0,
+  "debt": 8453000192.0,
+  "cash": 4664000000.0,
+  "beta": 0.972,
+  "hi52": 192.966,
+  "lo52": 81.24,
+  "history": [
+   {
+    "year": 2022,
+    "revenue": 7245000000.0
+   },
+   {
+    "year": 2023,
+    "revenue": 8971000000.0
+   },
+   {
+    "year": 2024,
+    "revenue": 10984000000.0
+   },
+   {
+    "year": 2025,
+    "revenue": 13278000000.0
+   }
+  ],
+  "as_of": "2026-09-29",
+  "net_debt": 3789000192.0,
+  "ev": 139690159616.0,
+  "gross_profit": 11014968682.12863,
+  "fcf_margin": 0.3495367150772876,
+  "ebitda_margin": 0.19664674760103398
+ },
+ "ADBE": {
+  "ticker": "ADBE",
+  "name": "Adobe Inc.",
+  "price": 231.01,
+  "market_cap": 91826470912.0,
+  "shares": 397500000.0,
+  "revenue": 25969999872.0,
+  "rev_growth": 0.129,
+  "gross_margin": 0.89252996,
+  "ebitda": 9916999680.0,
+  "fcf": 9345125376.0,
+  "debt": 6786999808.0,
+  "cash": 5641999872.0,
+  "beta": 1.417,
+  "hi52": 363.7,
+  "lo52": 190.12,
+  "history": [
+   {
+    "year": 2022,
+    "revenue": 17606000000.0
+   },
+   {
+    "year": 2023,
+    "revenue": 19409000000.0
+   },
+   {
+    "year": 2024,
+    "revenue": 21505000000.0
+   },
+   {
+    "year": 2025,
+    "revenue": 23769000000.0
+   }
+  ],
+  "as_of": "2026-09-29",
+  "net_debt": 1144999936.0,
+  "ev": 92971470848.0,
+  "gross_profit": 23179002946.956165,
+  "fcf_margin": 0.35984310443049355,
+  "ebitda_margin": 0.38186367843198116
+ },
+ "WDAY": {
+  "ticker": "WDAY",
+  "name": "Workday, Inc.",
+  "price": 188.6,
+  "market_cap": 45452603392.0,
+  "shares": 196000000.0,
+  "revenue": 10154999808.0,
+  "rev_growth": 0.128,
+  "gross_margin": 0.75795,
+  "ebitda": 1586000000.0,
+  "fcf": 3046374912.0,
+  "debt": 3772000000.0,
+  "cash": 3403000064.0,
+  "beta": 1.082,
+  "hi52": 249.14,
+  "lo52": 110.36,
+  "history": [
+   {
+    "year": 2023,
+    "revenue": 6216000000.0
+   },
+   {
+    "year": 2024,
+    "revenue": 7259000000.0
+   },
+   {
+    "year": 2025,
+    "revenue": 8446000000.0
+   },
+   {
+    "year": 2026,
+    "revenue": 9552000000.0
+   }
+  ],
+  "as_of": "2026-09-29",
+  "net_debt": 368999936.0,
+  "ev": 45821603328.0,
+  "gross_profit": 7696982104.4736,
+  "fcf_margin": 0.29998768779888096,
+  "ebitda_margin": 0.15617922501097106
+ },
+ "HUBS": {
+  "ticker": "HUBS",
+  "name": "HubSpot, Inc.",
+  "price": 202.84,
+  "market_cap": 10383522816.0,
+  "shares": 51190708.0,
+  "revenue": 3448997888.0,
+  "rev_growth": 0.198,
+  "gross_margin": 0.83248,
+  "ebitda": 156663008.0,
+  "fcf": 666651008.0,
+  "debt": 236914000.0,
+  "cash": 1337943040.0,
+  "beta": 1.181,
+  "hi52": 521.189,
+  "lo52": 169.63,
+  "history": [
+   {
+    "year": 2022,
+    "revenue": 1730969000.0
+   },
+   {
+    "year": 2023,
+    "revenue": 2170230000.0
+   },
+   {
+    "year": 2024,
+    "revenue": 2627543000.0
+   },
+   {
+    "year": 2025,
+    "revenue": 3131266000.0
+   }
+  ],
+  "as_of": "2026-09-29",
+  "net_debt": -1101029040.0,
+  "ev": 9282493776.0,
+  "gross_profit": 2871221761.80224,
+  "fcf_margin": 0.19328832015799716,
+  "ebitda_margin": 0.04542276136064714
+ },
+ "DDOG": {
+  "ticker": "DDOG",
+  "name": "Datadog, Inc.",
+  "price": 268.7,
+  "market_cap": 96483459072.0,
+  "shares": 334904614.0,
+  "revenue": 3966725120.0,
+  "rev_growth": 0.356,
+  "gross_margin": 0.79536,
+  "ebitda": 82897000.0,
+  "fcf": 1051412352.0,
+  "debt": 1277800960.0,
+  "cash": 4985438208.0,
+  "beta": 1.488,
+  "hi52": 292.72,
+  "lo52": 98.01,
+  "history": [
+   {
+    "year": 2022,
+    "revenue": 1675100000.0
+   },
+   {
+    "year": 2023,
+    "revenue": 2128359000.0
+   },
+   {
+    "year": 2024,
+    "revenue": 2684275000.0
+   },
+   {
+    "year": 2025,
+    "revenue": 3427158000.0
+   }
+  ],
+  "as_of": "2026-09-29",
+  "net_debt": -3707637248.0,
+  "ev": 92775821824.0,
+  "gross_profit": 3154974491.4431996,
+  "fcf_margin": 0.2650580315482006,
+  "ebitda_margin": 0.020898095404200834
+ },
+ "ZS": {
+  "ticker": "ZS",
+  "name": "Zscaler, Inc.",
+  "price": 199.39,
+  "market_cap": 32511477760.0,
+  "shares": 163054698.0,
+  "revenue": 3352523008.0,
+  "rev_growth": 0.249,
+  "gross_margin": 0.76872003,
+  "ebitda": 43850000.0,
+  "fcf": 1074915840.0,
+  "debt": 1867984000.0,
+  "cash": 3474150912.0,
+  "beta": 0.948,
+  "hi52": 336.99,
+  "lo52": 114.625,
+  "history": [
+   {
+    "year": 2023,
+    "revenue": 1616952000.0
+   },
+   {
+    "year": 2024,
+    "revenue": 2167771000.0
+   },
+   {
+    "year": 2025,
+    "revenue": 2673115000.0
+   },
+   {
+    "year": 2026,
+    "revenue": 3352523000.0
+   }
+  ],
+  "as_of": "2026-09-29",
+  "net_debt": -1606166912.0,
+  "ev": 30905310848.0,
+  "gross_profit": 2577151587.2854505,
+  "fcf_margin": 0.3206289225860549,
+  "ebitda_margin": 0.013079701435415175
+ },
+ "NET": {
+  "ticker": "NET",
+  "name": "Cloudflare, Inc.",
+  "price": 353.99,
+  "market_cap": 126048657408.0,
+  "shares": 322618775.0,
+  "revenue": 2512349952.0,
+  "rev_growth": 0.359,
+  "gross_margin": 0.72577006,
+  "ebitda": -3610000.0,
+  "fcf": 691946368.0,
+  "debt": 3529349888.0,
+  "cash": 4162798080.0,
+  "beta": 1.664,
+  "hi52": 367.43,
+  "lo52": 158.83,
+  "history": [
+   {
+    "year": 2022,
+    "revenue": 975241000.0
+   },
+   {
+    "year": 2023,
+    "revenue": 1296745000.0
+   },
+   {
+    "year": 2024,
+    "revenue": 1669626000.0
+   },
+   {
+    "year": 2025,
+    "revenue": 2167937000.0
+   }
+  ],
+  "as_of": "2026-09-29",
+  "net_debt": -633448192.0,
+  "ev": 125415209216.0,
+  "gross_profit": 1823388375.404037,
+  "fcf_margin": 0.27541798762913744,
+  "ebitda_margin": -0.0014369017330273582
+ },
+ "MDB": {
+  "ticker": "MDB",
+  "name": "MongoDB, Inc.",
+  "price": 334.68,
+  "market_cap": 26918957056.0,
+  "shares": 80431927.0,
+  "revenue": 2782769920.0,
+  "rev_growth": 0.305,
+  "gross_margin": 0.72688,
+  "ebitda": 13854000.0,
+  "fcf": 561356224.0,
+  "debt": 55013000.0,
+  "cash": 2411254016.0,
+  "beta": 1.585,
+  "hi52": 473.1,
+  "lo52": 215.68,
+  "history": [
+   {
+    "year": 2023,
+    "revenue": 1284040000.0
+   },
+   {
+    "year": 2024,
+    "revenue": 1683011000.0
+   },
+   {
+    "year": 2025,
+    "revenue": 2006443000.0
+   },
+   {
+    "year": 2026,
+    "revenue": 2463797000.0
+   }
+  ],
+  "as_of": "2026-09-29",
+  "net_debt": -2356241016.0,
+  "ev": 24562716040.0,
+  "gross_profit": 2022739799.4496,
+  "fcf_margin": 0.20172570501265158,
+  "ebitda_margin": 0.0049784927961273925
+ },
+ "TEAM": {
+  "ticker": "TEAM",
+  "name": "Atlassian Corporation",
+  "price": 178.54,
+  "market_cap": 45195403264.0,
+  "shares": 159005198.0,
+  "revenue": 6572307968.0,
+  "rev_growth": 0.276,
+  "gross_margin": 0.85643,
+  "ebitda": 436392992.0,
+  "fcf": 1655499904.0,
+  "debt": 1232909952.0,
+  "cash": 1239512064.0,
+  "beta": 1.159,
+  "hi52": 200.0,
+  "lo52": 56.01,
+  "history": [
+   {
+    "year": 2023,
+    "revenue": 3534647000.0
+   },
+   {
+    "year": 2024,
+    "revenue": 4358603000.0
+   },
+   {
+    "year": 2025,
+    "revenue": 5215304000.0
+   },
+   {
+    "year": 2026,
+    "revenue": 6572308000.0
+   }
+  ],
+  "as_of": "2026-09-29",
+  "net_debt": -6602112.0,
+  "ev": 45188801152.0,
+  "gross_profit": 5628721713.03424,
+  "fcf_margin": 0.2518901901828834,
+  "ebitda_margin": 0.06639874365668191
+ },
+ "DOCU": {
+  "ticker": "DOCU",
+  "name": "DocuSign, Inc.",
+  "price": 66.98,
+  "market_cap": 12518726656.0,
+  "shares": 186902452.0,
+  "revenue": 3361190912.0,
+  "rev_growth": 0.094,
+  "gross_margin": 0.79609,
+  "ebitda": 441652992.0,
+  "fcf": 1312730880.0,
+  "debt": 183098000.0,
+  "cash": 777676992.0,
+  "beta": 0.9,
+  "hi52": 81.88,
+  "lo52": 40.16,
+  "history": [
+   {
+    "year": 2023,
+    "revenue": 2515915000.0
+   },
+   {
+    "year": 2024,
+    "revenue": 2761882000.0
+   },
+   {
+    "year": 2025,
+    "revenue": 2976739000.0
+   },
+   {
+    "year": 2026,
+    "revenue": 3219500000.0
+   }
+  ],
+  "as_of": "2026-09-29",
+  "net_debt": -594578992.0,
+  "ev": 11924147664.0,
+  "gross_profit": 2675810473.13408,
+  "fcf_margin": 0.3905552866138417,
+  "ebitda_margin": 0.1313977704816548
+ },
+ "BOX": {
+  "ticker": "BOX",
+  "name": "Box, Inc.",
+  "price": 31.34,
+  "market_cap": 4299872256.0,
+  "shares": 137200773.0,
+  "revenue": 1234070016.0,
+  "rev_growth": 0.092,
+  "gross_margin": 0.79550004,
+  "ebitda": 131819000.0,
+  "fcf": 378295360.0,
+  "debt": 555142976.0,
+  "cash": 444136000.0,
+  "beta": 0.736,
+  "hi52": 36.34,
+  "lo52": 21.34,
+  "history": [
+   {
+    "year": 2023,
+    "revenue": 990874000.0
+   },
+   {
+    "year": 2024,
+    "revenue": 1037741000.0
+   },
+   {
+    "year": 2025,
+    "revenue": 1090130000.0
+   },
+   {
+    "year": 2026,
+    "revenue": 1177253000.0
+   }
+  ],
+  "as_of": "2026-09-29",
+  "net_debt": 111006976.0,
+  "ev": 4410879232.0,
+  "gross_profit": 981702747.0908006,
+  "fcf_margin": 0.30654286636520955,
+  "ebitda_margin": 0.10681646769708081
+ },
+ "ASAN": {
+  "ticker": "ASAN",
+  "name": "Asana, Inc.",
+  "price": 8.64,
+  "market_cap": 1978301824.0,
+  "shares": 159441754.0,
+  "revenue": 828126976.0,
+  "rev_growth": 0.099,
+  "gross_margin": 0.87592006,
+  "ebitda": -109700000.0,
+  "fcf": 197051120.0,
+  "debt": 258326000.0,
+  "cash": 339851008.0,
+  "beta": 0.951,
+  "hi52": 15.48,
+  "lo52": 5.38,
+  "history": [
+   {
+    "year": 2023,
+    "revenue": 547212000.0
+   },
+   {
+    "year": 2024,
+    "revenue": 652504000.0
+   },
+   {
+    "year": 2025,
+    "revenue": 723876000.0
+   },
+   {
+    "year": 2026,
+    "revenue": 790806000.0
+   }
+  ],
+  "as_of": "2026-09-29",
+  "net_debt": -81525008.0,
+  "ev": 1896776816.0,
+  "gross_profit": 725373030.5055386,
+  "fcf_margin": 0.237947954493394,
+  "ebitda_margin": -0.1324676084455918
+ },
+ "FRSH": {
+  "ticker": "FRSH",
+  "name": "Freshworks Inc.",
+  "price": 12.53,
+  "market_cap": 3269337088.0,
+  "shares": 236959436.0,
+  "revenue": 903868032.0,
+  "rev_growth": 0.16,
+  "gross_margin": 0.84963995,
+  "ebitda": 57489000.0,
+  "fcf": 260802752.0,
+  "debt": 34594000.0,
+  "cash": 664107008.0,
+  "beta": 0.894,
+  "hi52": 13.99,
+  "lo52": 6.79,
+  "history": [
+   {
+    "year": 2022,
+    "revenue": 497999000.0
+   },
+   {
+    "year": 2023,
+    "revenue": 596432000.0
+   },
+   {
+    "year": 2024,
+    "revenue": 720420000.0
+   },
+   {
+    "year": 2025,
+    "revenue": 838809000.0
+   }
+  ],
+  "as_of": "2026-09-29",
+  "net_debt": -629513008.0,
+  "ev": 2639824080.0,
+  "gross_profit": 767962389.5150784,
+  "fcf_margin": 0.2885407413103421,
+  "ebitda_margin": 0.06360331150643017
+ },
+ "GTLB": {
+  "ticker": "GTLB",
+  "name": "GitLab Inc.",
+  "price": 46.21,
+  "market_cap": 7699279360.0,
+  "shares": 165500000.0,
+  "revenue": 1055166976.0,
+  "rev_growth": 0.213,
+  "gross_margin": 0.859,
+  "ebitda": -59407000.0,
+  "fcf": 286033984.0,
+  "debt": 0.0,
+  "cash": 1256985984.0,
+  "beta": 0.992,
+  "hi52": 55.55,
+  "lo52": 18.73,
+  "history": [
+   {
+    "year": 2023,
+    "revenue": 424336000.0
+   },
+   {
+    "year": 2024,
+    "revenue": 579906000.0
+   },
+   {
+    "year": 2025,
+    "revenue": 759249000.0
+   },
+   {
+    "year": 2026,
+    "revenue": 955224000.0
+   }
+  ],
+  "as_of": "2026-09-29",
+  "net_debt": -1256985984.0,
+  "ev": 6442293376.0,
+  "gross_profit": 906388432.384,
+  "fcf_margin": 0.2710793556905253,
+  "ebitda_margin": -0.05630104177938185
+ },
+ "S": {
+  "ticker": "S",
+  "name": "SentinelOne, Inc.",
+  "price": 22.74,
+  "market_cap": 7914636800.0,
+  "shares": 342184493.0,
+  "revenue": 1098704000.0,
+  "rev_growth": 0.206,
+  "gross_margin": 0.72540003,
+  "ebitda": -237791008.0,
+  "fcf": 296880640.0,
+  "debt": 0.0,
+  "cash": 655248000.0,
+  "beta": 0.772,
+  "hi52": 24.398,
+  "lo52": 11.81,
+  "history": [
+   {
+    "year": 2023,
+    "revenue": 422179000.0
+   },
+   {
+    "year": 2024,
+    "revenue": 621154000.0
+   },
+   {
+    "year": 2025,
+    "revenue": 821461000.0
+   },
+   {
+    "year": 2026,
+    "revenue": 1001278000.0
+   }
+  ],
+  "as_of": "2026-09-29",
+  "net_debt": -655248000.0,
+  "ev": 7259388800.0,
+  "gross_profit": 796999914.5611199,
+  "fcf_margin": 0.27020984723820063,
+  "ebitda_margin": -0.21642863592013864
+ },
+ "PATH": {
+  "ticker": "PATH",
+  "name": "UiPath, Inc.",
+  "price": 12.19,
+  "market_cap": 6352884224.0,
+  "shares": 456464703.0,
+  "revenue": 1720857984.0,
+  "rev_growth": 0.134,
+  "gross_margin": 0.82583,
+  "ebitda": 184616992.0,
+  "fcf": 474257632.0,
+  "debt": 79760000.0,
+  "cash": 1283990016.0,
+  "beta": 1.023,
+  "hi52": 19.84,
+  "lo52": 9.2,
+  "history": [
+   {
+    "year": 2023,
+    "revenue": 1058581000.0
+   },
+   {
+    "year": 2024,
+    "revenue": 1308072000.0
+   },
+   {
+    "year": 2025,
+    "revenue": 1429664000.0
+   },
+   {
+    "year": 2026,
+    "revenue": 1610572000.0
+   }
+  ],
+  "as_of": "2026-09-29",
+  "net_debt": -1204230016.0,
+  "ev": 5148654208.0,
+  "gross_profit": 1421136148.92672,
+  "fcf_margin": 0.2755937075630292,
+  "ebitda_margin": 0.10728194523691735
+ },
+ "BILL": {
+  "ticker": "BILL",
+  "name": "BILL Holdings, Inc.",
+  "price": 41.6,
+  "market_cap": 3547514112.0,
+  "shares": 85276782.0,
+  "revenue": 1653159936.0,
+  "rev_growth": 0.138,
+  "gross_margin": 0.83938,
+  "ebitda": 100104000.0,
+  "fcf": 222836880.0,
+  "debt": 1897444992.0,
+  "cash": 1937508992.0,
+  "beta": 1.1,
+  "hi52": 57.21,
+  "lo52": 31.41,
+  "history": [
+   {
+    "year": 2023,
+    "revenue": 1058468000.0
+   },
+   {
+    "year": 2024,
+    "revenue": 1290172000.0
+   },
+   {
+    "year": 2025,
+    "revenue": 1462570000.0
+   },
+   {
+    "year": 2026,
+    "revenue": 1653160000.0
+   }
+  ],
+  "as_of": "2026-09-29",
+  "net_debt": -40064000.0,
+  "ev": 3507450112.0,
+  "gross_profit": 1387629387.07968,
+  "fcf_margin": 0.1347945078678703,
+  "ebitda_margin": 0.060553124849016426
+ },
+ "TWLO": {
+  "ticker": "TWLO",
+  "name": "Twilio Inc.",
+  "price": 286.98,
+  "market_cap": 44073017344.0,
+  "shares": 153575220.0,
+  "revenue": 5572327936.0,
+  "rev_growth": 0.22,
+  "gross_margin": 0.48561,
+  "ebitda": 499808000.0,
+  "fcf": 954675392.0,
+  "debt": 1065518976.0,
+  "cash": 2656329984.0,
+  "beta": 1.405,
+  "hi52": 304.75,
+  "lo52": 98.44,
+  "history": [
+   {
+    "year": 2022,
+    "revenue": 3826321000.0
+   },
+   {
+    "year": 2023,
+    "revenue": 4153945000.0
+   },
+   {
+    "year": 2024,
+    "revenue": 4458036000.0
+   },
+   {
+    "year": 2025,
+    "revenue": 5067220000.0
+   }
+  ],
+  "as_of": "2026-09-29",
+  "net_debt": -1590811008.0,
+  "ev": 42482206336.0,
+  "gross_profit": 2705978169.00096,
+  "fcf_margin": 0.171324337505753,
+  "ebitda_margin": 0.08969464929926192
+ },
+ "OKTA": {
+  "ticker": "OKTA",
+  "name": "Okta, Inc.",
+  "price": 202.18,
+  "market_cap": 35345293312.0,
+  "shares": 167139757.0,
+  "revenue": 3072999936.0,
+  "rev_growth": 0.106,
+  "gross_margin": 0.78132004,
+  "ebitda": 321000000.0,
+  "fcf": 1037625024.0,
+  "debt": 53000000.0,
+  "cash": 2299000064.0,
+  "beta": 0.789,
+  "hi52": 212.5,
+  "lo52": 62.66,
+  "history": [
+   {
+    "year": 2023,
+    "revenue": 1858000000.0
+   },
+   {
+    "year": 2024,
+    "revenue": 2263000000.0
+   },
+   {
+    "year": 2025,
+    "revenue": 2610000000.0
+   },
+   {
+    "year": 2026,
+    "revenue": 2919000000.0
+   }
+  ],
+  "as_of": "2026-09-29",
+  "net_debt": -2246000064.0,
+  "ev": 33099293248.0,
+  "gross_profit": 2400996432.9155173,
+  "fcf_margin": 0.3376586546079251,
+  "ebitda_margin": 0.10445818636033971
+ },
+ "ESTC": {
+  "ticker": "ESTC",
+  "name": "Elastic N.V.",
+  "price": 87.94,
+  "market_cap": 9232933888.0,
+  "shares": 104991280.0,
+  "revenue": 1802156032.0,
+  "rev_growth": 0.151,
+  "gross_margin": 0.75586,
+  "ebitda": -22268000.0,
+  "fcf": 504316864.0,
+  "debt": 595774976.0,
+  "cash": 1461042048.0,
+  "beta": 1.037,
+  "hi52": 108.0,
+  "lo52": 42.05,
+  "history": [
+   {
+    "year": 2023,
+    "revenue": 1068989000.0
+   },
+   {
+    "year": 2024,
+    "revenue": 1267321000.0
+   },
+   {
+    "year": 2025,
+    "revenue": 1483296000.0
+   },
+   {
+    "year": 2026,
+    "revenue": 1739331000.0
+   }
+  ],
+  "as_of": "2026-09-29",
+  "net_debt": -865267072.0,
+  "ev": 8367666816.0,
+  "gross_profit": 1362177658.3475199,
+  "fcf_margin": 0.27984084343702376,
+  "ebitda_margin": -0.012356310776979382
+ },
+ "APPF": {
+  "ticker": "APPF",
+  "name": "AppFolio, Inc.",
+  "price": 197.91,
+  "market_cap": 7009376768.0,
+  "shares": 24087367.0,
+  "revenue": 1040883008.0,
+  "rev_growth": 0.193,
+  "gross_margin": 0.63532,
+  "ebitda": 194698000.0,
+  "fcf": 198919872.0,
+  "debt": 35775000.0,
+  "cash": 221684992.0,
+  "beta": 0.848,
+  "hi52": 283.14,
+  "lo52": 142.56,
+  "history": [
+   {
+    "year": 2022,
+    "revenue": 471883000.0
+   },
+   {
+    "year": 2023,
+    "revenue": 620445000.0
+   },
+   {
+    "year": 2024,
+    "revenue": 794202000.0
+   },
+   {
+    "year": 2025,
+    "revenue": 950822000.0
+   }
+  ],
+  "as_of": "2026-09-29",
+  "net_debt": -185909992.0,
+  "ev": 6823466776.0,
+  "gross_profit": 661293792.64256,
+  "fcf_margin": 0.19110684915705722,
+  "ebitda_margin": 0.18705080062177362
+ },
+ "PCOR": {
+  "ticker": "PCOR",
+  "name": "Procore Technologies, Inc.",
+  "price": 49.06,
+  "market_cap": 7454929408.0,
+  "shares": 151955338.0,
+  "revenue": 1422448000.0,
+  "rev_growth": 0.158,
+  "gross_margin": 0.80074,
+  "ebitda": 65190000.0,
+  "fcf": 304718112.0,
+  "debt": 67526000.0,
+  "cash": 655913984.0,
+  "beta": 0.745,
+  "hi52": 82.315,
+  "lo52": 38.03,
+  "history": [
+   {
+    "year": 2022,
+    "revenue": 720203000.0
+   },
+   {
+    "year": 2023,
+    "revenue": 950010000.0
+   },
+   {
+    "year": 2024,
+    "revenue": 1151708000.0
+   },
+   {
+    "year": 2025,
+    "revenue": 1322509000.0
+   }
+  ],
+  "as_of": "2026-09-29",
+  "net_debt": -588387984.0,
+  "ev": 6866541424.0,
+  "gross_profit": 1139011011.52,
+  "fcf_margin": 0.2142209149297549,
+  "ebitda_margin": 0.045829443325872014
+ },
+ "DT": {
+  "ticker": "DT",
+  "name": "Dynatrace, Inc.",
+  "price": 57.84,
+  "market_cap": 16786837504.0,
+  "shares": 290228871.0,
+  "revenue": 2095586048.0,
+  "rev_growth": 0.162,
+  "gross_margin": 0.81597,
+  "ebitda": 291415008.0,
+  "fcf": 546524224.0,
+  "debt": 159272992.0,
+  "cash": 1108864000.0,
+  "beta": 0.741,
+  "hi52": 59.41,
+  "lo52": 31.635,
+  "history": [
+   {
+    "year": 2023,
+    "revenue": 1158530000.0
+   },
+   {
+    "year": 2024,
+    "revenue": 1430530000.0
+   },
+   {
+    "year": 2025,
+    "revenue": 1698683000.0
+   },
+   {
+    "year": 2026,
+    "revenue": 2018387000.0
+   }
+  ],
+  "as_of": "2026-09-29",
+  "net_debt": -949591008.0,
+  "ev": 15837246496.0,
+  "gross_profit": 1709935347.58656,
+  "fcf_margin": 0.26079779664576197,
+  "ebitda_margin": 0.13906134194686146
+ },
+ "PAYC": {
+  "ticker": "PAYC",
+  "name": "Paycom Software, Inc.",
+  "price": 220.58,
+  "market_cap": 9941898240.0,
+  "shares": 45071619.0,
+  "revenue": 2140700032.0,
+  "rev_growth": 0.098,
+  "gross_margin": 0.88055,
+  "ebitda": 735100032.0,
+  "fcf": 423724992.0,
+  "debt": 982800000.0,
+  "cash": 198000000.0,
+  "beta": 0.786,
+  "hi52": 244.98,
+  "lo52": 104.9,
+  "history": [
+   {
+    "year": 2022,
+    "revenue": 1375200000.0
+   },
+   {
+    "year": 2023,
+    "revenue": 1693700000.0
+   },
+   {
+    "year": 2024,
+    "revenue": 1883200000.0
+   },
+   {
+    "year": 2025,
+    "revenue": 2051700000.0
+   }
+  ],
+  "as_of": "2026-09-29",
+  "net_debt": 784800000.0,
+  "ev": 10726698240.0,
+  "gross_profit": 1884993413.1776001,
+  "fcf_margin": 0.197937583811836,
+  "ebitda_margin": 0.3433923581125074
+ },
+ "PCTY": {
+  "ticker": "PCTY",
+  "name": "Paylocity Holding Corporation",
+  "price": 142.72,
+  "market_cap": 7901835776.0,
+  "shares": 55366000.0,
+  "revenue": 1771325952.0,
+  "rev_growth": 0.11,
+  "gross_margin": 0.69281995,
+  "ebitda": 427990016.0,
+  "fcf": 359865120.0,
+  "debt": 132972000.0,
+  "cash": 271916992.0,
+  "beta": 0.454,
+  "hi52": 162.35,
+  "lo52": 92.99,
+  "history": [
+   {
+    "year": 2023,
+    "revenue": 1174598000.0
+   },
+   {
+    "year": 2024,
+    "revenue": 1402515000.0
+   },
+   {
+    "year": 2025,
+    "revenue": 1595221000.0
+   },
+   {
+    "year": 2026,
+    "revenue": 1771326000.0
+   }
+  ],
+  "as_of": "2026-09-29",
+  "net_debt": -138944992.0,
+  "ev": 7762890784.0,
+  "gross_profit": 1227209957.4983423,
+  "fcf_margin": 0.20316143372352058,
+  "ebitda_margin": 0.24162126429455713
+ },
+ "BRZE": {
+  "ticker": "BRZE",
+  "name": "Braze, Inc.",
+  "price": 23.17,
+  "market_cap": 2631751168.0,
+  "shares": 113584427.0,
+  "revenue": 834241024.0,
+  "rev_growth": 0.262,
+  "gross_margin": 0.66297996,
+  "ebitda": -86197000.0,
+  "fcf": 196280128.0,
+  "debt": 96407000.0,
+  "cash": 409868992.0,
+  "beta": 0.88,
+  "hi52": 37.327,
+  "lo52": 15.26,
+  "history": [
+   {
+    "year": 2023,
+    "revenue": 355426000.0
+   },
+   {
+    "year": 2024,
+    "revenue": 471800000.0
+   },
+   {
+    "year": 2025,
+    "revenue": 593410000.0
+   },
+   {
+    "year": 2026,
+    "revenue": 738182000.0
+   }
+  ],
+  "as_of": "2026-09-29",
+  "net_debt": -313461992.0,
+  "ev": 2318289176.0,
+  "gross_profit": 553085080.7218791,
+  "fcf_margin": 0.2352798799786667,
+  "ebitda_margin": -0.10332385667957752
+ },
+ "QLYS": {
+  "ticker": "QLYS",
+  "name": "Qualys, Inc.",
+  "price": 173.83,
+  "market_cap": 6013648896.0,
+  "shares": 34595001.0,
+  "revenue": 702977024.0,
+  "rev_growth": 0.11,
+  "gross_margin": 0.83417,
+  "ebitda": 254642000.0,
+  "fcf": 244382624.0,
+  "debt": 53399000.0,
+  "cash": 426294016.0,
+  "beta": 0.617,
+  "hi52": 201.54,
+  "lo52": 74.51,
+  "history": [
+   {
+    "year": 2022,
+    "revenue": 489723000.0
+   },
+   {
+    "year": 2023,
+    "revenue": 554458000.0
+   },
+   {
+    "year": 2024,
+    "revenue": 607571000.0
+   },
+   {
+    "year": 2025,
+    "revenue": 669125000.0
+   }
+  ],
+  "as_of": "2026-09-29",
+  "net_debt": -372895016.0,
+  "ev": 5640753880.0,
+  "gross_profit": 586402344.11008,
+  "fcf_margin": 0.34763956097660453,
+  "ebitda_margin": 0.3622337449253534
+ },
+ "TENB": {
+  "ticker": "TENB",
+  "name": "Tenable Holdings, Inc.",
+  "price": 34.47,
+  "market_cap": 3796525312.0,
+  "shares": 110139983.0,
+  "revenue": 1043539008.0,
+  "rev_growth": 0.086,
+  "gross_margin": 0.78051,
+  "ebitda": 53708000.0,
+  "fcf": 256786496.0,
+  "debt": 421561984.0,
+  "cash": 298208992.0,
+  "beta": 0.958,
+  "hi52": 43.67,
+  "lo52": 15.73,
+  "history": [
+   {
+    "year": 2022,
+    "revenue": 683191000.0
+   },
+   {
+    "year": 2023,
+    "revenue": 798710000.0
+   },
+   {
+    "year": 2024,
+    "revenue": 900021000.0
+   },
+   {
+    "year": 2025,
+    "revenue": 999405000.0
+   }
+  ],
+  "as_of": "2026-09-29",
+  "net_debt": 123352992.0,
+  "ev": 3919878304.0,
+  "gross_profit": 814492631.13408,
+  "fcf_margin": 0.2460727332964251,
+  "ebitda_margin": 0.05146717045387152
+ },
+ "RPD": {
+  "ticker": "RPD",
+  "name": "Rapid7, Inc.",
+  "price": 11.8,
+  "market_cap": 795327552.0,
+  "shares": 67400640.0,
+  "revenue": 855921984.0,
+  "rev_growth": -0.015,
+  "gross_margin": 0.69297,
+  "ebitda": 58166000.0,
+  "fcf": 133225752.0,
+  "debt": 961646976.0,
+  "cash": 702579008.0,
+  "beta": 1.012,
+  "hi52": 20.17,
+  "lo52": 4.97,
+  "history": [
+   {
+    "year": 2022,
+    "revenue": 685083000.0
+   },
+   {
+    "year": 2023,
+    "revenue": 777707000.0
+   },
+   {
+    "year": 2024,
+    "revenue": 844007000.0
+   },
+   {
+    "year": 2025,
+    "revenue": 859794000.0
+   }
+  ],
+  "as_of": "2026-09-29",
+  "net_debt": 259067968.0,
+  "ev": 1054395520.0,
+  "gross_profit": 593128257.25248,
+  "fcf_margin": 0.1556517468769677,
+  "ebitda_margin": 0.06795712820480611
+ },
+ "VRNS": {
+  "ticker": "VRNS",
+  "name": "Varonis Systems, Inc.",
+  "price": 47.925,
+  "market_cap": 5504688640.0,
+  "shares": 114860485.0,
+  "revenue": 688094976.0,
+  "rev_growth": 0.183,
+  "gross_margin": 0.77069,
+  "ebitda": -130704000.0,
+  "fcf": 138683008.0,
+  "debt": 528374016.0,
+  "cash": 698265984.0,
+  "beta": 0.82,
+  "hi52": 63.9,
+  "lo52": 19.7,
+  "history": [
+   {
+    "year": 2022,
+    "revenue": 473634000.0
+   },
+   {
+    "year": 2023,
+    "revenue": 499160000.0
+   },
+   {
+    "year": 2024,
+    "revenue": 550950000.0
+   },
+   {
+    "year": 2025,
+    "revenue": 623532000.0
+   }
+  ],
+  "as_of": "2026-09-29",
+  "net_debt": -169891968.0,
+  "ev": 5334796672.0,
+  "gross_profit": 530307917.05344,
+  "fcf_margin": 0.20154631676892232,
+  "ebitda_margin": -0.1899505221790778
+ },
+ "DBX": {
+  "ticker": "DBX",
+  "name": "Dropbox, Inc.",
+  "price": 31.92,
+  "market_cap": 6940768768.0,
+  "shares": 142295014.0,
+  "revenue": 2531599872.0,
+  "rev_growth": 0.009,
+  "gross_margin": 0.79732,
+  "ebitda": 830099968.0,
+  "fcf": 783075008.0,
+  "debt": 3975399936.0,
+  "cash": 1113799936.0,
+  "beta": 0.649,
+  "hi52": 38.17,
+  "lo52": 21.695,
+  "history": [
+   {
+    "year": 2022,
+    "revenue": 2324900000.0
+   },
+   {
+    "year": 2023,
+    "revenue": 2501600000.0
+   },
+   {
+    "year": 2024,
+    "revenue": 2548200000.0
+   },
+   {
+    "year": 2025,
+    "revenue": 2521000000.0
+   }
+  ],
+  "as_of": "2026-09-29",
+  "net_debt": 2861600000.0,
+  "ev": 9802368768.0,
+  "gross_profit": 2018495209.9430401,
+  "fcf_margin": 0.309320211563038,
+  "ebitda_margin": 0.3278954060557007
+ },
+ "NCNO": {
+  "ticker": "NCNO",
+  "name": "nCino, Inc.",
+  "price": 18.6,
+  "market_cap": 1966692864.0,
+  "shares": 105736174.0,
+  "revenue": 622243968.0,
+  "rev_growth": 0.082,
+  "gross_margin": 0.62243,
+  "ebitda": 91868000.0,
+  "fcf": 151539376.0,
+  "debt": 338627008.0,
+  "cash": 83290000.0,
+  "beta": 0.693,
+  "hi52": 28.035,
+  "lo52": 13.8,
+  "history": [
+   {
+    "year": 2023,
+    "revenue": 408315000.0
+   },
+   {
+    "year": 2024,
+    "revenue": 476543000.0
+   },
+   {
+    "year": 2025,
+    "revenue": 540657000.0
+   },
+   {
+    "year": 2026,
+    "revenue": 594781000.0
+   }
+  ],
+  "as_of": "2026-09-29",
+  "net_debt": 255337008.0,
+  "ev": 2222029872.0,
+  "gross_profit": 387303313.00224,
+  "fcf_margin": 0.24353691444703568,
+  "ebitda_margin": 0.14763984019849913
+ },
+ "PD": {
+  "ticker": "PD",
+  "name": "PagerDuty, Inc.",
+  "price": 14.48,
+  "market_cap": 1138850048.0,
+  "shares": 78649873.0,
+  "revenue": 494732992.0,
+  "rev_growth": 0.008,
+  "gross_margin": 0.84980005,
+  "ebitda": 45853000.0,
+  "fcf": 116991624.0,
+  "debt": 412816992.0,
+  "cash": 470043008.0,
+  "beta": 0.965,
+  "hi52": 16.91,
+  "lo52": 5.7,
+  "history": [
+   {
+    "year": 2023,
+    "revenue": 370793000.0
+   },
+   {
+    "year": 2024,
+    "revenue": 430699000.0
+   },
+   {
+    "year": 2025,
+    "revenue": 467499000.0
+   },
+   {
+    "year": 2026,
+    "revenue": 492546000.0
+   }
+  ],
+  "as_of": "2026-09-29",
+  "net_debt": -57226016.0,
+  "ev": 1081624032.0,
+  "gross_profit": 420424121.3382496,
+  "fcf_margin": 0.23647427176233277,
+  "ebitda_margin": 0.0926823170103036
+ },
+ "AMPL": {
+  "ticker": "AMPL",
+  "name": "Amplitude, Inc.",
+  "price": 13.3,
+  "market_cap": 1763836032.0,
+  "shares": 103867086.0,
+  "revenue": 374368992.0,
+  "rev_growth": 0.212,
+  "gross_margin": 0.72416997,
+  "ebitda": -96246000.0,
+  "fcf": 71186872.0,
+  "debt": 9707000.0,
+  "cash": 140539008.0,
+  "beta": 1.502,
+  "hi52": 14.76,
+  "lo52": 5.51,
+  "history": [
+   {
+    "year": 2022,
+    "revenue": 238067000.0
+   },
+   {
+    "year": 2023,
+    "revenue": 276284000.0
+   },
+   {
+    "year": 2024,
+    "revenue": 299272000.0
+   },
+   {
+    "year": 2025,
+    "revenue": 343214000.0
+   }
+  ],
+  "as_of": "2026-09-29",
+  "net_debt": -130832008.0,
+  "ev": 1633004024.0,
+  "gross_profit": 271106781.7055703,
+  "fcf_margin": 0.19015162452343276,
+  "ebitda_margin": -0.2570885999019919
+ },
+ "DOMO": {
+  "ticker": "DOMO",
+  "name": "Domo, Inc.",
+  "price": 3.55,
+  "market_cap": 166978368.0,
+  "shares": 43772502.0,
+  "revenue": 315214016.0,
+  "rev_growth": -0.037,
+  "gross_margin": 0.75441,
+  "ebitda": -24965000.0,
+  "fcf": 10888000.0,
+  "debt": 146760000.0,
+  "cash": 25071000.0,
+  "beta": 1.77,
+  "hi52": 16.505,
+  "lo52": 1.84,
+  "history": [
+   {
+    "year": 2023,
+    "revenue": 308645000.0
+   },
+   {
+    "year": 2024,
+    "revenue": 318989000.0
+   },
+   {
+    "year": 2025,
+    "revenue": 317044000.0
+   },
+   {
+    "year": 2026,
+    "revenue": 318857000.0
+   }
+  ],
+  "as_of": "2026-09-29",
+  "net_debt": 121689000.0,
+  "ev": 288667368.0,
+  "gross_profit": 237800605.81056002,
+  "fcf_margin": 0.03454161124611921,
+  "ebitda_margin": -0.07920015840919967
+ },
+ "YEXT": {
+  "ticker": "YEXT",
+  "name": "Yext, Inc.",
+  "price": 6.43,
+  "market_cap": 636433024.0,
+  "shares": 98978704.0,
+  "revenue": 443020992.0,
+  "rev_growth": -0.018,
+  "gross_margin": 0.74858004,
+  "ebitda": 39847000.0,
+  "fcf": 41926624.0,
+  "debt": 221674000.0,
+  "cash": 86828000.0,
+  "beta": 1.154,
+  "hi52": 9.03,
+  "lo52": 3.265,
+  "history": [
+   {
+    "year": 2023,
+    "revenue": 400850000.0
+   },
+   {
+    "year": 2024,
+    "revenue": 404322000.0
+   },
+   {
+    "year": 2025,
+    "revenue": 420957000.0
+   },
+   {
+    "year": 2026,
+    "revenue": 446579000.0
+   }
+  ],
+  "as_of": "2026-09-29",
+  "net_debt": 134846000.0,
+  "ev": 771279024.0,
+  "gross_profit": 331636671.9121997,
+  "fcf_margin": 0.09463800758226824,
+  "ebitda_margin": 0.08994381918588634
+ },
+ "FIVN": {
+  "ticker": "FIVN",
+  "name": "Five9, Inc.",
+  "price": 34.66,
+  "market_cap": 2589917440.0,
+  "shares": 74723531.0,
+  "revenue": 1203876992.0,
+  "rev_growth": 0.103,
+  "gross_margin": 0.55063,
+  "ebitda": 151528000.0,
+  "fcf": 260481504.0,
+  "debt": 843264000.0,
+  "cash": 654062016.0,
+  "beta": 1.487,
+  "hi52": 40.0,
+  "lo52": 13.29,
+  "history": [
+   {
+    "year": 2022,
+    "revenue": 778846000.0
+   },
+   {
+    "year": 2023,
+    "revenue": 910488000.0
+   },
+   {
+    "year": 2024,
+    "revenue": 1041938000.0
+   },
+   {
+    "year": 2025,
+    "revenue": 1149088000.0
+   }
+  ],
+  "as_of": "2026-09-29",
+  "net_debt": 189201984.0,
+  "ev": 2779119424.0,
+  "gross_profit": 662890788.10496,
+  "fcf_margin": 0.216368869685982,
+  "ebitda_margin": 0.12586667990744357
+ },
+ "WK": {
+  "ticker": "WK",
+  "name": "Workiva Inc.",
+  "price": 68.19,
+  "market_cap": 3710660352.0,
+  "shares": 50846905.0,
+  "revenue": 965697024.0,
+  "rev_growth": 0.186,
+  "gross_margin": 0.8021,
+  "ebitda": 42035000.0,
+  "fcf": 169095376.0,
+  "debt": 792678016.0,
+  "cash": 815241984.0,
+  "beta": 0.487,
+  "hi52": 97.095,
+  "lo52": 43.34,
+  "history": [
+   {
+    "year": 2022,
+    "revenue": 537875000.0
+   },
+   {
+    "year": 2023,
+    "revenue": 630039000.0
+   },
+   {
+    "year": 2024,
+    "revenue": 738680000.0
+   },
+   {
+    "year": 2025,
+    "revenue": 884568000.0
+   }
+  ],
+  "as_of": "2026-09-29",
+  "net_debt": -22563968.0,
+  "ev": 3688096384.0,
+  "gross_profit": 774585582.9504,
+  "fcf_margin": 0.17510189199878906,
+  "ebitda_margin": 0.04352814491017837
+ },
+ "ALRM": {
+  "ticker": "ALRM",
+  "name": "Alarm.com Holdings, Inc.",
+  "price": 53.77,
+  "market_cap": 2639581696.0,
+  "shares": 49090228.0,
+  "revenue": 1060984000.0,
+  "rev_growth": 0.092,
+  "gross_margin": 0.65809,
+  "ebitda": 167716000.0,
+  "fcf": 100146624.0,
+  "debt": 567465024.0,
+  "cash": 481318016.0,
+  "beta": 0.764,
+  "hi52": 58.145,
+  "lo52": 41.49,
+  "history": [
+   {
+    "year": 2022,
+    "revenue": 842559000.0
+   },
+   {
+    "year": 2023,
+    "revenue": 881682000.0
+   },
+   {
+    "year": 2024,
+    "revenue": 939827000.0
+   },
+   {
+    "year": 2025,
+    "revenue": 1011187000.0
+   }
+  ],
+  "as_of": "2026-09-29",
+  "net_debt": 86147008.0,
+  "ev": 2725728704.0,
+  "gross_profit": 698222960.56,
+  "fcf_margin": 0.09439032445352616,
+  "ebitda_margin": 0.15807589935380742
+ },
+ "SPT": {
+  "ticker": "SPT",
+  "name": "Sprout Social, Inc",
+  "price": 9.47,
+  "market_cap": 573808256.0,
+  "shares": 55022855.0,
+  "revenue": 481824000.0,
+  "rev_growth": 0.108,
+  "gross_margin": 0.77445,
+  "ebitda": -14106000.0,
+  "fcf": 104006248.0,
+  "debt": 45882000.0,
+  "cash": 119929000.0,
+  "beta": 0.951,
+  "hi52": 13.888,
+  "lo52": 4.92,
+  "history": [
+   {
+    "year": 2022,
+    "revenue": 253828000.0
+   },
+   {
+    "year": 2023,
+    "revenue": 333643000.0
+   },
+   {
+    "year": 2024,
+    "revenue": 405908000.0
+   },
+   {
+    "year": 2025,
+    "revenue": 457547000.0
+   }
+  ],
+  "as_of": "2026-09-29",
+  "net_debt": -74047000.0,
+  "ev": 499761256.0,
+  "gross_profit": 373148596.8,
+  "fcf_margin": 0.21585941754665605,
+  "ebitda_margin": -0.029276250249053597
+ },
+ "ZM": {
+  "ticker": "ZM",
+  "name": "Zoom Communications, Inc.",
+  "price": 87.3,
+  "market_cap": 25472718848.0,
+  "shares": 263233141.0,
+  "revenue": 4993050112.0,
+  "rev_growth": 0.049,
+  "gross_margin": 0.77663004,
+  "ebitda": 1333758976.0,
+  "fcf": 1975528320.0,
+  "debt": 60272000.0,
+  "cash": 7249720832.0,
+  "beta": 1.04,
+  "hi52": 114.74,
+  "lo52": 70.7,
+  "history": [
+   {
+    "year": 2023,
+    "revenue": 4392960000.0
+   },
+   {
+    "year": 2024,
+    "revenue": 4527224000.0
+   },
+   {
+    "year": 2025,
+    "revenue": 4665433000.0
+   },
+   {
+    "year": 2026,
+    "revenue": 4868769000.0
+   }
+  ],
+  "as_of": "2026-09-29",
+  "net_debt": -7189448832.0,
+  "ev": 18283270016.0,
+  "gross_profit": 3877752708.2045646,
+  "fcf_margin": 0.3956556164441716,
+  "ebitda_margin": 0.2671230903119764
+ },
+ "GWRE": {
+  "ticker": "GWRE",
+  "name": "Guidewire Software, Inc.",
+  "price": 145.18,
+  "market_cap": 11903695872.0,
+  "shares": 81992669.0,
+  "revenue": 1475362944.0,
+  "rev_growth": 0.153,
+  "gross_margin": 0.64212996,
+  "ebitda": 163426000.0,
+  "fcf": 343031744.0,
+  "debt": 714987008.0,
+  "cash": 777160000.0,
+  "beta": 0.967,
+  "hi52": 255.89,
+  "lo52": 102.3,
+  "history": [
+   {
+    "year": 2023,
+    "revenue": 905341000.0
+   },
+   {
+    "year": 2024,
+    "revenue": 980497000.0
+   },
+   {
+    "year": 2025,
+    "revenue": 1202459000.0
+   },
+   {
+    "year": 2026,
+    "revenue": 1475363000.0
+   }
+  ],
+  "as_of": "2026-09-29",
+  "net_debt": -62172992.0,
+  "ev": 11841522880.0,
+  "gross_profit": 947374748.2162023,
+  "fcf_margin": 0.2325066827759502,
+  "ebitda_margin": 0.11077003164856498
+ },
+ "MNDY": {
+  "ticker": "MNDY",
+  "name": "monday.com Ltd.",
+  "price": 79.05,
+  "market_cap": 3341769216.0,
+  "shares": 42274119.0,
+  "revenue": 1366619008.0,
+  "rev_growth": 0.219,
+  "gross_margin": 0.88738,
+  "ebitda": 50808000.0,
+  "fcf": 284633120.0,
+  "debt": 237488000.0,
+  "cash": 1072755008.0,
+  "beta": 1.145,
+  "hi52": 210.49,
+  "lo52": 57.5,
+  "history": [
+   {
+    "year": 2022,
+    "revenue": 519029000.0
+   },
+   {
+    "year": 2023,
+    "revenue": 729695000.0
+   },
+   {
+    "year": 2024,
+    "revenue": 971995000.0
+   },
+   {
+    "year": 2025,
+    "revenue": 1231997000.0
+   }
+  ],
+  "as_of": "2026-09-29",
+  "net_debt": -835267008.0,
+  "ev": 2506502208.0,
+  "gross_profit": 1212710375.3190398,
+  "fcf_margin": 0.20827539960574,
+  "ebitda_margin": 0.03717788184020341
+ },
+ "BL": {
+  "ticker": "BL",
+  "name": "BlackLine, Inc.",
+  "price": 26.56,
+  "market_cap": 1543807232.0,
+  "shares": 58125270.0,
+  "revenue": 732448000.0,
+  "rev_growth": 0.092,
+  "gross_margin": 0.75563,
+  "ebitda": 64471000.0,
+  "fcf": 138621248.0,
+  "debt": 690739968.0,
+  "cash": 527760000.0,
+  "beta": 0.653,
+  "hi52": 59.57,
+  "lo52": 24.7,
+  "history": [
+   {
+    "year": 2022,
+    "revenue": 522938000.0
+   },
+   {
+    "year": 2023,
+    "revenue": 589996000.0
+   },
+   {
+    "year": 2024,
+    "revenue": 653336000.0
+   },
+   {
+    "year": 2025,
+    "revenue": 700427000.0
+   }
+  ],
+  "as_of": "2026-09-29",
+  "net_debt": 162979968.0,
+  "ev": 1706787200.0,
+  "gross_profit": 553459682.24,
+  "fcf_margin": 0.18925745991524312,
+  "ebitda_margin": 0.0880212656734676
+ },
+ "CWAN": {
+  "ticker": "CWAN",
+  "name": "Clearwater Analytics Holdings, ",
+  "price": 24.56,
+  "market_cap": 7330872320.0,
+  "shares": 297375155.0,
+  "revenue": 825731968.0,
+  "rev_growth": 0.744,
+  "gross_margin": 0.65972,
+  "ebitda": 109074000.0,
+  "fcf": 160307872.0,
+  "debt": 860836992.0,
+  "cash": 81507000.0,
+  "beta": 0.596,
+  "hi52": 24.56,
+  "lo52": 15.735,
+  "history": [],
+  "as_of": "2026-09-29",
+  "net_debt": 779329992.0,
+  "ev": 8110202312.0,
+  "gross_profit": 544751893.92896,
+  "fcf_margin": 0.1941403242365445,
+  "ebitda_margin": 0.13209371106726972
+ },
+ "PYPL": {
+  "ticker": "PYPL",
+  "name": "PayPal Holdings, Inc.",
+  "price": 54.28,
+  "market_cap": 46434414592.0,
+  "shares": 855460874.0,
+  "revenue": 34127998976.0,
+  "rev_growth": 0.048,
+  "gross_margin": 0.40477002,
+  "ebitda": 6456000000.0,
+  "fcf": 4423124992.0,
+  "debt": 14220999680.0,
+  "cash": 11256000512.0,
+  "beta": 1.286,
+  "hi52": 79.215,
+  "lo52": 38.46,
+  "history": [
+   {
+    "year": 2022,
+    "revenue": 27518000000.0
+   },
+   {
+    "year": 2023,
+    "revenue": 29771000000.0
+   },
+   {
+    "year": 2024,
+    "revenue": 31797000000.0
+   },
+   {
+    "year": 2025,
+    "revenue": 33172000000.0
+   }
+  ],
+  "as_of": "2026-09-29",
+  "net_debt": 2964999168.0,
+  "ev": 49399413760.0,
+  "gross_profit": 13813990828.0755,
+  "fcf_margin": 0.12960399451226237,
+  "ebitda_margin": 0.18917018851706144
+ },
+ "XYZ": {
+  "ticker": "XYZ",
+  "name": "Block, Inc.",
+  "price": 73.31,
+  "market_cap": 44044279808.0,
+  "shares": 540816000.0,
+  "revenue": 25041963008.0,
+  "rev_growth": 0.093,
+  "gross_margin": 0.46572,
+  "ebitda": 1547908992.0,
+  "fcf": -27105876.0,
+  "debt": 7171312128.0,
+  "cash": 6738176000.0,
+  "beta": 2.522,
+  "hi52": 86.92,
+  "lo52": 48.21,
+  "history": [
+   {
+    "year": 2022,
+    "revenue": 17531587000.0
+   },
+   {
+    "year": 2023,
+    "revenue": 21915623000.0
+   },
+   {
+    "year": 2024,
+    "revenue": 24121053000.0
+   },
+   {
+    "year": 2025,
+    "revenue": 24193683000.0
+   }
+  ],
+  "as_of": "2026-09-29",
+  "net_debt": 433136128.0,
+  "ev": 44477415936.0,
+  "gross_profit": 11662543012.08576,
+  "fcf_margin": -0.0010824181790916572,
+  "ebitda_margin": 0.061812605964855834
+ },
+ "AFRM": {
+  "ticker": "AFRM",
+  "name": "Affirm Holdings, Inc.",
+  "price": 67.21,
+  "market_cap": 22678081536.0,
+  "shares": 296881962.0,
+  "revenue": 4261082112.0,
+  "rev_growth": 0.33,
+  "gross_margin": 0.4893,
+  "ebitda": 739193984.0,
+  "fcf": 478676736.0,
+  "debt": 10022802432.0,
+  "cash": 1701895040.0,
+  "beta": 3.61,
+  "hi52": 90.44,
+  "lo52": 42.095,
+  "history": [
+   {
+    "year": 2023,
+    "revenue": 1587985000.0
+   },
+   {
+    "year": 2024,
+    "revenue": 2322999000.0
+   },
+   {
+    "year": 2025,
+    "revenue": 3224412000.0
+   },
+   {
+    "year": 2026,
+    "revenue": 4261083000.0
+   }
+  ],
+  "as_of": "2026-09-29",
+  "net_debt": 8320907392.0,
+  "ev": 30998988928.0,
+  "gross_profit": 2084947477.4016001,
+  "fcf_margin": 0.11233689551580273,
+  "ebitda_margin": 0.17347564880721078
+ },
+ "SOFI": {
+  "ticker": "SOFI",
+  "name": "SoFi Technologies, Inc.",
+  "price": 15.93,
+  "market_cap": 20574715904.0,
+  "shares": 1291570324.0,
+  "revenue": 4268439040.0,
+  "rev_growth": 0.426,
+  "gross_margin": 0.83734,
+  "ebitda": null,
+  "fcf": null,
+  "debt": 3415378944.0,
+  "cash": 3366502912.0,
+  "beta": 2.208,
+  "hi52": 32.73,
+  "lo52": 14.88,
+  "history": [
+   {
+    "year": 2022,
+    "revenue": 1573535000.0
+   },
+   {
+    "year": 2023,
+    "revenue": 2108215000.0
+   },
+   {
+    "year": 2024,
+    "revenue": 2612342000.0
+   },
+   {
+    "year": 2025,
+    "revenue": 3613354000.0
+   }
+  ],
+  "as_of": "2026-09-29",
+  "net_debt": 48876032.0,
+  "ev": 20623591936.0,
+  "gross_profit": 3574134745.7536,
+  "fcf_margin": null,
+  "ebitda_margin": null
+ },
+ "UPST": {
+  "ticker": "UPST",
+  "name": "Upstart Holdings, Inc.",
+  "price": 23.03,
+  "market_cap": 2241119488.0,
+  "shares": 97313046.0,
+  "revenue": 1285890048.0,
+  "rev_growth": 0.423,
+  "gross_margin": 0.83043,
+  "ebitda": 115055000.0,
+  "fcf": -132382752.0,
+  "debt": 2057602944.0,
+  "cash": 457843008.0,
+  "beta": 2.165,
+  "hi52": 55.22,
+  "lo52": 22.785,
+  "history": [
+   {
+    "year": 2022,
+    "revenue": 837760000.0
+   },
+   {
+    "year": 2023,
+    "revenue": 508119000.0
+   },
+   {
+    "year": 2024,
+    "revenue": 628834000.0
+   },
+   {
+    "year": 2025,
+    "revenue": 1023985000.0
+   }
+  ],
+  "as_of": "2026-09-29",
+  "net_debt": 1599759936.0,
+  "ev": 3840879424.0,
+  "gross_profit": 1067841672.56064,
+  "fcf_margin": -0.102950288950366,
+  "ebitda_margin": 0.08947499063310271
+ },
+ "TOST": {
+  "ticker": "TOST",
+  "name": "Toast, Inc.",
+  "price": 30.38,
+  "market_cap": 17559640064.0,
+  "shares": 514000000.0,
+  "revenue": 6803999744.0,
+  "rev_growth": 0.231,
+  "gross_margin": 0.26646,
+  "ebitda": 477000000.0,
+  "fcf": 474249984.0,
+  "debt": 0.0,
+  "cash": 1712999936.0,
+  "beta": 1.728,
+  "hi52": 39.725,
+  "lo52": 22.26,
+  "history": [
+   {
+    "year": 2022,
+    "revenue": 2731000000.0
+   },
+   {
+    "year": 2023,
+    "revenue": 3865000000.0
+   },
+   {
+    "year": 2024,
+    "revenue": 4960000000.0
+   },
+   {
+    "year": 2025,
+    "revenue": 6153000000.0
+   }
+  ],
+  "as_of": "2026-09-29",
+  "net_debt": -1712999936.0,
+  "ev": 15846640128.0,
+  "gross_profit": 1812993771.7862399,
+  "fcf_margin": 0.0697016463614964,
+  "ebitda_margin": 0.07010582274354653
+ },
+ "FOUR": {
+  "ticker": "FOUR",
+  "name": "Shift4 Payments, Inc.",
+  "price": 37.03,
+  "market_cap": 2923893248.0,
+  "shares": 78960120.0,
+  "revenue": 4782000128.0,
+  "rev_growth": 0.341,
+  "gross_margin": 0.35904998,
+  "ebitda": 909000000.0,
+  "fcf": 353524992.0,
+  "debt": 4567000064.0,
+  "cash": 356000000.0,
+  "beta": 1.377,
+  "hi52": 80.98,
+  "lo52": 34.56,
+  "history": [
+   {
+    "year": 2022,
+    "revenue": 1993600000.0
+   },
+   {
+    "year": 2023,
+    "revenue": 2565000000.0
+   },
+   {
+    "year": 2024,
+    "revenue": 3331000000.0
+   },
+   {
+    "year": 2025,
+    "revenue": 4180000000.0
+   }
+  ],
+  "as_of": "2026-09-29",
+  "net_debt": 4211000064.0,
+  "ev": 7134893312.0,
+  "gross_profit": 1716977050.3183973,
+  "fcf_margin": 0.07392826903747,
+  "ebitda_margin": 0.1900878242720114
+ },
+ "PAYO": {
+  "ticker": "PAYO",
+  "name": "Payoneer Global Inc.",
+  "price": 7.14,
+  "market_cap": 2419395072.0,
+  "shares": 338850836.0,
+  "revenue": 1081395968.0,
+  "rev_growth": 0.052,
+  "gross_margin": 0.85370004,
+  "ebitda": 195763008.0,
+  "fcf": -69092496.0,
+  "debt": 86162000.0,
+  "cash": 346320000.0,
+  "beta": 0.943,
+  "hi52": 7.19,
+  "lo52": 4.08,
+  "history": [
+   {
+    "year": 2022,
+    "revenue": 572331000.0
+   },
+   {
+    "year": 2023,
+    "revenue": 600469000.0
+   },
+   {
+    "year": 2024,
+    "revenue": 720870000.0
+   },
+   {
+    "year": 2025,
+    "revenue": 821160000.0
+   }
+  ],
+  "as_of": "2026-09-29",
+  "net_debt": -260158000.0,
+  "ev": 2159237072.0,
+  "gross_profit": 923187781.1374387,
+  "fcf_margin": -0.06389194896646776,
+  "ebitda_margin": 0.18102805428621682
+ },
+ "FLYW": {
+  "ticker": "FLYW",
+  "name": "Flywire Corporation - Voting",
+  "price": 17.3,
+  "market_cap": 2104850688.0,
+  "shares": 121667674.0,
+  "revenue": 713537984.0,
+  "rev_growth": 0.272,
+  "gross_margin": 0.59622,
+  "ebitda": 63417000.0,
+  "fcf": 167960368.0,
+  "debt": 1473000.0,
+  "cash": 294184000.0,
+  "beta": 1.307,
+  "hi52": 19.73,
+  "lo52": 10.55,
+  "history": [
+   {
+    "year": 2022,
+    "revenue": 289375000.0
+   },
+   {
+    "year": 2023,
+    "revenue": 403094000.0
+   },
+   {
+    "year": 2024,
+    "revenue": 492144000.0
+   },
+   {
+    "year": 2025,
+    "revenue": 623025000.0
+   }
+  ],
+  "as_of": "2026-09-29",
+  "net_debt": -292711000.0,
+  "ev": 1812139688.0,
+  "gross_profit": 425425616.82048,
+  "fcf_margin": 0.2353909276958688,
+  "ebitda_margin": 0.08887683826513712
+ },
+ "MQ": {
+  "ticker": "MQ",
+  "name": "Marqeta, Inc.",
+  "price": 16.89,
+  "market_cap": 1758229248.0,
+  "shares": 95911790.0,
+  "revenue": 677212032.0,
+  "rev_growth": 0.17,
+  "gross_margin": 0.69991994,
+  "ebitda": 17112000.0,
+  "fcf": 152723744.0,
+  "debt": 6745000.0,
+  "cash": 700896000.0,
+  "beta": 1.287,
+  "hi52": 22.28,
+  "lo52": 14.8,
+  "history": [
+   {
+    "year": 2022,
+    "revenue": 748206000.0
+   },
+   {
+    "year": 2023,
+    "revenue": 676171000.0
+   },
+   {
+    "year": 2024,
+    "revenue": 506995000.0
+   },
+   {
+    "year": 2025,
+    "revenue": 624884000.0
+   }
+  ],
+  "as_of": "2026-09-29",
+  "net_debt": -694151000.0,
+  "ev": 1064078248.0,
+  "gross_profit": 473994204.8047181,
+  "fcf_margin": 0.2255183558227152,
+  "ebitda_margin": 0.025268304742701322
+ },
+ "RELY": {
+  "ticker": "RELY",
+  "name": "Remitly Global, Inc.",
+  "price": 21.89,
+  "market_cap": 4633763840.0,
+  "shares": 211684054.0,
+  "revenue": 1809629056.0,
+  "rev_growth": 0.202,
+  "gross_margin": 0.61548,
+  "ebitda": 199207008.0,
+  "fcf": 196120992.0,
+  "debt": 38264000.0,
+  "cash": 676393984.0,
+  "beta": 0.364,
+  "hi52": 27.479,
+  "lo52": 12.08,
+  "history": [
+   {
+    "year": 2022,
+    "revenue": 653560000.0
+   },
+   {
+    "year": 2023,
+    "revenue": 944285000.0
+   },
+   {
+    "year": 2024,
+    "revenue": 1263963000.0
+   },
+   {
+    "year": 2025,
+    "revenue": 1635147000.0
+   }
+  ],
+  "as_of": "2026-09-29",
+  "net_debt": -638129984.0,
+  "ev": 3995633856.0,
+  "gross_profit": 1113790491.3868802,
+  "fcf_margin": 0.1083763500313735,
+  "ebitda_margin": 0.11008168073976814
+ },
+ "NU": {
+  "ticker": "NU",
+  "name": "Nu Holdings Ltd.",
+  "price": 12.23,
+  "market_cap": 59079319552.0,
+  "shares": 3808087961.0,
+  "revenue": 8442067968.0,
+  "rev_growth": 0.521,
+  "gross_margin": 0.0,
+  "ebitda": null,
+  "fcf": null,
+  "debt": 5896687104.0,
+  "cash": 15170837504.0,
+  "beta": 0.94,
+  "hi52": 18.98,
+  "lo52": 11.2,
+  "history": [
+   {
+    "year": 2022,
+    "revenue": 2971196000.0
+   },
+   {
+    "year": 2023,
+    "revenue": 5632184000.0
+   },
+   {
+    "year": 2024,
+    "revenue": 8269605000.0
+   },
+   {
+    "year": 2025,
+    "revenue": 10626855000.0
+   }
+  ],
+  "as_of": "2026-09-29",
+  "net_debt": -9274150400.0,
+  "ev": 49805169152.0,
+  "gross_profit": 0.0,
+  "fcf_margin": null,
+  "ebitda_margin": null
+ },
+ "HOOD": {
+  "ticker": "HOOD",
+  "name": "Robinhood Markets, Inc.",
+  "price": 116.46,
+  "market_cap": 104707121152.0,
+  "shares": 790630234.0,
+  "revenue": 4931999744.0,
+  "rev_growth": 0.323,
+  "gross_margin": 0.9189,
+  "ebitda": null,
+  "fcf": null,
+  "debt": 22925000704.0,
+  "cash": 23904999424.0,
+  "beta": 2.34,
+  "hi52": 153.86,
+  "lo52": 63.515,
+  "history": [
+   {
+    "year": 2022,
+    "revenue": 1358000000.0
+   },
+   {
+    "year": 2023,
+    "revenue": 1865000000.0
+   },
+   {
+    "year": 2024,
+    "revenue": 2951000000.0
+   },
+   {
+    "year": 2025,
+    "revenue": 4473000000.0
+   }
+  ],
+  "as_of": "2026-09-29",
+  "net_debt": -979998720.0,
+  "ev": 103727122432.0,
+  "gross_profit": 4532014564.7616005,
+  "fcf_margin": null,
+  "ebitda_margin": null
+ },
+ "COIN": {
+  "ticker": "COIN",
+  "name": "Coinbase Global, Inc.",
+  "price": 191.79,
+  "market_cap": 50601283584.0,
+  "shares": 222803032.0,
+  "revenue": 6043752960.0,
+  "rev_growth": -0.173,
+  "gross_margin": 0.8581,
+  "ebitda": 699548992.0,
+  "fcf": 2668452864.0,
+  "debt": 6668290048.0,
+  "cash": 8788842496.0,
+  "beta": 3.388,
+  "hi52": 402.16,
+  "lo52": 139.11,
+  "history": [
+   {
+    "year": 2022,
+    "revenue": 3194208000.0
+   },
+   {
+    "year": 2023,
+    "revenue": 3108383000.0
+   },
+   {
+    "year": 2024,
+    "revenue": 6564028000.0
+   },
+   {
+    "year": 2025,
+    "revenue": 7181325000.0
+   }
+  ],
+  "as_of": "2026-09-29",
+  "net_debt": -2120552448.0,
+  "ev": 48480731136.0,
+  "gross_profit": 5186144414.976,
+  "fcf_margin": 0.44152249134948096,
+  "ebitda_margin": 0.11574744974354478
+ },
+ "TREE": {
+  "ticker": "TREE",
+  "name": "LendingTree, Inc.",
+  "price": 24.21,
+  "market_cap": 339897760.0,
+  "shares": 14039561.0,
+  "revenue": 1268168960.0,
+  "rev_growth": 0.253,
+  "gross_margin": 0.96408,
+  "ebitda": 117628000.0,
+  "fcf": 63107376.0,
+  "debt": 436062016.0,
+  "cash": 110766000.0,
+  "beta": 2.056,
+  "hi52": 68.93,
+  "lo52": 23.5,
+  "history": [
+   {
+    "year": 2022,
+    "revenue": 984992000.0
+   },
+   {
+    "year": 2023,
+    "revenue": 672502000.0
+   },
+   {
+    "year": 2024,
+    "revenue": 900219000.0
+   },
+   {
+    "year": 2025,
+    "revenue": 1117324000.0
+   }
+  ],
+  "as_of": "2026-09-29",
+  "net_debt": 325296016.0,
+  "ev": 665193776.0,
+  "gross_profit": 1222616330.9568,
+  "fcf_margin": 0.04976259314847132,
+  "ebitda_margin": 0.09275420208991711
+ },
+ "ENVA": {
+  "ticker": "ENVA",
+  "name": "Enova International, Inc.",
+  "price": 170.02,
+  "market_cap": 4233221376.0,
+  "shares": 24898371.0,
+  "revenue": 1691782016.0,
+  "rev_growth": 0.311,
+  "gross_margin": 0.83291,
+  "ebitda": null,
+  "fcf": null,
+  "debt": 5045454848.0,
+  "cash": 135266000.0,
+  "beta": 1.211,
+  "hi52": 267.45,
+  "lo52": 103.02,
+  "history": [
+   {
+    "year": 2022,
+    "revenue": 1736085000.0
+   },
+   {
+    "year": 2023,
+    "revenue": 2117639000.0
+   },
+   {
+    "year": 2024,
+    "revenue": 2657800000.0
+   },
+   {
+    "year": 2025,
+    "revenue": 3151653000.0
+   }
+  ],
+  "as_of": "2026-09-29",
+  "net_debt": 4910188848.0,
+  "ev": 9143410224.0,
+  "gross_profit": 1409102158.9465601,
+  "fcf_margin": null,
+  "ebitda_margin": null
+ },
+ "OPFI": {
+  "ticker": "OPFI",
+  "name": "OppFi Inc.",
+  "price": 6.12,
+  "market_cap": 521474464.0,
+  "shares": 85208247.0,
+  "revenue": 327479008.0,
+  "rev_growth": -0.139,
+  "gross_margin": 1.0,
+  "ebitda": null,
+  "fcf": null,
+  "debt": 286880992.0,
+  "cash": 64347000.0,
+  "beta": 1.776,
+  "hi52": 12.276,
+  "lo52": 6.09,
+  "history": [
+   {
+    "year": 2022,
+    "revenue": 452859000.0
+   },
+   {
+    "year": 2023,
+    "revenue": 508949000.0
+   },
+   {
+    "year": 2024,
+    "revenue": 525963000.0
+   },
+   {
+    "year": 2025,
+    "revenue": 597050000.0
+   }
+  ],
+  "as_of": "2026-09-29",
+  "net_debt": 222533992.0,
+  "ev": 744008456.0,
+  "gross_profit": 327479008.0,
+  "fcf_margin": null,
+  "ebitda_margin": null
+ },
+ "PAGS": {
+  "ticker": "PAGS",
+  "name": "PagSeguro Digital Ltd.",
+  "price": 8.9,
+  "market_cap": 2453249536.0,
+  "shares": 155186514.0,
+  "revenue": 19803666432.0,
+  "rev_growth": -0.002,
+  "gross_margin": 0.51472,
+  "ebitda": 9309784064.0,
+  "fcf": -1856306432.0,
+  "debt": 1775282048.0,
+  "cash": 1386558976.0,
+  "beta": 1.266,
+  "hi52": 12.32,
+  "lo52": 8.42,
+  "history": [
+   {
+    "year": 2022,
+    "revenue": 15334914000.0
+   },
+   {
+    "year": 2023,
+    "revenue": 15948401000.0
+   },
+   {
+    "year": 2024,
+    "revenue": 18809632000.0
+   },
+   {
+    "year": 2025,
+    "revenue": 20410512000.0
+   }
+  ],
+  "as_of": "2026-09-29",
+  "net_debt": 388723072.0,
+  "ev": 2841972608.0,
+  "gross_profit": 10193343185.87904,
+  "fcf_margin": -0.09373549278735903,
+  "ebitda_margin": 0.4701040636069627
+ },
+ "STNE": {
+  "ticker": "STNE",
+  "name": "StoneCo Ltd.",
+  "price": 9.27,
+  "market_cap": 2137621632.0,
+  "shares": 216544468.0,
+  "revenue": 13586661376.0,
+  "rev_growth": 0.016,
+  "gross_margin": 0.71558,
+  "ebitda": 6820098048.0,
+  "fcf": 7076109824.0,
+  "debt": 16962031616.0,
+  "cash": 8196646912.0,
+  "beta": 1.616,
+  "hi52": 19.95,
+  "lo52": 9.04,
+  "history": [
+   {
+    "year": 2022,
+    "revenue": 9016344000.0
+   },
+   {
+    "year": 2023,
+    "revenue": 10091093000.0
+   },
+   {
+    "year": 2024,
+    "revenue": 11551278000.0
+   },
+   {
+    "year": 2025,
+    "revenue": 13399706000.0
+   }
+  ],
+  "as_of": "2026-09-29",
+  "net_debt": 8765384704.0,
+  "ev": 10903006336.0,
+  "gross_profit": 9722343147.43808,
+  "fcf_margin": 0.5208129965246291,
+  "ebitda_margin": 0.5019701204923884
+ },
+ "DLO": {
+  "ticker": "DLO",
+  "name": "DLocal Limited",
+  "price": 13.82,
+  "market_cap": 4066799104.0,
+  "shares": 178035757.0,
+  "revenue": 1355896064.0,
+  "rev_growth": 0.558,
+  "gross_margin": 0.34282002,
+  "ebitda": 241559008.0,
+  "fcf": 407251488.0,
+  "debt": 67371000.0,
+  "cash": 874566016.0,
+  "beta": 0.871,
+  "hi52": 16.78,
+  "lo52": 10.64,
+  "history": [
+   {
+    "year": 2022,
+    "revenue": 418925000.0
+   },
+   {
+    "year": 2023,
+    "revenue": 650351000.0
+   },
+   {
+    "year": 2024,
+    "revenue": 745974000.0
+   },
+   {
+    "year": 2025,
+    "revenue": 1093587000.0
+   }
+  ],
+  "as_of": "2026-09-29",
+  "net_debt": -807195016.0,
+  "ev": 3259604088.0,
+  "gross_profit": 464828315.77840126,
+  "fcf_margin": 0.3003559777278032,
+  "ebitda_margin": 0.17815451671670315
+ },
+ "TSLA": {
+  "ticker": "TSLA",
+  "name": "Tesla, Inc.",
+  "price": 357.45,
+  "market_cap": 1411765764096.0,
+  "shares": 3949547394.0,
+  "revenue": 103619002368.0,
+  "rev_growth": 0.255,
+  "gross_margin": 0.18852,
+  "ebitda": 10755000320.0,
+  "fcf": 4835999744.0,
+  "debt": 16080000000.0,
+  "cash": 43524001792.0,
+  "beta": 1.845,
+  "hi52": 498.83,
+  "lo52": 297.38,
+  "history": [
+   {
+    "year": 2022,
+    "revenue": 81462000000.0
+   },
+   {
+    "year": 2023,
+    "revenue": 96773000000.0
+   },
+   {
+    "year": 2024,
+    "revenue": 97690000000.0
+   },
+   {
+    "year": 2025,
+    "revenue": 94827000000.0
+   }
+  ],
+  "as_of": "2026-09-29",
+  "net_debt": -27444001792.0,
+  "ev": 1384321762304.0,
+  "gross_profit": 19534254326.41536,
+  "fcf_margin": 0.046670973793253495,
+  "ebitda_margin": 0.10379370650379277
+ },
+ "RIVN": {
+  "ticker": "RIVN",
+  "name": "Rivian Automotive, Inc.",
+  "price": 14.79,
+  "market_cap": 21413859328.0,
+  "shares": 1443948130.0,
+  "revenue": 5882999808.0,
+  "rev_growth": 0.272,
+  "gross_margin": 0.07513,
+  "ebitda": -2713999872.0,
+  "fcf": -1539374976.0,
+  "debt": 5352999936.0,
+  "cash": 5310000128.0,
+  "beta": 1.618,
+  "hi52": 22.69,
+  "lo52": 12.39,
+  "history": [
+   {
+    "year": 2022,
+    "revenue": 1658000000.0
+   },
+   {
+    "year": 2023,
+    "revenue": 4434000000.0
+   },
+   {
+    "year": 2024,
+    "revenue": 4970000000.0
+   },
+   {
+    "year": 2025,
+    "revenue": 5387000000.0
+   }
+  ],
+  "as_of": "2026-09-29",
+  "net_debt": 42999808.0,
+  "ev": 21456859136.0,
+  "gross_profit": 441989775.57504004,
+  "fcf_margin": -0.26166497131390015,
+  "ebitda_margin": -0.46132924708060774
+ },
+ "LCID": {
+  "ticker": "LCID",
+  "name": "Lucid Group, Inc.",
+  "price": 3.9,
+  "market_cap": 1536873728.0,
+  "shares": 394070176.0,
+  "revenue": 1547122048.0,
+  "rev_growth": 0.562,
+  "gross_margin": -1.00603,
+  "ebitda": -3588486912.0,
+  "fcf": -3364247552.0,
+  "debt": 3656666880.0,
+  "cash": 761313024.0,
+  "beta": 0.811,
+  "hi52": 25.23,
+  "lo52": 2.37,
+  "history": [
+   {
+    "year": 2022,
+    "revenue": 608181000.0
+   },
+   {
+    "year": 2023,
+    "revenue": 595271000.0
+   },
+   {
+    "year": 2024,
+    "revenue": 807832000.0
+   },
+   {
+    "year": 2025,
+    "revenue": 1353790000.0
+   }
+  ],
+  "as_of": "2026-09-29",
+  "net_debt": 2895353856.0,
+  "ev": 4432227584.0,
+  "gross_profit": -1556451193.94944,
+  "fcf_margin": -2.1745198165516673,
+  "ebitda_margin": -2.3194594871418963
+ },
+ "NIO": {
+  "ticker": "NIO",
+  "name": "NIO Inc.",
+  "price": 3.59,
+  "market_cap": 8995344384.0,
+  "shares": 2357167022.0,
+  "revenue": 114113634304.0,
+  "rev_growth": 0.691,
+  "gross_margin": 0.1736,
+  "ebitda": 3411818496.0,
+  "fcf": null,
+  "debt": 28995940352.0,
+  "cash": 43088306176.0,
+  "beta": 0.916,
+  "hi52": 8.02,
+  "lo52": 3.55,
+  "history": [
+   {
+    "year": 2022,
+    "revenue": 49268561000.0
+   },
+   {
+    "year": 2023,
+    "revenue": 55617933000.0
+   },
+   {
+    "year": 2024,
+    "revenue": 65731559000.0
+   },
+   {
+    "year": 2025,
+    "revenue": 87487510000.0
+   }
+  ],
+  "as_of": "2026-09-29",
+  "net_debt": -14092365824.0,
+  "ev": -5097021440.0,
+  "gross_profit": 19810126915.1744,
+  "fcf_margin": null,
+  "ebitda_margin": 0.029898429901118365
+ },
+ "XPEV": {
+  "ticker": "XPEV",
+  "name": "XPeng Inc.",
+  "price": 9.95,
+  "market_cap": 9531868160.0,
+  "shares": 783622601.0,
+  "revenue": 75412086784.0,
+  "rev_growth": 0.08,
+  "gross_margin": 0.20848,
+  "ebitda": -1329122560.0,
+  "fcf": null,
+  "debt": 26858964992.0,
+  "cash": 28042694656.0,
+  "beta": 1.101,
+  "hi52": 28.235,
+  "lo52": 9.935,
+  "history": [
+   {
+    "year": 2022,
+    "revenue": 26855119000.0
+   },
+   {
+    "year": 2023,
+    "revenue": 30676067000.0
+   },
+   {
+    "year": 2024,
+    "revenue": 40866309000.0
+   },
+   {
+    "year": 2025,
+    "revenue": 76719742000.0
+   }
+  ],
+  "as_of": "2026-09-29",
+  "net_debt": -1183729664.0,
+  "ev": 8348138496.0,
+  "gross_profit": 15721911852.72832,
+  "fcf_margin": null,
+  "ebitda_margin": -0.017624794866199046
+ },
+ "LI": {
+  "ticker": "LI",
+  "name": "Li Auto Inc.",
+  "price": 11.71,
+  "market_cap": 11443884032.0,
+  "shares": 804674894.0,
+  "revenue": 104789884928.0,
+  "rev_growth": -0.151,
+  "gross_margin": 0.13593,
+  "ebitda": -1119793024.0,
+  "fcf": -9747736576.0,
+  "debt": 14691901440.0,
+  "cash": 85592055808.0,
+  "beta": 0.537,
+  "hi52": 26.5,
+  "lo52": 11.43,
+  "history": [
+   {
+    "year": 2022,
+    "revenue": 45286816000.0
+   },
+   {
+    "year": 2023,
+    "revenue": 123851332000.0
+   },
+   {
+    "year": 2024,
+    "revenue": 144459946000.0
+   },
+   {
+    "year": 2025,
+    "revenue": 112312511000.0
+   }
+  ],
+  "as_of": "2026-09-29",
+  "net_debt": -70900154368.0,
+  "ev": -59456270336.0,
+  "gross_profit": 14244089058.263039,
+  "fcf_margin": -0.093021731846519,
+  "ebitda_margin": -0.010686079336468379
+ },
+ "CHPT": {
+  "ticker": "CHPT",
+  "name": "ChargePoint Holdings, Inc.",
+  "price": 8.74,
+  "market_cap": 234671824.0,
+  "shares": 26850324.0,
+  "revenue": 432888000.0,
+  "rev_growth": 0.177,
+  "gross_margin": 0.30969998,
+  "ebitda": -144243008.0,
+  "fcf": 32783500.0,
+  "debt": 250100992.0,
+  "cash": 95330000.0,
+  "beta": 1.768,
+  "hi52": 12.61,
+  "lo52": 4.44,
+  "history": [
+   {
+    "year": 2023,
+    "revenue": 468094000.0
+   },
+   {
+    "year": 2024,
+    "revenue": 506639000.0
+   },
+   {
+    "year": 2025,
+    "revenue": 417083000.0
+   },
+   {
+    "year": 2026,
+    "revenue": 411224000.0
+   }
+  ],
+  "as_of": "2026-09-29",
+  "net_debt": 154770992.0,
+  "ev": 389442816.0,
+  "gross_profit": 134065404.94224,
+  "fcf_margin": 0.07573206002476392,
+  "ebitda_margin": -0.3332109182975735
+ },
+ "EVGO": {
+  "ticker": "EVGO",
+  "name": "EVgo Inc.",
+  "price": 1.34,
+  "market_cap": 421451072.0,
+  "shares": 141715720.0,
+  "revenue": 402948000.0,
+  "rev_growth": -0.157,
+  "gross_margin": 0.39938,
+  "ebitda": -36822000.0,
+  "fcf": -171632256.0,
+  "debt": 415555008.0,
+  "cash": 121822000.0,
+  "beta": 2.839,
+  "hi52": 5.18,
+  "lo52": 1.23,
+  "history": [
+   {
+    "year": 2022,
+    "revenue": 54588000.0
+   },
+   {
+    "year": 2023,
+    "revenue": 160953000.0
+   },
+   {
+    "year": 2024,
+    "revenue": 256825000.0
+   },
+   {
+    "year": 2025,
+    "revenue": 384086000.0
+   }
+  ],
+  "as_of": "2026-09-29",
+  "net_debt": 293733008.0,
+  "ev": 715184080.0,
+  "gross_profit": 160929372.24,
+  "fcf_margin": -0.4259414515024271,
+  "ebitda_margin": -0.09138151821078651
+ },
+ "BLNK": {
+  "ticker": "BLNK",
+  "name": "Blink Charging Co.",
+  "price": 0.5603,
+  "market_cap": 81209160.0,
+  "shares": 144938716.0,
+  "revenue": 96550000.0,
+  "rev_growth": -0.245,
+  "gross_margin": 0.33688998,
+  "ebitda": -36206000.0,
+  "fcf": 18803376.0,
+  "debt": 4469000.0,
+  "cash": 34004000.0,
+  "beta": 2.067,
+  "hi52": 2.65,
+  "lo52": 0.45,
+  "history": [
+   {
+    "year": 2022,
+    "revenue": 60843000.0
+   },
+   {
+    "year": 2023,
+    "revenue": 140129000.0
+   },
+   {
+    "year": 2024,
+    "revenue": 122989000.0
+   },
+   {
+    "year": 2025,
+    "revenue": 103210000.0
+   }
+  ],
+  "as_of": "2026-09-29",
+  "net_debt": -29535000.0,
+  "ev": 51674160.0,
+  "gross_profit": 32526727.569,
+  "fcf_margin": 0.1947527291558778,
+  "ebitda_margin": -0.37499741066804765
+ },
+ "PSNY": {
+  "ticker": "PSNY",
+  "name": "Polestar Automotive Holding UK ",
+  "price": 6.64,
+  "market_cap": 1090819968.0,
+  "shares": 163283710.0,
+  "revenue": 2995595008.0,
+  "rev_growth": -0.044,
+  "gross_margin": -0.05689,
+  "ebitda": -1073385984.0,
+  "fcf": -1020823104.0,
+  "debt": 6016476160.0,
+  "cash": 887577024.0,
+  "beta": 1.73,
+  "hi52": 29.46,
+  "lo52": 6.62,
+  "history": [
+   {
+    "year": 2022,
+    "revenue": 2440818000.0
+   },
+   {
+    "year": 2023,
+    "revenue": 2368085000.0
+   },
+   {
+    "year": 2024,
+    "revenue": 2034261000.0
+   },
+   {
+    "year": 2025,
+    "revenue": 3058109000.0
+   }
+  ],
+  "as_of": "2026-09-29",
+  "net_debt": 5128899136.0,
+  "ev": 6219719104.0,
+  "gross_profit": -170419400.00512,
+  "fcf_margin": -0.3407747379982281,
+  "ebitda_margin": -0.35832146239175466
+ },
+ "QS": {
+  "ticker": "QS",
+  "name": "QuantumScape Corporation",
+  "price": 4.56,
+  "market_cap": 2805061632.0,
+  "shares": 578338434.0,
+  "revenue": null,
+  "rev_growth": null,
+  "gross_margin": 0.0,
+  "ebitda": -397867008.0,
+  "fcf": -141085376.0,
+  "debt": 67118000.0,
+  "cash": 859001984.0,
+  "beta": 2.692,
+  "hi52": 19.07,
+  "lo52": 4.54,
+  "history": [],
+  "as_of": "2026-09-29",
+  "net_debt": -791883984.0,
+  "ev": 2013177648.0,
+  "gross_profit": null,
+  "fcf_margin": null,
+  "ebitda_margin": null
+ }
+}
