@@ -25,10 +25,9 @@ app.add_middleware(CORSMiddleware, allow_origins=settings.cors_origins, allow_cr
                     allow_methods=["*"], allow_headers=["*"])
 
 
-@app.get("/health")
+@app.api_route("/health", methods=["GET", "HEAD"])
 def health():
     return {"status": "ok"}
-
 
 @app.get("/sectors")
 def sectors():
