@@ -38,18 +38,25 @@ export default function ScreenerPage() {
   }, [data, sortKey, sortDir]);
 
   const toggleSort = (key: SortKey) => {
-    if (key === sortKey) setSortDir((d) => (d === "desc" ? "asc" : "desc"));
-    else { setSortKey(key); setSortDir("desc"); }
+    if (key === sortKey) {
+      setSortDir((d) => (d === "desc" ? "asc" : "desc"));
+    } else {
+      setSortKey(key);
+      setSortDir("desc");
+    }
   };
 
-  const Header = ({ label, k, align = "right" }: { label: string; k: SortKey; align?: "left" | "right" }) => (
-    <th
-      onClick={() => toggleSort(k)}
-      className={`py-2 pr-4 font-normal cursor-pointer select-none hover:text-ink transition-colors ${align === "right" ? "text-right" : "text-left"}`}
-    >
-      {label}{sortKey === k && <span className="text-signal ml-1">{sortDir === "desc" ? "↓" : "↑"}</span>}
-    </th>
-  );
+  function Header({ label, k, align = "right" }: { label: string; k: SortKey; align?: "left" | "right" }) {
+    return (
+      <th
+        onClick={() => toggleSort(k)}
+        className={"py-2 pr-4 font-normal cursor-pointer select-none hover:text-ink transition-colors " + (align === "right" ? "text-right" : "text-left")}
+      >
+        {label}
+        {sortKey === k && <span className="text-signal ml-1">{sortDir === "desc" ? "down" : "up"}</span>}
+      </th>
+    );
+  }
 
   return (
     <div>
@@ -59,7 +66,7 @@ export default function ScreenerPage() {
             Screen acquisition targets, backed by numbers you can trace.
           </h1>
           <p className="text-dim leading-relaxed">
-            Every score breaks down into the criteria that produced it — growth, margin,
+            Every score breaks down into the criteria that produced it: growth, margin,
             leverage, deal size fit. Pick a name below, or look up any company directly.
           </p>
         </div>
@@ -77,9 +84,7 @@ export default function ScreenerPage() {
               <button
                 key={key}
                 onClick={() => setSector(key)}
-                className={`px-3 py-2 text-[12px] transition-colors focus-ring ${
-                  sector === key ? "bg-signal text-bg" : "text-dim hover:text-ink"
-                }`}
+                className={"px-3 py-2 text-[12px] transition-colors focus-ring " + (sector === key ? "bg-signal text-bg" : "text-dim hover:text-ink")}
               >
                 {label}
               </button>
@@ -106,20 +111,20 @@ export default function ScreenerPage() {
         </div>
         {rows.length > 0 && (
           <p className="text-dim text-[11px] ml-auto">
-            {rows.length} candidates in {SECTOR_LABELS[sector]}{isFetching && !isLoading ? " · refreshing…" : ""}
+            {rows.length} candidates in {SECTOR_LABELS[sector]}{isFetching && !isLoading ? " (refreshing)" : ""}
           </p>
         )}
       </section>
 
       {isLoading && (
         <div className="py-16 text-center">
-          <p className="text-dim">Loading {SECTOR_LABELS[sector]} universe — pulling live market data…</p>
+          <p className="text-dim">Loading {SECTOR_LABELS[sector]} universe, pulling live market data...</p>
         </div>
       )}
 
       {isError && (
         <div className="py-16 text-center border border-down/30 bg-down/5">
-          <p className="text-down mb-1">Couldn&apos;t load the screener</p>
+          <p className="text-down mb-1">Could not load the screener</p>
           <p className="text-dim text-[12px]">{(error as Error).message}</p>
         </div>
       )}
@@ -144,7 +149,7 @@ export default function ScreenerPage() {
                 <Header label="Rule of 40" k="rule_of_40" />
                 <Header label="EV/Rev" k="ev_rev" />
                 <th className="py-2 font-normal cursor-pointer hover:text-ink transition-colors" onClick={() => toggleSort("score")}>
-                  Fit score{sortKey === "score" && <span className="text-signal ml-1">{sortDir === "desc" ? "↓" : "↑"}</span>}
+                  Fit score{sortKey === "score" && <span className="text-signal ml-1">{sortDir === "desc" ? "down" : "up"}</span>}
                 </th>
               </tr>
             </thead>
@@ -152,7 +157,7 @@ export default function ScreenerPage() {
               {rows.map((r: ScreenRow) => (
                 <tr key={r.ticker} className="border-b border-line/60 hover:bg-surface transition-colors group">
                   <td className="py-3 pr-4">
-                    <Link href={`/company/${r.ticker}`} className="focus-ring">
+                    <Link href={"/company/" + r.ticker} className="focus-ring">
                       <div className="text-ink group-hover:text-signal transition-colors">{r.ticker}</div>
                       <div className="text-dim text-[11px]">{r.name}</div>
                     </Link>
@@ -168,4 +173,20 @@ export default function ScreenerPage() {
                   <td className="py-3 pr-4 text-right text-ink tabular-nums">{fmtPct(r.rule_of_40)}</td>
                   <td className="py-3 pr-4 text-right text-ink tabular-nums">{fmtX(r.ev_rev)}</td>
                   <td className="py-3">
-                    <ScoreBar
+                    <ScoreBar score={r.score} />
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      )}
+
+      {rows.length > 0 && (
+        <p className="text-dim text-[11px] mt-4">
+          Fit score method: <span className="text-ink">{rows[0].method}</span> - explainable, weighted criteria, not a prediction of an announced deal. Click a column header to sort.
+        </p>
+      )}
+    </div>
+  );
+}
