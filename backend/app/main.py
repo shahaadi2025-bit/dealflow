@@ -1,4 +1,4 @@
-import logging
+﻿import logging
 from fastapi import FastAPI, HTTPException, Query
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import Response
@@ -12,6 +12,7 @@ from app.config import settings
 from app.data.fetch import DataError, get_financials
 from app.data.universe import UNIVERSES
 from app.screening.service import screen
+from app.screening.custom import screen_custom
 from app.valuation.service import valuate
 from app.memo.generate import generate_memo
 from app.memo.pdf import memo_to_pdf_bytes
@@ -29,6 +30,7 @@ app.add_middleware(CORSMiddleware, allow_origins=settings.cors_origins, allow_cr
 def health():
     return {"status": "ok"}
 
+
 @app.get("/sectors")
 def sectors():
     return {"sectors": list(UNIVERSES.keys())}
@@ -42,6 +44,20 @@ def screen_endpoint(request: Request, sector: str = "saas", min_mcap: float | No
     if sector not in UNIVERSES:
         raise HTTPException(400, f"Unknown sector '{sector}'. Choose from {list(UNIVERSES)}")
     return {"sector": sector, "results": screen(sector, min_mcap, max_mcap, min_growth, min_fcf_margin, limit)}
+
+
+class CustomScreenRequest(BaseModel):
+    tickers: list[str]
+
+
+@app.post("/screen/custom")
+@limiter.limit("10/minute")
+def screen_custom_endpoint(request: Request, body: CustomScreenRequest):
+    if not body.tickers:
+        raise HTTPException(400, "Provide at least one ticker")
+    if len(body.tickers) > 25:
+        raise HTTPException(400, "Limit to 25 tickers per custom screen")
+    return {"sector": "custom", "results": screen_custom(body.tickers)}
 
 
 @app.get("/company/{ticker}")

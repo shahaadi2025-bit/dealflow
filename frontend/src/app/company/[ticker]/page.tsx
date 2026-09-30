@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import { useState } from "react";
 import { useParams } from "next/navigation";
 import { useMutation, useQuery } from "@tanstack/react-query";
@@ -8,6 +8,8 @@ import { StatCell } from "@/components/StatCell";
 import { FootballField } from "@/components/FootballField";
 import { SensitivityGrid } from "@/components/SensitivityGrid";
 import { MemoPanel } from "@/components/MemoPanel";
+import { RevenueChart } from "@/components/RevenueChart";
+import { valuationToCsv, downloadCsv } from "@/lib/csv";
 
 export default function CompanyPage() {
   const params = useParams<{ ticker: string }>();
@@ -35,7 +37,7 @@ export default function CompanyPage() {
     },
   });
 
-  if (valuation.isLoading) return <p className="text-dim py-12">Loading {ticker}…</p>;
+  if (valuation.isLoading) return <p className="text-dim py-12">Loading {ticker}...</p>;
   if (valuation.isError)
     return <p className="text-down py-12">{(valuation.error as Error).message}</p>;
 
@@ -62,11 +64,17 @@ export default function CompanyPage() {
       <div className="flex items-baseline justify-between mb-2">
         <div>
           <h1 className="font-serif text-3xl text-ink">{c.name}</h1>
-          <p className="text-dim text-[12px] mt-1">{c.ticker} · as of {c.as_of}</p>
+          <p className="text-dim text-[12px] mt-1">{c.ticker} - as of {c.as_of}</p>
         </div>
         <div className="text-right">
           <div className="font-serif text-3xl text-ink tabular-nums">{fmtPrice(c.price)}</div>
           <div className="text-dim text-[11px]">current price</div>
+          <button
+            onClick={() => downloadCsv(`${c.ticker}_valuation.csv`, valuationToCsv(v))}
+            className="mt-2 border border-line px-3 py-1 text-[11px] text-dim hover:text-ink hover:border-signal transition-colors focus-ring"
+          >
+            Export CSV
+          </button>
         </div>
       </div>
 
@@ -106,9 +114,10 @@ export default function CompanyPage() {
             <StatCell label="DCF value / share" value={fmtPrice(v.dcf.per_share)}
               sub={`${(((v.dcf.per_share / c.price) - 1) * 100).toFixed(0)}% vs. current`} />
             <StatCell label="Enterprise value" value={fmtMoney(v.dcf.ev)} />
-            <StatCell label="Terminal value share of EV" value={v.dcf.tv_share != null ? fmtPct(v.dcf.tv_share) : "—"} />
+            <StatCell label="Terminal value share of EV" value={v.dcf.tv_share != null ? fmtPct(v.dcf.tv_share) : "-"} />
           </div>
           <FootballField bars={v.football} currentPrice={c.price} />
+          <RevenueChart history={c.history} />
         </div>
       </div>
 
@@ -138,7 +147,7 @@ export default function CompanyPage() {
             </tbody>
           </table>
           {v.comps.peers.length < 3 && (
-            <p className="text-dim text-[11px] mt-3">Fewer than 3 peers had usable multiples — comps percentiles are omitted from the football field above.</p>
+            <p className="text-dim text-[11px] mt-3">Fewer than 3 peers had usable multiples - comps percentiles are omitted from the football field above.</p>
           )}
         </div>
       </div>

@@ -1,4 +1,4 @@
-const BASE = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
+﻿const BASE = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
 
 async function req<T>(path: string, init?: RequestInit): Promise<T> {
   const res = await fetch(`${BASE}${path}`, {
@@ -56,6 +56,11 @@ export const api = {
     );
     return req<{ sector: string; results: ScreenRow[] }>(`/screen?${qs.toString()}`);
   },
+  screenCustom: (tickers: string[]) =>
+    req<{ sector: string; results: ScreenRow[] }>("/screen/custom", {
+      method: "POST",
+      body: JSON.stringify({ tickers }),
+    }),
   company: (ticker: string) => req<Company>(`/company/${ticker}`),
   valuate: (ticker: string, overrides: Record<string, unknown> = {}) =>
     req<Valuation>(`/valuate/${ticker}`, { method: "POST", body: JSON.stringify(overrides) }),
