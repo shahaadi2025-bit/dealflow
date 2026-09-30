@@ -11,6 +11,7 @@ export function SiteHeader() {
         </Link>
         <nav className="flex items-center gap-6 text-[12px] text-dim shrink-0">
           <Link href="/" className="hover:text-ink transition-colors">Screener</Link>
+          <Link href="/sectors" className="hover:text-ink transition-colors">Sectors</Link>
           <span className="text-line hidden md:inline">/</span>
           <span className="hidden md:inline">DCF - Comps - Memo</span>
         </nav>

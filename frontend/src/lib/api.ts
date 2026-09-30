@@ -39,10 +39,17 @@ export type Valuation = {
     peers: { ticker: string; name: string; market_cap: number; ev_rev: number | null; ev_gp: number | null; ev_ebitda: number | null }[];
     stats: Record<string, { p25: number; p50: number; p75: number; n: number } | null>;
     implied: Record<string, { low: number; mid: number; high: number } | null>;
+    excluded: { ticker: string; name: string; reason: string }[];
   };
   football: FootballBar[];
   offer: { low: number; high: number };
 };
+export type SectorStats = {
+  sector: string; company_count: number; median_growth: number | null;
+  median_gross_margin: number | null; median_fcf_margin: number | null;
+  median_rule_of_40: number | null; median_ev_rev: number | null;
+};
+
 export type Memo = {
   executive_summary: string; business_overview: string; financial_analysis: string;
   valuation_summary: string; key_risks: string; recommendation: string; _grounded?: boolean;
@@ -70,4 +77,7 @@ export const api = {
       body: JSON.stringify({ valuation, screening, thesis_note: thesisNote }),
     }),
   memoPdfUrl: () => `${BASE}/memo/pdf`,
+  reportPdfUrl: (ticker: string) => `${BASE}/valuate/${ticker}/report`,
+  searchTickers: (q: string) => req<{ results: { ticker: string; name: string }[] }>(`/tickers/search?q=${encodeURIComponent(q)}`),
+  sectorStats: () => req<{ sectors: SectorStats[] }>("/sectors/stats"),
 };

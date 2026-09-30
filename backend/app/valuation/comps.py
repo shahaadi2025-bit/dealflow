@@ -1,4 +1,4 @@
-import numpy as np
+﻿import numpy as np
 from app.data.models import Financials
 
 
@@ -10,6 +10,15 @@ def peer_multiples(f: Financials) -> dict:
         "ev_gp": ev / f.gross_profit if f.gross_profit else None,
         "ev_ebitda": ev / f.ebitda if f.ebitda and f.ebitda > 0 else None,
     }
+
+
+def _exclusion_reason(f: Financials) -> str | None:
+    if not f.revenue:
+        return "No revenue data available"
+    if f.ebitda is None or f.ebitda <= 0:
+        if f.gross_profit is None:
+            return "No gross profit or positive EBITDA to base a multiple on"
+    return None
 
 
 def _stats(vals):
@@ -33,4 +42,11 @@ def comps_analysis(target: Financials, peers: list[Financials]) -> dict:
             continue
         per = lambda mult: (mult * m - target.net_debt) / target.shares
         implied[k] = {"low": per(s["p25"]), "mid": per(s["p50"]), "high": per(s["p75"])}
-    return {"peers": rows, "stats": stats, "implied": implied}
+
+    excluded = []
+    for p in peers:
+        reason = _exclusion_reason(p)
+        if reason:
+            excluded.append({"ticker": p.ticker, "name": p.name, "reason": reason})
+
+    return {"peers": rows, "stats": stats, "implied": implied, "excluded": excluded}

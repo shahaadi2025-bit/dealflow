@@ -1,7 +1,7 @@
 ﻿"use client";
-import { useState } from "react";
-import { useParams } from "next/navigation";
-import { useMutation, useQuery } from "@tanstack/react-query";
+import { Suspense, useEffect, useState } from "react";
+import { useParams, useRouter, useSearchParams } from "next/navigation";
+import { useMutation, useQueries, useQuery } from "@tanstack/react-query";
 import { api, Memo } from "@/lib/api";
 import { fmtMoney, fmtPct, fmtPrice, fmtX } from "@/lib/format";
 import { StatCell } from "@/components/StatCell";
@@ -11,19 +11,49 @@ import { MemoPanel } from "@/components/MemoPanel";
 import { RevenueChart } from "@/components/RevenueChart";
 import { valuationToCsv, downloadCsv } from "@/lib/csv";
 
+function num(v: string | null): number | null {
+  if (v === null || v === "") return null;
+  const n = Number(v);
+  return Number.isFinite(n) ? n : null;
+}
+
 export default function CompanyPage() {
+  return (
+    <Suspense fallback={<p className="text-dim py-12">Loading...</p>}>
+      <CompanyInner />
+    </Suspense>
+  );
+}
+
+function CompanyInner() {
   const params = useParams<{ ticker: string }>();
   const ticker = params.ticker.toUpperCase();
+  const router = useRouter();
+  const searchParams = useSearchParams();
 
-  const [growthStart, setGrowthStart] = useState<number | null>(null);
-  const [growthEnd, setGrowthEnd] = useState<number | null>(null);
-  const [wacc, setWacc] = useState<number | null>(null);
-  const [terminalG, setTerminalG] = useState<number | null>(null);
-  const [margin, setMargin] = useState<number | null>(null);
+  const [growthStart, setGrowthStart] = useState<number | null>(() => num(searchParams.get("gs")));
+  const [growthEnd, setGrowthEnd] = useState<number | null>(() => num(searchParams.get("ge")));
+  const [wacc, setWacc] = useState<number | null>(() => num(searchParams.get("w")));
+  const [terminalG, setTerminalG] = useState<number | null>(() => num(searchParams.get("tg")));
+  const [margin, setMargin] = useState<number | null>(() => num(searchParams.get("m")));
+  const [copied, setCopied] = useState(false);
 
   const overrides = {
     growth_start: growthStart, growth_end: growthEnd, wacc, terminal_g: terminalG, fcf_margin_target: margin,
   };
+
+  // keep the URL in sync with slider state so the current scenario is shareable
+  useEffect(() => {
+    const qs = new URLSearchParams();
+    if (growthStart !== null) qs.set("gs", String(growthStart));
+    if (growthEnd !== null) qs.set("ge", String(growthEnd));
+    if (wacc !== null) qs.set("w", String(wacc));
+    if (terminalG !== null) qs.set("tg", String(terminalG));
+    if (margin !== null) qs.set("m", String(margin));
+    const qsStr = qs.toString();
+    router.replace(qsStr ? `/company/${ticker}?${qsStr}` : `/company/${ticker}`, { scroll: false });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [growthStart, growthEnd, wacc, terminalG, margin, ticker]);
 
   const valuation = useQuery({
     queryKey: ["valuate", ticker, overrides],
@@ -36,6 +66,32 @@ export default function CompanyPage() {
       return api.memo(valuation.data);
     },
   });
+
+  const base = valuation.data?.assumptions;
+  const scenarioQueries = useQueries({
+    queries: base
+      ? [
+          { key: "bear", growth_end: Math.max(0, base.growth_end - 0.05), wacc: base.wacc + 0.02 },
+          { key: "base", growth_end: base.growth_end, wacc: base.wacc },
+          { key: "bull", growth_end: base.growth_end + 0.05, wacc: Math.max(base.terminal_g + 0.01, base.wacc - 0.02) },
+        ].map((s) => ({
+          queryKey: ["scenario", ticker, s.key, s.growth_end, s.wacc],
+          queryFn: () => api.valuate(ticker, { growth_end: s.growth_end, wacc: s.wacc }),
+          enabled: !!base,
+        }))
+      : [],
+  });
+
+  const copyLink = () => {
+    navigator.clipboard.writeText(window.location.href).then(() => {
+      setCopied(true);
+      setTimeout(() => setCopied(false), 1500);
+    });
+  };
+
+  const downloadReport = () => {
+    window.open(api.reportPdfUrl(ticker), "_blank");
+  };
 
   if (valuation.isLoading) return <p className="text-dim py-12">Loading {ticker}...</p>;
   if (valuation.isError)
@@ -61,6 +117,8 @@ export default function CompanyPage() {
     </div>
   );
 
+  const scenarioLabels = ["Bear", "Base", "Bull"];
+
   return (
     <div>
       <div className="flex items-baseline justify-between mb-2">
@@ -71,12 +129,20 @@ export default function CompanyPage() {
         <div className="text-right">
           <div className="font-serif text-3xl text-ink tabular-nums">{fmtPrice(c.price)}</div>
           <div className="text-dim text-[11px]">current price</div>
-          <button
-            onClick={() => downloadCsv(`${c.ticker}_valuation.csv`, valuationToCsv(v))}
-            className="mt-2 border border-line px-3 py-1 text-[11px] text-dim hover:text-ink hover:border-signal transition-colors focus-ring"
-          >
-            Export CSV
-          </button>
+          <div className="flex gap-2 mt-2 justify-end">
+            <button onClick={copyLink}
+              className="border border-line px-3 py-1 text-[11px] text-dim hover:text-ink hover:border-signal transition-colors focus-ring">
+              {copied ? "Copied!" : "Share link"}
+            </button>
+            <button onClick={downloadReport}
+              className="border border-line px-3 py-1 text-[11px] text-dim hover:text-ink hover:border-signal transition-colors focus-ring">
+              PDF report
+            </button>
+            <button onClick={() => downloadCsv(`${c.ticker}_valuation.csv`, valuationToCsv(v))}
+              className="border border-line px-3 py-1 text-[11px] text-dim hover:text-ink hover:border-signal transition-colors focus-ring">
+              Export CSV
+            </button>
+          </div>
         </div>
       </div>
 
@@ -109,6 +175,21 @@ export default function CompanyPage() {
           >
             Reset to base case
           </button>
+
+          <div className="mt-6 pt-5 border-t border-line">
+            <div className="text-ink text-[13px] mb-3">Scenarios</div>
+            <div className="space-y-2">
+              {scenarioQueries.map((q, i) => (
+                <div key={scenarioLabels[i]} className="flex justify-between text-[12px]">
+                  <span className="text-dim">{scenarioLabels[i]}</span>
+                  <span className="text-ink tabular-nums">
+                    {q.isLoading ? "..." : q.data ? fmtPrice(q.data.dcf.per_share) : "-"}
+                  </span>
+                </div>
+              ))}
+            </div>
+            <p className="text-dim text-[10px] mt-2">Bear/bull vary growth and WACC around your current assumptions.</p>
+          </div>
         </div>
 
         <div className="space-y-6">
@@ -150,6 +231,20 @@ export default function CompanyPage() {
           </table>
           {v.comps.peers.length < 3 && (
             <p className="text-dim text-[11px] mt-3">Fewer than 3 peers had usable multiples - comps percentiles are omitted from the football field above.</p>
+          )}
+          {v.comps.excluded.length > 0 && (
+            <details className="mt-3">
+              <summary className="text-dim text-[11px] cursor-pointer hover:text-ink transition-colors">
+                {v.comps.excluded.length} peer{v.comps.excluded.length > 1 ? "s" : ""} excluded - why?
+              </summary>
+              <ul className="mt-2 space-y-1">
+                {v.comps.excluded.map((e) => (
+                  <li key={e.ticker} className="text-dim text-[11px]">
+                    <span className="text-ink">{e.ticker}</span>: {e.reason}
+                  </li>
+                ))}
+              </ul>
+            </details>
           )}
         </div>
       </div>

@@ -16,6 +16,9 @@ from app.screening.custom import screen_custom
 from app.valuation.service import valuate
 from app.memo.generate import generate_memo
 from app.memo.pdf import memo_to_pdf_bytes
+from app.memo.report import valuation_to_pdf_bytes
+from app.data.lookup import search_tickers
+from app.screening.sector_stats import all_sector_stats, sector_stats
 
 logging.basicConfig(level=logging.INFO)
 limiter = Limiter(key_func=get_remote_address)
@@ -34,6 +37,25 @@ def health():
 @app.get("/sectors")
 def sectors():
     return {"sectors": list(UNIVERSES.keys())}
+
+
+@app.get("/tickers/search")
+def tickers_search_endpoint(q: str = ""):
+    return {"results": search_tickers(q)}
+
+
+@app.get("/sectors/stats")
+@limiter.limit("20/minute")
+def sectors_stats_endpoint(request: Request):
+    return {"sectors": all_sector_stats()}
+
+
+@app.get("/sectors/stats/{sector}")
+@limiter.limit("20/minute")
+def sector_stats_endpoint(request: Request, sector: str):
+    if sector not in UNIVERSES:
+        raise HTTPException(400, f"Unknown sector '{sector}'")
+    return sector_stats(sector)
 
 
 @app.get("/screen")
@@ -89,6 +111,21 @@ def valuate_endpoint(request: Request, ticker: str, overrides: ValuationOverride
         raise HTTPException(404, str(e))
     except ValueError as e:
         raise HTTPException(400, str(e))
+
+
+@app.post("/valuate/{ticker}/report")
+@limiter.limit("15/minute")
+def valuation_report_endpoint(request: Request, ticker: str, overrides: ValuationOverrides = ValuationOverrides()):
+    try:
+        v = valuate(ticker, overrides.model_dump(exclude={"peers"}), overrides.peers)
+    except DataError as e:
+        raise HTTPException(404, str(e))
+    except ValueError as e:
+        raise HTTPException(400, str(e))
+    name = v["company"]["name"]
+    pdf = valuation_to_pdf_bytes(name, ticker.upper(), v)
+    return Response(content=pdf, media_type="application/pdf",
+                     headers={"Content-Disposition": f'attachment; filename="{ticker.upper()}_report.pdf"'})
 
 
 class MemoRequest(BaseModel):

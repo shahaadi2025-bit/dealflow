@@ -1,6 +1,7 @@
 ﻿"use client";
 import { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
+import { api } from "@/lib/api";
 
 const RECENTS_KEY = "dealflow:recent-tickers";
 
@@ -22,24 +23,38 @@ function pushRecent(ticker: string) {
 export function TickerSearch({ variant = "header" }: { variant?: "header" | "hero" }) {
   const [value, setValue] = useState("");
   const [error, setError] = useState("");
-  const [showRecents, setShowRecents] = useState(false);
+  const [open, setOpen] = useState(false);
+  const [suggestions, setSuggestions] = useState<{ ticker: string; name: string }[]>([]);
   const [recents, setRecents] = useState<string[]>([]);
   const router = useRouter();
   const wrapRef = useRef<HTMLDivElement>(null);
+  const debounceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => setRecents(getRecents()), []);
 
   useEffect(() => {
     const onClick = (e: MouseEvent) => {
-      if (wrapRef.current && !wrapRef.current.contains(e.target as Node)) setShowRecents(false);
+      if (wrapRef.current && !wrapRef.current.contains(e.target as Node)) setOpen(false);
     };
     document.addEventListener("mousedown", onClick);
     return () => document.removeEventListener("mousedown", onClick);
   }, []);
 
+  useEffect(() => {
+    if (debounceRef.current) clearTimeout(debounceRef.current);
+    if (value.trim().length < 1) {
+      setSuggestions([]);
+      return;
+    }
+    debounceRef.current = setTimeout(() => {
+      api.searchTickers(value.trim()).then((r) => setSuggestions(r.results)).catch(() => setSuggestions([]));
+    }, 150);
+  }, [value]);
+
   const navigate = (t: string) => {
     pushRecent(t);
-    setShowRecents(false);
+    setOpen(false);
+    setValue("");
     router.push(`/company/${t}`);
   };
 
@@ -55,17 +70,23 @@ export function TickerSearch({ variant = "header" }: { variant?: "header" | "her
     navigate(t);
   };
 
-  const dropdown = showRecents && recents.length > 0 && (
-    <div className="absolute z-20 top-full left-0 mt-1 w-full bg-surface border border-line">
-      <div className="text-dim text-[10px] px-3 py-1.5 uppercase tracking-wide border-b border-line">Recent</div>
-      {recents.map((t) => (
+  const showSuggestions = suggestions.length > 0;
+  const showRecents = !showSuggestions && recents.length > 0;
+
+  const dropdown = open && (showSuggestions || showRecents) && (
+    <div className="absolute z-20 top-full left-0 mt-1 w-full min-w-[220px] bg-surface border border-line">
+      <div className="text-dim text-[10px] px-3 py-1.5 uppercase tracking-wide border-b border-line">
+        {showSuggestions ? "Matches" : "Recent"}
+      </div>
+      {(showSuggestions ? suggestions : recents.map((t) => ({ ticker: t, name: "" }))).map((s) => (
         <button
-          key={t}
+          key={s.ticker}
           type="button"
-          onClick={() => navigate(t)}
-          className="block w-full text-left px-3 py-1.5 text-[12px] text-ink hover:bg-bg transition-colors"
+          onClick={() => navigate(s.ticker)}
+          className="flex justify-between w-full text-left px-3 py-1.5 text-[12px] text-ink hover:bg-bg transition-colors"
         >
-          {t}
+          <span>{s.ticker}</span>
+          {s.name && <span className="text-dim text-[11px]">{s.name}</span>}
         </button>
       ))}
     </div>
@@ -78,7 +99,7 @@ export function TickerSearch({ variant = "header" }: { variant?: "header" | "her
           <input
             value={value}
             onChange={(e) => setValue(e.target.value)}
-            onFocus={() => setShowRecents(true)}
+            onFocus={() => setOpen(true)}
             placeholder="Look up any ticker - AAPL, MSFT..."
             className="flex-1 bg-surface border border-line px-3 py-2.5 text-ink placeholder:text-dim/60 focus-ring"
           />
@@ -98,7 +119,7 @@ export function TickerSearch({ variant = "header" }: { variant?: "header" | "her
         <input
           value={value}
           onChange={(e) => setValue(e.target.value)}
-          onFocus={() => setShowRecents(true)}
+          onFocus={() => setOpen(true)}
           placeholder="Jump to ticker..."
           className="w-40 bg-surface border border-line px-3 py-1.5 text-[12px] text-ink placeholder:text-dim/60 focus-ring"
         />
