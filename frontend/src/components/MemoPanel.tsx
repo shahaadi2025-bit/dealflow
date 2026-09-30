@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import { Memo } from "@/lib/api";
 
 const SECTIONS: { key: keyof Memo; label: string }[] = [
@@ -36,7 +36,7 @@ export function MemoPanel({ onGenerate, isPending, isError, error, memo, company
         <div>
           <div className="text-ink text-[13px]">Investment memo</div>
           <div className="text-dim text-[11px] mt-1">
-            Generated from the numbers above — the model writes prose, it doesn&apos;t invent figures.
+            Generated from the numbers above - the model writes prose, it doesn&apos;t invent figures.
           </div>
         </div>
         <div className="flex gap-2">
@@ -47,7 +47,7 @@ export function MemoPanel({ onGenerate, isPending, isError, error, memo, company
           )}
           <button onClick={onGenerate} disabled={isPending}
             className="bg-signal text-bg px-4 py-2 text-[12px] font-medium hover:opacity-90 transition-opacity disabled:opacity-50 focus-ring">
-            {isPending ? "Drafting…" : memo ? "Regenerate memo" : "Generate memo"}
+            {isPending ? "Drafting..." : memo ? "Regenerate memo" : "Generate memo"}
           </button>
         </div>
       </div>

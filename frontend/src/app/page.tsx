@@ -87,7 +87,7 @@ export default function ScreenerPage() {
       onClick={() => toggleSort(k)}
       className="py-2 pr-4 font-normal text-right cursor-pointer select-none hover:text-ink transition-colors"
     >
-      {label}{sortKey === k && <span className="text-signal ml-1">{sortDir === "desc" ? "â†“" : "â†‘"}</span>}
+      {label}{sortKey === k && <span className="text-signal ml-1">{sortDir === "desc" ? "v" : "^"}</span>}
     </th>
   );
 
@@ -99,7 +99,7 @@ export default function ScreenerPage() {
             Screen acquisition targets, backed by numbers you can trace.
           </h1>
           <p className="text-dim leading-relaxed">
-            Every score breaks down into the criteria that produced it â€” growth, margin,
+            Every score breaks down into the criteria that produced it - growth, margin,
             leverage, deal size fit. Pick a name below, or look up any company directly.
           </p>
         </div>
@@ -191,7 +191,7 @@ export default function ScreenerPage() {
               disabled={selected.size < 2}
               className="border border-signal text-signal px-3 py-1.5 text-[11px] hover:bg-signal hover:text-bg transition-colors disabled:opacity-40 disabled:hover:bg-transparent disabled:hover:text-signal focus-ring"
             >
-              Compare selected â†’
+              Compare selected (2-4 companies)
             </button>
           </div>
         )}
@@ -200,7 +200,7 @@ export default function ScreenerPage() {
       {isLoading && (
         <div className="py-16 text-center">
           <p className="text-dim">
-            {mode === "custom" ? "Screening your listâ€¦" : `Loading ${SECTOR_LABELS[mode]} universeâ€¦`}
+            {mode === "custom" ? "Screening your list..." : `Loading ${SECTOR_LABELS[mode]} universe...`}
           </p>
         </div>
       )}
@@ -239,7 +239,7 @@ export default function ScreenerPage() {
                 <Header label="Rule of 40" k="rule_of_40" />
                 <Header label="EV/Rev" k="ev_rev" />
                 <th className="py-2 font-normal cursor-pointer hover:text-ink transition-colors" onClick={() => toggleSort("score")}>
-                  Fit score{sortKey === "score" && <span className="text-signal ml-1">{sortDir === "desc" ? "â†“" : "â†‘"}</span>}
+                  Fit score{sortKey === "score" && <span className="text-signal ml-1">{sortDir === "desc" ? "v" : "^"}</span>}
                 </th>
               </tr>
             </thead>
@@ -282,7 +282,7 @@ export default function ScreenerPage() {
 
       {rows.length > 0 && (
         <p className="text-dim text-[11px] mt-4">
-          Fit score method: <span className="text-ink">{rows[0].method}</span> Â· hover a score bar for its drivers Â· check rows to compare.
+          Fit score method: <span className="text-ink">{rows[0].method}</span> - hover a score bar for its drivers - check rows to compare.
         </p>
       )}
     </div>

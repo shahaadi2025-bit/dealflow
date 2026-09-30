@@ -79,7 +79,7 @@ export function TickerSearch({ variant = "header" }: { variant?: "header" | "her
             value={value}
             onChange={(e) => setValue(e.target.value)}
             onFocus={() => setShowRecents(true)}
-            placeholder="Look up any ticker â€” AAPL, MSFTâ€¦"
+            placeholder="Look up any ticker - AAPL, MSFT..."
             className="flex-1 bg-surface border border-line px-3 py-2.5 text-ink placeholder:text-dim/60 focus-ring"
           />
           <button type="submit" className="bg-signal text-bg px-4 py-2.5 text-[12px] font-medium hover:opacity-90 transition-opacity focus-ring">
@@ -99,7 +99,7 @@ export function TickerSearch({ variant = "header" }: { variant?: "header" | "her
           value={value}
           onChange={(e) => setValue(e.target.value)}
           onFocus={() => setShowRecents(true)}
-          placeholder="Jump to tickerâ€¦"
+          placeholder="Jump to ticker..."
           className="w-40 bg-surface border border-line px-3 py-1.5 text-[12px] text-ink placeholder:text-dim/60 focus-ring"
         />
       </form>

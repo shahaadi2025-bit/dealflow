@@ -3,7 +3,7 @@
 export function valuationToCsv(v: Valuation): string {
   const c = v.company;
   const lines: string[] = [];
-  lines.push(`DealFlow valuation export â€” ${c.name} (${c.ticker})`);
+  lines.push(`DealFlow valuation export - ${c.name} (${c.ticker})`);
   lines.push(`As of,${c.as_of}`);
   lines.push("");
   lines.push("Company financials");

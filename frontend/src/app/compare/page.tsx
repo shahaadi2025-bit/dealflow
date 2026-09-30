@@ -16,14 +16,14 @@ const ROWS: { label: string; get: (c: any) => string }[] = [
   { label: "EBITDA margin", get: (c) => fmtPct(c.ebitda_margin) },
   { label: "Net debt", get: (c) => fmtMoney(c.net_debt) },
   { label: "Enterprise value", get: (c) => fmtMoney(c.ev) },
-  { label: "EV / Revenue", get: (c) => (c.revenue ? fmtX(c.ev / c.revenue) : "â€”") },
-  { label: "Beta", get: (c) => (c.beta != null ? c.beta.toFixed(2) : "â€”") },
-  { label: "52-week range", get: (c) => (c.lo52 && c.hi52 ? `${fmtPrice(c.lo52)} â€“ ${fmtPrice(c.hi52)}` : "â€”") },
+  { label: "EV / Revenue", get: (c) => (c.revenue ? fmtX(c.ev / c.revenue) : "-") },
+  { label: "Beta", get: (c) => (c.beta != null ? c.beta.toFixed(2) : "-") },
+  { label: "52-week range", get: (c) => (c.lo52 && c.hi52 ? `${fmtPrice(c.lo52)} - ${fmtPrice(c.hi52)}` : "-") },
 ];
 
 export default function ComparePage() {
   return (
-    <Suspense fallback={<p className="text-dim py-12">Loadingâ€¦</p>}>
+    <Suspense fallback={<p className="text-dim py-12">Loading...</p>}>
       <CompareInner />
     </Suspense>
   );
@@ -47,9 +47,9 @@ function CompareInner() {
   return (
     <div>
       <h1 className="font-serif text-3xl text-ink mb-2">Comparison</h1>
-      <p className="text-dim text-[12px] mb-8">{tickers.join(" Â· ")}</p>
+      <p className="text-dim text-[12px] mb-8">{tickers.join(" - ")}</p>
 
-      {loading && <p className="text-dim py-12">Loading companiesâ€¦</p>}
+      {loading && <p className="text-dim py-12">Loading companies...</p>}
 
       {!loading && companies.length > 0 && (
         <div className="overflow-x-auto">

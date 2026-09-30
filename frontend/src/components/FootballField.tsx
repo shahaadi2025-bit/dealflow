@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import { ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip, Cell, ReferenceLine } from "recharts";
 import { FootballBar } from "@/lib/api";
 import { fmtPrice } from "@/lib/format";
@@ -11,7 +11,7 @@ export function FootballField({ bars, currentPrice }: { bars: FootballBar[]; cur
 
   return (
     <div className="border border-line p-5">
-      <div className="text-dim text-[11px] mb-4">Valuation range per share — DCF, comparables, trading range, offer range</div>
+      <div className="text-dim text-[11px] mb-4">Valuation range per share - DCF, comparables, trading range, offer range</div>
       <ResponsiveContainer width="100%" height={data.length * 46 + 40}>
         <BarChart data={data} layout="vertical" margin={{ left: 10, right: 30 }}>
           <XAxis type="number" domain={[0, max]} stroke="#8B94A0" tick={{ fontSize: 11, fontFamily: "var(--font-mono)" }}
@@ -23,7 +23,7 @@ export function FootballField({ bars, currentPrice }: { bars: FootballBar[]; cur
             labelStyle={{ color: "#EDEEF0" }}
             formatter={(_: unknown, __: string, p) => {
               const d = p.payload as FootballBar;
-              return [`${fmtPrice(d.low)} – ${fmtPrice(d.high)}`, "Range"];
+              return [`${fmtPrice(d.low)} - ${fmtPrice(d.high)}`, "Range"];
             }}
           />
           <ReferenceLine x={currentPrice} stroke="#EDEEF0" strokeDasharray="3 3"
