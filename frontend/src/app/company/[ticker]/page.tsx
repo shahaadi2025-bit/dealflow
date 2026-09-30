@@ -40,8 +40,10 @@ export default function CompanyPage() {
   if (valuation.isLoading) return <p className="text-dim py-12">Loading {ticker}...</p>;
   if (valuation.isError)
     return <p className="text-down py-12">{(valuation.error as Error).message}</p>;
+  if (!valuation.data)
+    return <p className="text-dim py-12">No data available for {ticker} yet. Try refreshing in a moment.</p>;
 
-  const v = valuation.data!;
+  const v = valuation.data;
   const c = v.company;
   const a = v.assumptions;
 
