@@ -1,5 +1,5 @@
-﻿# Curated ticker universes per sector. This is not the full market -- free-tier hosting
-# can't afford one live API call per ticker across thousands of names -- but each list
+﻿# Curated ticker universes per sector. This is not the full market - free-tier hosting
+# can't afford one live API call per ticker across thousands of names - but each list
 # covers the sector broadly. For any OTHER company, use the search bar in the app to
 # jump straight to its valuation workbench regardless of sector or whether it's listed here.
 UNIVERSES = {
@@ -35,6 +35,20 @@ UNIVERSES = {
         "ABAT","AMPX","EOSE","STEM","FLNC","NOVA","RUN","ENPH","SEDG","FSLR","CSIQ",
     ],
 }
+
+# Broad reference pool of well-known large caps -- not shown in any sector screener,
+# used only to widen snapshot fallback coverage so arbitrary ticker searches (via the
+# search bar) still resolve to something if a live Yahoo fetch is briefly rate-limited.
+REFERENCE_TICKERS = [
+    "AAPL","MSFT","GOOGL","GOOG","AMZN","META","NVDA","BRK-B","JPM","JNJ","V","UNH",
+    "XOM","WMT","PG","MA","HD","CVX","MRK","ABBV","KO","PEP","COST","AVGO","ORCL",
+    "BAC","MCD","ADBE","CSCO","NFLX","CRM","ABT","TMO","ACN","LIN","DHR","VZ","NKE",
+    "TXN","NEE","PM","WFC","RTX","UPS","AMD","INTC","IBM","GE","CAT","HON","BA",
+    "SBUX","LOW","UNP","QCOM","AMGN","GS","SPGI","ELV","BLK","DE","MDT","ISRG","PLD",
+    "T","AMT","SYK","GILD","MMC","LMT","ADI","CI","MO","TJX","SCHW","C","REGN","ZTS",
+    "PGR","SO","CB","BSX","ETN","BMY","MU","APD","FI","SHW","DUK","BDX","AON","ITW",
+    "CME","EOG","NOC","WM","CL","EQIX","MCK","GD","FDX","SLB","PNC","USB","HUM",
+]
 
 def sector_of(ticker: str) -> str:
     t = ticker.upper()
