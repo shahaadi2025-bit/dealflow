@@ -1,11 +1,18 @@
 ﻿"use client";
 import { ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip } from "recharts";
+import { motion } from "framer-motion";
 import { fmtMoney } from "@/lib/format";
 
 export function RevenueChart({ history }: { history: { year: number; revenue: number }[] }) {
   if (!history || history.length < 2) return null;
   return (
-    <div className="border border-line p-5">
+    <motion.div
+      initial={{ opacity: 0, y: 10 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-50px" }}
+      transition={{ duration: 0.4, delay: 0.1 }}
+      className="border border-line p-5"
+    >
       <div className="text-dim text-[11px] mb-4">Revenue history</div>
       <ResponsiveContainer width="100%" height={160}>
         <BarChart data={history} margin={{ left: 0, right: 10 }}>
@@ -17,9 +24,9 @@ export function RevenueChart({ history }: { history: { year: number; revenue: nu
             labelStyle={{ color: "#EDEEF0" }}
             formatter={(v: number) => [fmtMoney(v), "Revenue"]}
           />
-          <Bar dataKey="revenue" fill="#C08A2E" radius={[2, 2, 0, 0]} />
+          <Bar dataKey="revenue" fill="#C08A2E" radius={[2, 2, 0, 0]} animationDuration={700} />
         </BarChart>
       </ResponsiveContainer>
-    </div>
+    </motion.div>
   );
 }

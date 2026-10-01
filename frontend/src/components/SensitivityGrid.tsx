@@ -1,4 +1,5 @@
 ﻿"use client";
+import { motion } from "framer-motion";
 import { fmtPrice } from "@/lib/format";
 
 export function SensitivityGrid({ waccs, tgs, grid, base }: {
@@ -15,7 +16,13 @@ export function SensitivityGrid({ waccs, tgs, grid, base }: {
   };
 
   return (
-    <div className="border border-line p-5">
+    <motion.div
+      initial={{ opacity: 0, y: 10 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-50px" }}
+      transition={{ duration: 0.4 }}
+      className="border border-line p-5"
+    >
       <div className="text-dim text-[11px] mb-4">Per-share value sensitivity - WACC vs. terminal growth</div>
       <table className="w-full text-center border-collapse text-[12px]">
         <thead>
@@ -40,6 +47,6 @@ export function SensitivityGrid({ waccs, tgs, grid, base }: {
         </tbody>
       </table>
       <p className="text-dim text-[11px] mt-3">Base case: {fmtPrice(base)}/share (center cell)</p>
-    </div>
+    </motion.div>
   );
 }

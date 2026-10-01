@@ -2,6 +2,8 @@
 import { Suspense, useEffect, useState } from "react";
 import { useParams, useRouter, useSearchParams } from "next/navigation";
 import { useMutation, useQueries, useQuery } from "@tanstack/react-query";
+import { motion } from "framer-motion";
+import { Share2, FileDown, Check } from "lucide-react";
 import { api, Memo } from "@/lib/api";
 import { fmtMoney, fmtPct, fmtPrice, fmtX } from "@/lib/format";
 import { StatCell } from "@/components/StatCell";
@@ -10,6 +12,8 @@ import { SensitivityGrid } from "@/components/SensitivityGrid";
 import { MemoPanel } from "@/components/MemoPanel";
 import { RevenueChart } from "@/components/RevenueChart";
 import { valuationToCsv, downloadCsv } from "@/lib/csv";
+import { CompanySkeleton } from "@/components/Skeleton";
+import { PageFade } from "@/components/PageFade";
 
 function num(v: string | null): number | null {
   if (v === null || v === "") return null;
@@ -93,7 +97,7 @@ function CompanyInner() {
     window.open(api.reportPdfUrl(ticker), "_blank");
   };
 
-  if (valuation.isLoading) return <p className="text-dim py-12">Loading {ticker}...</p>;
+  if (valuation.isLoading) return <CompanySkeleton />;
   if (valuation.isError)
     return <p className="text-down py-12">{(valuation.error as Error).message}</p>;
   if (!valuation.data)
@@ -120,26 +124,36 @@ function CompanyInner() {
   const scenarioLabels = ["Bear", "Base", "Bull"];
 
   return (
-    <div>
+    <PageFade>
       <div className="flex items-baseline justify-between mb-2">
         <div>
           <h1 className="font-serif text-3xl text-ink">{c.name}</h1>
           <p className="text-dim text-[12px] mt-1">{c.ticker} - as of {c.as_of}</p>
         </div>
         <div className="text-right">
-          <div className="font-serif text-3xl text-ink tabular-nums">{fmtPrice(c.price)}</div>
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.3 }}
+            className="font-serif text-3xl text-ink tabular-nums"
+          >
+            {fmtPrice(c.price)}
+          </motion.div>
           <div className="text-dim text-[11px]">current price</div>
           <div className="flex gap-2 mt-2 justify-end">
             <button onClick={copyLink}
-              className="border border-line px-3 py-1 text-[11px] text-dim hover:text-ink hover:border-signal transition-colors focus-ring">
+              className="border border-line px-3 py-1 text-[11px] text-dim hover:text-ink hover:border-signal transition-colors focus-ring flex items-center gap-1.5">
+              {copied ? <Check size={12} className="text-up" /> : <Share2 size={12} />}
               {copied ? "Copied!" : "Share link"}
             </button>
             <button onClick={downloadReport}
-              className="border border-line px-3 py-1 text-[11px] text-dim hover:text-ink hover:border-signal transition-colors focus-ring">
+              className="border border-line px-3 py-1 text-[11px] text-dim hover:text-ink hover:border-signal transition-colors focus-ring flex items-center gap-1.5">
+              <FileDown size={12} />
               PDF report
             </button>
             <button onClick={() => downloadCsv(`${c.ticker}_valuation.csv`, valuationToCsv(v))}
-              className="border border-line px-3 py-1 text-[11px] text-dim hover:text-ink hover:border-signal transition-colors focus-ring">
+              className="border border-line px-3 py-1 text-[11px] text-dim hover:text-ink hover:border-signal transition-colors focus-ring flex items-center gap-1.5">
+              <FileDown size={12} />
               Export CSV
             </button>
           </div>
@@ -257,6 +271,6 @@ function CompanyInner() {
         memo={memoMutation.data?.memo as Memo | undefined}
         companyName={c.name}
       />
-    </div>
+    </PageFade>
   );
 }

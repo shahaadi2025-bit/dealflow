@@ -1,0 +1,21 @@
+﻿ticker,label,growth,gross_margin,fcf_margin,rule_of_40,ev_rev,cash_ratio,log_mcap,confidence,deal_note
+SPLK,1,0.18,0.80,0.21,0.39,7.6,0.15,10.32,verified,Cisco acquired Splunk 2023 for $28B EV approx 7.6x revenue SEC DEFM14A
+WORK,1,0.39,0.84,0.02,0.41,30.8,0.20,10.44,verified,Salesforce acquired Slack 2021 for 27.7B over 30x LTM revenue per Fortune/SEC
+COUP,1,0.17,0.66,-0.02,0.15,9.0,0.15,9.79,verified,Thoma Bravo acquired Coupa 2022 8B EV 9.0x LTM revenue per mergersight/SEC
+AVLR,1,0.23,0.75,-0.05,0.18,8.8,0.18,9.82,verified,Vista acquired Avalara 2022 8.4B EV 8.8x NTM revenue per SEC DEFM14A
+ZEN,1,0.25,0.78,0.05,0.30,5.5,0.15,9.90,medium,Permira and Hellman Friedman acquired Zendesk 2022 per Avalara SEC comp table
+PING,1,0.15,0.75,0.05,0.20,7.7,0.15,9.30,medium,Thoma Bravo acquired Ping Identity 2022 per Avalara SEC comp table
+SUMO,1,0.15,0.70,-0.15,0.00,5.0,0.20,9.23,medium,Francisco Partners acquired Sumo Logic 2023 approx 1.7B deal
+MIME,1,0.15,0.75,0.05,0.20,11.0,0.15,9.76,medium,Permira acquired Mimecast 2022 approx 5.8B deal
+FORG,1,0.20,0.70,-0.10,0.10,11.0,0.20,9.32,medium,Thoma Bravo acquired ForgeRock 2023 approx 2.3B deal
+CVT,1,0.15,0.60,0.10,0.25,4.0,0.10,9.66,medium,Blackstone acquired Cvent 2023 approx 4.6B deal
+MDLA,1,0.20,0.65,-0.10,0.10,12.8,0.15,9.81,medium,Thoma Bravo acquired Medallia 2021 approx 6.4B deal
+NEWR,1,0.10,0.75,0.05,0.15,7.0,0.20,9.81,medium,Francisco Partners and TPG acquired New Relic 2023 approx 6.5B deal
+SAIL,1,0.30,0.75,-0.05,0.25,16.0,0.15,9.84,medium,Thoma Bravo acquired SailPoint 2022 approx 6.9B deal
+PFPT,1,0.24,0.70,0.10,0.34,11.7,0.15,10.09,medium,Thoma Bravo acquired Proofpoint 2021 approx 12.3B deal
+CTXS,1,0.02,0.82,0.20,0.22,5.0,0.15,10.20,medium,Vista and Evergreen acquired Citrix 2022 approx 16.5B deal
+CKR,1,0.20,0.85,0.15,0.35,7.0,0.20,9.85,medium,Intuit acquired Credit Karma 2020 approx 7.1B deal
+FIN,1,0.40,0.70,0.00,0.40,10.0,0.15,8.92,medium,Mastercard acquired Finicity 2020 approx 825M deal
+EVOP,1,0.10,0.45,0.10,0.20,6.5,0.10,9.60,medium,Global Payments acquired EVO Payments 2023 approx 4B deal
+PAYA,1,0.15,0.45,0.05,0.20,4.7,0.10,9.11,medium,Nuvei acquired Paya 2023 approx 1.3B deal
+EPAY,1,0.10,0.60,0.10,0.20,5.6,0.15,9.41,medium,Thoma Bravo acquired Bottomline Technologies 2022 approx 2.6B deal

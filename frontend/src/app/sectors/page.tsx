@@ -1,7 +1,9 @@
 ﻿"use client";
 import { useQuery } from "@tanstack/react-query";
+import { motion } from "framer-motion";
 import { api } from "@/lib/api";
 import { fmtPct, fmtX } from "@/lib/format";
+import { PageFade } from "@/components/PageFade";
 
 const LABELS: Record<string, string> = { saas: "SaaS", fintech: "Fintech", ev: "Electric Vehicles" };
 
@@ -12,7 +14,7 @@ export default function SectorsPage() {
   });
 
   return (
-    <div>
+    <PageFade>
       <h1 className="font-serif text-3xl text-ink mb-2">Sector comparison</h1>
       <p className="text-dim text-[12px] mb-8">Median metrics across each screened sector, for context on what is typical.</p>
 
@@ -33,8 +35,14 @@ export default function SectorsPage() {
             </tr>
           </thead>
           <tbody>
-            {data.sectors.map((s) => (
-              <tr key={s.sector} className="border-b border-line/60">
+            {data.sectors.map((s, i) => (
+              <motion.tr
+                key={s.sector}
+                initial={{ opacity: 0, x: -8 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.3, delay: i * 0.08 }}
+                className="border-b border-line/60"
+              >
                 <td className="py-3 pr-6 text-ink">{LABELS[s.sector] || s.sector}</td>
                 <td className="py-3 pr-6 text-right text-ink tabular-nums">{s.company_count}</td>
                 <td className="py-3 pr-6 text-right text-ink tabular-nums">{fmtPct(s.median_growth)}</td>
@@ -42,11 +50,11 @@ export default function SectorsPage() {
                 <td className="py-3 pr-6 text-right text-ink tabular-nums">{fmtPct(s.median_fcf_margin)}</td>
                 <td className="py-3 pr-6 text-right text-ink tabular-nums">{fmtPct(s.median_rule_of_40)}</td>
                 <td className="py-3 text-right text-ink tabular-nums">{fmtX(s.median_ev_rev)}</td>
-              </tr>
+              </motion.tr>
             ))}
           </tbody>
         </table>
       )}
-    </div>
+    </PageFade>
   );
 }

@@ -1,5 +1,6 @@
 ﻿"use client";
 import { ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip, Cell, ReferenceLine } from "recharts";
+import { motion } from "framer-motion";
 import { FootballBar } from "@/lib/api";
 import { fmtPrice } from "@/lib/format";
 
@@ -10,7 +11,13 @@ export function FootballField({ bars, currentPrice }: { bars: FootballBar[]; cur
   const max = Math.max(currentPrice, ...bars.map((b) => b.high)) * 1.1;
 
   return (
-    <div className="border border-line p-5">
+    <motion.div
+      initial={{ opacity: 0, y: 10 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-50px" }}
+      transition={{ duration: 0.4 }}
+      className="border border-line p-5"
+    >
       <div className="text-dim text-[11px] mb-4">Valuation range per share - DCF, comparables, trading range, offer range</div>
       <ResponsiveContainer width="100%" height={data.length * 46 + 40}>
         <BarChart data={data} layout="vertical" margin={{ left: 10, right: 30 }}>
@@ -35,6 +42,6 @@ export function FootballField({ bars, currentPrice }: { bars: FootballBar[]; cur
           </Bar>
         </BarChart>
       </ResponsiveContainer>
-    </div>
+    </motion.div>
   );
 }

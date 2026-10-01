@@ -3,10 +3,14 @@ import { useMemo, useState } from "react";
 import { useMutation, useQuery } from "@tanstack/react-query";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { motion, AnimatePresence } from "framer-motion";
+import { TrendingUp, TrendingDown, ArrowRight } from "lucide-react";
 import { api, ScreenRow } from "@/lib/api";
 import { fmtMoney, fmtPct, fmtX } from "@/lib/format";
 import { ScoreBar } from "@/components/ScoreBar";
 import { TickerSearch } from "@/components/TickerSearch";
+import { ScreenerSkeleton } from "@/components/Skeleton";
+import { PageFade } from "@/components/PageFade";
 
 const SECTOR_LABELS: Record<string, string> = { saas: "SaaS", fintech: "Fintech", ev: "Electric Vehicles" };
 type SortKey = "score" | "market_cap" | "growth" | "gross_margin" | "fcf_margin" | "rule_of_40" | "ev_rev";
@@ -92,9 +96,18 @@ export default function ScreenerPage() {
   );
 
   return (
-    <div>
-      <section className="mb-10 flex flex-col md:flex-row md:items-end md:justify-between gap-6">
-        <div className="max-w-[640px]">
+    <PageFade>
+      <section className="relative mb-10 flex flex-col md:flex-row md:items-end md:justify-between gap-6 overflow-hidden">
+        <div
+          className="pointer-events-none absolute -top-24 -left-24 w-72 h-72 rounded-full opacity-[0.07] blur-3xl"
+          style={{ background: "radial-gradient(circle, #C08A2E 0%, transparent 70%)" }}
+        />
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4 }}
+          className="max-w-[640px] relative"
+        >
           <h1 className="font-serif text-4xl leading-tight text-ink mb-3">
             Screen acquisition targets, backed by numbers you can trace.
           </h1>
@@ -102,11 +115,15 @@ export default function ScreenerPage() {
             Every score breaks down into the criteria that produced it - growth, margin,
             leverage, deal size fit. Pick a name below, or look up any company directly.
           </p>
-        </div>
-        <div>
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4, delay: 0.1 }}
+        >
           <div className="text-dim text-[11px] mb-1.5">Or analyze any ticker on the market</div>
           <TickerSearch variant="hero" />
-        </div>
+        </motion.div>
       </section>
 
       <section className="mb-6 pb-6 border-b border-line space-y-4">
@@ -198,10 +215,11 @@ export default function ScreenerPage() {
       </section>
 
       {isLoading && (
-        <div className="py-16 text-center">
-          <p className="text-dim">
+        <div>
+          <p className="text-dim text-[12px] mb-4">
             {mode === "custom" ? "Screening your list..." : `Loading ${SECTOR_LABELS[mode]} universe...`}
           </p>
+          <ScreenerSkeleton />
         </div>
       )}
 
@@ -244,37 +262,53 @@ export default function ScreenerPage() {
               </tr>
             </thead>
             <tbody>
-              {rows.map((r: ScreenRow) => (
-                <tr key={r.ticker} className="border-b border-line/60 hover:bg-surface transition-colors group">
-                  <td className="py-3 pr-2">
-                    <input
-                      type="checkbox"
-                      checked={selected.has(r.ticker)}
-                      onChange={() => toggleSelect(r.ticker)}
-                      className="accent-[#C08A2E]"
-                    />
-                  </td>
-                  <td className="py-3 pr-4">
-                    <Link href={`/company/${r.ticker}`} className="focus-ring">
-                      <div className="text-ink group-hover:text-signal transition-colors">{r.ticker}</div>
-                      <div className="text-dim text-[11px]">{r.name}</div>
-                    </Link>
-                  </td>
-                  <td className="py-3 pr-4 text-right text-ink tabular-nums">{fmtMoney(r.market_cap)}</td>
-                  <td className="py-3 pr-4 text-right tabular-nums" style={{ color: r.growth >= 0.15 ? "#4C9A6A" : "#EDEEF0" }}>
-                    {fmtPct(r.growth)}
-                  </td>
-                  <td className="py-3 pr-4 text-right text-ink tabular-nums">{fmtPct(r.gross_margin)}</td>
-                  <td className="py-3 pr-4 text-right tabular-nums" style={{ color: r.fcf_margin >= 0 ? "#EDEEF0" : "#C0553A" }}>
-                    {fmtPct(r.fcf_margin)}
-                  </td>
-                  <td className="py-3 pr-4 text-right text-ink tabular-nums">{fmtPct(r.rule_of_40)}</td>
-                  <td className="py-3 pr-4 text-right text-ink tabular-nums">{fmtX(r.ev_rev)}</td>
-                  <td className="py-3">
-                    <ScoreBar score={r.score} drivers={r.drivers} />
-                  </td>
-                </tr>
-              ))}
+              <AnimatePresence initial={false}>
+                {rows.map((r: ScreenRow, i: number) => (
+                  <motion.tr
+                    key={r.ticker}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 0.25, delay: Math.min(i * 0.02, 0.4) }}
+                    className="border-b border-line/60 hover:bg-surface transition-colors group"
+                  >
+                    <td className="py-3 pr-2">
+                      <input
+                        type="checkbox"
+                        checked={selected.has(r.ticker)}
+                        onChange={() => toggleSelect(r.ticker)}
+                        className="accent-[#C08A2E]"
+                      />
+                    </td>
+                    <td className="py-3 pr-4">
+                      <Link href={`/company/${r.ticker}`} className="focus-ring flex items-center gap-2">
+                        <div>
+                          <div className="text-ink group-hover:text-signal transition-colors flex items-center gap-1.5">
+                            {r.ticker}
+                            <ArrowRight size={11} className="opacity-0 group-hover:opacity-100 -translate-x-1 group-hover:translate-x-0 transition-all text-signal" />
+                          </div>
+                          <div className="text-dim text-[11px]">{r.name}</div>
+                        </div>
+                      </Link>
+                    </td>
+                    <td className="py-3 pr-4 text-right text-ink tabular-nums">{fmtMoney(r.market_cap)}</td>
+                    <td className="py-3 pr-4 text-right tabular-nums">
+                      <span className="inline-flex items-center gap-1" style={{ color: r.growth >= 0.15 ? "#4C9A6A" : r.growth < 0 ? "#C0553A" : "#EDEEF0" }}>
+                        {r.growth >= 0.15 ? <TrendingUp size={11} /> : r.growth < 0 ? <TrendingDown size={11} /> : null}
+                        {fmtPct(r.growth)}
+                      </span>
+                    </td>
+                    <td className="py-3 pr-4 text-right text-ink tabular-nums">{fmtPct(r.gross_margin)}</td>
+                    <td className="py-3 pr-4 text-right tabular-nums" style={{ color: r.fcf_margin >= 0 ? "#EDEEF0" : "#C0553A" }}>
+                      {fmtPct(r.fcf_margin)}
+                    </td>
+                    <td className="py-3 pr-4 text-right text-ink tabular-nums">{fmtPct(r.rule_of_40)}</td>
+                    <td className="py-3 pr-4 text-right text-ink tabular-nums">{fmtX(r.ev_rev)}</td>
+                    <td className="py-3">
+                      <ScoreBar score={r.score} drivers={r.drivers} />
+                    </td>
+                  </motion.tr>
+                ))}
+              </AnimatePresence>
             </tbody>
           </table>
         </div>
@@ -285,6 +319,6 @@ export default function ScreenerPage() {
           Fit score method: <span className="text-ink">{rows[0].method}</span> - hover a score bar for its drivers - check rows to compare.
         </p>
       )}
-    </div>
+    </PageFade>
   );
 }
