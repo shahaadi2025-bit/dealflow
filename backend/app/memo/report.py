@@ -1,4 +1,4 @@
-﻿"""One-pager valuation report as text-only PDF, reusing the lightweight PDF writer."""
+"""One-pager valuation report as text-only PDF, reusing the lightweight PDF writer."""
 from app.memo.pdf import _wrap, _simple_pdf
 
 

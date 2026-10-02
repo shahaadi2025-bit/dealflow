@@ -1,4 +1,4 @@
-﻿ticker,label,growth,gross_margin,fcf_margin,rule_of_40,ev_rev,cash_ratio,log_mcap,confidence,deal_note
+ticker,label,growth,gross_margin,fcf_margin,rule_of_40,ev_rev,cash_ratio,log_mcap,confidence,deal_note
 SPLK,1,0.18,0.80,0.21,0.39,7.6,0.15,10.32,verified,Cisco acquired Splunk 2023 for $28B EV approx 7.6x revenue SEC DEFM14A
 WORK,1,0.39,0.84,0.02,0.41,30.8,0.20,10.44,verified,Salesforce acquired Slack 2021 for 27.7B over 30x LTM revenue per Fortune/SEC
 COUP,1,0.17,0.66,-0.02,0.15,9.0,0.15,9.79,verified,Thoma Bravo acquired Coupa 2022 8B EV 9.0x LTM revenue per mergersight/SEC

@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 import { useMemo, useState } from "react";
 import { useMutation, useQuery } from "@tanstack/react-query";
 import Link from "next/link";
@@ -130,26 +130,26 @@ export default function ScreenerPage() {
         <div className="flex flex-wrap items-end gap-6">
           <div>
             <label className="block text-dim text-[11px] mb-1.5">Sector</label>
-            <div className="flex border border-line">
-              {(["saas", "fintech", "ev"] as const).map((key) => (
-                <button
+            <div className="flex border border-line relative">
+              {([...(["saas", "fintech", "ev"] as const), "custom" as const]).map((key, i) => (
+                <motion.button
                   key={key}
                   onClick={() => setMode(key)}
-                  className={`px-3 py-2 text-[12px] transition-colors focus-ring ${
-                    mode === key ? "bg-signal text-bg" : "text-dim hover:text-ink"
+                  whileTap={{ scale: 0.96 }}
+                  className={`relative px-3 py-2 text-[12px] transition-colors focus-ring ${i > 0 ? "border-l border-line" : ""} ${
+                    mode === key ? "text-bg" : "text-dim hover:text-ink"
                   }`}
                 >
-                  {SECTOR_LABELS[key]}
-                </button>
+                  {mode === key && (
+                    <motion.div
+                      layoutId="sector-pill"
+                      className="absolute inset-0 bg-signal -z-10"
+                      transition={{ type: "spring", stiffness: 400, damping: 30 }}
+                    />
+                  )}
+                  {key === "custom" ? "Custom list" : SECTOR_LABELS[key]}
+                </motion.button>
               ))}
-              <button
-                onClick={() => setMode("custom")}
-                className={`px-3 py-2 text-[12px] transition-colors focus-ring border-l border-line ${
-                  mode === "custom" ? "bg-signal text-bg" : "text-dim hover:text-ink"
-                }`}
-              >
-                Custom list
-              </button>
             </div>
           </div>
 
@@ -194,9 +194,9 @@ export default function ScreenerPage() {
               rows={2}
               className="flex-1 bg-surface border border-line px-3 py-2 text-ink placeholder:text-dim/60 focus-ring text-[12px] max-w-xl"
             />
-            <button onClick={runCustom} className="bg-signal text-bg px-4 py-2 text-[12px] font-medium hover:opacity-90 transition-opacity focus-ring">
+            <motion.button whileTap={{ scale: 0.96 }} onClick={runCustom} className="bg-signal text-bg px-4 py-2 text-[12px] font-medium hover:opacity-90 transition-opacity focus-ring">
               Screen list
-            </button>
+            </motion.button>
           </div>
         )}
 
@@ -315,9 +315,18 @@ export default function ScreenerPage() {
       )}
 
       {rows.length > 0 && (
-        <p className="text-dim text-[11px] mt-4">
-          Fit score method: <span className="text-ink">{rows[0].method}</span> - hover a score bar for its drivers - check rows to compare.
-        </p>
+        <div className="mt-4 space-y-1.5">
+          <p className="text-dim text-[11px]">
+            Fit score method: <span className="text-ink">{rows[0].method}</span> - hover a score bar for its drivers - check rows to compare.
+          </p>
+          {rows[0].method === "xgboost" && (
+            <p className="text-signal text-[11px]">
+              Experimental: this score comes from a model trained on a small set of historical deals (20 examples).
+              Treat relative ranking as a rough signal, not a precise probability.
+              {mode === "ev" && " The training data had no electric-vehicle acquisitions, so EV scores here are unvalidated extrapolation - weight them least."}
+            </p>
+          )}
+        </div>
       )}
     </PageFade>
   );

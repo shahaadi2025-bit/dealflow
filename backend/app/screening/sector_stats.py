@@ -1,4 +1,4 @@
-﻿import statistics
+import statistics
 from app.data.fetch import get_many
 from app.data.universe import UNIVERSES
 from app.screening.features import compute_features

@@ -1,4 +1,4 @@
-﻿from app.data.universe import UNIVERSES, REFERENCE_TICKERS
+from app.data.universe import UNIVERSES, REFERENCE_TICKERS
 
 # name hints for reference tickers so autocomplete can match by company name too,
 # not just ticker symbol. Sector universe names come from live data once fetched;

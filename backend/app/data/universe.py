@@ -1,4 +1,4 @@
-﻿# Curated ticker universes per sector. This is not the full market - free-tier hosting
+# Curated ticker universes per sector. This is not the full market - free-tier hosting
 # can't afford one live API call per ticker across thousands of names - but each list
 # covers the sector broadly. For any OTHER company, use the search bar in the app to
 # jump straight to its valuation workbench regardless of sector or whether it's listed here.

@@ -1,4 +1,4 @@
-﻿"""Builds the full labeled training set for the ML scoring model.
+"""Builds the full labeled training set for the ML scoring model.
 
 Positive examples (label=1): backend/data/historical_deals.csv, a hand-curated set
 of real past acquisitions with pre-deal financials sourced from SEC filings and
@@ -28,7 +28,7 @@ OUT = ROOT / "data" / "labeled_features.csv"
 
 def load_historical() -> list[dict]:
     rows = []
-    with open(HISTORICAL, newline="") as f:
+    with open(HISTORICAL, newline="", encoding="utf-8-sig") as f:
         for row in csv.DictReader(f):
             rows.append({
                 "ticker": row["ticker"], "label": 1,

@@ -1,4 +1,4 @@
-﻿"""Run locally, then commit data/snapshot.json:  python -m app.scripts.build_snapshot"""
+"""Run locally, then commit data/snapshot.json:  python -m app.scripts.build_snapshot"""
 import json
 from app.data.fetch import SNAPSHOT_PATH, fetch_live, DataError
 from app.data.universe import UNIVERSES, REFERENCE_TICKERS

@@ -1,4 +1,4 @@
-﻿from app.data.fetch import get_many
+from app.data.fetch import get_many
 from app.screening.features import compute_features
 from app.screening.scoring import fit_score
 
