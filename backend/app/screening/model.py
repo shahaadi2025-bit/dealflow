@@ -1,24 +1,40 @@
 """Optional XGBoost path. Train with: python -m app.screening.model data/labeled_features.csv
 CSV columns: ticker, label (1 = acquired, 0 = not), plus FEATURE_KEYS computed POINT-IN-TIME
-(before the deal announcement), e.g. from SEC EDGAR filings. Needs requirements-ml.txt."""
+(before the deal announcement), e.g. from SEC EDGAR filings. Needs requirements-ml.txt.
+
+load() and predict() are deliberately fail-soft: if the ML dependencies aren't installed,
+the model file is missing, or the bundle fails to unpickle for any reason, these return
+None / fall back rather than raising -- so a missing xgboost install degrades the screener
+to the rule-based score instead of crashing the endpoint for every sector."""
+import logging
 import sys
 from pathlib import Path
 from app.screening.features import FEATURE_KEYS
 
+log = logging.getLogger("ml_model")
 MODEL_PATH = Path(__file__).resolve().parents[2] / "models" / "target_model.joblib"
 
 
 def load():
     if not MODEL_PATH.exists():
         return None
-    import joblib
-    return joblib.load(MODEL_PATH)
+    try:
+        import joblib
+        return joblib.load(MODEL_PATH)
+    except Exception as e:
+        log.warning("ML model present but failed to load (%s) -- falling back to rule-based scoring.", e)
+        return None
 
 
 def predict(bundle, feat: dict):
-    import numpy as np
-    x = np.array([[feat[k] for k in FEATURE_KEYS]])
-    proba = float(bundle["model"].predict_proba(x)[0, 1]) * 100
+    try:
+        import numpy as np
+        x = np.array([[feat[k] for k in FEATURE_KEYS]])
+        proba = float(bundle["model"].predict_proba(x)[0, 1]) * 100
+    except Exception as e:
+        log.warning("ML prediction failed (%s) -- caller should fall back to rule-based scoring.", e)
+        raise
+
     drivers = []
     try:
         import shap
@@ -26,7 +42,7 @@ def predict(bundle, feat: dict):
         order = np.argsort(-np.abs(sv))[:3]
         drivers = [{"label": FEATURE_KEYS[i], "points": float(sv[i]), "value": feat[FEATURE_KEYS[i]]} for i in order]
     except Exception:
-        pass
+        pass  # SHAP explanations are a nice-to-have; score itself still stands without them
     return proba, drivers
 
 

@@ -18,9 +18,12 @@ def screen(sector="saas", min_mcap=None, max_mcap=None, min_growth=None, min_fcf
         if min_growth is not None and feat["growth"] < min_growth: continue
         if min_fcf_margin is not None and feat["fcf_margin"] < min_fcf_margin: continue
         if bundle:
-            score, drivers = ml.predict(bundle, feat)
-            method = "xgboost"
-        else:
+            try:
+                score, drivers = ml.predict(bundle, feat)
+                method = "xgboost"
+            except Exception:
+                bundle = None  # stop retrying the model for the rest of this request
+        if not bundle:
             score, parts = fit_score(feat)
             top = sorted(parts, key=lambda p: p["score"], reverse=True)[:3]
             drivers = [{"label": p["label"], "points": p["points"], "value": p["value"]} for p in top]

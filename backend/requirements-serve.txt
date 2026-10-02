@@ -1,0 +1,7 @@
+# Lean set for PRODUCTION SERVING of the trained model (not training).
+# Training needs the heavier requirements-ml.txt (pandas, shap, full sklearn) on your
+# own machine; the deployed API only needs to load the model and call .predict_proba().
+-r requirements.txt
+xgboost
+scikit-learn
+joblib
