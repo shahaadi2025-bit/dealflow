@@ -1,14 +1,33 @@
 import statistics
-from app.data.fetch import get_many
+from app.data.fetch import get_many, load_snapshot
 from app.data.universe import UNIVERSES
 from app.screening.features import compute_features
 
 
 def sector_stats(sector: str) -> dict:
+    """Prefer the committed snapshot: fast and avoids a live fetch across an entire
+    sector's ticker list on every page load. Only tickers missing from the snapshot
+    fall back to a (slower) live fetch."""
     tickers = UNIVERSES.get(sector, [])
-    fins = get_many(tickers)
-    feats = [compute_features(f) for f in fins.values()]
-    feats = [f for f in feats if f]
+    snapshot = load_snapshot()
+
+    feats = []
+    missing = []
+    for t in tickers:
+        f = snapshot.get(t)
+        if f is None:
+            missing.append(t)
+            continue
+        feat = compute_features(f)
+        if feat:
+            feats.append(feat)
+
+    if missing:
+        live = get_many(missing)
+        for f in live.values():
+            feat = compute_features(f)
+            if feat:
+                feats.append(feat)
 
     def med(key):
         vals = [f[key] for f in feats if f.get(key) is not None]
