@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 import { useQuery } from "@tanstack/react-query";
 import { motion } from "framer-motion";
 import { api } from "@/lib/api";
@@ -18,11 +18,12 @@ export default function SectorsPage() {
       <h1 className="font-serif text-3xl text-ink mb-2">Sector comparison</h1>
       <p className="text-dim text-[12px] mb-8">Median metrics across each screened sector, for context on what is typical.</p>
 
-      {isLoading && <p className="text-dim py-12">Loading sector medians - this pulls live data across every company, so it can take a moment...</p>}
+      {isLoading && <p className="text-dim py-12">Loading sector medians...</p>}
       {isError && <p className="text-down py-12">Could not load sector stats.</p>}
 
       {data && (
-        <table className="border-collapse w-full max-w-3xl">
+      <div className="overflow-x-auto">
+        <table className="border-collapse w-full min-w-[640px] max-w-3xl">
           <thead>
             <tr className="border-b border-line text-dim text-[11px]">
               <th className="text-left py-3 pr-6 font-normal">Sector</th>
@@ -54,6 +55,7 @@ export default function SectorsPage() {
             ))}
           </tbody>
         </table>
+      </div>
       )}
     </PageFade>
   );

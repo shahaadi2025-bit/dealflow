@@ -127,12 +127,12 @@ function CompanyInner() {
 
   return (
     <PageFade>
-      <div className="flex items-baseline justify-between mb-2">
+      <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-3 mb-2">
         <div>
-          <h1 className="font-serif text-3xl text-ink">{c.name}</h1>
+          <h1 className="font-serif text-2xl sm:text-3xl text-ink break-words">{c.name}</h1>
           <p className="text-dim text-[12px] mt-1">{c.ticker} - as of {c.as_of}</p>
         </div>
-        <div className="text-right">
+        <div className="sm:text-right">
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -142,21 +142,21 @@ function CompanyInner() {
             {fmtPrice(c.price)}
           </motion.div>
           <div className="text-dim text-[11px]">current price</div>
-          <div className="flex gap-2 mt-2 justify-end">
+          <div className="flex flex-wrap gap-2 mt-2 sm:justify-end">
             <button onClick={copyLink}
               className="border border-line px-3 py-1 text-[11px] text-dim hover:text-ink hover:border-signal transition-colors focus-ring flex items-center gap-1.5">
               {copied ? <Check size={12} className="text-up" /> : <Share2 size={12} />}
-              {copied ? "Copied!" : "Share link"}
+              <span className="hidden sm:inline">{copied ? "Copied!" : "Share link"}</span>
             </button>
             <button onClick={downloadReport}
               className="border border-line px-3 py-1 text-[11px] text-dim hover:text-ink hover:border-signal transition-colors focus-ring flex items-center gap-1.5">
               <FileDown size={12} />
-              PDF report
+              <span className="hidden sm:inline">PDF report</span>
             </button>
             <button onClick={() => downloadCsv(`${c.ticker}_valuation.csv`, valuationToCsv(v))}
               className="border border-line px-3 py-1 text-[11px] text-dim hover:text-ink hover:border-signal transition-colors focus-ring flex items-center gap-1.5">
               <FileDown size={12} />
-              Export CSV
+              <span className="hidden sm:inline">Export CSV</span>
             </button>
           </div>
         </div>
