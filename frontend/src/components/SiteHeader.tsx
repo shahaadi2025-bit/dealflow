@@ -1,3 +1,4 @@
+"use client";
 import Link from "next/link";
 import { LayoutGrid } from "lucide-react";
 import { TickerSearch } from "./TickerSearch";
@@ -24,7 +25,14 @@ export function SiteHeader() {
           <span className="text-line hidden md:inline">/</span>
           <span className="hidden md:inline">DCF - Comps - Memo</span>
         </nav>
-        <div className="ml-auto">
+        <div className="ml-auto flex items-center gap-3">
+          <button
+            onClick={() => document.dispatchEvent(new KeyboardEvent("keydown", { key: "k", metaKey: true }))}
+            className="hidden lg:flex items-center gap-1.5 text-dim text-[11px] border border-line px-2 py-1 hover:border-signal hover:text-ink transition-colors"
+          >
+            Jump to...
+            <kbd className="text-[10px] border border-line px-1 rounded">Ctrl K</kbd>
+          </button>
           <TickerSearch variant="header" />
         </div>
       </div>

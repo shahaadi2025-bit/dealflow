@@ -4,6 +4,7 @@ import "./globals.css";
 import { Providers } from "./providers";
 import { SiteHeader } from "@/components/SiteHeader";
 import { ErrorBoundary } from "@/components/ErrorBoundary";
+import { CommandPalette } from "@/components/CommandPalette";
 
 const serif = Source_Serif_4({ subsets: ["latin"], variable: "--font-serif", weight: ["400", "600", "700"] });
 const mono = IBM_Plex_Mono({ subsets: ["latin"], variable: "--font-mono", weight: ["400", "500", "600"] });
@@ -19,6 +20,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en" className={`${serif.variable} ${mono.variable}`}>
       <body className="min-h-screen font-mono text-[13px] antialiased">
         <Providers>
+          <CommandPalette />
           <SiteHeader />
           <main className="mx-auto max-w-[1400px] px-6 py-8">
             <ErrorBoundary>{children}</ErrorBoundary>

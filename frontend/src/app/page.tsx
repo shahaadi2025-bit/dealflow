@@ -177,6 +177,18 @@ function ScreenerInner() {
             </div>
           </div>
 
+          {rows.length > 0 && (
+            <div>
+              <label className="block text-dim text-[11px] mb-1.5 invisible">Surprise</label>
+              <button
+                onClick={() => router.push(`/company/${rows[Math.floor(Math.random() * rows.length)].ticker}`)}
+                className="border border-line px-3 py-2 text-[12px] text-dim hover:text-ink hover:border-signal transition-colors"
+              >
+                Surprise me
+              </button>
+            </div>
+          )}
+
           {mode !== "custom" && (
             <>
               <div>

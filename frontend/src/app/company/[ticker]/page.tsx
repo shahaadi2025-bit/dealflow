@@ -12,6 +12,7 @@ import { SensitivityGrid } from "@/components/SensitivityGrid";
 import { MemoPanel } from "@/components/MemoPanel";
 import { RevenueChart } from "@/components/RevenueChart";
 import { SectorBenchmark } from "@/components/SectorBenchmark";
+import { CompanyNotes } from "@/components/CompanyNotes";
 import { valuationToCsv, downloadCsv } from "@/lib/csv";
 import { CompanySkeleton } from "@/components/Skeleton";
 import { PageFade } from "@/components/PageFade";
@@ -272,6 +273,10 @@ function CompanyInner() {
             </details>
           )}
         </div>
+      </div>
+
+      <div className="mb-6">
+        <CompanyNotes ticker={c.ticker} />
       </div>
 
       <MemoPanel
