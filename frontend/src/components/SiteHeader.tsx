@@ -1,13 +1,16 @@
-﻿import Link from "next/link";
-import { TrendingUp, LayoutGrid } from "lucide-react";
+import Link from "next/link";
+import { LayoutGrid } from "lucide-react";
 import { TickerSearch } from "./TickerSearch";
+import { Logo } from "./Logo";
 
 export function SiteHeader() {
   return (
     <header className="border-b border-line sticky top-0 bg-bg/95 backdrop-blur z-10">
       <div className="mx-auto max-w-[1400px] px-6 h-16 flex items-center justify-between gap-6">
-        <Link href="/" className="flex items-baseline gap-2 shrink-0 group">
-          <TrendingUp size={18} className="text-signal mb-0.5 transition-transform group-hover:scale-110" />
+        <Link href="/" className="flex items-center gap-2.5 shrink-0 group">
+          <div className="transition-transform group-hover:scale-110">
+            <Logo size={20} />
+          </div>
           <span className="font-serif text-xl font-semibold tracking-tight text-ink">DealFlow</span>
           <span className="text-dim text-[11px] tracking-wide hidden sm:inline">deal screener</span>
         </Link>
@@ -17,6 +20,7 @@ export function SiteHeader() {
             Screener
           </Link>
           <Link href="/sectors" className="hover:text-ink transition-colors">Sectors</Link>
+          <Link href="/methodology" className="hover:text-ink transition-colors hidden sm:inline">Methodology</Link>
           <span className="text-line hidden md:inline">/</span>
           <span className="hidden md:inline">DCF - Comps - Memo</span>
         </nav>

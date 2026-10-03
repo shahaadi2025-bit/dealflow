@@ -50,16 +50,18 @@ def valuate(ticker: str, overrides: dict | None = None, peers: list[str] | None 
 
     football = []
     if core:
-        football.append({"key": "dcf", "label": "DCF (WACC ±1 pt, growth ±0.5 pt)", "low": min(core), "high": max(core), "kind": "dcf"})
+        football.append({"key": "dcf", "label": "DCF (WACC +-1 pt, growth +-0.5 pt)", "low": min(core), "high": max(core), "kind": "dcf"})
     for k, imp in comps["implied"].items():
         if imp:
-            football.append({"key": k, "label": LABELS[k] + " (25th–75th pct)", "low": imp["low"], "high": imp["high"], "kind": "comps"})
+            football.append({"key": k, "label": LABELS[k] + " (25th-75th pct)", "low": imp["low"], "high": imp["high"], "kind": "comps"})
     if f.lo52 and f.hi52:
         football.append({"key": "range52", "label": "52-week trading range", "low": f.lo52, "high": f.hi52, "kind": "market"})
     offer = {"low": f.price * (1 + a["premium_low"]), "high": f.price * (1 + a["premium_high"])}
-    football.append({"key": "offer", "label": f"Offer range ({a['premium_low']:.0%}–{a['premium_high']:.0%} premium)",
+    football.append({"key": "offer", "label": f"Offer range ({a['premium_low']:.0%}-{a['premium_high']:.0%} premium)",
                      "low": offer["low"], "high": offer["high"], "kind": "offer"})
 
-    return {"company": f.to_dict(), "assumptions": a, "dcf": base,
+    company_dict = f.to_dict()
+    company_dict["sector"] = sector_of(f.ticker)
+    return {"company": company_dict, "assumptions": a, "dcf": base,
             "sensitivity": {"waccs": waccs, "tgs": tgs, "grid": grid},
             "comps": comps, "football": football, "offer": offer}

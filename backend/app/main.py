@@ -10,7 +10,7 @@ from starlette.requests import Request
 
 from app.config import settings
 from app.data.fetch import DataError, get_financials
-from app.data.universe import UNIVERSES
+from app.data.universe import UNIVERSES, sector_of
 from app.screening.service import screen
 from app.screening.custom import screen_custom
 from app.valuation.service import valuate
@@ -86,7 +86,9 @@ def screen_custom_endpoint(request: Request, body: CustomScreenRequest):
 @limiter.limit("30/minute")
 def company_endpoint(request: Request, ticker: str):
     try:
-        return get_financials(ticker).to_dict()
+        d = get_financials(ticker).to_dict()
+        d["sector"] = sector_of(ticker)
+        return d
     except DataError as e:
         raise HTTPException(404, str(e))
 

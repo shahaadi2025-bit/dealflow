@@ -1,4 +1,4 @@
-﻿const BASE = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
+const BASE = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
 
 async function req<T>(path: string, init?: RequestInit): Promise<T> {
   const res = await fetch(`${BASE}${path}`, {
@@ -24,7 +24,8 @@ export type Company = {
   ebitda: number | null; fcf: number | null; debt: number; cash: number; beta: number | null;
   hi52: number | null; lo52: number | null; history: { year: number; revenue: number }[];
   as_of: string; net_debt: number; ev: number; gross_profit: number | null;
-  fcf_margin: number | null; ebitda_margin: number | null;
+  fcf_margin: number | null; ebitda_margin: number | null; sector?: string;
+  price_history?: { date: string; close: number }[];
 };
 export type FootballBar = { key: string; label: string; low: number; high: number; kind: string };
 export type Valuation = {

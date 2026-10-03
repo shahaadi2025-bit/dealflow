@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 import { Suspense, useEffect, useState } from "react";
 import { useParams, useRouter, useSearchParams } from "next/navigation";
 import { useMutation, useQueries, useQuery } from "@tanstack/react-query";
@@ -11,6 +11,7 @@ import { FootballField } from "@/components/FootballField";
 import { SensitivityGrid } from "@/components/SensitivityGrid";
 import { MemoPanel } from "@/components/MemoPanel";
 import { RevenueChart } from "@/components/RevenueChart";
+import { SectorBenchmark } from "@/components/SectorBenchmark";
 import { valuationToCsv, downloadCsv } from "@/lib/csv";
 import { CompanySkeleton } from "@/components/Skeleton";
 import { PageFade } from "@/components/PageFade";
@@ -209,12 +210,22 @@ function CompanyInner() {
         <div className="space-y-6">
           <div className="grid grid-cols-3 gap-3">
             <StatCell label="DCF value / share" value={fmtPrice(v.dcf.per_share)}
+              numeric={v.dcf.per_share} format={fmtPrice}
               sub={`${(((v.dcf.per_share / c.price) - 1) * 100).toFixed(0)}% vs. current`} />
-            <StatCell label="Enterprise value" value={fmtMoney(v.dcf.ev)} />
+            <StatCell label="Enterprise value" value={fmtMoney(v.dcf.ev)} numeric={v.dcf.ev} format={(x) => fmtMoney(x)} />
             <StatCell label="Terminal value share of EV" value={v.dcf.tv_share != null ? fmtPct(v.dcf.tv_share) : "-"} />
           </div>
           <FootballField bars={v.football} currentPrice={c.price} />
           <RevenueChart history={c.history} />
+          {c.sector && (
+            <SectorBenchmark
+              sector={c.sector}
+              growth={c.rev_growth}
+              grossMargin={c.gross_margin}
+              fcfMargin={c.fcf_margin}
+              evRev={c.revenue ? c.ev / c.revenue : null}
+            />
+          )}
         </div>
       </div>
 

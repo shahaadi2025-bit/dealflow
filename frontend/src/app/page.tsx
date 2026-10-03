@@ -1,8 +1,8 @@
 "use client";
-import { useMemo, useState } from "react";
+import { Suspense, useEffect, useMemo, useState } from "react";
 import { useMutation, useQuery } from "@tanstack/react-query";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { TrendingUp, TrendingDown, ArrowRight } from "lucide-react";
 import { api, ScreenRow } from "@/lib/api";
@@ -11,23 +11,46 @@ import { ScoreBar } from "@/components/ScoreBar";
 import { TickerSearch } from "@/components/TickerSearch";
 import { ScreenerSkeleton } from "@/components/Skeleton";
 import { PageFade } from "@/components/PageFade";
+import { Term } from "@/components/Term";
 
 const SECTOR_LABELS: Record<string, string> = { saas: "SaaS", fintech: "Fintech", ev: "Electric Vehicles" };
 type SortKey = "score" | "market_cap" | "growth" | "gross_margin" | "fcf_margin" | "rule_of_40" | "ev_rev";
 type Mode = "saas" | "fintech" | "ev" | "custom";
 
 export default function ScreenerPage() {
+  return (
+    <Suspense fallback={<p className="text-dim py-12">Loading...</p>}>
+      <ScreenerInner />
+    </Suspense>
+  );
+}
+
+function ScreenerInner() {
   const router = useRouter();
-  const [mode, setMode] = useState<Mode>("saas");
-  const [minGrowth, setMinGrowth] = useState("");
-  const [minFcf, setMinFcf] = useState("");
-  const [minMcap, setMinMcap] = useState("");
-  const [maxMcap, setMaxMcap] = useState("");
+  const searchParams = useSearchParams();
+  const [mode, setMode] = useState<Mode>(() => (searchParams.get("sector") as Mode) || "saas");
+  const [minGrowth, setMinGrowth] = useState(() => searchParams.get("minGrowth") || "");
+  const [minFcf, setMinFcf] = useState(() => searchParams.get("minFcf") || "");
+  const [minMcap, setMinMcap] = useState(() => searchParams.get("minMcap") || "");
+  const [maxMcap, setMaxMcap] = useState(() => searchParams.get("maxMcap") || "");
   const [sortKey, setSortKey] = useState<SortKey>("score");
   const [sortDir, setSortDir] = useState<"asc" | "desc">("desc");
   const [customInput, setCustomInput] = useState("");
   const [customTickers, setCustomTickers] = useState<string[]>([]);
   const [selected, setSelected] = useState<Set<string>>(new Set());
+
+  useEffect(() => {
+    if (mode === "custom") return;
+    const qs = new URLSearchParams();
+    if (mode !== "saas") qs.set("sector", mode);
+    if (minGrowth) qs.set("minGrowth", minGrowth);
+    if (minFcf) qs.set("minFcf", minFcf);
+    if (minMcap) qs.set("minMcap", minMcap);
+    if (maxMcap) qs.set("maxMcap", maxMcap);
+    const qsStr = qs.toString();
+    router.replace(qsStr ? `/?${qsStr}` : "/", { scroll: false });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [mode, minGrowth, minFcf, minMcap, maxMcap]);
 
   const sectorQuery = useQuery({
     queryKey: ["screen", mode, minGrowth, minFcf, minMcap, maxMcap],
@@ -91,7 +114,8 @@ export default function ScreenerPage() {
       onClick={() => toggleSort(k)}
       className="py-2 pr-4 font-normal text-right cursor-pointer select-none hover:text-ink transition-colors"
     >
-      {label}{sortKey === k && <span className="text-signal ml-1">{sortDir === "desc" ? "v" : "^"}</span>}
+      <span onClick={(e) => e.stopPropagation()}><Term>{label}</Term></span>
+      <span onClick={() => toggleSort(k)}>{sortKey === k && <span className="text-signal ml-1">{sortDir === "desc" ? "v" : "^"}</span>}</span>
     </th>
   );
 
