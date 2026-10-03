@@ -2,8 +2,8 @@
  "AAPL": {
   "ticker": "AAPL",
   "name": "Apple Inc.",
-  "price": 330.32,
-  "market_cap": 4820749516800.0,
+  "price": 333.69,
+  "market_cap": 4869931925504.0,
   "shares": 14594180000.0,
   "revenue": 466822987776.0,
   "rev_growth": 0.164,
@@ -33,9 +33,9 @@
     "revenue": 416161000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 21944995840.0,
-  "ev": 4842694512640.0,
+  "ev": 4891876921344.0,
   "gross_profit": 227123388242.6573,
   "fcf_margin": 0.23075529328407707,
   "ebitda_margin": 0.3597916288059776
@@ -43,8 +43,8 @@
  "AB": {
   "ticker": "AB",
   "name": "AllianceBernstein Holding L.P.",
-  "price": 35.01,
-  "market_cap": 3258563072.0,
+  "price": 35.0,
+  "market_cap": 3257632512.0,
   "shares": 93075219.0,
   "revenue": 79997000.0,
   "rev_growth": null,
@@ -74,9 +74,9 @@
     "revenue": 332756000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 0.0,
-  "ev": 3258563072.0,
+  "ev": 3257632512.0,
   "gross_profit": 79997000.0,
   "fcf_margin": null,
   "ebitda_margin": null
@@ -84,8 +84,8 @@
  "ABAT": {
   "ticker": "ABAT",
   "name": "American Battery Technology Com",
-  "price": 2.28,
-  "market_cap": 325077280.0,
+  "price": 2.19,
+  "market_cap": 312245312.0,
   "shares": 142577758.0,
   "revenue": 21741726.0,
   "rev_growth": 1.966,
@@ -111,9 +111,9 @@
     "revenue": 21741726.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": -49329309.0,
-  "ev": 275747971.0,
+  "ev": 262916003.0,
   "gross_profit": -3089281.84734,
   "fcf_margin": 0.1167459749975692,
   "ebitda_margin": -3.205902972008754
@@ -121,8 +121,8 @@
  "ABBV": {
   "ticker": "ABBV",
   "name": "AbbVie Inc.",
-  "price": 259.93,
-  "market_cap": 459326783488.0,
+  "price": 262.82,
+  "market_cap": 464433774592.0,
   "shares": 1767117285.0,
   "revenue": 64385998848.0,
   "rev_growth": 0.102,
@@ -152,9 +152,9 @@
     "revenue": 61160000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 64315999232.0,
-  "ev": 523642782720.0,
+  "ev": 528749773824.0,
   "gross_profit": 46867856281.43616,
   "fcf_margin": 0.26201737641481093,
   "ebitda_margin": 0.4777902084057764
@@ -162,8 +162,8 @@
  "ABT": {
   "ticker": "ABT",
   "name": "Abbott Laboratories",
-  "price": 96.69,
-  "market_cap": 167310770176.0,
+  "price": 97.5,
+  "market_cap": 168712372224.0,
   "shares": 1730383296.0,
   "revenue": 46584999936.0,
   "rev_growth": 0.13,
@@ -193,9 +193,9 @@
     "revenue": 44328000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 27116999168.0,
-  "ev": 194427769344.0,
+  "ev": 195829371392.0,
   "gross_profit": 26482174913.61792,
   "fcf_margin": 0.1547520634089113,
   "ebitda_margin": 0.2507459582279219
@@ -203,17 +203,17 @@
  "ACN": {
   "ticker": "ACN",
   "name": "Accenture plc",
-  "price": 212.3,
-  "market_cap": 129915305984.0,
+  "price": 198.9,
+  "market_cap": 121715277824.0,
   "shares": 611942109.0,
   "revenue": 74183442432.0,
   "rev_growth": 0.062,
   "gross_margin": 0.3205,
   "ebitda": 14068783104.0,
-  "fcf": 9080814592.0,
+  "fcf": 11181248512.0,
   "debt": 13396989952.0,
   "cash": 12837769216.0,
-  "beta": null,
+  "beta": 1.092,
   "hi52": 291.09,
   "lo52": 118.15,
   "history": [
@@ -234,18 +234,18 @@
     "revenue": 69672977000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 559220736.0,
-  "ev": 130474526720.0,
+  "ev": 122274498560.0,
   "gross_profit": 23775793299.456,
-  "fcf_margin": 0.12241026156643914,
+  "fcf_margin": 0.1507243145564356,
   "ebitda_margin": 0.1896485609561204
  },
  "ADBE": {
   "ticker": "ADBE",
   "name": "Adobe Inc.",
-  "price": 241.28,
-  "market_cap": 95908798464.0,
+  "price": 237.69,
+  "market_cap": 94481776640.0,
   "shares": 397500000.0,
   "revenue": 25969999872.0,
   "rev_growth": 0.129,
@@ -275,9 +275,9 @@
     "revenue": 23769000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 1144999936.0,
-  "ev": 97053798400.0,
+  "ev": 95626776576.0,
   "gross_profit": 23179002946.956165,
   "fcf_margin": 0.35984310443049355,
   "ebitda_margin": 0.38186367843198116
@@ -285,8 +285,8 @@
  "ADI": {
   "ticker": "ADI",
   "name": "Analog Devices, Inc.",
-  "price": 404.6,
-  "market_cap": 196055187456.0,
+  "price": 417.15,
+  "market_cap": 202136485888.0,
   "shares": 484565465.0,
   "revenue": 13881744384.0,
   "rev_growth": 0.396,
@@ -316,9 +316,9 @@
     "revenue": 11019707000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 6839126784.0,
-  "ev": 202894314240.0,
+  "ev": 208975612672.0,
   "gross_profit": 9134188498.759218,
   "fcf_margin": 0.29876209309690166,
   "ebitda_margin": 0.4986909864137144
@@ -326,8 +326,8 @@
  "ADSK": {
   "ticker": "ADSK",
   "name": "Autodesk, Inc.",
-  "price": 211.31,
-  "market_cap": 44163788800.0,
+  "price": 212.0,
+  "market_cap": 44308000768.0,
   "shares": 209000000.0,
   "revenue": 7790000128.0,
   "rev_growth": 0.161,
@@ -357,9 +357,9 @@
     "revenue": 7206000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": -450000128.0,
-  "ev": 43713788672.0,
+  "ev": 43858000640.0,
   "gross_profit": 7205983818.40384,
   "fcf_margin": 0.4053273237635562,
   "ebitda_margin": 0.2934531566672652
@@ -367,8 +367,8 @@
  "ADYEY": {
   "ticker": "ADYEY",
   "name": "Adyen N.V.",
-  "price": 9.57,
-  "market_cap": 30209308672.0,
+  "price": 9.65,
+  "market_cap": 30461841408.0,
   "shares": 3156667700.0,
   "revenue": 2584399872.0,
   "rev_growth": 0.189,
@@ -398,9 +398,9 @@
     "revenue": 2646897000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": -11993828800.0,
-  "ev": 18215479872.0,
+  "ev": 18468012608.0,
   "gross_profit": 1771218607.3391924,
   "fcf_margin": -0.46079819028872016,
   "ebitda_margin": 0.49937010366792034
@@ -408,8 +408,8 @@
  "AEHR": {
   "ticker": "AEHR",
   "name": "Aehr Test Systems",
-  "price": 101.6,
-  "market_cap": 3318209792.0,
+  "price": 107.21,
+  "market_cap": 3501430016.0,
   "shares": 32659546.0,
   "revenue": 50001000.0,
   "rev_growth": 0.337,
@@ -439,9 +439,9 @@
     "revenue": 50001000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": -106476000.0,
-  "ev": 3211733792.0,
+  "ev": 3394954016.0,
   "gross_profit": 17650853.009999998,
   "fcf_margin": -0.03910671786564269,
   "ebitda_margin": -0.2268754624907502
@@ -449,8 +449,8 @@
  "AFRM": {
   "ticker": "AFRM",
   "name": "Affirm Holdings, Inc.",
-  "price": 70.43,
-  "market_cap": 23764578304.0,
+  "price": 70.77,
+  "market_cap": 23879301120.0,
   "shares": 296881962.0,
   "revenue": 4261082112.0,
   "rev_growth": 0.33,
@@ -480,9 +480,9 @@
     "revenue": 4261083000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 8320907392.0,
-  "ev": 32085485696.0,
+  "ev": 32200208512.0,
   "gross_profit": 2084947477.4016001,
   "fcf_margin": 0.11233689551580273,
   "ebitda_margin": 0.17347564880721078
@@ -490,8 +490,8 @@
  "AI": {
   "ticker": "AI",
   "name": "C3.ai, Inc.",
-  "price": 11.11,
-  "market_cap": 1786264192.0,
+  "price": 11.01,
+  "market_cap": 1770186240.0,
   "shares": 157279864.0,
   "revenue": 232382000.0,
   "rev_growth": -0.255,
@@ -521,9 +521,9 @@
     "revenue": 250268000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": -591603992.0,
-  "ev": 1194660200.0,
+  "ev": 1178582248.0,
   "gross_profit": 67606895.26,
   "fcf_margin": 0.06836964566963018,
   "ebitda_margin": -1.9238968939074454
@@ -531,8 +531,8 @@
  "ALB": {
   "ticker": "ALB",
   "name": "Albemarle Corporation",
-  "price": 105.03,
-  "market_cap": 12394071040.0,
+  "price": 104.59,
+  "market_cap": 12342148096.0,
   "shares": 118005057.0,
   "revenue": 5907904000.0,
   "rev_growth": 0.311,
@@ -543,7 +543,7 @@
   "cash": 1631687936.0,
   "beta": 1.334,
   "hi52": 221.0,
-  "lo52": 85.85,
+  "lo52": 88.01,
   "history": [
    {
     "year": 2022,
@@ -562,9 +562,9 @@
     "revenue": 5142733000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 367250048.0,
-  "ev": 12761321088.0,
+  "ev": 12709398144.0,
   "gross_profit": 1415533739.32096,
   "fcf_margin": 0.22585678846508,
   "ebitda_margin": 0.2509297700165744
@@ -572,8 +572,8 @@
  "ALGM": {
   "ticker": "ALGM",
   "name": "Allegro MicroSystems, Inc.",
-  "price": 36.38,
-  "market_cap": 6781306880.0,
+  "price": 39.53,
+  "market_cap": 7368472576.0,
   "shares": 186402046.0,
   "revenue": 945934016.0,
   "rev_growth": 0.275,
@@ -603,9 +603,9 @@
     "revenue": 890096000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 141978016.0,
-  "ev": 6923284896.0,
+  "ev": 7510450592.0,
   "gross_profit": 448136240.08,
   "fcf_margin": 0.10941447315496475,
   "ebitda_margin": 0.14258604693205154
@@ -613,8 +613,8 @@
  "ALKT": {
   "ticker": "ALKT",
   "name": "Alkami Technology, Inc.",
-  "price": 14.04,
-  "market_cap": 1501465472.0,
+  "price": 13.89,
+  "market_cap": 1485424256.0,
   "shares": 106941980.0,
   "revenue": 489727008.0,
   "rev_growth": 0.159,
@@ -624,7 +624,7 @@
   "debt": 358158016.0,
   "cash": 80955000.0,
   "beta": 0.606,
-  "hi52": 24.815,
+  "hi52": 24.79,
   "lo52": 13.205,
   "history": [
    {
@@ -644,9 +644,9 @@
     "revenue": 443639000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 277203016.0,
-  "ev": 1778668488.0,
+  "ev": 1762627272.0,
   "gross_profit": 280902534.1078003,
   "fcf_margin": 0.1693959096493204,
   "ebitda_margin": -0.04518027316965945
@@ -654,8 +654,8 @@
  "ALLY": {
   "ticker": "ALLY",
   "name": "Ally Financial Inc.",
-  "price": 37.65,
-  "market_cap": 11453118464.0,
+  "price": 37.91,
+  "market_cap": 11532210176.0,
   "shares": 304199693.0,
   "revenue": 7897999872.0,
   "rev_growth": 0.11,
@@ -685,9 +685,9 @@
     "revenue": 8770000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 15242999808.0,
-  "ev": 26696118272.0,
+  "ev": 26775209984.0,
   "gross_profit": 0.0,
   "fcf_margin": null,
   "ebitda_margin": null
@@ -695,8 +695,8 @@
  "ALRM": {
   "ticker": "ALRM",
   "name": "Alarm.com Holdings, Inc.",
-  "price": 54.86,
-  "market_cap": 2693090048.0,
+  "price": 54.68,
+  "market_cap": 2684253696.0,
   "shares": 49090228.0,
   "revenue": 1060984000.0,
   "rev_growth": 0.092,
@@ -726,9 +726,9 @@
     "revenue": 1011187000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 86147008.0,
-  "ev": 2779237056.0,
+  "ev": 2770400704.0,
   "gross_profit": 698222960.56,
   "fcf_margin": 0.09439032445352616,
   "ebitda_margin": 0.15807589935380742
@@ -736,8 +736,8 @@
  "AMBA": {
   "ticker": "AMBA",
   "name": "Ambarella, Inc.",
-  "price": 70.3,
-  "market_cap": 3103110400.0,
+  "price": 68.65,
+  "market_cap": 3030277888.0,
   "shares": 44140971.0,
   "revenue": 417800992.0,
   "rev_growth": 0.132,
@@ -767,9 +767,9 @@
     "revenue": 390702000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": -259690000.0,
-  "ev": 2843420400.0,
+  "ev": 2770587888.0,
   "gross_profit": 244505496.53824,
   "fcf_margin": 0.07858196756028765,
   "ebitda_margin": -0.1170198274684805
@@ -777,8 +777,8 @@
  "AMD": {
   "ticker": "AMD",
   "name": "Advanced Micro Devices, Inc.",
-  "price": 615.73,
-  "market_cap": 1005163773952.0,
+  "price": 633.91,
+  "market_cap": 1034842210304.0,
   "shares": 1632475042.0,
   "revenue": 41305001984.0,
   "rev_growth": 0.501,
@@ -788,8 +788,8 @@
   "debt": 4276000000.0,
   "cash": 13111000064.0,
   "beta": 2.476,
-  "hi52": 639.0,
-  "lo52": 163.14,
+  "hi52": 645.4599,
+  "lo52": 188.22,
   "history": [
    {
     "year": 2022,
@@ -808,9 +808,9 @@
     "revenue": 34639000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": -8835000064.0,
-  "ev": 996328773888.0,
+  "ev": 1026007210240.0,
   "gross_profit": 23016799305.56416,
   "fcf_margin": 0.21405396981762315,
   "ebitda_margin": 0.23149739558671267
@@ -818,8 +818,8 @@
  "AMGN": {
   "ticker": "AMGN",
   "name": "Amgen Inc.",
-  "price": 407.27,
-  "market_cap": 220183183360.0,
+  "price": 403.04,
+  "market_cap": 217896321024.0,
   "shares": 540632005.0,
   "revenue": 38094999552.0,
   "rev_growth": 0.095,
@@ -849,9 +849,9 @@
     "revenue": 36751000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 43314998272.0,
-  "ev": 263498181632.0,
+  "ev": 261211319296.0,
   "gross_profit": 27386876127.92832,
   "fcf_margin": 0.22694907294062697,
   "ebitda_margin": 0.4532878585397811
@@ -859,8 +859,8 @@
  "AMP": {
   "ticker": "AMP",
   "name": "Ameriprise Financial, Inc.",
-  "price": 494.82,
-  "market_cap": 43709042688.0,
+  "price": 490.91,
+  "market_cap": 43363659776.0,
   "shares": 88333219.0,
   "revenue": 19839000576.0,
   "rev_growth": 0.116,
@@ -890,9 +890,9 @@
     "revenue": 18480000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": -5996999680.0,
-  "ev": 37712043008.0,
+  "ev": 37366660096.0,
   "gross_profit": 10897959796.408321,
   "fcf_margin": 0.1463342359852553,
   "ebitda_margin": null
@@ -900,8 +900,8 @@
  "AMPL": {
   "ticker": "AMPL",
   "name": "Amplitude, Inc.",
-  "price": 14.3,
-  "market_cap": 1896455296.0,
+  "price": 14.52,
+  "market_cap": 1925631488.0,
   "shares": 103867086.0,
   "revenue": 374368992.0,
   "rev_growth": 0.212,
@@ -931,9 +931,9 @@
     "revenue": 343214000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": -130832008.0,
-  "ev": 1765623288.0,
+  "ev": 1794799480.0,
   "gross_profit": 271106781.7055703,
   "fcf_margin": 0.19015162452343276,
   "ebitda_margin": -0.2570885999019919
@@ -941,8 +941,8 @@
  "AMPX": {
   "ticker": "AMPX",
   "name": "Amprius Technologies, Inc.",
-  "price": 9.61,
-  "market_cap": 1403834752.0,
+  "price": 9.67,
+  "market_cap": 1412599680.0,
   "shares": 146080618.0,
   "revenue": 109228000.0,
   "rev_growth": 1.259,
@@ -972,9 +972,9 @@
     "revenue": 71911000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": -68140000.0,
-  "ev": 1335694752.0,
+  "ev": 1344459680.0,
   "gross_profit": 24305415.65228,
   "fcf_margin": -0.3286462811733255,
   "ebitda_margin": -0.13463580766836342
@@ -982,8 +982,8 @@
  "AMT": {
   "ticker": "AMT",
   "name": "American Tower Corporation (REI",
-  "price": 161.06,
-  "market_cap": 75047526400.0,
+  "price": 162.2,
+  "market_cap": 75578720256.0,
   "shares": 465960048.0,
   "revenue": 10941500416.0,
   "rev_growth": 0.047,
@@ -1013,9 +1013,9 @@
     "revenue": 10644600000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 43217400448.0,
-  "ev": 118264926848.0,
+  "ev": 118796120704.0,
   "gross_profit": 8071982954.559857,
   "fcf_margin": 0.2668749653137152,
   "ebitda_margin": 0.643823960167183
@@ -1023,8 +1023,8 @@
  "AMZN": {
   "ticker": "AMZN",
   "name": "Amazon.com, Inc.",
-  "price": 248.23,
-  "market_cap": 2677486387200.0,
+  "price": 251.52,
+  "market_cap": 2712973606912.0,
   "shares": 10786313572.0,
   "revenue": 775680032768.0,
   "rev_growth": 0.196,
@@ -1054,9 +1054,9 @@
     "revenue": 716924000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 128647004160.0,
-  "ev": 2806133391360.0,
+  "ev": 2841620611072.0,
   "gross_profit": 393812752636.31366,
   "fcf_margin": 0.004150068141515273,
   "ebitda_margin": 0.21775988519034148
@@ -1064,8 +1064,8 @@
  "AON": {
   "ticker": "AON",
   "name": "Aon plc",
-  "price": 275.95,
-  "market_cap": 58536017920.0,
+  "price": 269.45,
+  "market_cap": 57157201920.0,
   "shares": 212125434.0,
   "revenue": 17577000960.0,
   "rev_growth": 0.022,
@@ -1076,7 +1076,7 @@
   "cash": 1096999936.0,
   "beta": 0.66,
   "hi52": 382.34,
-  "lo52": 269.02,
+  "lo52": 268.9,
   "history": [
    {
     "year": 2022,
@@ -1095,9 +1095,9 @@
     "revenue": 17181000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 14776999936.0,
-  "ev": 73313017856.0,
+  "ev": 71934201856.0,
   "gross_profit": 8464029042.2784,
   "fcf_margin": 0.1815369349561667,
   "ebitda_margin": 0.33566592329525596
@@ -1105,8 +1105,8 @@
  "APD": {
   "ticker": "APD",
   "name": "Air Products and Chemicals, Inc",
-  "price": 273.33,
-  "market_cap": 60866633728.0,
+  "price": 277.57,
+  "market_cap": 61810827264.0,
   "shares": 222685530.0,
   "revenue": 12602200064.0,
   "rev_growth": 0.046,
@@ -1136,9 +1136,9 @@
     "revenue": 12037300000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 17271199232.0,
-  "ev": 78137832960.0,
+  "ev": 79082026496.0,
   "gross_profit": 4039761252.51584,
   "fcf_margin": -0.11882846045888643,
   "ebitda_margin": 0.36915775915109295
@@ -1146,8 +1146,8 @@
  "API": {
   "ticker": "API",
   "name": "Agora, Inc.",
-  "price": 4.14,
-  "market_cap": 350036096.0,
+  "price": 4.08,
+  "market_cap": 344963104.0,
   "shares": 65504801.0,
   "revenue": 151694000.0,
   "rev_growth": 0.18,
@@ -1177,9 +1177,9 @@
     "revenue": 141057000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": -242435000.0,
-  "ev": 107601096.0,
+  "ev": 102528104.0,
   "gross_profit": 97825943.66,
   "fcf_margin": -0.0848657494693264,
   "ebitda_margin": 0.001779899007211887
@@ -1187,8 +1187,8 @@
  "APO": {
   "ticker": "APO",
   "name": "Apollo Global Management, Inc. ",
-  "price": 114.34,
-  "market_cap": 67522703360.0,
+  "price": 114.02,
+  "market_cap": 67333730304.0,
   "shares": 590543159.0,
   "revenue": 35598000128.0,
   "rev_growth": 0.638,
@@ -1218,9 +1218,9 @@
     "revenue": 32049000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": -5731999744.0,
-  "ev": 61790703616.0,
+  "ev": 61601730560.0,
   "gross_profit": 12865828494.301756,
   "fcf_margin": null,
   "ebitda_margin": null
@@ -1228,8 +1228,8 @@
  "APP": {
   "ticker": "APP",
   "name": "Applovin Corporation",
-  "price": 281.31,
-  "market_cap": 94503149568.0,
+  "price": 268.22,
+  "market_cap": 90105700352.0,
   "shares": 305732000.0,
   "revenue": 6829124096.0,
   "rev_growth": 0.528,
@@ -1240,7 +1240,7 @@
   "cash": 3053306112.0,
   "beta": 2.488,
   "hi52": 738.01,
-  "lo52": 275.13,
+  "lo52": 266.84,
   "history": [
    {
     "year": 2022,
@@ -1259,9 +1259,9 @@
     "revenue": 5480717000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 461765888.0,
-  "ev": 94964915456.0,
+  "ev": 90567466240.0,
   "gross_profit": 6041316340.2854395,
   "fcf_margin": 0.4656462789807239,
   "ebitda_margin": 0.7929136709013173
@@ -1269,8 +1269,8 @@
  "APPF": {
   "ticker": "APPF",
   "name": "AppFolio, Inc.",
-  "price": 204.24,
-  "market_cap": 7233566720.0,
+  "price": 202.97,
+  "market_cap": 7188587008.0,
   "shares": 24087367.0,
   "revenue": 1040883008.0,
   "rev_growth": 0.193,
@@ -1300,9 +1300,9 @@
     "revenue": 950822000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": -185909992.0,
-  "ev": 7047656728.0,
+  "ev": 7002677016.0,
   "gross_profit": 661293792.64256,
   "fcf_margin": 0.19110684915705722,
   "ebitda_margin": 0.18705080062177362
@@ -1310,8 +1310,8 @@
  "APTV": {
   "ticker": "APTV",
   "name": "Aptiv PLC",
-  "price": 43.97,
-  "market_cap": 9129637888.0,
+  "price": 43.54,
+  "market_cap": 9040355328.0,
   "shares": 207633331.0,
   "revenue": 20518000640.0,
   "rev_growth": 0.023,
@@ -1322,7 +1322,7 @@
   "cash": 761000000.0,
   "beta": 1.33,
   "hi52": 88.93,
-  "lo52": 42.5553,
+  "lo52": 42.56,
   "history": [
    {
     "year": 2022,
@@ -1341,9 +1341,9 @@
     "revenue": 20398000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 4922999744.0,
-  "ev": 14052637632.0,
+  "ev": 13963355072.0,
   "gross_profit": 3949920303.2064,
   "fcf_margin": 0.07875401567391704,
   "ebitda_margin": 0.15756895580250846
@@ -1351,8 +1351,8 @@
  "ARES": {
   "ticker": "ARES",
   "name": "Ares Management Corporation",
-  "price": 116.57,
-  "market_cap": 38675120128.0,
+  "price": 117.55,
+  "market_cap": 39000260608.0,
   "shares": 223957742.0,
   "revenue": 5252563968.0,
   "rev_growth": 0.096,
@@ -1382,9 +1382,9 @@
     "revenue": 5601482000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 13020249728.0,
-  "ev": 51695369856.0,
+  "ev": 52020510336.0,
   "gross_profit": 5252563968.0,
   "fcf_margin": 0.41117368758525513,
   "ebitda_margin": 0.27230796554099196
@@ -1392,8 +1392,8 @@
  "ASAN": {
   "ticker": "ASAN",
   "name": "Asana, Inc.",
-  "price": 8.93,
-  "market_cap": 2044703232.0,
+  "price": 8.62,
+  "market_cap": 1973722368.0,
   "shares": 159441754.0,
   "revenue": 828126976.0,
   "rev_growth": 0.099,
@@ -1423,9 +1423,9 @@
     "revenue": 790806000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": -81525008.0,
-  "ev": 1963178224.0,
+  "ev": 1892197360.0,
   "gross_profit": 725373030.5055386,
   "fcf_margin": 0.237947954493394,
   "ebitda_margin": -0.1324676084455918
@@ -1433,8 +1433,8 @@
  "AVGO": {
   "ticker": "AVGO",
   "name": "Broadcom Inc.",
-  "price": 343.64,
-  "market_cap": 1640410251264.0,
+  "price": 355.14,
+  "market_cap": 1695307005952.0,
   "shares": 4773629865.0,
   "revenue": 89103998976.0,
   "rev_growth": 0.855,
@@ -1464,9 +1464,9 @@
     "revenue": 63887000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 35444000768.0,
-  "ev": 1675854252032.0,
+  "ev": 1730751006720.0,
   "gross_profit": 67286884826.7264,
   "fcf_margin": 0.3433796440970187,
   "ebitda_margin": 0.5865056601789123
@@ -1474,8 +1474,8 @@
  "AXP": {
   "ticker": "AXP",
   "name": "American Express Company",
-  "price": 302.09,
-  "market_cap": 204004343808.0,
+  "price": 302.78,
+  "market_cap": 204470304768.0,
   "shares": 675309833.0,
   "revenue": 70912999424.0,
   "rev_growth": 0.128,
@@ -1505,9 +1505,9 @@
     "revenue": 72230000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 13340000256.0,
-  "ev": 217344344064.0,
+  "ev": 217810305024.0,
   "gross_profit": 44205745580.93312,
   "fcf_margin": null,
   "ebitda_margin": null
@@ -1515,8 +1515,8 @@
  "BA": {
   "ticker": "BA",
   "name": "Boeing Company (The)",
-  "price": 192.28,
-  "market_cap": 151972347904.0,
+  "price": 193.56,
+  "market_cap": 152984027136.0,
   "shares": 790370020.0,
   "revenue": 93994999808.0,
   "rev_growth": 0.08,
@@ -1546,9 +1546,9 @@
     "revenue": 89463000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 29066999808.0,
-  "ev": 181039347712.0,
+  "ev": 182051026944.0,
   "gross_profit": 4427164490.9568,
   "fcf_margin": 0.05984760086696887,
   "ebitda_margin": -0.030852704994135
@@ -1556,8 +1556,8 @@
  "BAC": {
   "ticker": "BAC",
   "name": "Bank of America Corporation",
-  "price": 53.73,
-  "market_cap": 375720378368.0,
+  "price": 53.75,
+  "market_cap": 375860232192.0,
   "shares": 6992748365.0,
   "revenue": 113931001856.0,
   "rev_growth": 0.168,
@@ -1587,9 +1587,9 @@
     "revenue": 113097000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": -79157002240.0,
-  "ev": 296563376128.0,
+  "ev": 296703229952.0,
   "gross_profit": 0.0,
   "fcf_margin": null,
   "ebitda_margin": null
@@ -1597,8 +1597,8 @@
  "BB": {
   "ticker": "BB",
   "name": "BlackBerry Limited",
-  "price": 9.18,
-  "market_cap": 5388956160.0,
+  "price": 9.3,
+  "market_cap": 5459400192.0,
   "shares": 587032279.0,
   "revenue": 614000000.0,
   "rev_growth": 0.26,
@@ -1628,9 +1628,9 @@
     "revenue": 549100000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": -156500000.0,
-  "ev": 5232456160.0,
+  "ev": 5302900192.0,
   "gross_profit": 478097240.0,
   "fcf_margin": 0.2254885993485342,
   "ebitda_margin": 0.18583061889250815
@@ -1638,8 +1638,8 @@
  "BDX": {
   "ticker": "BDX",
   "name": "Becton, Dickinson and Company",
-  "price": 178.07,
-  "market_cap": 48503922688.0,
+  "price": 176.8,
+  "market_cap": 48157990912.0,
   "shares": 272386800.0,
   "revenue": 22484000768.0,
   "rev_growth": 0.054,
@@ -1669,9 +1669,9 @@
     "revenue": 21840000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 16098999488.0,
-  "ev": 64602922176.0,
+  "ev": 64256990400.0,
   "gross_profit": 10553090600.46848,
   "fcf_margin": 0.19918051765830647,
   "ebitda_margin": 0.27223802379119366
@@ -1679,8 +1679,8 @@
  "BEN": {
   "ticker": "BEN",
   "name": "Franklin Templeton, Inc.",
-  "price": 32.5,
-  "market_cap": 16512498688.0,
+  "price": 32.81,
+  "market_cap": 16670003200.0,
   "shares": 508076910.0,
   "revenue": 9324099584.0,
   "rev_growth": 0.143,
@@ -1710,9 +1710,9 @@
     "revenue": 8770700000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 901800192.0,
-  "ev": 17414298880.0,
+  "ev": 17571803392.0,
   "gross_profit": 3515838230.1388803,
   "fcf_margin": -0.32076690784515755,
   "ebitda_margin": 0.1929516105863161
@@ -1720,8 +1720,8 @@
  "BILL": {
   "ticker": "BILL",
   "name": "BILL Holdings, Inc.",
-  "price": 43.78,
-  "market_cap": 3733417472.0,
+  "price": 43.62,
+  "market_cap": 3719773184.0,
   "shares": 85276782.0,
   "revenue": 1653159936.0,
   "rev_growth": 0.138,
@@ -1751,9 +1751,9 @@
     "revenue": 1653160000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": -40064000.0,
-  "ev": 3693353472.0,
+  "ev": 3679709184.0,
   "gross_profit": 1387629387.07968,
   "fcf_margin": 0.1347945078678703,
   "ebitda_margin": 0.060553124849016426
@@ -1761,8 +1761,8 @@
  "BL": {
   "ticker": "BL",
   "name": "BlackLine, Inc.",
-  "price": 27.48,
-  "market_cap": 1597282432.0,
+  "price": 27.41,
+  "market_cap": 1593213696.0,
   "shares": 58125270.0,
   "revenue": 732448000.0,
   "rev_growth": 0.092,
@@ -1792,9 +1792,9 @@
     "revenue": 700427000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 162979968.0,
-  "ev": 1760262400.0,
+  "ev": 1756193664.0,
   "gross_profit": 553459682.24,
   "fcf_margin": 0.18925745991524312,
   "ebitda_margin": 0.0880212656734676
@@ -1802,8 +1802,8 @@
  "BLK": {
   "ticker": "BLK",
   "name": "BlackRock, Inc.",
-  "price": 1064.36,
-  "market_cap": 172933152768.0,
+  "price": 1059.63,
+  "market_cap": 172164644864.0,
   "shares": 154869259.0,
   "revenue": 27299000320.0,
   "rev_growth": 0.306,
@@ -1833,9 +1833,9 @@
     "revenue": 24216000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 1125000192.0,
-  "ev": 174058152960.0,
+  "ev": 173289645056.0,
   "gross_profit": 12872024630.8864,
   "fcf_margin": 0.2775971541510279,
   "ebitda_margin": 0.40719440732985784
@@ -1843,8 +1843,8 @@
  "BLNK": {
   "ticker": "BLNK",
   "name": "Blink Charging Co.",
-  "price": 0.531,
-  "market_cap": 76962464.0,
+  "price": 0.5607,
+  "market_cap": 81267144.0,
   "shares": 144938716.0,
   "revenue": 96550000.0,
   "rev_growth": -0.245,
@@ -1874,9 +1874,9 @@
     "revenue": 103210000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": -29535000.0,
-  "ev": 47427464.0,
+  "ev": 51732144.0,
   "gross_profit": 32526727.569,
   "fcf_margin": 0.1947527291558778,
   "ebitda_margin": -0.37499741066804765
@@ -1884,8 +1884,8 @@
  "BMY": {
   "ticker": "BMY",
   "name": "Bristol-Myers Squibb Company",
-  "price": 61.46,
-  "market_cap": 125545242624.0,
+  "price": 61.15,
+  "market_cap": 124912001024.0,
   "shares": 2042714656.0,
   "revenue": 49186000896.0,
   "rev_growth": 0.057,
@@ -1915,9 +1915,9 @@
     "revenue": 48195000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 33986001920.0,
-  "ev": 159531244544.0,
+  "ev": 158898002944.0,
   "gross_profit": 35247180102.08256,
   "fcf_margin": 0.1649732651604919,
   "ebitda_margin": 0.38486560255276747
@@ -1925,8 +1925,8 @@
  "BOX": {
   "ticker": "BOX",
   "name": "Box, Inc.",
-  "price": 34.6,
-  "market_cap": 4747146240.0,
+  "price": 34.49,
+  "market_cap": 4732054528.0,
   "shares": 137200773.0,
   "revenue": 1234070016.0,
   "rev_growth": 0.092,
@@ -1956,9 +1956,9 @@
     "revenue": 1177253000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 111006976.0,
-  "ev": 4858153216.0,
+  "ev": 4843061504.0,
   "gross_profit": 981702747.0908006,
   "fcf_margin": 0.30654286636520955,
   "ebitda_margin": 0.10681646769708081
@@ -1966,8 +1966,8 @@
  "BRK-B": {
   "ticker": "BRK-B",
   "name": "Berkshire Hathaway Inc. New",
-  "price": 500.5,
-  "market_cap": 1071425257472.0,
+  "price": 502.65,
+  "market_cap": 1076027719680.0,
   "shares": 1408035161.0,
   "revenue": 384687013888.0,
   "rev_growth": 0.1,
@@ -1997,9 +1997,9 @@
     "revenue": 410522000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": -236914999296.0,
-  "ev": 834510258176.0,
+  "ev": 839112720384.0,
   "gross_profit": 116683272746.24844,
   "fcf_margin": 0.18710079954233988,
   "ebitda_margin": 0.33971254074630086
@@ -2007,8 +2007,8 @@
  "BRZE": {
   "ticker": "BRZE",
   "name": "Braze, Inc.",
-  "price": 25.65,
-  "market_cap": 2913440512.0,
+  "price": 25.42,
+  "market_cap": 2887315968.0,
   "shares": 113584427.0,
   "revenue": 834241024.0,
   "rev_growth": 0.262,
@@ -2038,9 +2038,9 @@
     "revenue": 738182000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": -313461992.0,
-  "ev": 2599978520.0,
+  "ev": 2573853976.0,
   "gross_profit": 553085080.7218791,
   "fcf_margin": 0.2352798799786667,
   "ebitda_margin": -0.10332385667957752
@@ -2048,8 +2048,8 @@
  "BSX": {
   "ticker": "BSX",
   "name": "Boston Scientific Corporation",
-  "price": 43.23,
-  "market_cap": 62650191872.0,
+  "price": 42.6,
+  "market_cap": 61737177088.0,
   "shares": 1449229526.0,
   "revenue": 20995999744.0,
   "rev_growth": 0.075,
@@ -2060,7 +2060,7 @@
   "cash": 539000000.0,
   "beta": 0.568,
   "hi52": 105.65,
-  "lo52": 42.2,
+  "lo52": 41.9397,
   "history": [
    {
     "year": 2022,
@@ -2079,9 +2079,9 @@
     "revenue": 20074000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 12085000000.0,
-  "ev": 74735191872.0,
+  "ev": 73822177088.0,
   "gross_profit": 14526922262.87616,
   "fcf_margin": 0.11675438816389423,
   "ebitda_margin": 0.27200419763922057
@@ -2089,8 +2089,8 @@
  "BSY": {
   "ticker": "BSY",
   "name": "Bentley Systems, Incorporated",
-  "price": 32.75,
-  "market_cap": 9893541888.0,
+  "price": 32.23,
+  "market_cap": 9736454144.0,
   "shares": 290577762.0,
   "revenue": 1602039040.0,
   "rev_growth": 0.128,
@@ -2120,9 +2120,9 @@
     "revenue": 1501779000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 1120464000.0,
-  "ev": 11014005888.0,
+  "ev": 10856918144.0,
   "gross_profit": 1311188900.3491714,
   "fcf_margin": 0.24842067269471785,
   "ebitda_margin": 0.29194917996505254
@@ -2130,8 +2130,8 @@
  "BWA": {
   "ticker": "BWA",
   "name": "BorgWarner Inc.",
-  "price": 60.38,
-  "market_cap": 12297374720.0,
+  "price": 60.52,
+  "market_cap": 12325888000.0,
   "shares": 203666354.0,
   "revenue": 14343999488.0,
   "rev_growth": 0.003,
@@ -2161,9 +2161,9 @@
     "revenue": 14316000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 1616999936.0,
-  "ev": 13914374656.0,
+  "ev": 13942887936.0,
   "gross_profit": 2771977901.056,
   "fcf_margin": 0.07433421793496373,
   "ebitda_margin": 0.14194088627117496
@@ -2171,8 +2171,8 @@
  "BX": {
   "ticker": "BX",
   "name": "Blackstone Inc.",
-  "price": 112.24,
-  "market_cap": 134160220160.0,
+  "price": 111.75,
+  "market_cap": 133574524928.0,
   "shares": 750625114.0,
   "revenue": 15483307008.0,
   "rev_growth": 0.286,
@@ -2202,9 +2202,9 @@
     "revenue": 12410012000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 12640771584.0,
-  "ev": 146800991744.0,
+  "ev": 146215296512.0,
   "gross_profit": 15483307008.0,
   "fcf_margin": null,
   "ebitda_margin": null
@@ -2212,8 +2212,8 @@
  "BYDDY": {
   "ticker": "BYDDY",
   "name": "BYD Co., Ltd.",
-  "price": 9.68,
-  "market_cap": 88254472192.0,
+  "price": 9.35,
+  "market_cap": 85245796352.0,
   "shares": 3683400000.0,
   "revenue": 777499443200.0,
   "rev_growth": -0.032,
@@ -2243,9 +2243,9 @@
     "revenue": 803964958000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": -2773868544.0,
-  "ev": 85480603648.0,
+  "ev": 82471927808.0,
   "gross_profit": 139156858118.93042,
   "fcf_margin": -0.12386358176622807,
   "ebitda_margin": 0.15154877904869477
@@ -2253,8 +2253,8 @@
  "C": {
   "ticker": "C",
   "name": "Citigroup, Inc.",
-  "price": 127.0,
-  "market_cap": 213034467328.0,
+  "price": 128.5,
+  "market_cap": 215550623744.0,
   "shares": 1677436783.0,
   "revenue": 81711996928.0,
   "rev_growth": 0.155,
@@ -2284,9 +2284,9 @@
     "revenue": 85213000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": -214099951616.0,
-  "ev": -1065484288.0,
+  "ev": 1450672128.0,
   "gross_profit": 0.0,
   "fcf_margin": null,
   "ebitda_margin": null
@@ -2294,8 +2294,8 @@
  "CACC": {
   "ticker": "CACC",
   "name": "Credit Acceptance Corporation",
-  "price": 511.95,
-  "market_cap": 5314338304.0,
+  "price": 527.5,
+  "market_cap": 5475756032.0,
   "shares": 10380580.0,
   "revenue": 1303399936.0,
   "rev_growth": 0.095,
@@ -2325,9 +2325,9 @@
     "revenue": 2287900000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 6284799808.0,
-  "ev": 11599138112.0,
+  "ev": 11760555840.0,
   "gross_profit": 1233694146.524718,
   "fcf_margin": null,
   "ebitda_margin": null
@@ -2335,8 +2335,8 @@
  "CAT": {
   "ticker": "CAT",
   "name": "Caterpillar, Inc.",
-  "price": 826.35,
-  "market_cap": 379852324864.0,
+  "price": 845.42,
+  "market_cap": 388618321920.0,
   "shares": 459674889.0,
   "revenue": 74728996864.0,
   "rev_growth": 0.24,
@@ -2366,9 +2366,9 @@
     "revenue": 67589000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 39201001472.0,
-  "ev": 419053326336.0,
+  "ev": 427819323392.0,
   "gross_profit": 22204226838.20032,
   "fcf_margin": 0.06756413370821399,
   "ebitda_margin": 0.2174657828951638
@@ -2376,8 +2376,8 @@
  "CB": {
   "ticker": "CB",
   "name": "Chubb Limited",
-  "price": 331.3,
-  "market_cap": 127815491584.0,
+  "price": 330.89,
+  "market_cap": 127657328640.0,
   "shares": 385799859.0,
   "revenue": 61895999488.0,
   "rev_growth": 0.061,
@@ -2407,9 +2407,9 @@
     "revenue": 59783000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 17045999616.0,
-  "ev": 144861491200.0,
+  "ev": 144703328256.0,
   "gross_profit": 19268223402.69441,
   "fcf_margin": 0.16944553119355227,
   "ebitda_margin": 0.24045173263395514
@@ -2417,8 +2417,8 @@
  "CBOE": {
   "ticker": "CBOE",
   "name": "Cboe Global Markets, Inc.",
-  "price": 277.19,
-  "market_cap": 28947232768.0,
+  "price": 271.26,
+  "market_cap": 28327958528.0,
   "shares": 104431019.0,
   "revenue": 5061300224.0,
   "rev_growth": 0.229,
@@ -2448,9 +2448,9 @@
     "revenue": 4714200000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": -774200064.0,
-  "ev": 28173032704.0,
+  "ev": 27553758464.0,
   "gross_profit": 2737100345.6849513,
   "fcf_margin": 0.13400706418952002,
   "ebitda_margin": 0.381463249867076
@@ -2458,8 +2458,8 @@
  "CDNS": {
   "ticker": "CDNS",
   "name": "Cadence Design Systems, Inc.",
-  "price": 350.73,
-  "market_cap": 96588587008.0,
+  "price": 351.35,
+  "market_cap": 96759332864.0,
   "shares": 275393000.0,
   "revenue": 5837622784.0,
   "rev_growth": 0.242,
@@ -2489,9 +2489,9 @@
     "revenue": 5296759000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 1119523968.0,
-  "ev": 97708110976.0,
+  "ev": 97878856832.0,
   "gross_profit": 5012825352.729779,
   "fcf_margin": 0.2757417879777824,
   "ebitda_margin": 0.36931386075664596
@@ -2499,8 +2499,8 @@
  "CGNX": {
   "ticker": "CGNX",
   "name": "Cognex Corporation",
-  "price": 62.22,
-  "market_cap": 10466887680.0,
+  "price": 64.97,
+  "market_cap": 10929503232.0,
   "shares": 168223842.0,
   "revenue": 1088930048.0,
   "rev_growth": 0.169,
@@ -2530,9 +2530,9 @@
     "revenue": 994359000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": -331892984.0,
-  "ev": 10134994696.0,
+  "ev": 10597610248.0,
   "gross_profit": 749902534.1877786,
   "fcf_margin": 0.17969141026035862,
   "ebitda_margin": 0.2455676565185572
@@ -2540,8 +2540,8 @@
  "CHPT": {
   "ticker": "CHPT",
   "name": "ChargePoint Holdings, Inc.",
-  "price": 10.2,
-  "market_cap": 273873312.0,
+  "price": 9.29,
+  "market_cap": 249439504.0,
   "shares": 26850324.0,
   "revenue": 432888000.0,
   "rev_growth": 0.177,
@@ -2571,9 +2571,9 @@
     "revenue": 411224000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 154770992.0,
-  "ev": 428644304.0,
+  "ev": 404210496.0,
   "gross_profit": 134065404.94224,
   "fcf_margin": 0.07573206002476392,
   "ebitda_margin": -0.3332109182975735
@@ -2581,8 +2581,8 @@
  "CI": {
   "ticker": "CI",
   "name": "The Cigna Group",
-  "price": 267.96,
-  "market_cap": 70805880832.0,
+  "price": 270.53,
+  "market_cap": 71484973056.0,
   "shares": 264240486.0,
   "revenue": 282382008320.0,
   "rev_growth": 0.067,
@@ -2612,9 +2612,9 @@
     "revenue": 273854000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 24621000704.0,
-  "ev": 95426881536.0,
+  "ev": 96105973760.0,
   "gross_profit": 25798418868.20516,
   "fcf_margin": 0.028260034098761665,
   "ebitda_margin": 0.045179930874145575
@@ -2622,8 +2622,8 @@
  "CL": {
   "ticker": "CL",
   "name": "Colgate-Palmolive Company",
-  "price": 84.53,
-  "market_cap": 67385016320.0,
+  "price": 84.26,
+  "market_cap": 67169783808.0,
   "shares": 797172829.0,
   "revenue": 21046999040.0,
   "rev_growth": 0.049,
@@ -2653,9 +2653,9 @@
     "revenue": 20382000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 6404000000.0,
-  "ev": 73789016320.0,
+  "ev": 73573783808.0,
   "gross_profit": 12718911989.8624,
   "fcf_margin": 0.1643167705489666,
   "ebitda_margin": 0.23675584602487823
@@ -2663,8 +2663,8 @@
  "CME": {
   "ticker": "CME",
   "name": "CME Group Inc.",
-  "price": 265.1,
-  "market_cap": 95324463104.0,
+  "price": 263.14,
+  "market_cap": 94619688960.0,
   "shares": 359576125.0,
   "revenue": 6757199872.0,
   "rev_growth": 0.008,
@@ -2694,9 +2694,9 @@
     "revenue": 6520600000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 1592900096.0,
-  "ev": 96917363200.0,
+  "ev": 96212589056.0,
   "gross_profit": 6757199872.0,
   "fcf_margin": 0.43050561402721815,
   "ebitda_margin": 0.7060765184363041
@@ -2704,8 +2704,8 @@
  "COIN": {
   "ticker": "COIN",
   "name": "Coinbase Global, Inc.",
-  "price": 189.29,
-  "market_cap": 49941688320.0,
+  "price": 183.0,
+  "market_cap": 48282157056.0,
   "shares": 222803032.0,
   "revenue": 6043752960.0,
   "rev_growth": -0.173,
@@ -2735,9 +2735,9 @@
     "revenue": 7181325000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": -2120552448.0,
-  "ev": 47821135872.0,
+  "ev": 46161604608.0,
   "gross_profit": 5186144414.976,
   "fcf_margin": 0.44152249134948096,
   "ebitda_margin": 0.11574744974354478
@@ -2745,8 +2745,8 @@
  "COST": {
   "ticker": "COST",
   "name": "Costco Wholesale Corporation",
-  "price": 914.94,
-  "market_cap": 405561769984.0,
+  "price": 920.65,
+  "market_cap": 408092835840.0,
   "shares": 443266000.0,
   "revenue": 303154003968.0,
   "rev_growth": 0.111,
@@ -2776,9 +2776,9 @@
     "revenue": 275235000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": -12725000192.0,
-  "ev": 392836769792.0,
+  "ev": 395367835648.0,
   "gross_profit": 38876469468.856316,
   "fcf_margin": 0.023577125614195973,
   "ebitda_margin": 0.04736536504896598
@@ -2786,8 +2786,8 @@
  "CPAY": {
   "ticker": "CPAY",
   "name": "Corpay, Inc.",
-  "price": 389.73,
-  "market_cap": 25589516288.0,
+  "price": 394.6,
+  "market_cap": 25909278720.0,
   "shares": 65659599.0,
   "revenue": 5020502016.0,
   "rev_growth": 0.215,
@@ -2817,9 +2817,9 @@
     "revenue": 4528403000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 7558492416.0,
-  "ev": 33148008704.0,
+  "ev": 33467771136.0,
   "gross_profit": 4043462118.66624,
   "fcf_margin": 0.38764567085077734,
   "ebitda_margin": 0.5573703392772426
@@ -2827,8 +2827,8 @@
  "CRM": {
   "ticker": "CRM",
   "name": "Salesforce, Inc.",
-  "price": 236.69,
-  "market_cap": 194795864064.0,
+  "price": 234.69,
+  "market_cap": 193149878272.0,
   "shares": 823000000.0,
   "revenue": 43938000896.0,
   "rev_growth": 0.108,
@@ -2858,9 +2858,9 @@
     "revenue": 41525000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 30972999680.0,
-  "ev": 225768863744.0,
+  "ev": 224122877952.0,
   "gross_profit": 33956165852.446716,
   "fcf_margin": 0.4035658076017351,
   "ebitda_margin": 0.2935727629149894
@@ -2868,8 +2868,8 @@
  "CRTO": {
   "ticker": "CRTO",
   "name": "Criteo S.A.",
-  "price": 15.23,
-  "market_cap": 746232832.0,
+  "price": 14.73,
+  "market_cap": 721734016.0,
   "shares": 48997559.0,
   "revenue": 1863453056.0,
   "rev_growth": -0.113,
@@ -2880,7 +2880,7 @@
   "cash": 280288000.0,
   "beta": null,
   "hi52": 25.29,
-  "lo52": 15.06,
+  "lo52": 14.35,
   "history": [
    {
     "year": 2022,
@@ -2899,9 +2899,9 @@
     "revenue": 1944901000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": -132100992.0,
-  "ev": 614131840.0,
+  "ev": 589633024.0,
   "gross_profit": 998848181.6152422,
   "fcf_margin": 0.09586732299200995,
   "ebitda_margin": 0.1532584977552555
@@ -2909,8 +2909,8 @@
  "CRWD": {
   "ticker": "CRWD",
   "name": "CrowdStrike Holdings, Inc.",
-  "price": 266.09,
-  "market_cap": 272458825728.0,
+  "price": 270.04,
+  "market_cap": 276503363584.0,
   "shares": 1023934842.0,
   "revenue": 5396145152.0,
   "rev_growth": 0.258,
@@ -2920,7 +2920,7 @@
   "debt": 820179008.0,
   "cash": 5013847040.0,
   "beta": 1.255,
-  "hi52": 269.3,
+  "hi52": 273.5351,
   "lo52": 85.68,
   "history": [
    {
@@ -2940,9 +2940,9 @@
     "revenue": 4812005000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": -4193668032.0,
-  "ev": 268265157696.0,
+  "ev": 272309695552.0,
   "gross_profit": 4057145478.136914,
   "fcf_margin": 0.36977979942968,
   "ebitda_margin": 0.019803210808811096
@@ -2950,8 +2950,8 @@
  "CSCO": {
   "ticker": "CSCO",
   "name": "Cisco Systems, Inc.",
-  "price": 108.76,
-  "market_cap": 428795756544.0,
+  "price": 112.2,
+  "market_cap": 442358235136.0,
   "shares": 3942586873.0,
   "revenue": 63324999680.0,
   "rev_growth": 0.176,
@@ -2981,9 +2981,9 @@
     "revenue": 63325000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 15267000320.0,
-  "ev": 444062756864.0,
+  "ev": 457625235456.0,
   "gross_profit": 40859822793.5232,
   "fcf_margin": 0.17659099604436035,
   "ebitda_margin": 0.2943861029009641
@@ -2991,8 +2991,8 @@
  "CSGP": {
   "ticker": "CSGP",
   "name": "CoStar Group, Inc.",
-  "price": 27.72,
-  "market_cap": 11232076800.0,
+  "price": 27.38,
+  "market_cap": 11094309888.0,
   "shares": 405197588.0,
   "revenue": 3556000000.0,
   "rev_growth": 0.184,
@@ -3022,9 +3022,9 @@
     "revenue": 3247000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": -110999936.0,
-  "ev": 11121076864.0,
+  "ev": 10983309952.0,
   "gross_profit": 2798002897.76,
   "fcf_margin": 0.11605736782902137,
   "ebitda_margin": 0.1107986501687289
@@ -3032,8 +3032,8 @@
  "CSIQ": {
   "ticker": "CSIQ",
   "name": "Canadian Solar Inc.",
-  "price": 11.27,
-  "market_cap": 765196416.0,
+  "price": 11.185,
+  "market_cap": 759425216.0,
   "shares": 67896749.0,
   "revenue": 4990202880.0,
   "rev_growth": -0.287,
@@ -3063,9 +3063,9 @@
     "revenue": 5595107000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 5845462016.0,
-  "ev": 6610658432.0,
+  "ev": 6604887232.0,
   "gross_profit": 880221836.1011711,
   "fcf_margin": -0.2581255405792239,
   "ebitda_margin": 0.1256313683182356
@@ -3073,8 +3073,8 @@
  "CVX": {
   "ticker": "CVX",
   "name": "Chevron Corporation",
-  "price": 207.1,
-  "market_cap": 406248062976.0,
+  "price": 206.69,
+  "market_cap": 405443805184.0,
   "shares": 1961603274.0,
   "revenue": 209383997440.0,
   "rev_growth": 0.535,
@@ -3104,9 +3104,9 @@
     "revenue": 184432000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 28545001472.0,
-  "ev": 434793064448.0,
+  "ev": 433988806656.0,
   "gross_profit": 92688014146.7648,
   "fcf_margin": 0.10475490197996289,
   "ebitda_margin": 0.24195735687259215
@@ -3128,7 +3128,7 @@
   "hi52": 24.56,
   "lo52": 15.735,
   "history": [],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 779329992.0,
   "ev": 8110202312.0,
   "gross_profit": 544751893.92896,
@@ -3138,8 +3138,8 @@
  "CXM": {
   "ticker": "CXM",
   "name": "Sprinklr, Inc.",
-  "price": 5.22,
-  "market_cap": 1211934336.0,
+  "price": 5.2,
+  "market_cap": 1207291008.0,
   "shares": 131087011.0,
   "revenue": 872881984.0,
   "rev_growth": 0.008,
@@ -3169,9 +3169,9 @@
     "revenue": 857200000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": -411551008.0,
-  "ev": 800383328.0,
+  "ev": 795740000.0,
   "gross_profit": 572558208.58496,
   "fcf_margin": 0.11521002133548446,
   "ebitda_margin": 0.05854857923153103
@@ -3179,8 +3179,8 @@
  "DAN": {
   "ticker": "DAN",
   "name": "Dana Incorporated",
-  "price": 27.63,
-  "market_cap": 2972343552.0,
+  "price": 27.88,
+  "market_cap": 2999237632.0,
   "shares": 107576679.0,
   "revenue": 7662000128.0,
   "rev_growth": 0.039,
@@ -3210,9 +3210,9 @@
     "revenue": 7500000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 1172000064.0,
-  "ev": 4144343616.0,
+  "ev": 4171237696.0,
   "gross_profit": 724978452.11136,
   "fcf_margin": 0.08238710172989441,
   "ebitda_margin": 0.08744452999309582
@@ -3251,7 +3251,7 @@
     "revenue": 772255000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 190234000.0,
   "ev": 291692016.0,
   "gross_profit": 159307795.7952,
@@ -3261,8 +3261,8 @@
  "DBX": {
   "ticker": "DBX",
   "name": "Dropbox, Inc.",
-  "price": 34.08,
-  "market_cap": 7410444800.0,
+  "price": 33.9,
+  "market_cap": 7371305472.0,
   "shares": 142295014.0,
   "revenue": 2531599872.0,
   "rev_growth": 0.009,
@@ -3292,9 +3292,9 @@
     "revenue": 2521000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 2861600000.0,
-  "ev": 10272044800.0,
+  "ev": 10232905472.0,
   "gross_profit": 2018495209.9430401,
   "fcf_margin": 0.309320211563038,
   "ebitda_margin": 0.3278954060557007
@@ -3302,8 +3302,8 @@
  "DDOG": {
   "ticker": "DDOG",
   "name": "Datadog, Inc.",
-  "price": 276.46,
-  "market_cap": 99269869568.0,
+  "price": 277.22,
+  "market_cap": 99542777856.0,
   "shares": 334904614.0,
   "revenue": 3966725120.0,
   "rev_growth": 0.356,
@@ -3333,9 +3333,9 @@
     "revenue": 3427158000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": -3707637248.0,
-  "ev": 95562232320.0,
+  "ev": 95835140608.0,
   "gross_profit": 3154974491.4431996,
   "fcf_margin": 0.2650580315482006,
   "ebitda_margin": 0.020898095404200834
@@ -3343,8 +3343,8 @@
  "DE": {
   "ticker": "DE",
   "name": "Deere & Company",
-  "price": 667.26,
-  "market_cap": 179910246400.0,
+  "price": 687.0,
+  "market_cap": 185232654336.0,
   "shares": 269625412.0,
   "revenue": 47927001088.0,
   "rev_growth": 0.049,
@@ -3374,9 +3374,9 @@
     "revenue": 44665000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 57637998592.0,
-  "ev": 237548244992.0,
+  "ev": 242870652928.0,
   "gross_profit": 12069935954.00192,
   "fcf_margin": 0.09423185280688848,
   "ebitda_margin": 0.1794395709468514
@@ -3384,8 +3384,8 @@
  "DHR": {
   "ticker": "DHR",
   "name": "Danaher Corporation",
-  "price": 211.76,
-  "market_cap": 148864319488.0,
+  "price": 214.06,
+  "market_cap": 150481190912.0,
   "shares": 702986054.0,
   "revenue": 25106999296.0,
   "rev_growth": 0.055,
@@ -3415,9 +3415,9 @@
     "revenue": 24568000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 23509999616.0,
-  "ev": 172374319104.0,
+  "ev": 173991190528.0,
   "gross_profit": 14751114292.09891,
   "fcf_margin": 0.17226770387845874,
   "ebitda_margin": 0.3197514828974009
@@ -3425,8 +3425,8 @@
  "DLO": {
   "ticker": "DLO",
   "name": "DLocal Limited",
-  "price": 13.73,
-  "market_cap": 4040314880.0,
+  "price": 13.745,
+  "market_cap": 4044729088.0,
   "shares": 178035757.0,
   "revenue": 1355896064.0,
   "rev_growth": 0.558,
@@ -3456,9 +3456,9 @@
     "revenue": 1093587000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": -747928008.0,
-  "ev": 3292386872.0,
+  "ev": 3296801080.0,
   "gross_profit": 464828315.77840126,
   "fcf_margin": 0.2566454179189947,
   "ebitda_margin": 0.17815451671670315
@@ -3466,8 +3466,8 @@
  "DOCU": {
   "ticker": "DOCU",
   "name": "DocuSign, Inc.",
-  "price": 69.74,
-  "market_cap": 13034575872.0,
+  "price": 69.01,
+  "market_cap": 12898138112.0,
   "shares": 186902452.0,
   "revenue": 3361190912.0,
   "rev_growth": 0.094,
@@ -3497,9 +3497,9 @@
     "revenue": 3219500000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": -594578992.0,
-  "ev": 12439996880.0,
+  "ev": 12303559120.0,
   "gross_profit": 2675810473.13408,
   "fcf_margin": 0.3905552866138417,
   "ebitda_margin": 0.1313977704816548
@@ -3538,7 +3538,7 @@
     "revenue": 318857000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 121689000.0,
   "ev": 288667368.0,
   "gross_profit": 237800605.81056002,
@@ -3548,8 +3548,8 @@
  "DT": {
   "ticker": "DT",
   "name": "Dynatrace, Inc.",
-  "price": 59.26,
-  "market_cap": 17198962688.0,
+  "price": 59.32,
+  "market_cap": 17216376832.0,
   "shares": 290228871.0,
   "revenue": 2095586048.0,
   "rev_growth": 0.162,
@@ -3559,7 +3559,7 @@
   "debt": 159272992.0,
   "cash": 1108864000.0,
   "beta": 0.741,
-  "hi52": 59.42,
+  "hi52": 60.24,
   "lo52": 31.635,
   "history": [
    {
@@ -3579,9 +3579,9 @@
     "revenue": 2018387000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": -949591008.0,
-  "ev": 16249371680.0,
+  "ev": 16266785824.0,
   "gross_profit": 1709935347.58656,
   "fcf_margin": 0.26079779664576197,
   "ebitda_margin": 0.13906134194686146
@@ -3589,8 +3589,8 @@
  "DUK": {
   "ticker": "DUK",
   "name": "Duke Energy Corporation (Holdin",
-  "price": 113.74,
-  "market_cap": 88683323392.0,
+  "price": 114.13,
+  "market_cap": 88987410432.0,
   "shares": 779702193.0,
   "revenue": 32803000320.0,
   "rev_growth": 0.011,
@@ -3620,9 +3620,9 @@
     "revenue": 32237000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 91532998080.0,
-  "ev": 180216321472.0,
+  "ev": 180520408512.0,
   "gross_profit": 17048047296.3072,
   "fcf_margin": -0.13649284920044777,
   "ebitda_margin": 0.5065695141876583
@@ -3661,7 +3661,7 @@
     "revenue": 748291000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": -98344000.0,
   "ev": 2008556992.0,
   "gross_profit": 633771532.0358399,
@@ -3671,8 +3671,8 @@
  "EEFT": {
   "ticker": "EEFT",
   "name": "Euronet Worldwide, Inc.",
-  "price": 63.64,
-  "market_cap": 2380364800.0,
+  "price": 63.5,
+  "market_cap": 2375128320.0,
   "shares": 37403595.0,
   "revenue": 4374600192.0,
   "rev_growth": 0.032,
@@ -3702,9 +3702,9 @@
     "revenue": 4244200000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 622899968.0,
-  "ev": 3003264768.0,
+  "ev": 2998028288.0,
   "gross_profit": 1050079030.08768,
   "fcf_margin": 0.07123793954243031,
   "ebitda_margin": 0.1502994566686107
@@ -3712,8 +3712,8 @@
  "EFX": {
   "ticker": "EFX",
   "name": "Equifax, Inc.",
-  "price": 139.73,
-  "market_cap": 16416163840.0,
+  "price": 140.0,
+  "market_cap": 16447885312.0,
   "shares": 117484896.0,
   "revenue": 6444499968.0,
   "rev_growth": 0.106,
@@ -3743,9 +3743,9 @@
     "revenue": 6074500000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 5297000160.0,
-  "ev": 21713164000.0,
+  "ev": 21744885472.0,
   "gross_profit": 3579404172.22656,
   "fcf_margin": 0.14703040991620345,
   "ebitda_margin": 0.2985957082093355
@@ -3753,8 +3753,8 @@
  "EGHT": {
   "ticker": "EGHT",
   "name": "8x8 Inc",
-  "price": 2.31,
-  "market_cap": 333646016.0,
+  "price": 2.28,
+  "market_cap": 329312960.0,
   "shares": 144435501.0,
   "revenue": 744561024.0,
   "rev_growth": 0.049,
@@ -3784,9 +3784,9 @@
     "revenue": 735752000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 266924008.0,
-  "ev": 600570024.0,
+  "ev": 596236968.0,
   "gross_profit": 470979521.34144,
   "fcf_margin": 0.09656965336933887,
   "ebitda_margin": 0.058582169350836176
@@ -3794,8 +3794,8 @@
  "ELV": {
   "ticker": "ELV",
   "name": "Elevance Health, Inc.",
-  "price": 381.67,
-  "market_cap": 82772508672.0,
+  "price": 386.43,
+  "market_cap": 83804798976.0,
   "shares": 216869290.0,
   "revenue": 201113993216.0,
   "rev_growth": 0.014,
@@ -3825,9 +3825,9 @@
     "revenue": 199125000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": -6469998592.0,
-  "ev": 76302510080.0,
+  "ev": 77334800384.0,
   "gross_profit": 52269526836.8384,
   "fcf_margin": 0.021412608337873718,
   "ebitda_margin": 0.041389460827123435
@@ -3835,8 +3835,8 @@
  "ENPH": {
   "ticker": "ENPH",
   "name": "Enphase Energy, Inc.",
-  "price": 32.82,
-  "market_cap": 4336987136.0,
+  "price": 33.47,
+  "market_cap": 4422881280.0,
   "shares": 132144648.0,
   "revenue": 1328502016.0,
   "rev_growth": -0.196,
@@ -3866,9 +3866,9 @@
     "revenue": 1472985000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": -324343040.0,
-  "ev": 4012644096.0,
+  "ev": 4098538240.0,
   "gross_profit": 399042150.54592,
   "fcf_margin": 0.058955689232465566,
   "ebitda_margin": 0.14436711249973744
@@ -3876,8 +3876,8 @@
  "ENVA": {
   "ticker": "ENVA",
   "name": "Enova International, Inc.",
-  "price": 171.49,
-  "market_cap": 4269821952.0,
+  "price": 172.89,
+  "market_cap": 4304679424.0,
   "shares": 24898371.0,
   "revenue": 1691782016.0,
   "rev_growth": 0.311,
@@ -3907,9 +3907,9 @@
     "revenue": 3151653000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 4910188848.0,
-  "ev": 9180010800.0,
+  "ev": 9214868272.0,
   "gross_profit": 1409102158.9465601,
   "fcf_margin": null,
   "ebitda_margin": null
@@ -3917,8 +3917,8 @@
  "ENVX": {
   "ticker": "ENVX",
   "name": "Enovix Corporation",
-  "price": 2.78,
-  "market_cap": 610066880.0,
+  "price": 2.8,
+  "market_cap": 614455872.0,
   "shares": 219448535.0,
   "revenue": 35879000.0,
   "rev_growth": 0.208,
@@ -3948,9 +3948,9 @@
     "revenue": 31821000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 65937024.0,
-  "ev": 676003904.0,
+  "ev": 680392896.0,
   "gross_profit": 6756015.7,
   "fcf_margin": -1.937167256612503,
   "ebitda_margin": -3.927395077900722
@@ -3958,8 +3958,8 @@
  "EOG": {
   "ticker": "EOG",
   "name": "EOG Resources, Inc.",
-  "price": 141.31,
-  "market_cap": 74121216000.0,
+  "price": 141.38,
+  "market_cap": 74157940736.0,
   "shares": 524529176.0,
   "revenue": 26720999424.0,
   "rev_growth": 0.587,
@@ -3989,9 +3989,9 @@
     "revenue": 22582000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 3343000064.0,
-  "ev": 77464216064.0,
+  "ev": 77500940800.0,
   "gross_profit": 16736965199.21664,
   "fcf_margin": 0.1676116277289135,
   "ebitda_margin": 0.5424572382940522
@@ -3999,8 +3999,8 @@
  "EOSE": {
   "ticker": "EOSE",
   "name": "Eos Energy Enterprises, Inc.",
-  "price": 3.14,
-  "market_cap": 1135698304.0,
+  "price": 3.21,
+  "market_cap": 1161016320.0,
   "shares": 361687337.0,
   "revenue": 214248000.0,
   "rev_growth": 3.514,
@@ -4030,9 +4030,9 @@
     "revenue": 114203000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 335334016.0,
-  "ev": 1471032320.0,
+  "ev": 1496350336.0,
   "gross_profit": -181573037.51999998,
   "fcf_margin": -1.5129196071841977,
   "ebitda_margin": -1.3278724468839849
@@ -4040,8 +4040,8 @@
  "EQIX": {
   "ticker": "EQIX",
   "name": "Equinix, Inc.",
-  "price": 1012.33,
-  "market_cap": 99888308224.0,
+  "price": 1025.72,
+  "market_cap": 101209522176.0,
   "shares": 98671686.0,
   "revenue": 9904000000.0,
   "rev_growth": 0.167,
@@ -4071,9 +4071,9 @@
     "revenue": 9217000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 22377000256.0,
-  "ev": 122265308480.0,
+  "ev": 123586522432.0,
   "gross_profit": 5148000160.0,
   "fcf_margin": 0.38226977705977383,
   "ebitda_margin": 0.45840067205169627
@@ -4081,8 +4081,8 @@
  "ESTC": {
   "ticker": "ESTC",
   "name": "Elastic N.V.",
-  "price": 92.31,
-  "market_cap": 9691745280.0,
+  "price": 93.94,
+  "market_cap": 9862881280.0,
   "shares": 104991280.0,
   "revenue": 1802156032.0,
   "rev_growth": 0.151,
@@ -4112,9 +4112,9 @@
     "revenue": 1739331000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": -865267072.0,
-  "ev": 8826478208.0,
+  "ev": 8997614208.0,
   "gross_profit": 1362177658.3475199,
   "fcf_margin": 0.27984084343702376,
   "ebitda_margin": -0.012356310776979382
@@ -4122,8 +4122,8 @@
  "ETN": {
   "ticker": "ETN",
   "name": "Eaton Corporation, PLC",
-  "price": 437.28,
-  "market_cap": 169839558656.0,
+  "price": 436.11,
+  "market_cap": 169385115648.0,
   "shares": 388400000.0,
   "revenue": 30026000384.0,
   "rev_growth": 0.214,
@@ -4153,9 +4153,9 @@
     "revenue": 27448000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 20631000128.0,
-  "ev": 190470558784.0,
+  "ev": 190016115776.0,
   "gross_profit": 10815965858.32448,
   "fcf_margin": 0.1034478457428904,
   "ebitda_margin": 0.22110837204737177
@@ -4163,8 +4163,8 @@
  "EVGO": {
   "ticker": "EVGO",
   "name": "EVgo Inc.",
-  "price": 1.26,
-  "market_cap": 396289792.0,
+  "price": 1.38,
+  "market_cap": 434031680.0,
   "shares": 141715720.0,
   "revenue": 402948000.0,
   "rev_growth": -0.157,
@@ -4174,7 +4174,7 @@
   "debt": 415555008.0,
   "cash": 121822000.0,
   "beta": 2.839,
-  "hi52": 5.18,
+  "hi52": 5.15,
   "lo52": 1.23,
   "history": [
    {
@@ -4194,9 +4194,9 @@
     "revenue": 384086000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 293733008.0,
-  "ev": 690022800.0,
+  "ev": 727764688.0,
   "gross_profit": 160929372.24,
   "fcf_margin": -0.4259414515024271,
   "ebitda_margin": -0.09138151821078651
@@ -4204,8 +4204,8 @@
  "EVR": {
   "ticker": "EVR",
   "name": "Evercore Inc.",
-  "price": 259.0,
-  "market_cap": 9960563712.0,
+  "price": 261.68,
+  "market_cap": 10063630336.0,
   "shares": 38457778.0,
   "revenue": 4709992960.0,
   "rev_growth": 0.188,
@@ -4235,9 +4235,9 @@
     "revenue": 3855820000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": -163457024.0,
-  "ev": 9797106688.0,
+  "ev": 9900173312.0,
   "gross_profit": 4424331651.476352,
   "fcf_margin": null,
   "ebitda_margin": null
@@ -4245,8 +4245,8 @@
  "EVTC": {
   "ticker": "EVTC",
   "name": "Evertec, Inc.",
-  "price": 27.39,
-  "market_cap": 1636622080.0,
+  "price": 27.23,
+  "market_cap": 1627061760.0,
   "shares": 59752542.0,
   "revenue": 996161984.0,
   "rev_growth": 0.197,
@@ -4276,9 +4276,9 @@
     "revenue": 931818000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 1064501952.0,
-  "ev": 2701124032.0,
+  "ev": 2691563712.0,
   "gross_profit": 509218082.98112,
   "fcf_margin": 0.1522072940298031,
   "ebitda_margin": 0.2757694154287261
@@ -4286,8 +4286,8 @@
  "EXFY": {
   "ticker": "EXFY",
   "name": "Expensify, Inc.",
-  "price": 2.37,
-  "market_cap": 216112384.0,
+  "price": 2.25,
+  "market_cap": 205170000.0,
   "shares": 78936804.0,
   "revenue": 138098000.0,
   "rev_growth": -0.053,
@@ -4317,9 +4317,9 @@
     "revenue": 142101000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": -60382000.0,
-  "ev": 155730384.0,
+  "ev": 144788000.0,
   "gross_profit": 67209534.64,
   "fcf_margin": 0.14501385972280553,
   "ebitda_margin": -0.09464293472751234
@@ -4327,8 +4327,8 @@
  "F": {
   "ticker": "F",
   "name": "Ford Motor Company",
-  "price": 12.27,
-  "market_cap": 48927801344.0,
+  "price": 12.1,
+  "market_cap": 48249909248.0,
   "shares": 3916743591.0,
   "revenue": 187972993024.0,
   "rev_growth": -0.038,
@@ -4358,9 +4358,9 @@
     "revenue": 187267000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 141176002560.0,
-  "ev": 190103803904.0,
+  "ev": 189425911808.0,
   "gross_profit": 13374278453.6576,
   "fcf_margin": -0.04224144109354159,
   "ebitda_margin": 0.04066009528839155
@@ -4368,8 +4368,8 @@
  "FDS": {
   "ticker": "FDS",
   "name": "FactSet Research Systems Inc.",
-  "price": 277.61,
-  "market_cap": 9873350656.0,
+  "price": 266.0,
+  "market_cap": 9460434944.0,
   "shares": 35565543.0,
   "revenue": 2476256000.0,
   "rev_growth": 0.063,
@@ -4399,9 +4399,9 @@
     "revenue": 2321748000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 1277081952.0,
-  "ev": 11150432608.0,
+  "ev": 10737516896.0,
   "gross_profit": 1253109348.8,
   "fcf_margin": 0.2590712171924066,
   "ebitda_margin": 0.35569303335357894
@@ -4409,8 +4409,8 @@
  "FDX": {
   "ticker": "FDX",
   "name": "FedEx Corporation",
-  "price": 287.07,
-  "market_cap": 67940982784.0,
+  "price": 290.36,
+  "market_cap": 68719624192.0,
   "shares": 236670435.0,
   "revenue": 94720000000.0,
   "rev_growth": 0.125,
@@ -4440,9 +4440,9 @@
     "revenue": 94720000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 29393000448.0,
-  "ev": 97333983232.0,
+  "ev": 98112624640.0,
   "gross_profit": 25875609599.999996,
   "fcf_margin": 0.05971943783783784,
   "ebitda_margin": 0.12504222702702703
@@ -4450,8 +4450,8 @@
  "FICO": {
   "ticker": "FICO",
   "name": "Fair Isaac Corporation",
-  "price": 661.75,
-  "market_cap": 14292235264.0,
+  "price": 661.25,
+  "market_cap": 14281437184.0,
   "shares": 21597635.0,
   "revenue": 2393574912.0,
   "rev_growth": 0.257,
@@ -4481,9 +4481,9 @@
     "revenue": 1990869000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 5349565856.0,
-  "ev": 19641801120.0,
+  "ev": 19631003040.0,
   "gross_profit": 2036932250.112,
   "fcf_margin": 0.3235384445740715,
   "ebitda_margin": 0.5278146765602463
@@ -4491,8 +4491,8 @@
  "FIS": {
   "ticker": "FIS",
   "name": "Fidelity National Information S",
-  "price": 33.1,
-  "market_cap": 17069864960.0,
+  "price": 32.44,
+  "market_cap": 16729499648.0,
   "shares": 515705917.0,
   "revenue": 12199999488.0,
   "rev_growth": 0.291,
@@ -4503,7 +4503,7 @@
   "cash": 744000000.0,
   "beta": 0.801,
   "hi52": 69.14,
-  "lo52": 32.75,
+  "lo52": 32.1,
   "history": [
    {
     "year": 2022,
@@ -4522,9 +4522,9 @@
     "revenue": 10677000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 20511999488.0,
-  "ev": 37581864448.0,
+  "ev": 37241499136.0,
   "gross_profit": 4371991816.51968,
   "fcf_margin": 0.21746928125772721,
   "ebitda_margin": 0.28885247113872664
@@ -4532,8 +4532,8 @@
  "FIVN": {
   "ticker": "FIVN",
   "name": "Five9, Inc.",
-  "price": 35.75,
-  "market_cap": 2671366144.0,
+  "price": 34.36,
+  "market_cap": 2567500544.0,
   "shares": 74723531.0,
   "revenue": 1203876992.0,
   "rev_growth": 0.103,
@@ -4563,9 +4563,9 @@
     "revenue": 1149088000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 189201984.0,
-  "ev": 2860568128.0,
+  "ev": 2756702528.0,
   "gross_profit": 662890788.10496,
   "fcf_margin": 0.216368869685982,
   "ebitda_margin": 0.12586667990744357
@@ -4573,8 +4573,8 @@
  "FLNC": {
   "ticker": "FLNC",
   "name": "Fluence Energy, Inc.",
-  "price": 7.57,
-  "market_cap": 1473597312.0,
+  "price": 7.61,
+  "market_cap": 1481383808.0,
   "shares": 143163588.0,
   "revenue": 2631864064.0,
   "rev_growth": 0.079,
@@ -4604,9 +4604,9 @@
     "revenue": 2262830000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 73836992.0,
-  "ev": 1547434304.0,
+  "ev": 1555220800.0,
   "gross_profit": 246447750.95296,
   "fcf_margin": 0.0009190729236690547,
   "ebitda_margin": -0.02962615017490508
@@ -4614,8 +4614,8 @@
  "FLYW": {
   "ticker": "FLYW",
   "name": "Flywire Corporation - Voting",
-  "price": 17.56,
-  "market_cap": 2136484224.0,
+  "price": 17.58,
+  "market_cap": 2138917632.0,
   "shares": 121667674.0,
   "revenue": 713537984.0,
   "rev_growth": 0.272,
@@ -4645,9 +4645,9 @@
     "revenue": 623025000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": -292711000.0,
-  "ev": 1843773224.0,
+  "ev": 1846206632.0,
   "gross_profit": 425425616.82048,
   "fcf_margin": 0.2353909276958688,
   "ebitda_margin": 0.08887683826513712
@@ -4655,8 +4655,8 @@
  "FOUR": {
   "ticker": "FOUR",
   "name": "Shift4 Payments, Inc.",
-  "price": 35.58,
-  "market_cap": 2809401088.0,
+  "price": 36.17,
+  "market_cap": 2855987456.0,
   "shares": 78960120.0,
   "revenue": 4782000128.0,
   "rev_growth": 0.341,
@@ -4686,9 +4686,9 @@
     "revenue": 4180000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 4211000064.0,
-  "ev": 7020401152.0,
+  "ev": 7066987520.0,
   "gross_profit": 1716977050.3183973,
   "fcf_margin": 0.07392826903747,
   "ebitda_margin": 0.1900878242720114
@@ -4696,8 +4696,8 @@
  "FROG": {
   "ticker": "FROG",
   "name": "JFrog Ltd.",
-  "price": 97.59,
-  "market_cap": 12032974848.0,
+  "price": 95.5,
+  "market_cap": 11775275008.0,
   "shares": 123301311.0,
   "revenue": 599961984.0,
   "rev_growth": 0.287,
@@ -4727,9 +4727,9 @@
     "revenue": 531840000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": -809917016.0,
-  "ev": 11223057832.0,
+  "ev": 10965357992.0,
   "gross_profit": 467142399.98208,
   "fcf_margin": 0.33796994710918216,
   "ebitda_margin": -0.06760761695194341
@@ -4737,8 +4737,8 @@
  "FRSH": {
   "ticker": "FRSH",
   "name": "Freshworks Inc.",
-  "price": 13.15,
-  "market_cap": 3431108096.0,
+  "price": 12.78,
+  "market_cap": 3334567424.0,
   "shares": 236959436.0,
   "revenue": 903868032.0,
   "rev_growth": 0.16,
@@ -4768,9 +4768,9 @@
     "revenue": 838809000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": -629513008.0,
-  "ev": 2801595088.0,
+  "ev": 2705054416.0,
   "gross_profit": 767962389.5150784,
   "fcf_margin": 0.2885407413103421,
   "ebitda_margin": 0.06360331150643017
@@ -4778,8 +4778,8 @@
  "FSLR": {
   "ticker": "FSLR",
   "name": "First Solar, Inc.",
-  "price": 172.11,
-  "market_cap": 18496626688.0,
+  "price": 174.61,
+  "market_cap": 18765299712.0,
   "shares": 107469788.0,
   "revenue": 5378071040.0,
   "rev_growth": -0.037,
@@ -4809,9 +4809,9 @@
     "revenue": 5219376000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": -1532953968.0,
-  "ev": 16963672720.0,
+  "ev": 17232345744.0,
   "gross_profit": 2367211641.404979,
   "fcf_margin": 0.29725988892850325,
   "ebitda_margin": 0.4436349044582349
@@ -4819,8 +4819,8 @@
  "FTNT": {
   "ticker": "FTNT",
   "name": "Fortinet, Inc.",
-  "price": 178.72,
-  "market_cap": 131129303040.0,
+  "price": 180.95,
+  "market_cap": 132765483008.0,
   "shares": 733713653.0,
   "revenue": 7527399936.0,
   "rev_growth": 0.256,
@@ -4830,7 +4830,7 @@
   "debt": 561400000.0,
   "cash": 4069600000.0,
   "beta": 1.059,
-  "hi52": 181.37,
+  "hi52": 183.09,
   "lo52": 73.55,
   "history": [
    {
@@ -4850,9 +4850,9 @@
     "revenue": 6799600000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": -3508200000.0,
-  "ev": 127621103040.0,
+  "ev": 129257283008.0,
   "gross_profit": 6037276145.765437,
   "fcf_margin": 0.3009787543192391,
   "ebitda_margin": 0.34484683769564495
@@ -4860,8 +4860,8 @@
  "FUTU": {
   "ticker": "FUTU",
   "name": "Futu Holdings Limited",
-  "price": 106.43,
-  "market_cap": 14920900608.0,
+  "price": 102.17,
+  "market_cap": 14323671040.0,
   "shares": 95750481.0,
   "revenue": 24059121664.0,
   "rev_growth": 0.356,
@@ -4891,9 +4891,9 @@
     "revenue": 22846898000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": -126337339392.0,
-  "ev": -111416438784.0,
+  "ev": -112013668352.0,
   "gross_profit": 22640354537.70027,
   "fcf_margin": null,
   "ebitda_margin": null
@@ -4901,8 +4901,8 @@
  "GD": {
   "ticker": "GD",
   "name": "General Dynamics Corporation",
-  "price": 332.72,
-  "market_cap": 90019782656.0,
+  "price": 330.09,
+  "market_cap": 89308217344.0,
   "shares": 270557195.0,
   "revenue": 54861000704.0,
   "rev_growth": 0.081,
@@ -4932,9 +4932,9 @@
     "revenue": 52550000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 5145999872.0,
-  "ev": 95165782528.0,
+  "ev": 94454217216.0,
   "gross_profit": 8434878858.24,
   "fcf_margin": 0.08020497022540057,
   "ebitda_margin": 0.12090555860962227
@@ -4942,8 +4942,8 @@
  "GDDY": {
   "ticker": "GDDY",
   "name": "GoDaddy Inc.",
-  "price": 96.98,
-  "market_cap": 12282294272.0,
+  "price": 97.21,
+  "market_cap": 12311422976.0,
   "shares": 126647704.0,
   "revenue": 5104099840.0,
   "rev_growth": 0.066,
@@ -4973,9 +4973,9 @@
     "revenue": 4951100000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 2638900096.0,
-  "ev": 14921194368.0,
+  "ev": 14950323072.0,
   "gross_profit": 3256517779.9168,
   "fcf_margin": 0.23607493069728042,
   "ebitda_margin": 0.27017497839540694
@@ -4983,8 +4983,8 @@
  "GE": {
   "ticker": "GE",
   "name": "GE Aerospace",
-  "price": 312.39,
-  "market_cap": 324124147712.0,
+  "price": 309.56,
+  "market_cap": 321187840000.0,
   "shares": 1037562513.0,
   "revenue": 50638999552.0,
   "rev_growth": 0.211,
@@ -5014,9 +5014,9 @@
     "revenue": 45855000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 10285000704.0,
-  "ev": 334409148416.0,
+  "ev": 331472840704.0,
   "gross_profit": 15723915750.89152,
   "fcf_margin": 0.1302281854369602,
   "ebitda_margin": 0.22676198008628462
@@ -5024,8 +5024,8 @@
  "GILD": {
   "ticker": "GILD",
   "name": "Gilead Sciences, Inc.",
-  "price": 147.5,
-  "market_cap": 182893395968.0,
+  "price": 144.74,
+  "market_cap": 179471122432.0,
   "shares": 1239955155.0,
   "revenue": 30456999936.0,
   "rev_growth": 0.102,
@@ -5036,7 +5036,7 @@
   "cash": 4881999872.0,
   "beta": 0.35,
   "hi52": 157.29,
-  "lo52": 109.66,
+  "lo52": 112.41,
   "history": [
    {
     "year": 2022,
@@ -5055,9 +5055,9 @@
     "revenue": 29442000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 21364000768.0,
-  "ev": 204257396736.0,
+  "ev": 200835123200.0,
   "gross_profit": 24244988401.633446,
   "fcf_margin": 0.3207431798446191,
   "ebitda_margin": 0.4793971818196611
@@ -5065,8 +5065,8 @@
  "GM": {
   "ticker": "GM",
   "name": "General Motors Company",
-  "price": 79.31,
-  "market_cap": 71732043776.0,
+  "price": 78.27,
+  "market_cap": 70791413760.0,
   "shares": 904451541.0,
   "revenue": 185527992320.0,
   "rev_growth": 0.019,
@@ -5096,9 +5096,9 @@
     "revenue": 185019000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 104052998144.0,
-  "ev": 175785041920.0,
+  "ev": 174844411904.0,
   "gross_profit": 18881183778.4064,
   "fcf_margin": 0.11822340121143828,
   "ebitda_margin": 0.08873054638356796
@@ -5106,8 +5106,8 @@
  "GOOG": {
   "ticker": "GOOG",
   "name": "Alphabet Inc.",
-  "price": 334.93,
-  "market_cap": 4096171966464.0,
+  "price": 340.35,
+  "market_cap": 4162458484736.0,
   "shares": 5527000000.0,
   "revenue": 445865984000.0,
   "rev_growth": 0.242,
@@ -5137,9 +5137,9 @@
     "revenue": 402836000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": -121682993152.0,
-  "ev": 3974488973312.0,
+  "ev": 4040775491584.0,
   "gross_profit": 271519008276.48,
   "fcf_margin": 0.05083366252044022,
   "ebitda_margin": 0.38837679828026533
@@ -5147,8 +5147,8 @@
  "GOOGL": {
   "ticker": "GOOGL",
   "name": "Alphabet Inc.",
-  "price": 338.24,
-  "market_cap": 4136653029376.0,
+  "price": 343.5,
+  "market_cap": 4200982642688.0,
   "shares": 5867155790.0,
   "revenue": 445865984000.0,
   "rev_growth": 0.242,
@@ -5178,9 +5178,9 @@
     "revenue": 402836000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": -121682993152.0,
-  "ev": 4014970036224.0,
+  "ev": 4079299649536.0,
   "gross_profit": 271519008276.48,
   "fcf_margin": 0.05083366252044022,
   "ebitda_margin": 0.38837679828026533
@@ -5188,8 +5188,8 @@
  "GPN": {
   "ticker": "GPN",
   "name": "Global Payments Inc.",
-  "price": 80.29,
-  "market_cap": 21246210048.0,
+  "price": 78.38,
+  "market_cap": 20740788224.0,
   "shares": 264618390.0,
   "revenue": 10206745600.0,
   "rev_growth": 0.686,
@@ -5219,9 +5219,9 @@
     "revenue": 7705878000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 18146847232.0,
-  "ev": 39393057280.0,
+  "ev": 38887635456.0,
   "gross_profit": 6528132418.304,
   "fcf_margin": 0.7708395514433122,
   "ebitda_margin": 0.4391397563587751
@@ -5229,8 +5229,8 @@
  "GS": {
   "ticker": "GS",
   "name": "Goldman Sachs Group, Inc. (The)",
-  "price": 896.67,
-  "market_cap": 261084643328.0,
+  "price": 902.56,
+  "market_cap": 262799654912.0,
   "shares": 291171408.0,
   "revenue": 67569999872.0,
   "rev_growth": 0.425,
@@ -5260,9 +5260,9 @@
     "revenue": 58283000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": -259369074688.0,
-  "ev": 1715568640.0,
+  "ev": 3430580224.0,
   "gross_profit": 55458749716.442726,
   "fcf_margin": null,
   "ebitda_margin": null
@@ -5270,8 +5270,8 @@
  "GTLB": {
   "ticker": "GTLB",
   "name": "GitLab Inc.",
-  "price": 49.95,
-  "market_cap": 8322419712.0,
+  "price": 49.78,
+  "market_cap": 8294094848.0,
   "shares": 165500000.0,
   "revenue": 1055166976.0,
   "rev_growth": 0.213,
@@ -5301,9 +5301,9 @@
     "revenue": 955224000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": -1256985984.0,
-  "ev": 7065433728.0,
+  "ev": 7037108864.0,
   "gross_profit": 906388432.384,
   "fcf_margin": 0.2710793556905253,
   "ebitda_margin": -0.05630104177938185
@@ -5311,8 +5311,8 @@
  "GWRE": {
   "ticker": "GWRE",
   "name": "Guidewire Software, Inc.",
-  "price": 155.32,
-  "market_cap": 12735101952.0,
+  "price": 152.15,
+  "market_cap": 12475184128.0,
   "shares": 81992669.0,
   "revenue": 1475362944.0,
   "rev_growth": 0.153,
@@ -5342,9 +5342,9 @@
     "revenue": 1475363000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": -62172992.0,
-  "ev": 12672928960.0,
+  "ev": 12413011136.0,
   "gross_profit": 947374748.2162023,
   "fcf_margin": 0.2325066827759502,
   "ebitda_margin": 0.11077003164856498
@@ -5352,8 +5352,8 @@
  "HD": {
   "ticker": "HD",
   "name": "Home Depot, Inc. (The)",
-  "price": 282.46,
-  "market_cap": 281807388672.0,
+  "price": 282.85,
+  "market_cap": 282196508672.0,
   "shares": 997689626.0,
   "revenue": 169176006656.0,
   "rev_growth": 0.057,
@@ -5383,9 +5383,9 @@
     "revenue": 164683000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 61103000832.0,
-  "ev": 342910389504.0,
+  "ev": 343299509504.0,
   "gross_profit": 55491421943.234566,
   "fcf_margin": 0.06361791625620153,
   "ebitda_margin": 0.14569441598251506
@@ -5393,8 +5393,8 @@
  "HLI": {
   "ticker": "HLI",
   "name": "Houlihan Lokey, Inc.",
-  "price": 128.38,
-  "market_cap": 8972028928.0,
+  "price": 126.37,
+  "market_cap": 8831556608.0,
   "shares": 54197538.0,
   "revenue": 2523515904.0,
   "rev_growth": -0.155,
@@ -5424,9 +5424,9 @@
     "revenue": 2617516000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": -252000000.0,
-  "ev": 8720028928.0,
+  "ev": 8579556608.0,
   "gross_profit": 2374906052.41344,
   "fcf_margin": null,
   "ebitda_margin": null
@@ -5434,8 +5434,8 @@
  "HMC": {
   "ticker": "HMC",
   "name": "Honda Motor Company, Ltd.",
-  "price": 31.62,
-  "market_cap": 41032396800.0,
+  "price": 31.35,
+  "market_cap": 40682024960.0,
   "shares": 1297672194.0,
   "revenue": 22517855027200.0,
   "rev_growth": 0.135,
@@ -5465,9 +5465,9 @@
     "revenue": 21796610000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 8874140106752.0,
-  "ev": 8915172503552.0,
+  "ev": 8914822131712.0,
   "gross_profit": 3928690166595.5835,
   "fcf_margin": 0.011890813666779979,
   "ebitda_margin": 0.0569387290625713
@@ -5475,8 +5475,8 @@
  "HON": {
   "ticker": "HON",
   "name": "Honeywell International Inc.",
-  "price": 213.8,
-  "market_cap": 67761774592.0,
+  "price": 213.99,
+  "market_cap": 67821993984.0,
   "shares": 316940010.0,
   "revenue": 38057000960.0,
   "rev_growth": 0.043,
@@ -5506,9 +5506,9 @@
     "revenue": 37442000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 25759001600.0,
-  "ev": 93520776192.0,
+  "ev": 93580995584.0,
   "gross_profit": 13894991620.5056,
   "fcf_margin": 0.06859118811657407,
   "ebitda_margin": 0.2236644976031238
@@ -5516,8 +5516,8 @@
  "HOOD": {
   "ticker": "HOOD",
   "name": "Robinhood Markets, Inc.",
-  "price": 111.15,
-  "market_cap": 99932995584.0,
+  "price": 112.74,
+  "market_cap": 101362540544.0,
   "shares": 790630234.0,
   "revenue": 4931999744.0,
   "rev_growth": 0.323,
@@ -5547,9 +5547,9 @@
     "revenue": 4473000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": -979998720.0,
-  "ev": 98952996864.0,
+  "ev": 100382541824.0,
   "gross_profit": 4532014564.7616005,
   "fcf_margin": null,
   "ebitda_margin": null
@@ -5557,8 +5557,8 @@
  "HUBS": {
   "ticker": "HUBS",
   "name": "HubSpot, Inc.",
-  "price": 217.45,
-  "market_cap": 11131419648.0,
+  "price": 214.53,
+  "market_cap": 10981942272.0,
   "shares": 51190708.0,
   "revenue": 3448997888.0,
   "rev_growth": 0.198,
@@ -5588,9 +5588,9 @@
     "revenue": 3131266000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": -1101029040.0,
-  "ev": 10030390608.0,
+  "ev": 9880913232.0,
   "gross_profit": 2871221761.80224,
   "fcf_margin": 0.19328832015799716,
   "ebitda_margin": 0.04542276136064714
@@ -5598,8 +5598,8 @@
  "HUM": {
   "ticker": "HUM",
   "name": "Humana Inc.",
-  "price": 379.68,
-  "market_cap": 45592088576.0,
+  "price": 388.36,
+  "market_cap": 46634385408.0,
   "shares": 120080308.0,
   "revenue": 145679007744.0,
   "rev_growth": 0.262,
@@ -5629,9 +5629,9 @@
     "revenue": 129664000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": -9127000064.0,
-  "ev": 36465088512.0,
+  "ev": 37507385344.0,
   "gross_profit": 19889554927.288322,
   "fcf_margin": 0.013323813540869912,
   "ebitda_margin": 0.024684407559387063
@@ -5653,7 +5653,7 @@
   "hi52": 11.43,
   "lo52": 6.2611,
   "history": [],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": -104426000.0,
   "ev": 1631189872.0,
   "gross_profit": 457305418.13248,
@@ -5663,8 +5663,8 @@
  "IBKR": {
   "ticker": "IBKR",
   "name": "Interactive Brokers Group, Inc.",
-  "price": 85.81,
-  "market_cap": 146204409856.0,
+  "price": 88.3,
+  "market_cap": 150446915584.0,
   "shares": 453077771.0,
   "revenue": 6834999808.0,
   "rev_growth": 0.263,
@@ -5694,9 +5694,9 @@
     "revenue": 10222000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": -85079998464.0,
-  "ev": 61124411392.0,
+  "ev": 65366917120.0,
   "gross_profit": 6359010421.37088,
   "fcf_margin": null,
   "ebitda_margin": null
@@ -5704,8 +5704,8 @@
  "IBM": {
   "ticker": "IBM",
   "name": "International Business Machines",
-  "price": 225.62,
-  "market_cap": 212564361216.0,
+  "price": 222.64,
+  "market_cap": 209756798976.0,
   "shares": 942134390.0,
   "revenue": 69094998016.0,
   "rev_growth": 0.011,
@@ -5735,9 +5735,9 @@
     "revenue": 67536000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 57140000768.0,
-  "ev": 269704361984.0,
+  "ev": 266896799744.0,
   "gross_profit": 40142811947.335686,
   "fcf_margin": 0.1743939555973313,
   "ebitda_margin": 0.23841088948559527
@@ -5745,8 +5745,8 @@
  "ICE": {
   "ticker": "ICE",
   "name": "Intercontinental Exchange Inc.",
-  "price": 151.47,
-  "market_cap": 85034426368.0,
+  "price": 150.15,
+  "market_cap": 84293378048.0,
   "shares": 561394487.0,
   "revenue": 10558000128.0,
   "rev_growth": 0.048,
@@ -5776,9 +5776,9 @@
     "revenue": 12640000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 19459999552.0,
-  "ev": 104494425920.0,
+  "ev": 103753377600.0,
   "gross_profit": 10558000128.0,
   "fcf_margin": 0.34415846220379964,
   "ebitda_margin": 0.635915873328544
@@ -5786,8 +5786,8 @@
  "INTA": {
   "ticker": "INTA",
   "name": "Intapp, Inc.",
-  "price": 37.59,
-  "market_cap": 2876054272.0,
+  "price": 36.49,
+  "market_cap": 2791891968.0,
   "shares": 76511148.0,
   "revenue": 577804992.0,
   "rev_growth": 0.13,
@@ -5817,9 +5817,9 @@
     "revenue": 577805000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": -139976992.0,
-  "ev": 2736077280.0,
+  "ev": 2651914976.0,
   "gross_profit": 438103277.92204034,
   "fcf_margin": 0.2793693274287253,
   "ebitda_margin": -0.02763042933350081
@@ -5827,8 +5827,8 @@
  "INTC": {
   "ticker": "INTC",
   "name": "Intel Corporation",
-  "price": 120.0,
-  "market_cap": 634332643328.0,
+  "price": 119.33,
+  "market_cap": 630790946816.0,
   "shares": 5286105262.0,
   "revenue": 57031999488.0,
   "rev_growth": 0.254,
@@ -5858,9 +5858,9 @@
     "revenue": 52853000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 20810000384.0,
-  "ev": 655142643712.0,
+  "ev": 651600947200.0,
   "gross_profit": 22170050301.61023,
   "fcf_margin": 0.0853271007800441,
   "ebitda_margin": 0.29527282296219115
@@ -5868,8 +5868,8 @@
  "INTU": {
   "ticker": "INTU",
   "name": "Intuit Inc.",
-  "price": 282.78,
-  "market_cap": 75568996352.0,
+  "price": 281.08,
+  "market_cap": 75114692608.0,
   "shares": 267236000.0,
   "revenue": 21447999488.0,
   "rev_growth": 0.137,
@@ -5899,9 +5899,9 @@
     "revenue": 21448000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 1221000192.0,
-  "ev": 76789996544.0,
+  "ev": 76335692800.0,
   "gross_profit": 17369018945.372158,
   "fcf_margin": 0.2962339257586614,
   "ebitda_margin": 0.31933047834283873
@@ -5909,8 +5909,8 @@
  "ISRG": {
   "ticker": "ISRG",
   "name": "Intuitive Surgical, Inc.",
-  "price": 401.24,
-  "market_cap": 143755476992.0,
+  "price": 391.95,
+  "market_cap": 140427083776.0,
   "shares": 358278038.0,
   "revenue": 11034399744.0,
   "rev_growth": 0.185,
@@ -5940,9 +5940,9 @@
     "revenue": 10064700000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": -5216200192.0,
-  "ev": 138539276800.0,
+  "ev": 135210883584.0,
   "gross_profit": 7357627405.30176,
   "fcf_margin": 0.2370042830306221,
   "ebitda_margin": 0.3788878504490765
@@ -5950,8 +5950,8 @@
  "ITW": {
   "ticker": "ITW",
   "name": "Illinois Tool Works Inc.",
-  "price": 260.84,
-  "market_cap": 74287226880.0,
+  "price": 262.92,
+  "market_cap": 74879623168.0,
   "shares": 284800000.0,
   "revenue": 16469000192.0,
   "rev_growth": 0.061,
@@ -5981,9 +5981,9 @@
     "revenue": 16044000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 8855000128.0,
-  "ev": 83142227008.0,
+  "ev": 83734623296.0,
   "gross_profit": 7273039864.79104,
   "fcf_margin": 0.14773209713008909,
   "ebitda_margin": 0.29182100139476397
@@ -5991,8 +5991,8 @@
  "IVZ": {
   "ticker": "IVZ",
   "name": "Invesco Ltd",
-  "price": 30.42,
-  "market_cap": 13430423552.0,
+  "price": 30.66,
+  "market_cap": 13536382976.0,
   "shares": 441499780.0,
   "revenue": 6902499840.0,
   "rev_growth": 0.205,
@@ -6022,9 +6022,9 @@
     "revenue": 6377100000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 708600000.0,
-  "ev": 14139023552.0,
+  "ev": 14244982976.0,
   "gross_profit": 2037617952.7680001,
   "fcf_margin": 0.1652716381663835,
   "ebitda_margin": 0.20931547026301706
@@ -6032,8 +6032,8 @@
  "JKHY": {
   "ticker": "JKHY",
   "name": "Jack Henry & Associates, Inc.",
-  "price": 143.84,
-  "market_cap": 10084997120.0,
+  "price": 142.54,
+  "market_cap": 9993850880.0,
   "shares": 70112608.0,
   "revenue": 2544338944.0,
   "rev_growth": 0.047,
@@ -6063,9 +6063,9 @@
     "revenue": 2544339000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 65765000.0,
-  "ev": 10150762120.0,
+  "ev": 10059615880.0,
   "gross_profit": 1116913858.7503412,
   "fcf_margin": 0.13843428558549783,
   "ebitda_margin": 0.27599075101843035
@@ -6073,8 +6073,8 @@
  "JNJ": {
   "ticker": "JNJ",
   "name": "Johnson & Johnson",
-  "price": 258.66,
-  "market_cap": 623344353280.0,
+  "price": 256.03,
+  "market_cap": 617006301184.0,
   "shares": 2409898597.0,
   "revenue": 97929003008.0,
   "rev_growth": 0.066,
@@ -6104,9 +6104,9 @@
     "revenue": 94193000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 28278001664.0,
-  "ev": 651622354944.0,
+  "ev": 645284302848.0,
   "gross_profit": 66728822649.6512,
   "fcf_margin": 0.17242210786747847,
   "ebitda_margin": 0.3560947159765452
@@ -6114,8 +6114,8 @@
  "JPM": {
   "ticker": "JPM",
   "name": "JP Morgan Chase & Co.",
-  "price": 333.18,
-  "market_cap": 885654487040.0,
+  "price": 332.38,
+  "market_cap": 883527974912.0,
   "shares": 2658186195.0,
   "revenue": 186328006656.0,
   "rev_growth": 0.304,
@@ -6145,9 +6145,9 @@
     "revenue": 181847000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": -183112040448.0,
-  "ev": 702542446592.0,
+  "ev": 700415934464.0,
   "gross_profit": 0.0,
   "fcf_margin": null,
   "ebitda_margin": null
@@ -6155,8 +6155,8 @@
  "JXN": {
   "ticker": "JXN",
   "name": "Jackson Financial Inc.",
-  "price": 129.48,
-  "market_cap": 8769517568.0,
+  "price": 131.53,
+  "market_cap": 8908361728.0,
   "shares": 67728744.0,
   "revenue": 6549000192.0,
   "rev_growth": null,
@@ -6186,9 +6186,9 @@
     "revenue": 6511000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": -265999872.0,
-  "ev": 8503517696.0,
+  "ev": 8642361856.0,
   "gross_profit": 3195977583.69792,
   "fcf_margin": 0.1874713666216976,
   "ebitda_margin": null
@@ -6196,8 +6196,8 @@
  "KKR": {
   "ticker": "KKR",
   "name": "KKR & Co. Inc.",
-  "price": 91.24,
-  "market_cap": 84268400640.0,
+  "price": 90.29,
+  "market_cap": 83390988288.0,
   "shares": 897635601.0,
   "revenue": 25833117696.0,
   "rev_growth": 0.078,
@@ -6227,9 +6227,9 @@
     "revenue": 19207544000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 8607404032.0,
-  "ev": 92875804672.0,
+  "ev": 91998392320.0,
   "gross_profit": 14148023568.56832,
   "fcf_margin": null,
   "ebitda_margin": null
@@ -6237,8 +6237,8 @@
  "KLTR": {
   "ticker": "KLTR",
   "name": "Kaltura, Inc.",
-  "price": 1.28,
-  "market_cap": 195265552.0,
+  "price": 1.31,
+  "market_cap": 199842080.0,
   "shares": 152551223.0,
   "revenue": 180928000.0,
   "rev_growth": 0.055,
@@ -6268,9 +6268,9 @@
     "revenue": 180854000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 12214000.0,
-  "ev": 207479552.0,
+  "ev": 212056080.0,
   "gross_profit": 130360433.28,
   "fcf_margin": 0.23352451804032542,
   "ebitda_margin": 0.036511761584718784
@@ -6278,8 +6278,8 @@
  "KO": {
   "ticker": "KO",
   "name": "Coca-Cola Company (The)",
-  "price": 86.1,
-  "market_cap": 370449448960.0,
+  "price": 85.65,
+  "market_cap": 368513318912.0,
   "shares": 4302549243.0,
   "revenue": 50128998400.0,
   "rev_growth": 0.067,
@@ -6309,9 +6309,9 @@
     "revenue": 47941000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 27889998848.0,
-  "ev": 398339447808.0,
+  "ev": 396403317760.0,
   "gross_profit": 31023836033.661953,
   "fcf_margin": 0.10410640783917996,
   "ebitda_margin": 0.3390851634490267
@@ -6319,8 +6319,8 @@
  "LAC": {
   "ticker": "LAC",
   "name": "Lithium Americas Corp.",
-  "price": 2.57,
-  "market_cap": 933020352.0,
+  "price": 2.55,
+  "market_cap": 925759488.0,
   "shares": 363042943.0,
   "revenue": null,
   "rev_growth": null,
@@ -6333,9 +6333,9 @@
   "hi52": 10.52,
   "lo52": 2.51,
   "history": [],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 338234048.0,
-  "ev": 1271254400.0,
+  "ev": 1263993536.0,
   "gross_profit": null,
   "fcf_margin": null,
   "ebitda_margin": null
@@ -6343,8 +6343,8 @@
  "LCID": {
   "ticker": "LCID",
   "name": "Lucid Group, Inc.",
-  "price": 4.19,
-  "market_cap": 1651154048.0,
+  "price": 4.13,
+  "market_cap": 1627509888.0,
   "shares": 394070176.0,
   "revenue": 1547122048.0,
   "rev_growth": 0.562,
@@ -6374,9 +6374,9 @@
     "revenue": 1353790000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 2895353856.0,
-  "ev": 4546507904.0,
+  "ev": 4522863744.0,
   "gross_profit": -1556451193.94944,
   "fcf_margin": -2.1745198165516673,
   "ebitda_margin": -2.3194594871418963
@@ -6384,8 +6384,8 @@
  "LEA": {
   "ticker": "LEA",
   "name": "Lear Corporation",
-  "price": 121.37,
-  "market_cap": 8080179200.0,
+  "price": 120.85,
+  "market_cap": 8045560320.0,
   "shares": 66574764.0,
   "revenue": 23700600832.0,
   "rev_growth": 0.03,
@@ -6415,9 +6415,9 @@
     "revenue": 23259100000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 2508999936.0,
-  "ev": 10589179136.0,
+  "ev": 10554560256.0,
   "gross_profit": 1823998240.03072,
   "fcf_margin": 0.036243280332379384,
   "ebitda_margin": 0.07171126217632591
@@ -6425,8 +6425,8 @@
  "LEU": {
   "ticker": "LEU",
   "name": "Centrus Energy Corp.",
-  "price": 139.11,
-  "market_cap": 2845231872.0,
+  "price": 139.27,
+  "market_cap": 2848504320.0,
   "shares": 19733908.0,
   "revenue": 473900000.0,
   "rev_growth": 0.14,
@@ -6437,7 +6437,7 @@
   "cash": 1868499968.0,
   "beta": 1.334,
   "hi52": 464.25,
-  "lo52": 135.745,
+  "lo52": 135.75,
   "history": [
    {
     "year": 2022,
@@ -6456,9 +6456,9 @@
     "revenue": 448700000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": -690999936.0,
-  "ev": 2154231936.0,
+  "ev": 2157504384.0,
   "gross_profit": 112101045.0,
   "fcf_margin": -0.26862207216712386,
   "ebitda_margin": 0.02131251318843638
@@ -6466,8 +6466,8 @@
  "LI": {
   "ticker": "LI",
   "name": "Li Auto Inc.",
-  "price": 11.12,
-  "market_cap": 10867292160.0,
+  "price": 10.69,
+  "market_cap": 10447064064.0,
   "shares": 804674894.0,
   "revenue": 104789884928.0,
   "rev_growth": -0.151,
@@ -6478,7 +6478,7 @@
   "cash": 85592055808.0,
   "beta": 0.537,
   "hi52": 25.39,
-  "lo52": 11.09,
+  "lo52": 10.66,
   "history": [
    {
     "year": 2022,
@@ -6497,9 +6497,9 @@
     "revenue": 112312511000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": -70900154368.0,
-  "ev": -60032862208.0,
+  "ev": -60453090304.0,
   "gross_profit": 14244089058.263039,
   "fcf_margin": -0.093021731846519,
   "ebitda_margin": -0.010686079336468379
@@ -6507,8 +6507,8 @@
  "LIN": {
   "ticker": "LIN",
   "name": "Linde plc",
-  "price": 469.45,
-  "market_cap": 216407146496.0,
+  "price": 479.48,
+  "market_cap": 221030776832.0,
   "shares": 460980163.0,
   "revenue": 35448999936.0,
   "rev_growth": 0.093,
@@ -6538,9 +6538,9 @@
     "revenue": 33986000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 23115000832.0,
-  "ev": 239522147328.0,
+  "ev": 244145777664.0,
   "gross_profit": 17138882489.057281,
   "fcf_margin": 0.11737284796501628,
   "ebitda_margin": 0.38991227264392186
@@ -6548,8 +6548,8 @@
  "LMT": {
   "ticker": "LMT",
   "name": "Lockheed Martin Corporation",
-  "price": 505.5,
-  "market_cap": 116664721408.0,
+  "price": 505.41,
+  "market_cap": 116643954688.0,
   "shares": 230790753.0,
   "revenue": 77013999616.0,
   "rev_growth": 0.105,
@@ -6579,9 +6579,9 @@
     "revenue": 75048000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 16746999296.0,
-  "ev": 133411720704.0,
+  "ev": 133390953984.0,
   "gross_profit": 9086111674.69568,
   "fcf_margin": 0.07222875128854286,
   "ebitda_margin": 0.12569143335322813
@@ -6589,8 +6589,8 @@
  "LOW": {
   "ticker": "LOW",
   "name": "Lowe's Companies, Inc.",
-  "price": 182.38,
-  "market_cap": 102325035008.0,
+  "price": 180.8,
+  "market_cap": 101438570496.0,
   "shares": 561054019.0,
   "revenue": 90431995904.0,
   "rev_growth": 0.083,
@@ -6601,7 +6601,7 @@
   "cash": 3172000000.0,
   "beta": 0.846,
   "hi52": 293.06,
-  "lo52": 179.205,
+  "lo52": 179.21,
   "history": [
    {
     "year": 2023,
@@ -6620,9 +6620,9 @@
     "revenue": 86286000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 38859001600.0,
-  "ev": 141184036608.0,
+  "ev": 140297572096.0,
   "gross_profit": 29837132728.56576,
   "fcf_margin": 0.051036967633663076,
   "ebitda_margin": 0.14075770205838142
@@ -6630,8 +6630,8 @@
  "LPLA": {
   "ticker": "LPLA",
   "name": "LPL Financial Holdings Inc.",
-  "price": 312.15,
-  "market_cap": 24579403776.0,
+  "price": 316.44,
+  "market_cap": 24917209088.0,
   "shares": 78742290.0,
   "revenue": 19195801600.0,
   "rev_growth": 0.364,
@@ -6661,9 +6661,9 @@
     "revenue": 16989479000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 4949200896.0,
-  "ev": 29528604672.0,
+  "ev": 29866409984.0,
   "gross_profit": 5737625098.24,
   "fcf_margin": null,
   "ebitda_margin": null
@@ -6671,8 +6671,8 @@
  "MA": {
   "ticker": "MA",
   "name": "Mastercard Incorporated",
-  "price": 550.0,
-  "market_cap": 481805467648.0,
+  "price": 552.26,
+  "market_cap": 483785244672.0,
   "shares": 869464115.0,
   "revenue": 35083001856.0,
   "rev_growth": 0.141,
@@ -6702,9 +6702,9 @@
     "revenue": 32791000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 13034000384.0,
-  "ev": 494839468032.0,
+  "ev": 496819245056.0,
   "gross_profit": 35083001856.0,
   "fcf_margin": 0.48346063354607827,
   "ebitda_margin": 0.6328135781289513
@@ -6712,8 +6712,8 @@
  "MANH": {
   "ticker": "MANH",
   "name": "Manhattan Associates, Inc.",
-  "price": 204.15,
-  "market_cap": 11902959616.0,
+  "price": 204.145,
+  "market_cap": 11902668800.0,
   "shares": 58304972.0,
   "revenue": 1126193024.0,
   "rev_growth": 0.093,
@@ -6743,9 +6743,9 @@
     "revenue": 1081392000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": -132228000.0,
-  "ev": 11770731616.0,
+  "ev": 11770440800.0,
   "gross_profit": 628528326.6944001,
   "fcf_margin": 0.28513441049338273,
   "ebitda_margin": 0.2565528233994815
@@ -6753,8 +6753,8 @@
  "MBLY": {
   "ticker": "MBLY",
   "name": "Mobileye Global Inc.",
-  "price": 7.35,
-  "market_cap": 6248878592.0,
+  "price": 7.42,
+  "market_cap": 6308391936.0,
   "shares": 252419583.0,
   "revenue": 2016000000.0,
   "rev_growth": 0.004,
@@ -6784,9 +6784,9 @@
     "revenue": 1894000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": -1355000064.0,
-  "ev": 4893878528.0,
+  "ev": 4953391872.0,
   "gross_profit": 954999299.52,
   "fcf_margin": 0.3244667619047619,
   "ebitda_margin": -0.11755952380952381
@@ -6794,8 +6794,8 @@
  "MC": {
   "ticker": "MC",
   "name": "Moelis & Company",
-  "price": 56.95,
-  "market_cap": 4218907136.0,
+  "price": 56.32,
+  "market_cap": 4172236032.0,
   "shares": 74078589.0,
   "revenue": 1573993984.0,
   "rev_growth": 0.12,
@@ -6825,9 +6825,9 @@
     "revenue": 1516796000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 55012992.0,
-  "ev": 4273920128.0,
+  "ev": 4227249024.0,
   "gross_profit": 1452576088.07424,
   "fcf_margin": null,
   "ebitda_margin": null
@@ -6835,8 +6835,8 @@
  "MCD": {
   "ticker": "MCD",
   "name": "McDonald's Corporation",
-  "price": 231.83,
-  "market_cap": 164052533248.0,
+  "price": 231.89,
+  "market_cap": 164095000576.0,
   "shares": 707641531.0,
   "revenue": 27701999616.0,
   "rev_growth": 0.037,
@@ -6866,9 +6866,9 @@
     "revenue": 26885000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 53782001280.0,
-  "ev": 217834534528.0,
+  "ev": 217877001856.0,
   "gross_profit": 15895961419.65312,
   "fcf_margin": 0.22606219763222452,
   "ebitda_margin": 0.538950259149408
@@ -6876,8 +6876,8 @@
  "MCK": {
   "ticker": "MCK",
   "name": "McKesson Corporation",
-  "price": 898.82,
-  "market_cap": 104793751552.0,
+  "price": 902.28,
+  "market_cap": 105197150208.0,
   "shares": 116590363.0,
   "revenue": 410983006208.0,
   "rev_growth": 0.077,
@@ -6907,9 +6907,9 @@
     "revenue": 403430000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 6631999488.0,
-  "ev": 111425751040.0,
+  "ev": 111829149696.0,
   "gross_profit": 14931012615.53664,
   "fcf_margin": 0.016548737269583995,
   "ebitda_margin": 0.0172050911039892
@@ -6917,8 +6917,8 @@
  "MCO": {
   "ticker": "MCO",
   "name": "Moody's Corporation",
-  "price": 447.36,
-  "market_cap": 77474242560.0,
+  "price": 441.36,
+  "market_cap": 76435161088.0,
   "shares": 173180984.0,
   "revenue": 8160000000.0,
   "rev_growth": 0.151,
@@ -6948,9 +6948,9 @@
     "revenue": 7718000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 6123999744.0,
-  "ev": 83598242304.0,
+  "ev": 82559160832.0,
   "gross_profit": 6117959673.6,
   "fcf_margin": 0.31606923921568625,
   "ebitda_margin": 0.496691168627451
@@ -6958,8 +6958,8 @@
  "MDB": {
   "ticker": "MDB",
   "name": "MongoDB, Inc.",
-  "price": 351.73,
-  "market_cap": 28290322432.0,
+  "price": 357.96,
+  "market_cap": 28791412736.0,
   "shares": 80431927.0,
   "revenue": 2782769920.0,
   "rev_growth": 0.305,
@@ -6989,9 +6989,9 @@
     "revenue": 2463797000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": -2356241016.0,
-  "ev": 25934081416.0,
+  "ev": 26435171720.0,
   "gross_profit": 2022739799.4496,
   "fcf_margin": 0.20172570501265158,
   "ebitda_margin": 0.0049784927961273925
@@ -6999,8 +6999,8 @@
  "MDT": {
   "ticker": "MDT",
   "name": "Medtronic plc.",
-  "price": 86.44,
-  "market_cap": 110568685568.0,
+  "price": 86.38,
+  "market_cap": 110491926528.0,
   "shares": 1279137890.0,
   "revenue": 37541998592.0,
   "rev_growth": 0.137,
@@ -7030,9 +7030,9 @@
     "revenue": 36364000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 19333999616.0,
-  "ev": 129902685184.0,
+  "ev": 129825926144.0,
   "gross_profit": 24504037900.98432,
   "fcf_margin": 0.14417186540392057,
   "ebitda_margin": 0.2772361589246314
@@ -7040,8 +7040,8 @@
  "MELI": {
   "ticker": "MELI",
   "name": "MercadoLibre, Inc.",
-  "price": 1685.12,
-  "market_cap": 85430190080.0,
+  "price": 1696.56,
+  "market_cap": 86010167296.0,
   "shares": 50696802.0,
   "revenue": 35181998080.0,
   "rev_growth": 0.498,
@@ -7071,9 +7071,9 @@
     "revenue": 28893000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 7462000128.0,
-  "ev": 92892190208.0,
+  "ev": 93472167424.0,
   "gross_profit": 16799052263.2192,
   "fcf_margin": 0.010044199513525753,
   "ebitda_margin": 0.11062475733043983
@@ -7081,8 +7081,8 @@
  "META": {
   "ticker": "META",
   "name": "Meta Platforms, Inc.",
-  "price": 725.93,
-  "market_cap": 1849311100928.0,
+  "price": 728.08,
+  "market_cap": 1854788337664.0,
   "shares": 2205128509.0,
   "revenue": 228246994944.0,
   "rev_growth": 0.28,
@@ -7112,9 +7112,9 @@
     "revenue": 200966000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 22058000384.0,
-  "ev": 1871369101312.0,
+  "ev": 1876846338048.0,
   "gross_profit": 186585070956.87167,
   "fcf_margin": 0.09443114505532983,
   "ebitda_margin": 0.48042253115710754
@@ -7122,8 +7122,8 @@
  "MGA": {
   "ticker": "MGA",
   "name": "Magna International, Inc.",
-  "price": 64.46,
-  "market_cap": 17244327936.0,
+  "price": 64.57,
+  "market_cap": 17273755648.0,
   "shares": 267519846.0,
   "revenue": 42671001600.0,
   "rev_growth": 0.033,
@@ -7153,9 +7153,9 @@
     "revenue": 42010000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 5039000192.0,
-  "ev": 22283328128.0,
+  "ev": 22312755840.0,
   "gross_profit": 6278184465.408,
   "fcf_margin": 0.05477958839381919,
   "ebitda_margin": 0.10084131852203816
@@ -7163,8 +7163,8 @@
  "MKTX": {
   "ticker": "MKTX",
   "name": "MarketAxess Holdings, Inc.",
-  "price": 164.22,
-  "market_cap": 5780083712.0,
+  "price": 164.14,
+  "market_cap": 5777267712.0,
   "shares": 35197197.0,
   "revenue": 870025024.0,
   "rev_growth": -0.005,
@@ -7194,9 +7194,9 @@
     "revenue": 846268000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": -167399008.0,
-  "ev": 5612684704.0,
+  "ev": 5609868704.0,
   "gross_profit": 536483495.74811906,
   "fcf_margin": -0.5261802860511745,
   "ebitda_margin": 0.49993504554646007
@@ -7204,8 +7204,8 @@
  "MNDY": {
   "ticker": "MNDY",
   "name": "monday.com Ltd.",
-  "price": 80.31,
-  "market_cap": 3395034368.0,
+  "price": 78.8,
+  "market_cap": 3331200768.0,
   "shares": 42274119.0,
   "revenue": 1366619008.0,
   "rev_growth": 0.219,
@@ -7235,9 +7235,9 @@
     "revenue": 1231997000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": -835267008.0,
-  "ev": 2559767360.0,
+  "ev": 2495933760.0,
   "gross_profit": 1212710375.3190398,
   "fcf_margin": 0.20827539960574,
   "ebitda_margin": 0.03717788184020341
@@ -7245,8 +7245,8 @@
  "MO": {
   "ticker": "MO",
   "name": "Altria Group, Inc.",
-  "price": 66.95,
-  "market_cap": 111789350912.0,
+  "price": 67.35,
+  "market_cap": 112457244672.0,
   "shares": 1669743926.0,
   "revenue": 20444000256.0,
   "rev_growth": 0.012,
@@ -7276,9 +7276,9 @@
     "revenue": 20139000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 22209999360.0,
-  "ev": 133999350272.0,
+  "ev": 134667244032.0,
   "gross_profit": 17787916764.940495,
   "fcf_margin": 0.441859450542163,
   "ebitda_margin": 0.7711308938852716
@@ -7286,8 +7286,8 @@
  "MP": {
   "ticker": "MP",
   "name": "MP Materials Corp.",
-  "price": 46.09,
-  "market_cap": 8208701952.0,
+  "price": 46.97,
+  "market_cap": 8365431808.0,
   "shares": 178101588.0,
   "revenue": 416246016.0,
   "rev_growth": 1.197,
@@ -7317,9 +7317,9 @@
     "revenue": 224441000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": -471022976.0,
-  "ev": 7737678976.0,
+  "ev": 7894408832.0,
   "gross_profit": 176180288.73216,
   "fcf_margin": -1.0401273462278615,
   "ebitda_margin": 0.09772105542506862
@@ -7327,8 +7327,8 @@
  "MQ": {
   "ticker": "MQ",
   "name": "Marqeta, Inc.",
-  "price": 17.0,
-  "market_cap": 1769680128.0,
+  "price": 16.55,
+  "market_cap": 1722835584.0,
   "shares": 95911790.0,
   "revenue": 677212032.0,
   "rev_growth": 0.17,
@@ -7358,9 +7358,9 @@
     "revenue": 624884000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": -694151000.0,
-  "ev": 1075529128.0,
+  "ev": 1028684584.0,
   "gross_profit": 473994204.8047181,
   "fcf_margin": 0.2255183558227152,
   "ebitda_margin": 0.025268304742701322
@@ -7368,8 +7368,8 @@
  "MRK": {
   "ticker": "MRK",
   "name": "Merck & Company, Inc.",
-  "price": 143.81,
-  "market_cap": 354803941376.0,
+  "price": 144.3,
+  "market_cap": 356012851200.0,
   "shares": 2467171638.0,
   "revenue": 66568998912.0,
   "rev_growth": 0.051,
@@ -7399,9 +7399,9 @@
     "revenue": 65011000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 46769998848.0,
-  "ev": 401573940224.0,
+  "ev": 402782850048.0,
   "gross_profit": 50525870174.208,
   "fcf_margin": 0.22790638705646996,
   "ebitda_margin": 0.43370037909336195
@@ -7409,8 +7409,8 @@
  "MS": {
   "ticker": "MS",
   "name": "Morgan Stanley",
-  "price": 188.01,
-  "market_cap": 295282147328.0,
+  "price": 190.31,
+  "market_cap": 298894458880.0,
   "shares": 1570566292.0,
   "revenue": 77827997696.0,
   "rev_growth": 0.28,
@@ -7440,9 +7440,9 @@
     "revenue": 65966000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": -131580035072.0,
-  "ev": 163702112256.0,
+  "ev": 167314423808.0,
   "gross_profit": 68209235460.75136,
   "fcf_margin": null,
   "ebitda_margin": null
@@ -7450,8 +7450,8 @@
  "MSCI": {
   "ticker": "MSCI",
   "name": "MSCI Inc.",
-  "price": 545.39,
-  "market_cap": 39649853440.0,
+  "price": 535.95,
+  "market_cap": 38963564544.0,
   "shares": 72700000.0,
   "revenue": 3333758976.0,
   "rev_growth": 0.122,
@@ -7481,9 +7481,9 @@
     "revenue": 3134459000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 6191500192.0,
-  "ev": 45841353632.0,
+  "ev": 45155064736.0,
   "gross_profit": 2766186510.336,
   "fcf_margin": 0.35836601524008915,
   "ebitda_margin": 0.588614540561195
@@ -7491,8 +7491,8 @@
  "MSFT": {
   "ticker": "MSFT",
   "name": "Microsoft Corporation",
-  "price": 512.8,
-  "market_cap": 3807819857920.0,
+  "price": 517.53,
+  "market_cap": 3842942959616.0,
   "shares": 7425545491.0,
   "revenue": 331839012864.0,
   "rev_growth": 0.177,
@@ -7522,9 +7522,9 @@
     "revenue": 331839000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 51969998848.0,
-  "ev": 3859789856768.0,
+  "ev": 3894912958464.0,
   "gross_profit": 225464698900.31616,
   "fcf_margin": 0.049860021030079915,
   "ebitda_margin": 0.5853350519205093
@@ -7532,8 +7532,8 @@
  "MSTR": {
   "ticker": "MSTR",
   "name": "Strategy Inc",
-  "price": 160.5,
-  "market_cap": 63999504384.0,
+  "price": 160.01,
+  "market_cap": 63804116992.0,
   "shares": 379110575.0,
   "revenue": 498347008.0,
   "rev_growth": 0.069,
@@ -7563,9 +7563,9 @@
     "revenue": 477233000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 4322795008.0,
-  "ev": 68322299392.0,
+  "ev": 68126912000.0,
   "gross_profit": 336887535.9607296,
   "fcf_margin": -45.32488950350034,
   "ebitda_margin": -72.95111441704492
@@ -7573,8 +7573,8 @@
  "MTCH": {
   "ticker": "MTCH",
   "name": "Match Group, Inc.",
-  "price": 40.13,
-  "market_cap": 9360986112.0,
+  "price": 40.32,
+  "market_cap": 9405305856.0,
   "shares": 233266526.0,
   "revenue": 3509319936.0,
   "rev_growth": -0.012,
@@ -7604,9 +7604,9 @@
     "revenue": 3487197000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 3084431872.0,
-  "ev": 12445417984.0,
+  "ev": 12489737728.0,
   "gross_profit": 2627498022.4819202,
   "fcf_margin": 0.2651978209375778,
   "ebitda_margin": 0.3387921505256567
@@ -7614,17 +7614,17 @@
  "MU": {
   "ticker": "MU",
   "name": "Micron Technology, Inc.",
-  "price": 1097.39,
-  "market_cap": 1239384719360.0,
+  "price": 1074.89,
+  "market_cap": 1213973397504.0,
   "shares": 1129393151.0,
   "revenue": 133188001792.0,
   "rev_growth": 3.793,
   "gross_margin": 0.80716,
   "ebitda": 108842999808.0,
-  "fcf": 27881250816.0,
+  "fcf": 29214251008.0,
   "debt": 5178999808.0,
   "cash": 43434000384.0,
-  "beta": null,
+  "beta": 2.222,
   "hi52": 1255.0,
   "lo52": 179.61,
   "history": [
@@ -7645,18 +7645,18 @@
     "revenue": 37378000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": -38255000576.0,
-  "ev": 1201129718784.0,
+  "ev": 1175718396928.0,
   "gross_profit": 107504027526.43073,
-  "fcf_margin": 0.2093375562428079,
+  "fcf_margin": 0.21934596671571033,
   "ebitda_margin": 0.8172132500191748
  },
  "NCNO": {
   "ticker": "NCNO",
   "name": "nCino, Inc.",
-  "price": 19.35,
-  "market_cap": 2045995008.0,
+  "price": 18.68,
+  "market_cap": 1975151744.0,
   "shares": 105736174.0,
   "revenue": 622243968.0,
   "rev_growth": 0.082,
@@ -7686,9 +7686,9 @@
     "revenue": 594781000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 255337008.0,
-  "ev": 2301332016.0,
+  "ev": 2230488752.0,
   "gross_profit": 387303313.00224,
   "fcf_margin": 0.24353691444703568,
   "ebitda_margin": 0.14763984019849913
@@ -7696,8 +7696,8 @@
  "NDAQ": {
   "ticker": "NDAQ",
   "name": "Nasdaq, Inc.",
-  "price": 91.67,
-  "market_cap": 51241451520.0,
+  "price": 90.33,
+  "market_cap": 50492424192.0,
   "shares": 558977372.0,
   "revenue": 5614000128.0,
   "rev_growth": 0.149,
@@ -7727,9 +7727,9 @@
     "revenue": 8262000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 8762000192.0,
-  "ev": 60003451712.0,
+  "ev": 59254424384.0,
   "gross_profit": 5614000128.0,
   "fcf_margin": 0.3013003194573493,
   "ebitda_margin": 0.5972568328377494
@@ -7737,8 +7737,8 @@
  "NEE": {
   "ticker": "NEE",
   "name": "NextEra Energy, Inc.",
-  "price": 76.35,
-  "market_cap": 159264440320.0,
+  "price": 76.83,
+  "market_cap": 160265715712.0,
   "shares": 2085978209.0,
   "revenue": 28700000256.0,
   "rev_growth": 0.124,
@@ -7768,9 +7768,9 @@
     "revenue": 27412000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 107330998272.0,
-  "ev": 266595438592.0,
+  "ev": 267596713984.0,
   "gross_profit": 17513888156.22144,
   "fcf_margin": -0.6190548772655732,
   "ebitda_margin": 0.508466910029006
@@ -7778,8 +7778,8 @@
  "NET": {
   "ticker": "NET",
   "name": "Cloudflare, Inc.",
-  "price": 351.0,
-  "market_cap": 124983975936.0,
+  "price": 349.07,
+  "market_cap": 124296749056.0,
   "shares": 322618775.0,
   "revenue": 2512349952.0,
   "rev_growth": 0.359,
@@ -7809,9 +7809,9 @@
     "revenue": 2167937000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": -633448192.0,
-  "ev": 124350527744.0,
+  "ev": 123663300864.0,
   "gross_profit": 1823388375.404037,
   "fcf_margin": 0.27541798762913744,
   "ebitda_margin": -0.0014369017330273582
@@ -7819,8 +7819,8 @@
  "NFLX": {
   "ticker": "NFLX",
   "name": "Netflix, Inc.",
-  "price": 67.85,
-  "market_cap": 282523303936.0,
+  "price": 67.06,
+  "market_cap": 279233789952.0,
   "shares": 4163939676.0,
   "revenue": 48370765824.0,
   "rev_growth": 0.134,
@@ -7850,9 +7850,9 @@
     "revenue": 45183036000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 7526750208.0,
-  "ev": 290050054144.0,
+  "ev": 286760540160.0,
   "gross_profit": 23758752757.43232,
   "fcf_margin": 0.5248532318130783,
   "ebitda_margin": 0.3044593403706868
@@ -7860,8 +7860,8 @@
  "NICE": {
   "ticker": "NICE",
   "name": "NICE Ltd",
-  "price": 116.48,
-  "market_cap": 6825400832.0,
+  "price": 113.9,
+  "market_cap": 6674220032.0,
   "shares": 58597188.0,
   "revenue": 3069404928.0,
   "rev_growth": 0.076,
@@ -7871,7 +7871,7 @@
   "debt": 88219000.0,
   "cash": 354689984.0,
   "beta": 0.053,
-  "hi52": 141.1,
+  "hi52": 140.48,
   "lo52": 83.1,
   "history": [
    {
@@ -7891,9 +7891,9 @@
     "revenue": 2945399000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": -266470984.0,
-  "ev": 6558929848.0,
+  "ev": 6407749048.0,
   "gross_profit": 1998735008.9328923,
   "fcf_margin": 0.20046352906617865,
   "ebitda_margin": 0.26579517630851995
@@ -7901,8 +7901,8 @@
  "NIO": {
   "ticker": "NIO",
   "name": "NIO Inc.",
-  "price": 3.4,
-  "market_cap": 8519268352.0,
+  "price": 3.37,
+  "market_cap": 8444097536.0,
   "shares": 2357167022.0,
   "revenue": 114113634304.0,
   "rev_growth": 0.691,
@@ -7913,7 +7913,7 @@
   "cash": 43088306176.0,
   "beta": 0.916,
   "hi52": 7.86,
-  "lo52": 3.38,
+  "lo52": 3.3731,
   "history": [
    {
     "year": 2022,
@@ -7932,9 +7932,9 @@
     "revenue": 87487510000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": -14092365824.0,
-  "ev": -5573097472.0,
+  "ev": -5648268288.0,
   "gross_profit": 19810126915.1744,
   "fcf_margin": null,
   "ebitda_margin": 0.029898429901118365
@@ -7942,19 +7942,19 @@
  "NKE": {
   "ticker": "NKE",
   "name": "Nike, Inc.",
-  "price": 35.15,
-  "market_cap": 52144984064.0,
+  "price": 33.87,
+  "market_cap": 50246103040.0,
   "shares": 1202110951.0,
-  "revenue": 46398001152.0,
-  "rev_growth": -0.011,
-  "gross_margin": 0.43245,
-  "ebitda": 4928999936.0,
-  "fcf": 1889250048.0,
-  "debt": 11043000320.0,
-  "cash": 9027000320.0,
+  "revenue": 45890998272.0,
+  "rev_growth": -0.043,
+  "gross_margin": 0.43407002,
+  "ebitda": 4886750208.0,
+  "fcf": null,
+  "debt": 11072000000.0,
+  "cash": 8368000000.0,
   "beta": 1.11,
   "hi52": 74.78,
-  "lo52": 35.02,
+  "lo52": 31.97,
   "history": [
    {
     "year": 2023,
@@ -7973,18 +7973,18 @@
     "revenue": 46398000000.0
    }
   ],
-  "as_of": "2026-10-02",
-  "net_debt": 2016000000.0,
-  "ev": 54160984064.0,
-  "gross_profit": 20064815598.1824,
-  "fcf_margin": 0.04071834995242168,
-  "ebitda_margin": 0.10623302326866584
+  "as_of": "2026-10-03",
+  "net_debt": 2704000000.0,
+  "ev": 52950103040.0,
+  "gross_profit": 19919906537.747005,
+  "fcf_margin": null,
+  "ebitda_margin": 0.10648602976635635
  },
  "NMR": {
   "ticker": "NMR",
   "name": "Nomura Holdings Inc",
-  "price": 9.74,
-  "market_cap": 28466042880.0,
+  "price": 9.73,
+  "market_cap": 28436815872.0,
   "shares": 2922591697.0,
   "revenue": 2331112112128.0,
   "rev_growth": 0.312,
@@ -8014,9 +8014,9 @@
     "revenue": 1841954000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": -15404843925504.0,
-  "ev": -15376377882624.0,
+  "ev": -15376407109632.0,
   "gross_profit": 1817707980552.9292,
   "fcf_margin": null,
   "ebitda_margin": null
@@ -8024,8 +8024,8 @@
  "NOC": {
   "ticker": "NOC",
   "name": "Northrop Grumman Corporation",
-  "price": 482.0,
-  "market_cap": 68474376192.0,
+  "price": 478.0,
+  "market_cap": 67906125824.0,
   "shares": 142063026.0,
   "revenue": 42892001280.0,
   "rev_growth": 0.051,
@@ -8036,7 +8036,7 @@
   "cash": 2307000064.0,
   "beta": -0.11,
   "hi52": 774.0,
-  "lo52": 479.02,
+  "lo52": 470.06,
   "history": [
    {
     "year": 2022,
@@ -8055,9 +8055,9 @@
     "revenue": 41954000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 14745000192.0,
-  "ev": 83219376384.0,
+  "ev": 82651126016.0,
   "gross_profit": 8604135456.768,
   "fcf_margin": 0.057773012544309985,
   "ebitda_margin": 0.1691457578917614
@@ -8065,8 +8065,8 @@
  "NOW": {
   "ticker": "NOW",
   "name": "ServiceNow, Inc.",
-  "price": 137.76,
-  "market_cap": 142424817664.0,
+  "price": 134.38,
+  "market_cap": 138930388992.0,
   "shares": 1033862000.0,
   "revenue": 14732000256.0,
   "rev_growth": 0.24,
@@ -8096,9 +8096,9 @@
     "revenue": 13278000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 3789000192.0,
-  "ev": 146213817856.0,
+  "ev": 142719389184.0,
   "gross_profit": 11014968682.12863,
   "fcf_margin": 0.3495367150772876,
   "ebitda_margin": 0.19664674760103398
@@ -8106,8 +8106,8 @@
  "NU": {
   "ticker": "NU",
   "name": "Nu Holdings Ltd.",
-  "price": 13.29,
-  "market_cap": 64199852032.0,
+  "price": 13.43,
+  "market_cap": 64876150784.0,
   "shares": 3808087961.0,
   "revenue": 8442067968.0,
   "rev_growth": 0.521,
@@ -8137,9 +8137,9 @@
     "revenue": 10626855000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": -9274150400.0,
-  "ev": 54925701632.0,
+  "ev": 55602000384.0,
   "gross_profit": 0.0,
   "fcf_margin": null,
   "ebitda_margin": null
@@ -8147,8 +8147,8 @@
  "NVDA": {
   "ticker": "NVDA",
   "name": "NVIDIA Corporation",
-  "price": 230.86,
-  "market_cap": 5574576046080.0,
+  "price": 233.95,
+  "market_cap": 5649190617088.0,
   "shares": 24147000000.0,
   "revenue": 302970011648.0,
   "rev_growth": 1.059,
@@ -8158,7 +8158,7 @@
   "debt": 38860001280.0,
   "cash": 62469001216.0,
   "beta": 2.217,
-  "hi52": 236.54,
+  "hi52": 237.87,
   "lo52": 164.27,
   "history": [
    {
@@ -8178,9 +8178,9 @@
     "revenue": 215938000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": -23608999936.0,
-  "ev": 5550967046144.0,
+  "ev": 5625581617152.0,
   "gross_profit": 226239838616.828,
   "fcf_margin": 0.13800004401945898,
   "ebitda_margin": 0.6643099852464511
@@ -8188,8 +8188,8 @@
  "OKTA": {
   "ticker": "OKTA",
   "name": "Okta, Inc.",
-  "price": 212.63,
-  "market_cap": 37172174848.0,
+  "price": 211.49,
+  "market_cap": 36972879872.0,
   "shares": 167139757.0,
   "revenue": 3072999936.0,
   "rev_growth": 0.106,
@@ -8199,7 +8199,7 @@
   "debt": 53000000.0,
   "cash": 2299000064.0,
   "beta": 0.789,
-  "hi52": 213.86,
+  "hi52": 216.59,
   "lo52": 62.66,
   "history": [
    {
@@ -8219,9 +8219,9 @@
     "revenue": 2919000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": -2246000064.0,
-  "ev": 34926174784.0,
+  "ev": 34726879808.0,
   "gross_profit": 2400996432.9155173,
   "fcf_margin": 0.3376586546079251,
   "ebitda_margin": 0.10445818636033971
@@ -8229,8 +8229,8 @@
  "ON": {
   "ticker": "ON",
   "name": "ON Semiconductor Corporation",
-  "price": 80.08,
-  "market_cap": 31176636416.0,
+  "price": 84.89,
+  "market_cap": 33049257984.0,
   "shares": 389318613.0,
   "revenue": 6197799936.0,
   "rev_growth": 0.092,
@@ -8260,9 +8260,9 @@
     "revenue": 5995400000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 844500224.0,
-  "ev": 32021136640.0,
+  "ev": 33893758208.0,
   "gross_profit": 2651170900.6233597,
   "fcf_margin": 0.26729646021281317,
   "ebitda_margin": 0.33720030552467317
@@ -8270,8 +8270,8 @@
  "OPFI": {
   "ticker": "OPFI",
   "name": "OppFi Inc.",
-  "price": 5.95,
-  "market_cap": 506989056.0,
+  "price": 5.97,
+  "market_cap": 508693216.0,
   "shares": 85208247.0,
   "revenue": 327479008.0,
   "rev_growth": -0.139,
@@ -8282,7 +8282,7 @@
   "cash": 64347000.0,
   "beta": 1.776,
   "hi52": 11.69,
-  "lo52": 5.92,
+  "lo52": 5.91,
   "history": [
    {
     "year": 2022,
@@ -8301,9 +8301,9 @@
     "revenue": 597050000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 222533992.0,
-  "ev": 729523048.0,
+  "ev": 731227208.0,
   "gross_profit": 327479008.0,
   "fcf_margin": null,
   "ebitda_margin": null
@@ -8311,8 +8311,8 @@
  "OPRT": {
   "ticker": "OPRT",
   "name": "Oportun Financial Corporation",
-  "price": 8.225,
-  "market_cap": 378245152.0,
+  "price": 8.35,
+  "market_cap": 383993568.0,
   "shares": 45987253.0,
   "revenue": 743953024.0,
   "rev_growth": 0.094,
@@ -8342,9 +8342,9 @@
     "revenue": 405837000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 2522694032.0,
-  "ev": 2900939184.0,
+  "ev": 2906687600.0,
   "gross_profit": 708518541.4668801,
   "fcf_margin": null,
   "ebitda_margin": null
@@ -8352,8 +8352,8 @@
  "ORCL": {
   "ticker": "ORCL",
   "name": "Oracle Corporation",
-  "price": 138.07,
-  "market_cap": 418559361024.0,
+  "price": 142.3,
+  "market_cap": 431382593536.0,
   "shares": 3031501149.0,
   "revenue": 71776002048.0,
   "rev_growth": 0.296,
@@ -8383,9 +8383,9 @@
     "revenue": 67357000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 132065992704.0,
-  "ev": 550625353728.0,
+  "ev": 563448586240.0,
   "gross_profit": 45905777629.839355,
   "fcf_margin": -0.6388434164574326,
   "ebitda_margin": 0.47972857837600136
@@ -8393,8 +8393,8 @@
  "OTEX": {
   "ticker": "OTEX",
   "name": "Open Text Corporation",
-  "price": 22.4,
-  "market_cap": 5435636736.0,
+  "price": 22.22,
+  "market_cap": 5391957504.0,
   "shares": 242662360.0,
   "revenue": 5246401024.0,
   "rev_growth": 0.029,
@@ -8424,9 +8424,9 @@
     "revenue": 5246401000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 5012014976.0,
-  "ev": 10447651712.0,
+  "ev": 10403972480.0,
   "gross_profit": 4043086485.13536,
   "fcf_margin": 0.2597202542784499,
   "ebitda_margin": 0.3113740166882066
@@ -8434,8 +8434,8 @@
  "OWL": {
   "ticker": "OWL",
   "name": "Blue Owl Capital Inc.",
-  "price": 8.95,
-  "market_cap": 14026050560.0,
+  "price": 9.08,
+  "market_cap": 14229780480.0,
   "shares": 683908596.0,
   "revenue": 2990448896.0,
   "rev_growth": 0.071,
@@ -8465,9 +8465,9 @@
     "revenue": 2870178000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 4175490848.0,
-  "ev": 18201541408.0,
+  "ev": 18405271328.0,
   "gross_profit": 1749143583.377316,
   "fcf_margin": 0.5197877556373396,
   "ebitda_margin": 0.42045257943775943
@@ -8475,8 +8475,8 @@
  "PAGS": {
   "ticker": "PAGS",
   "name": "PagSeguro Digital Ltd.",
-  "price": 8.87,
-  "market_cap": 2444980224.0,
+  "price": 9.02,
+  "market_cap": 2486327296.0,
   "shares": 155186514.0,
   "revenue": 19803666432.0,
   "rev_growth": -0.002,
@@ -8506,9 +8506,9 @@
     "revenue": 20410512000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 388723072.0,
-  "ev": 2833703296.0,
+  "ev": 2875050368.0,
   "gross_profit": 10193343185.87904,
   "fcf_margin": -0.09373549278735903,
   "ebitda_margin": 0.4701040636069627
@@ -8516,8 +8516,8 @@
  "PANW": {
   "ticker": "PANW",
   "name": "Palo Alto Networks, Inc.",
-  "price": 396.25,
-  "market_cap": 324132503552.0,
+  "price": 403.24,
+  "market_cap": 329850322944.0,
   "shares": 818000000.0,
   "revenue": 11480000512.0,
   "rev_growth": 0.345,
@@ -8527,7 +8527,7 @@
   "debt": 2567000064.0,
   "cash": 3071000064.0,
   "beta": 0.908,
-  "hi52": 404.69,
+  "hi52": 409.5,
   "lo52": 139.57,
   "history": [
    {
@@ -8547,9 +8547,9 @@
     "revenue": 11480000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": -504000000.0,
-  "ev": 323628503552.0,
+  "ev": 329346322944.0,
   "gross_profit": 8079968760.360959,
   "fcf_margin": 0.36939239606891056,
   "ebitda_margin": 0.13588849568162806
@@ -8557,8 +8557,8 @@
  "PATH": {
   "ticker": "PATH",
   "name": "UiPath, Inc.",
-  "price": 13.32,
-  "market_cap": 6941790208.0,
+  "price": 13.12,
+  "market_cap": 6837559296.0,
   "shares": 456464703.0,
   "revenue": 1720857984.0,
   "rev_growth": 0.134,
@@ -8588,9 +8588,9 @@
     "revenue": 1610572000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": -1204230016.0,
-  "ev": 5737560192.0,
+  "ev": 5633329280.0,
   "gross_profit": 1421136148.92672,
   "fcf_margin": 0.2755937075630292,
   "ebitda_margin": 0.10728194523691735
@@ -8598,8 +8598,8 @@
  "PAYC": {
   "ticker": "PAYC",
   "name": "Paycom Software, Inc.",
-  "price": 227.47,
-  "market_cap": 10252441600.0,
+  "price": 220.99,
+  "market_cap": 9960377344.0,
   "shares": 45071619.0,
   "revenue": 2140700032.0,
   "rev_growth": 0.098,
@@ -8629,9 +8629,9 @@
     "revenue": 2051700000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 784800000.0,
-  "ev": 11037241600.0,
+  "ev": 10745177344.0,
   "gross_profit": 1884993413.1776001,
   "fcf_margin": 0.197937583811836,
   "ebitda_margin": 0.3433923581125074
@@ -8639,8 +8639,8 @@
  "PAYO": {
   "ticker": "PAYO",
   "name": "Payoneer Global Inc.",
-  "price": 7.14,
-  "market_cap": 2419395072.0,
+  "price": 7.15,
+  "market_cap": 2422783488.0,
   "shares": 338850836.0,
   "revenue": 1081395968.0,
   "rev_growth": 0.052,
@@ -8670,9 +8670,9 @@
     "revenue": 821160000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": -260158000.0,
-  "ev": 2159237072.0,
+  "ev": 2162625488.0,
   "gross_profit": 923187781.1374387,
   "fcf_margin": -0.06389194896646776,
   "ebitda_margin": 0.18102805428621682
@@ -8680,8 +8680,8 @@
  "PCOR": {
   "ticker": "PCOR",
   "name": "Procore Technologies, Inc.",
-  "price": 51.66,
-  "market_cap": 7850013184.0,
+  "price": 50.95,
+  "market_cap": 7742125056.0,
   "shares": 151955338.0,
   "revenue": 1422448000.0,
   "rev_growth": 0.158,
@@ -8711,9 +8711,9 @@
     "revenue": 1322509000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": -588387984.0,
-  "ev": 7261625200.0,
+  "ev": 7153737072.0,
   "gross_profit": 1139011011.52,
   "fcf_margin": 0.2142209149297549,
   "ebitda_margin": 0.045829443325872014
@@ -8721,8 +8721,8 @@
  "PCTY": {
   "ticker": "PCTY",
   "name": "Paylocity Holding Corporation",
-  "price": 146.6,
-  "market_cap": 8116656128.0,
+  "price": 144.47,
+  "market_cap": 7998726144.0,
   "shares": 55366000.0,
   "revenue": 1771325952.0,
   "rev_growth": 0.11,
@@ -8752,9 +8752,9 @@
     "revenue": 1771326000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": -138944992.0,
-  "ev": 7977711136.0,
+  "ev": 7859781152.0,
   "gross_profit": 1227209957.4983423,
   "fcf_margin": 0.20316143372352058,
   "ebitda_margin": 0.24162126429455713
@@ -8762,8 +8762,8 @@
  "PD": {
   "ticker": "PD",
   "name": "PagerDuty, Inc.",
-  "price": 15.58,
-  "market_cap": 1225364992.0,
+  "price": 15.34,
+  "market_cap": 1206489088.0,
   "shares": 78649873.0,
   "revenue": 494732992.0,
   "rev_growth": 0.008,
@@ -8793,9 +8793,9 @@
     "revenue": 492546000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": -57226016.0,
-  "ev": 1168138976.0,
+  "ev": 1149263072.0,
   "gross_profit": 420424121.3382496,
   "fcf_margin": 0.23647427176233277,
   "ebitda_margin": 0.0926823170103036
@@ -8803,8 +8803,8 @@
  "PEGA": {
   "ticker": "PEGA",
   "name": "Pegasystems Inc.",
-  "price": 34.43,
-  "market_cap": 5660462080.0,
+  "price": 33.93,
+  "market_cap": 5578259968.0,
   "shares": 164404945.0,
   "revenue": 1736355968.0,
   "rev_growth": 0.094,
@@ -8834,9 +8834,9 @@
     "revenue": 1745812000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": -289891008.0,
-  "ev": 5370571072.0,
+  "ev": 5288368960.0,
   "gross_profit": 1312216295.69664,
   "fcf_margin": 0.2922223284574791,
   "ebitda_margin": 0.12077073818080142
@@ -8844,8 +8844,8 @@
  "PEP": {
   "ticker": "PEP",
   "name": "Pepsico, Inc.",
-  "price": 125.6,
-  "market_cap": 171569594368.0,
+  "price": 125.89,
+  "market_cap": 171965743104.0,
   "shares": 1366000000.0,
   "revenue": 96904003584.0,
   "rev_growth": 0.064,
@@ -8856,7 +8856,7 @@
   "cash": 10716000256.0,
   "beta": 0.361,
   "hi52": 171.48,
-  "lo52": 125.525,
+  "lo52": 125.16,
   "history": [
    {
     "year": 2022,
@@ -8875,9 +8875,9 @@
     "revenue": 93925000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 42497998848.0,
-  "ev": 214067593216.0,
+  "ev": 214463741952.0,
   "gross_profit": 52493867781.48864,
   "fcf_margin": 0.08082096489657457,
   "ebitda_margin": 0.1948526397016443
@@ -8885,8 +8885,8 @@
  "PG": {
   "ticker": "PG",
   "name": "Procter & Gamble Company (The)",
-  "price": 143.95,
-  "market_cap": 334348681216.0,
+  "price": 144.91,
+  "market_cap": 336578478080.0,
   "shares": 2322672312.0,
   "revenue": 87031996416.0,
   "rev_growth": 0.015,
@@ -8916,9 +8916,9 @@
     "revenue": 87032000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 25082998784.0,
-  "ev": 359431680000.0,
+  "ev": 361661476864.0,
   "gross_profit": 44275787536.71168,
   "fcf_margin": 0.1525976082694851,
   "ebitda_margin": 0.28440116328814424
@@ -8926,8 +8926,8 @@
  "PGR": {
   "ticker": "PGR",
   "name": "Progressive Corporation (The)",
-  "price": 210.96,
-  "market_cap": 122441187328.0,
+  "price": 210.31,
+  "market_cap": 122063921152.0,
   "shares": 580400000.0,
   "revenue": 91019001856.0,
   "rev_growth": 0.073,
@@ -8937,7 +8937,7 @@
   "debt": 8386999808.0,
   "cash": 2156000000.0,
   "beta": 0.259,
-  "hi52": 247.49,
+  "hi52": 245.64,
   "lo52": 189.2,
   "history": [
    {
@@ -8957,9 +8957,9 @@
     "revenue": 87637000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 6230999808.0,
-  "ev": 128672187136.0,
+  "ev": 128294920960.0,
   "gross_profit": 16857629333.749762,
   "fcf_margin": 0.16605873265796145,
   "ebitda_margin": 0.16917346160707167
@@ -8967,8 +8967,8 @@
  "PGY": {
   "ticker": "PGY",
   "name": "Pagaya Technologies Ltd.",
-  "price": 17.44,
-  "market_cap": 1454946688.0,
+  "price": 17.98,
+  "market_cap": 1499996544.0,
   "shares": 72137266.0,
   "revenue": 1389959040.0,
   "rev_growth": 0.186,
@@ -8978,7 +8978,7 @@
   "debt": 907344000.0,
   "cash": 1289374976.0,
   "beta": 5.37,
-  "hi52": 32.04,
+  "hi52": 31.54,
   "lo52": 10.4,
   "history": [
    {
@@ -8998,9 +8998,9 @@
     "revenue": 1261341000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": -382030976.0,
-  "ev": 1072915712.0,
+  "ev": 1117965568.0,
   "gross_profit": 603061556.4839808,
   "fcf_margin": 0.14905267999839766,
   "ebitda_margin": 0.25296860546336675
@@ -9008,8 +9008,8 @@
  "PIPR": {
   "ticker": "PIPR",
   "name": "Piper Sandler Companies",
-  "price": 65.78,
-  "market_cap": 4648691712.0,
+  "price": 65.36,
+  "market_cap": 4619010048.0,
   "shares": 70670291.0,
   "revenue": 2115250048.0,
   "rev_growth": 0.249,
@@ -9039,9 +9039,9 @@
     "revenue": 1836294000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": -685681008.0,
-  "ev": 3963010704.0,
+  "ev": 3933329040.0,
   "gross_profit": 1942159200.0296614,
   "fcf_margin": null,
   "ebitda_margin": null
@@ -9049,8 +9049,8 @@
  "PJT": {
   "ticker": "PJT",
   "name": "PJT Partners Inc.",
-  "price": 140.3,
-  "market_cap": 5976388096.0,
+  "price": 138.69,
+  "market_cap": 5907806208.0,
   "shares": 25564818.0,
   "revenue": 1885650048.0,
   "rev_growth": 0.195,
@@ -9080,9 +9080,9 @@
     "revenue": 1713671000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 183809024.0,
-  "ev": 6160197120.0,
+  "ev": 6091615232.0,
   "gross_profit": 1796119383.7209601,
   "fcf_margin": null,
   "ebitda_margin": null
@@ -9090,8 +9090,8 @@
  "PLD": {
   "ticker": "PLD",
   "name": "Prologis, Inc.",
-  "price": 128.18,
-  "market_cap": 124602671104.0,
+  "price": 128.91,
+  "market_cap": 125312303104.0,
   "shares": 950333372.0,
   "revenue": 9657474048.0,
   "rev_growth": 0.123,
@@ -9121,9 +9121,9 @@
     "revenue": 8790127000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 35327040896.0,
-  "ev": 159929712000.0,
+  "ev": 160639344000.0,
   "gross_profit": 7296125647.971963,
   "fcf_margin": 0.5598711585582508,
   "ebitda_margin": 0.6976099462980405
@@ -9131,8 +9131,8 @@
  "PLTR": {
   "ticker": "PLTR",
   "name": "Palantir Technologies Inc.",
-  "price": 190.04,
-  "market_cap": 456677195776.0,
+  "price": 188.75,
+  "market_cap": 453577277440.0,
   "shares": 2300713329.0,
   "revenue": 6155940864.0,
   "rev_growth": 0.928,
@@ -9162,9 +9162,9 @@
     "revenue": 4475446000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": -9197698752.0,
-  "ev": 447479497024.0,
+  "ev": 444379578688.0,
   "gross_profit": 5219991615.03744,
   "fcf_margin": 0.3507350963402627,
   "ebitda_margin": 0.43253012769682125
@@ -9172,8 +9172,8 @@
  "PM": {
   "ticker": "PM",
   "name": "Philip Morris International Inc",
-  "price": 188.18,
-  "market_cap": 293299847168.0,
+  "price": 187.46,
+  "market_cap": 292177674240.0,
   "shares": 1558613439.0,
   "revenue": 42545000448.0,
   "rev_growth": 0.104,
@@ -9203,9 +9203,9 @@
     "revenue": 40648000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 43135999488.0,
-  "ev": 336435846656.0,
+  "ev": 335313673728.0,
   "gross_profit": 28709793879.564903,
   "fcf_margin": 0.22833175587512924,
   "ebitda_margin": 0.4234340201269611
@@ -9213,8 +9213,8 @@
  "PNC": {
   "ticker": "PNC",
   "name": "PNC Financial Services Group, I",
-  "price": 220.75,
-  "market_cap": 88066818048.0,
+  "price": 221.03,
+  "market_cap": 88178524160.0,
   "shares": 398943667.0,
   "revenue": 24319000576.0,
   "rev_growth": 0.236,
@@ -9244,9 +9244,9 @@
     "revenue": 23077000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 74504000512.0,
-  "ev": 162570818560.0,
+  "ev": 162682524672.0,
   "gross_profit": 0.0,
   "fcf_margin": null,
   "ebitda_margin": null
@@ -9254,8 +9254,8 @@
  "POAHY": {
   "ticker": "POAHY",
   "name": "Porsche Automobile Holding SE",
-  "price": 2.73,
-  "market_cap": 8531857920.0,
+  "price": 2.71,
+  "market_cap": 8469353472.0,
   "shares": 1531250000.0,
   "revenue": null,
   "rev_growth": null,
@@ -9266,7 +9266,7 @@
   "cash": 1916999936.0,
   "beta": 0.959,
   "hi52": 4.79,
-  "lo52": 2.72,
+  "lo52": 2.71,
   "history": [
    {
     "year": 2022,
@@ -9285,9 +9285,9 @@
     "revenue": 2743000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 4989999872.0,
-  "ev": 13521857792.0,
+  "ev": 13459353344.0,
   "gross_profit": null,
   "fcf_margin": null,
   "ebitda_margin": null
@@ -9295,8 +9295,8 @@
  "PSNY": {
   "ticker": "PSNY",
   "name": "Polestar Automotive Holding UK ",
-  "price": 6.36,
-  "market_cap": 1044821632.0,
+  "price": 6.23,
+  "market_cap": 1023465216.0,
   "shares": 163283710.0,
   "revenue": 2995595008.0,
   "rev_growth": -0.044,
@@ -9326,9 +9326,9 @@
     "revenue": 3058109000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 5128899136.0,
-  "ev": 6173720768.0,
+  "ev": 6152364352.0,
   "gross_profit": -170419400.00512,
   "fcf_margin": -0.3407747379982281,
   "ebitda_margin": -0.35832146239175466
@@ -9336,8 +9336,8 @@
  "PTC": {
   "ticker": "PTC",
   "name": "PTC Inc.",
-  "price": 146.47,
-  "market_cap": 15892912128.0,
+  "price": 144.03,
+  "market_cap": 15628156928.0,
   "shares": 108506261.0,
   "revenue": 2953971968.0,
   "rev_growth": -0.068,
@@ -9367,9 +9367,9 @@
     "revenue": 2739226000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 1256239936.0,
-  "ev": 17149152064.0,
+  "ev": 16884396864.0,
   "gross_profit": 2496135852.6796803,
   "fcf_margin": 0.3491655178767086,
   "ebitda_margin": 0.43194924184195915
@@ -9377,8 +9377,8 @@
  "PUBM": {
   "ticker": "PUBM",
   "name": "PubMatic, Inc.",
-  "price": 19.18,
-  "market_cap": 873650176.0,
+  "price": 18.42,
+  "market_cap": 839032128.0,
   "shares": 37303647.0,
   "revenue": 289166016.0,
   "rev_growth": 0.105,
@@ -9388,7 +9388,7 @@
   "debt": 40907000.0,
   "cash": 137507008.0,
   "beta": 1.581,
-  "hi52": 19.3,
+  "hi52": 19.48,
   "lo52": 6.15,
   "history": [
    {
@@ -9408,9 +9408,9 @@
     "revenue": 282926000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": -96600008.0,
-  "ev": 777050168.0,
+  "ev": 742432120.0,
   "gross_profit": 186309664.1088,
   "fcf_margin": 0.20858130161464064,
   "ebitda_margin": 0.008438059332670682
@@ -9418,8 +9418,8 @@
  "PYPL": {
   "ticker": "PYPL",
   "name": "PayPal Holdings, Inc.",
-  "price": 53.06,
-  "market_cap": 45390753792.0,
+  "price": 52.8,
+  "market_cap": 45168332800.0,
   "shares": 855460874.0,
   "revenue": 34127998976.0,
   "rev_growth": 0.048,
@@ -9449,9 +9449,9 @@
     "revenue": 33172000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 2964999168.0,
-  "ev": 48355752960.0,
+  "ev": 48133331968.0,
   "gross_profit": 13813990828.0755,
   "fcf_margin": 0.12960399451226237,
   "ebitda_margin": 0.18917018851706144
@@ -9459,8 +9459,8 @@
  "QCOM": {
   "ticker": "QCOM",
   "name": "QUALCOMM Incorporated",
-  "price": 182.09,
-  "market_cap": 194483126272.0,
+  "price": 184.87,
+  "market_cap": 197452333056.0,
   "shares": 1068060487.0,
   "revenue": 44068999168.0,
   "rev_growth": -0.04,
@@ -9490,9 +9490,9 @@
     "revenue": 44284000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 6965999616.0,
-  "ev": 201449125888.0,
+  "ev": 204418332672.0,
   "gross_profit": 23896855488.83968,
   "fcf_margin": 0.23238559171628156,
   "ebitda_margin": 0.27227755970262385
@@ -9500,8 +9500,8 @@
  "QLYS": {
   "ticker": "QLYS",
   "name": "Qualys, Inc.",
-  "price": 187.43,
-  "market_cap": 6484140544.0,
+  "price": 193.0,
+  "market_cap": 6676834816.0,
   "shares": 34595001.0,
   "revenue": 702977024.0,
   "rev_growth": 0.11,
@@ -9531,9 +9531,9 @@
     "revenue": 669125000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": -372895016.0,
-  "ev": 6111245528.0,
+  "ev": 6303939800.0,
   "gross_profit": 586402344.11008,
   "fcf_margin": 0.34763956097660453,
   "ebitda_margin": 0.3622337449253534
@@ -9541,8 +9541,8 @@
  "QS": {
   "ticker": "QS",
   "name": "QuantumScape Corporation",
-  "price": 4.59,
-  "market_cap": 2823516160.0,
+  "price": 4.57,
+  "market_cap": 2811213056.0,
   "shares": 578338434.0,
   "revenue": null,
   "rev_growth": null,
@@ -9555,9 +9555,9 @@
   "hi52": 19.07,
   "lo52": 4.54,
   "history": [],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": -791883984.0,
-  "ev": 2031632176.0,
+  "ev": 2019329072.0,
   "gross_profit": null,
   "fcf_margin": null,
   "ebitda_margin": null
@@ -9565,8 +9565,8 @@
  "QSI": {
   "ticker": "QSI",
   "name": "Quantum-Si Incorporated",
-  "price": 1.43,
-  "market_cap": 313003968.0,
+  "price": 1.55,
+  "market_cap": 339270048.0,
   "shares": 198946412.0,
   "revenue": 1605000.0,
   "rev_growth": -0.418,
@@ -9592,9 +9592,9 @@
     "revenue": 2436000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": -108488000.0,
-  "ev": 204515968.0,
+  "ev": 230782048.0,
   "gross_profit": 562006.8,
   "fcf_margin": -31.23115264797508,
   "ebitda_margin": -54.429906542056074
@@ -9602,8 +9602,8 @@
  "RACE": {
   "ticker": "RACE",
   "name": "Ferrari N.V.",
-  "price": 387.3,
-  "market_cap": 67960885248.0,
+  "price": 388.33,
+  "market_cap": 68141625344.0,
   "shares": 175473500.0,
   "revenue": 7353308160.0,
   "rev_growth": 0.084,
@@ -9633,9 +9633,9 @@
     "revenue": 7145768000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 1734133120.0,
-  "ev": 69695018368.0,
+  "ev": 69875758464.0,
   "gross_profit": 3795630606.0288,
   "fcf_margin": 0.1362627185204217,
   "ebitda_margin": 0.33598468311710195
@@ -9643,8 +9643,8 @@
  "RBLX": {
   "ticker": "RBLX",
   "name": "Roblox Corporation",
-  "price": 43.0,
-  "market_cap": 30718164992.0,
+  "price": 44.12,
+  "market_cap": 31518265344.0,
   "shares": 669992988.0,
   "revenue": 5685551104.0,
   "rev_growth": 0.359,
@@ -9674,9 +9674,9 @@
     "revenue": 4890551000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": -1178000128.0,
-  "ev": 29540164864.0,
+  "ev": 30340265216.0,
   "gross_profit": 1459708390.4409602,
   "fcf_margin": 0.2596678248061703,
   "ebitda_margin": -0.14836239593494294
@@ -9684,8 +9684,8 @@
  "REGN": {
   "ticker": "REGN",
   "name": "Regeneron Pharmaceuticals, Inc.",
-  "price": 734.81,
-  "market_cap": 75652358144.0,
+  "price": 735.2,
+  "market_cap": 75692515328.0,
   "shares": 101137842.0,
   "revenue": 15534699520.0,
   "rev_growth": 0.167,
@@ -9715,9 +9715,9 @@
     "revenue": 14342900000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": -5288000000.0,
-  "ev": 70364358144.0,
+  "ev": 70404515328.0,
   "gross_profit": 6906416712.6016,
   "fcf_margin": 0.19731955317536776,
   "ebitda_margin": 0.3027029904212785
@@ -9725,8 +9725,8 @@
  "RELY": {
   "ticker": "RELY",
   "name": "Remitly Global, Inc.",
-  "price": 21.48,
-  "market_cap": 4546973184.0,
+  "price": 21.77,
+  "market_cap": 4608361984.0,
   "shares": 211684054.0,
   "revenue": 1809629056.0,
   "rev_growth": 0.202,
@@ -9756,9 +9756,9 @@
     "revenue": 1635147000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": -638129984.0,
-  "ev": 3908843200.0,
+  "ev": 3970232000.0,
   "gross_profit": 1113790491.3868802,
   "fcf_margin": 0.1083763500313735,
   "ebitda_margin": 0.11008168073976814
@@ -9766,8 +9766,8 @@
  "RIVN": {
   "ticker": "RIVN",
   "name": "Rivian Automotive, Inc.",
-  "price": 14.76,
-  "market_cap": 21370423296.0,
+  "price": 14.3,
+  "market_cap": 20704407552.0,
   "shares": 1443948130.0,
   "revenue": 5882999808.0,
   "rev_growth": 0.272,
@@ -9797,9 +9797,9 @@
     "revenue": 5387000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 42999808.0,
-  "ev": 21413423104.0,
+  "ev": 20747407360.0,
   "gross_profit": 441989775.57504004,
   "fcf_margin": -0.26166497131390015,
   "ebitda_margin": -0.46132924708060774
@@ -9807,8 +9807,8 @@
  "RJF": {
   "ticker": "RJF",
   "name": "Raymond James Financial, Inc.",
-  "price": 159.76,
-  "market_cap": 30689894400.0,
+  "price": 158.21,
+  "market_cap": 30392141824.0,
   "shares": 192100000.0,
   "revenue": 15239999488.0,
   "rev_growth": 0.151,
@@ -9838,9 +9838,9 @@
     "revenue": 13842000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": -9936000000.0,
-  "ev": 20753894400.0,
+  "ev": 20456141824.0,
   "gross_profit": 14196973923.04128,
   "fcf_margin": null,
   "ebitda_margin": null
@@ -9848,8 +9848,8 @@
  "RKT": {
   "ticker": "RKT",
   "name": "Rocket Companies, Inc.",
-  "price": 11.97,
-  "market_cap": 33894760448.0,
+  "price": 11.7,
+  "market_cap": 33130215424.0,
   "shares": 1906422676.0,
   "revenue": 10243000320.0,
   "rev_growth": 0.919,
@@ -9879,9 +9879,9 @@
     "revenue": 6257000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 29731000832.0,
-  "ev": 63625761280.0,
+  "ev": 62861216256.0,
   "gross_profit": 10243000320.0,
   "fcf_margin": -0.3481177265061337,
   "ebitda_margin": 0.2518793243579631
@@ -9889,8 +9889,8 @@
  "RNG": {
   "ticker": "RNG",
   "name": "Ringcentral, Inc.",
-  "price": 78.31,
-  "market_cap": 6539367424.0,
+  "price": 78.28,
+  "market_cap": 6536862208.0,
   "shares": 73736624.0,
   "revenue": 2583898112.0,
   "rev_growth": 0.059,
@@ -9920,9 +9920,9 @@
     "revenue": 2515142000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 1053189944.0,
-  "ev": 7592557368.0,
+  "ev": 7590052152.0,
   "gross_profit": 1856815022.26432,
   "fcf_margin": 0.24749679293855995,
   "ebitda_margin": 0.1604416946917139
@@ -9930,8 +9930,8 @@
  "ROP": {
   "ticker": "ROP",
   "name": "Roper Technologies, Inc.",
-  "price": 362.59,
-  "market_cap": 35860467712.0,
+  "price": 354.32,
+  "market_cap": 35042557952.0,
   "shares": 98900874.0,
   "revenue": 8280300032.0,
   "rev_growth": 0.085,
@@ -9961,9 +9961,9 @@
     "revenue": 7902500000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 10954500448.0,
-  "ev": 46814968160.0,
+  "ev": 45997058400.0,
   "gross_profit": 5756878845.657001,
   "fcf_margin": 0.2736238473538443,
   "ebitda_margin": 0.39104864745074974
@@ -9971,8 +9971,8 @@
  "RPD": {
   "ticker": "RPD",
   "name": "Rapid7, Inc.",
-  "price": 12.06,
-  "market_cap": 812851776.0,
+  "price": 12.19,
+  "market_cap": 821613760.0,
   "shares": 67400640.0,
   "revenue": 855921984.0,
   "rev_growth": -0.015,
@@ -10002,9 +10002,9 @@
     "revenue": 859794000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 259067968.0,
-  "ev": 1071919744.0,
+  "ev": 1080681728.0,
   "gross_profit": 593128257.25248,
   "fcf_margin": 0.1556517468769677,
   "ebitda_margin": 0.06795712820480611
@@ -10012,8 +10012,8 @@
  "RTX": {
   "ticker": "RTX",
   "name": "RTX Corporation",
-  "price": 185.01,
-  "market_cap": 249348718592.0,
+  "price": 184.68,
+  "market_cap": 248903958528.0,
   "shares": 1347758144.0,
   "revenue": 93499998208.0,
   "rev_growth": 0.145,
@@ -10043,9 +10043,9 @@
     "revenue": 88603000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 30550999552.0,
-  "ev": 279899718144.0,
+  "ev": 279454958080.0,
   "gross_profit": 19024444635.38176,
   "fcf_margin": 0.1056684566990147,
   "ebitda_margin": 0.17000000394267387
@@ -10053,8 +10053,8 @@
  "RUN": {
   "ticker": "RUN",
   "name": "Sunrun Inc.",
-  "price": 7.64,
-  "market_cap": 1822516480.0,
+  "price": 7.71,
+  "market_cap": 1839214976.0,
   "shares": 238549287.0,
   "revenue": 3475609088.0,
   "rev_growth": 0.528,
@@ -10084,9 +10084,9 @@
     "revenue": 2956997000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 14506580544.0,
-  "ev": 16329097024.0,
+  "ev": 16345795520.0,
   "gross_profit": 1226646645.9156582,
   "fcf_margin": -0.5671350805260641,
   "ebitda_margin": 0.24185832489111042
@@ -10094,8 +10094,8 @@
  "S": {
   "ticker": "S",
   "name": "SentinelOne, Inc.",
-  "price": 24.67,
-  "market_cap": 8586371584.0,
+  "price": 25.06,
+  "market_cap": 8722110464.0,
   "shares": 342184493.0,
   "revenue": 1098704000.0,
   "rev_growth": 0.206,
@@ -10105,7 +10105,7 @@
   "debt": 0.0,
   "cash": 655248000.0,
   "beta": 0.772,
-  "hi52": 24.69,
+  "hi52": 25.75,
   "lo52": 11.81,
   "history": [
    {
@@ -10125,9 +10125,9 @@
     "revenue": 1001278000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": -655248000.0,
-  "ev": 7931123584.0,
+  "ev": 8066862464.0,
   "gross_profit": 796999914.5611199,
   "fcf_margin": 0.27020984723820063,
   "ebitda_margin": -0.21642863592013864
@@ -10135,8 +10135,8 @@
  "SAIL": {
   "ticker": "SAIL",
   "name": "SailPoint, Inc.",
-  "price": 20.58,
-  "market_cap": 11749360640.0,
+  "price": 20.43,
+  "market_cap": 11663724544.0,
   "shares": 570911633.0,
   "revenue": 1165543936.0,
   "rev_growth": 0.168,
@@ -10166,9 +10166,9 @@
     "revenue": 1071416000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": -278484984.0,
-  "ev": 11470875656.0,
+  "ev": 11385239560.0,
   "gross_profit": 772429277.2659199,
   "fcf_margin": 0.2910715156429762,
   "ebitda_margin": -0.00812496183756045
@@ -10176,8 +10176,8 @@
  "SBUX": {
   "ticker": "SBUX",
   "name": "Starbucks Corporation",
-  "price": 94.88,
-  "market_cap": 108163194880.0,
+  "price": 94.71,
+  "market_cap": 107969396736.0,
   "shares": 1140000000.0,
   "revenue": 38338301952.0,
   "rev_growth": -0.014,
@@ -10207,9 +10207,9 @@
     "revenue": 37184400000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 18842800640.0,
-  "ev": 127005995520.0,
+  "ev": 126812197376.0,
   "gross_profit": 8565160039.09632,
   "fcf_margin": 0.07996018028753826,
   "ebitda_margin": 0.14717135649524138
@@ -10217,8 +10217,8 @@
  "SCHW": {
   "ticker": "SCHW",
   "name": "Charles Schwab Corporation (The",
-  "price": 98.37,
-  "market_cap": 170114760704.0,
+  "price": 96.7,
+  "market_cap": 167226753024.0,
   "shares": 1729335714.0,
   "revenue": 26025000960.0,
   "rev_growth": 0.209,
@@ -10248,9 +10248,9 @@
     "revenue": 23921000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": -20580999168.0,
-  "ev": 149533761536.0,
+  "ev": 146645753856.0,
   "gross_profit": 25373074685.952,
   "fcf_margin": null,
   "ebitda_margin": null
@@ -10258,8 +10258,8 @@
  "SEDG": {
   "ticker": "SEDG",
   "name": "SolarEdge Technologies, Inc.",
-  "price": 30.87,
-  "market_cap": 1899299840.0,
+  "price": 33.09,
+  "market_cap": 2035886976.0,
   "shares": 61525748.0,
   "revenue": 1332280960.0,
   "rev_growth": 0.196,
@@ -10289,9 +10289,9 @@
     "revenue": 1184444000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": -139589024.0,
-  "ev": 1759710816.0,
+  "ev": 1896297952.0,
   "gross_profit": 283149672.4288,
   "fcf_margin": 0.08538833130213015,
   "ebitda_margin": -0.09089974535101064
@@ -10299,8 +10299,8 @@
  "SES": {
   "ticker": "SES",
   "name": "SES AI Corporation",
-  "price": 0.8163,
-  "market_cap": 303081888.0,
+  "price": 0.8847,
+  "market_cap": 328477952.0,
   "shares": 327406149.0,
   "revenue": 23463000.0,
   "rev_growth": 0.438,
@@ -10322,9 +10322,9 @@
     "revenue": 21000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": -155853000.0,
-  "ev": 147228888.0,
+  "ev": 172624952.0,
   "gross_profit": 6511921.0200000005,
   "fcf_margin": -1.2025476708008354,
   "ebitda_margin": -2.675787409964625
@@ -10332,8 +10332,8 @@
  "SGML": {
   "ticker": "SGML",
   "name": "Sigma Lithium Corporation",
-  "price": 8.335,
-  "market_cap": 938256896.0,
+  "price": 9.09,
+  "market_cap": 1023245952.0,
   "shares": 112568313.0,
   "revenue": 142494000.0,
   "rev_growth": 2.239,
@@ -10359,9 +10359,9 @@
     "revenue": 110012000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 260313000.0,
-  "ev": 1198569896.0,
+  "ev": 1283558952.0,
   "gross_profit": 69931777.53012,
   "fcf_margin": 0.3095314609737954,
   "ebitda_margin": 0.29179474223476076
@@ -10369,8 +10369,8 @@
  "SHOP": {
   "ticker": "SHOP",
   "name": "Shopify Inc.",
-  "price": 149.09,
-  "market_cap": 193467334656.0,
+  "price": 151.39,
+  "market_cap": 196451942400.0,
   "shares": 1219581025.0,
   "revenue": 13269000192.0,
   "rev_growth": 0.337,
@@ -10400,9 +10400,9 @@
     "revenue": 11556000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": -4768999808.0,
-  "ev": 188698334848.0,
+  "ev": 191682942592.0,
   "gross_profit": 6337937941.7088,
   "fcf_margin": 0.11965860223268886,
   "ebitda_margin": 0.1804958948937213
@@ -10410,8 +10410,8 @@
  "SHW": {
   "ticker": "SHW",
   "name": "Sherwin-Williams Company (The)",
-  "price": 320.78,
-  "market_cap": 77871955968.0,
+  "price": 319.51,
+  "market_cap": 77563658240.0,
   "shares": 242758151.0,
   "revenue": 24410300416.0,
   "rev_growth": 0.075,
@@ -10441,9 +10441,9 @@
     "revenue": 23574300000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 14738200480.0,
-  "ev": 92610156448.0,
+  "ev": 92301858720.0,
   "gross_profit": 11956652617.456108,
   "fcf_margin": 0.10266311603266423,
   "ebitda_margin": 0.19291446445752747
@@ -10451,8 +10451,8 @@
  "SLB": {
   "ticker": "SLB",
   "name": "SLB Limited",
-  "price": 48.66,
-  "market_cap": 72218411008.0,
+  "price": 48.74,
+  "market_cap": 72337145856.0,
   "shares": 1484143231.0,
   "revenue": 36366000128.0,
   "rev_growth": 0.05,
@@ -10482,9 +10482,9 @@
     "revenue": 35708000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 8686000384.0,
-  "ev": 80904411392.0,
+  "ev": 81023146240.0,
   "gross_profit": 6178947081.74848,
   "fcf_margin": 0.08126065505138415,
   "ebitda_margin": 0.20301930479056066
@@ -10492,8 +10492,8 @@
  "SNOW": {
   "ticker": "SNOW",
   "name": "Snowflake Inc.",
-  "price": 341.99,
-  "market_cap": 120654069760.0,
+  "price": 341.04,
+  "market_cap": 120318918656.0,
   "shares": 352800000.0,
   "revenue": 5434647040.0,
   "rev_growth": 0.351,
@@ -10523,9 +10523,9 @@
     "revenue": 4683946000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 419119872.0,
-  "ev": 121073189632.0,
+  "ev": 120738038528.0,
   "gross_profit": 3642843910.912,
   "fcf_margin": 0.32008088900654713,
   "ebitda_margin": -0.1906811950017641
@@ -10533,8 +10533,8 @@
  "SNPS": {
   "ticker": "SNPS",
   "name": "Synopsys, Inc.",
-  "price": 490.54,
-  "market_cap": 94005436416.0,
+  "price": 489.9,
+  "market_cap": 93882785792.0,
   "shares": 191636646.0,
   "revenue": 9416465408.0,
   "rev_growth": 0.424,
@@ -10564,9 +10564,9 @@
     "revenue": 7054178000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 7234120448.0,
-  "ev": 101239556864.0,
+  "ev": 101116906240.0,
   "gross_profit": 7808227280.96768,
   "fcf_margin": 0.36378218913115135,
   "ebitda_margin": 0.22041029856454605
@@ -10574,8 +10574,8 @@
  "SO": {
   "ticker": "SO",
   "name": "Southern Company (The)",
-  "price": 83.47,
-  "market_cap": 96020799488.0,
+  "price": 83.72,
+  "market_cap": 96308396032.0,
   "shares": 1150362966.0,
   "revenue": 30179000320.0,
   "rev_growth": 0.001,
@@ -10605,9 +10605,9 @@
     "revenue": 29553000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 74102998528.0,
-  "ev": 170123798016.0,
+  "ev": 170411394560.0,
   "gross_profit": 14573137464.5248,
   "fcf_margin": -0.1296721208292164,
   "ebitda_margin": 0.4724477193020554
@@ -10615,8 +10615,8 @@
  "SOFI": {
   "ticker": "SOFI",
   "name": "SoFi Technologies, Inc.",
-  "price": 15.84,
-  "market_cap": 20458473472.0,
+  "price": 15.77,
+  "market_cap": 20368064512.0,
   "shares": 1291570324.0,
   "revenue": 4268439040.0,
   "rev_growth": 0.426,
@@ -10646,9 +10646,9 @@
     "revenue": 3613354000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 48876032.0,
-  "ev": 20507349504.0,
+  "ev": 20416940544.0,
   "gross_profit": 3574134745.7536,
   "fcf_margin": null,
   "ebitda_margin": null
@@ -10656,8 +10656,8 @@
  "SPGI": {
   "ticker": "SPGI",
   "name": "S&P Global Inc.",
-  "price": 388.16,
-  "market_cap": 114429566976.0,
+  "price": 386.27,
+  "market_cap": 113872396288.0,
   "shares": 294800000.0,
   "revenue": 16122000384.0,
   "rev_growth": 0.104,
@@ -10687,9 +10687,9 @@
     "revenue": 15336000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 11613999616.0,
-  "ev": 126043566592.0,
+  "ev": 125486395904.0,
   "gross_profit": 11430981932.26752,
   "fcf_margin": 0.3379388243537707,
   "ebitda_margin": 0.5050862095302627
@@ -10697,8 +10697,8 @@
  "SPSC": {
   "ticker": "SPSC",
   "name": "SPS Commerce, Inc.",
-  "price": 84.2,
-  "market_cap": 3031214592.0,
+  "price": 82.35,
+  "market_cap": 2964614400.0,
   "shares": 36000174.0,
   "revenue": 772492032.0,
   "rev_growth": 0.056,
@@ -10728,9 +10728,9 @@
     "revenue": 751505000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": -166861008.0,
-  "ev": 2864353584.0,
+  "ev": 2797753392.0,
   "gross_profit": 539361661.66272,
   "fcf_margin": 0.22857112913237143,
   "ebitda_margin": 0.23715583386107988
@@ -10738,8 +10738,8 @@
  "SPT": {
   "ticker": "SPT",
   "name": "Sprout Social, Inc",
-  "price": 10.38,
-  "market_cap": 628947136.0,
+  "price": 10.09,
+  "market_cap": 611375424.0,
   "shares": 55022855.0,
   "revenue": 481824000.0,
   "rev_growth": 0.108,
@@ -10749,7 +10749,7 @@
   "debt": 45882000.0,
   "cash": 119929000.0,
   "beta": 0.951,
-  "hi52": 12.891,
+  "hi52": 12.61,
   "lo52": 4.92,
   "history": [
    {
@@ -10769,9 +10769,9 @@
     "revenue": 457547000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": -74047000.0,
-  "ev": 554900136.0,
+  "ev": 537328424.0,
   "gross_profit": 373148596.8,
   "fcf_margin": 0.21585941754665605,
   "ebitda_margin": -0.029276250249053597
@@ -10779,8 +10779,8 @@
  "SQM": {
   "ticker": "SQM",
   "name": "Sociedad Quimica y Minera S.A.",
-  "price": 64.12,
-  "market_cap": 18315098112.0,
+  "price": 64.52,
+  "market_cap": 18429351936.0,
   "shares": 142818904.0,
   "revenue": 6725432832.0,
   "rev_growth": 1.367,
@@ -10810,9 +10810,9 @@
     "revenue": 4576224000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 964985856.0,
-  "ev": 19280083968.0,
+  "ev": 19394337792.0,
   "gross_profit": 2835980516.59776,
   "fcf_margin": 0.38938816778298324,
   "ebitda_margin": 0.44666658444742313
@@ -10820,8 +10820,8 @@
  "SSNC": {
   "ticker": "SSNC",
   "name": "SS&C Technologies Holdings, Inc",
-  "price": 78.44,
-  "market_cap": 18406338560.0,
+  "price": 78.53,
+  "market_cap": 18427455488.0,
   "shares": 234654996.0,
   "revenue": 6564299776.0,
   "rev_growth": 0.103,
@@ -10851,9 +10851,9 @@
     "revenue": 6272200000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 7342499968.0,
-  "ev": 25748838528.0,
+  "ev": 25769955456.0,
   "gross_profit": 3157690764.2470403,
   "fcf_margin": 0.19830752104883761,
   "ebitda_margin": 0.3214508843296312
@@ -10861,8 +10861,8 @@
  "STEM": {
   "ticker": "STEM",
   "name": "Stem, Inc.",
-  "price": 4.07,
-  "market_cap": 39180848.0,
+  "price": 4.26,
+  "market_cap": 41009932.0,
   "shares": 9626744.0,
   "revenue": 148034000.0,
   "rev_growth": -0.123,
@@ -10892,9 +10892,9 @@
     "revenue": 156266000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 328034984.0,
-  "ev": 367215832.0,
+  "ev": 369044916.0,
   "gross_profit": 62083979.26,
   "fcf_margin": 0.11289805044787009,
   "ebitda_margin": 0.02516989340286691
@@ -10902,8 +10902,8 @@
  "STEP": {
   "ticker": "STEP",
   "name": "StepStone Group Inc.",
-  "price": 44.71,
-  "market_cap": 5771342848.0,
+  "price": 45.27,
+  "market_cap": 5843630080.0,
   "shares": 82288907.0,
   "revenue": 2008205056.0,
   "rev_growth": 0.04,
@@ -10933,9 +10933,9 @@
     "revenue": 1993603000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 865486016.0,
-  "ev": 6636828864.0,
+  "ev": 6709116096.0,
   "gross_profit": -971348703.53664,
   "fcf_margin": 1.405516899565061,
   "ebitda_margin": -0.5593916082641314
@@ -10943,8 +10943,8 @@
  "STLA": {
   "ticker": "STLA",
   "name": "Stellantis N.V.",
-  "price": 4.69,
-  "market_cap": 17668749312.0,
+  "price": 4.4,
+  "market_cap": 16576225280.0,
   "shares": 2900941252.0,
   "revenue": 160860995584.0,
   "rev_growth": 0.131,
@@ -10974,9 +10974,9 @@
     "revenue": 153508000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 20146999296.0,
-  "ev": 37815748608.0,
+  "ev": 36723224576.0,
   "gross_profit": 10542829650.57536,
   "fcf_margin": -0.020785026350617467,
   "ebitda_margin": -0.001945779328690991
@@ -10984,8 +10984,8 @@
  "STNE": {
   "ticker": "STNE",
   "name": "StoneCo Ltd.",
-  "price": 9.42,
-  "market_cap": 2172210944.0,
+  "price": 9.55,
+  "market_cap": 2202188288.0,
   "shares": 216544468.0,
   "revenue": 13586661376.0,
   "rev_growth": 0.016,
@@ -11015,9 +11015,9 @@
     "revenue": 13399706000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 8765384704.0,
-  "ev": 10937595648.0,
+  "ev": 10967572992.0,
   "gross_profit": 9722343147.43808,
   "fcf_margin": 0.5208129965246291,
   "ebitda_margin": 0.5019701204923884
@@ -11025,8 +11025,8 @@
  "SYF": {
   "ticker": "SYF",
   "name": "Synchrony Financial",
-  "price": 71.51,
-  "market_cap": 23267270656.0,
+  "price": 71.77,
+  "market_cap": 23351865344.0,
   "shares": 325370840.0,
   "revenue": 9907999744.0,
   "rev_growth": 0.006,
@@ -11056,9 +11056,9 @@
     "revenue": 14981000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 238999552.0,
-  "ev": 23506270208.0,
+  "ev": 23590864896.0,
   "gross_profit": 0.0,
   "fcf_margin": null,
   "ebitda_margin": null
@@ -11066,8 +11066,8 @@
  "SYK": {
   "ticker": "SYK",
   "name": "Stryker Corporation",
-  "price": 272.96,
-  "market_cap": 104700100608.0,
+  "price": 275.43,
+  "market_cap": 105647521792.0,
   "shares": 383573046.0,
   "revenue": 25837000704.0,
   "rev_growth": 0.094,
@@ -11097,9 +11097,9 @@
     "revenue": 25116000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 11969999616.0,
-  "ev": 116670100224.0,
+  "ev": 117617521408.0,
   "gross_profit": 16945972021.739521,
   "fcf_margin": 0.15903064969007324,
   "ebitda_margin": 0.2854820528320097
@@ -11138,7 +11138,7 @@
     "revenue": 125648000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 148185993216.0,
   "ev": 314698960896.0,
   "gross_profit": 75988400782.04929,
@@ -11148,8 +11148,8 @@
  "TDC": {
   "ticker": "TDC",
   "name": "Teradata Corporation",
-  "price": 29.92,
-  "market_cap": 2782560000.0,
+  "price": 30.14,
+  "market_cap": 2803020032.0,
   "shares": 93000000.0,
   "revenue": 1691000064.0,
   "rev_growth": 0.005,
@@ -11179,9 +11179,9 @@
     "revenue": 1663000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": -315000000.0,
-  "ev": 2467560000.0,
+  "ev": 2488020032.0,
   "gross_profit": 1037005789.2479999,
   "fcf_margin": 0.20609106257254406,
   "ebitda_margin": 0.20461264748952723
@@ -11189,8 +11189,8 @@
  "TEAM": {
   "ticker": "TEAM",
   "name": "Atlassian Corporation",
-  "price": 189.91,
-  "market_cap": 48073592832.0,
+  "price": 187.89,
+  "market_cap": 47562252288.0,
   "shares": 159005198.0,
   "revenue": 6572307968.0,
   "rev_growth": 0.276,
@@ -11220,9 +11220,9 @@
     "revenue": 6572308000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": -6602112.0,
-  "ev": 48066990720.0,
+  "ev": 47555650176.0,
   "gross_profit": 5628721713.03424,
   "fcf_margin": 0.2518901901828834,
   "ebitda_margin": 0.06639874365668191
@@ -11230,8 +11230,8 @@
  "TENB": {
   "ticker": "TENB",
   "name": "Tenable Holdings, Inc.",
-  "price": 36.11,
-  "market_cap": 3977154816.0,
+  "price": 36.85,
+  "market_cap": 4058658304.0,
   "shares": 110139983.0,
   "revenue": 1043539008.0,
   "rev_growth": 0.086,
@@ -11261,9 +11261,9 @@
     "revenue": 999405000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 123352992.0,
-  "ev": 4100507808.0,
+  "ev": 4182011296.0,
   "gross_profit": 814492631.13408,
   "fcf_margin": 0.2460727332964251,
   "ebitda_margin": 0.05146717045387152
@@ -11271,8 +11271,8 @@
  "TIGR": {
   "ticker": "TIGR",
   "name": "UP Fintech Holding Limited",
-  "price": 4.27,
-  "market_cap": 767939712.0,
+  "price": 4.16,
+  "market_cap": 748156672.0,
   "shares": 173337908.0,
   "revenue": 607240128.0,
   "rev_growth": 0.324,
@@ -11302,9 +11302,9 @@
     "revenue": 612064917.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": -4638326232.0,
-  "ev": -3870386520.0,
+  "ev": -3890169560.0,
   "gross_profit": 529519464.01728,
   "fcf_margin": null,
   "ebitda_margin": null
@@ -11312,8 +11312,8 @@
  "TJX": {
   "ticker": "TJX",
   "name": "TJX Companies, Inc. (The)",
-  "price": 133.59,
-  "market_cap": 146945523712.0,
+  "price": 132.68,
+  "market_cap": 145944543232.0,
   "shares": 1099974061.0,
   "revenue": 62363000832.0,
   "rev_growth": 0.054,
@@ -11343,9 +11343,9 @@
     "revenue": 60372000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 8312999936.0,
-  "ev": 155258523648.0,
+  "ev": 154257543168.0,
   "gross_profit": 19623765471.80544,
   "fcf_margin": 0.07052458985814572,
   "ebitda_margin": 0.14276093108450372
@@ -11353,8 +11353,8 @@
  "TM": {
   "ticker": "TM",
   "name": "Toyota Motor Corporation",
-  "price": 183.34,
-  "market_cap": 217108185088.0,
+  "price": 181.49,
+  "market_cap": 214917464064.0,
   "shares": 1184183366.0,
   "revenue": 51957024686080.0,
   "rev_growth": 0.104,
@@ -11384,9 +11384,9 @@
     "revenue": 50684952000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 30602607722496.0,
-  "ev": 30819715907584.0,
+  "ev": 30817525186560.0,
   "gross_profit": 8711634329115.034,
   "fcf_margin": -0.06928730992967115,
   "ebitda_margin": 0.10779179367621607
@@ -11394,8 +11394,8 @@
  "TMO": {
   "ticker": "TMO",
   "name": "Thermo Fisher Scientific Inc",
-  "price": 652.51,
-  "market_cap": 241263804416.0,
+  "price": 654.8,
+  "market_cap": 242110529536.0,
   "shares": 369747286.0,
   "revenue": 46336000000.0,
   "rev_growth": 0.105,
@@ -11425,9 +11425,9 @@
     "revenue": 44557000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 38484998144.0,
-  "ev": 279748802560.0,
+  "ev": 280595527680.0,
   "gross_profit": 18992198753.28,
   "fcf_margin": 0.13460916022099448,
   "ebitda_margin": 0.2533451270718232
@@ -11435,8 +11435,8 @@
  "TOST": {
   "ticker": "TOST",
   "name": "Toast, Inc.",
-  "price": 29.23,
-  "market_cap": 16894940160.0,
+  "price": 29.79,
+  "market_cap": 17218621440.0,
   "shares": 514000000.0,
   "revenue": 6803999744.0,
   "rev_growth": 0.231,
@@ -11466,9 +11466,9 @@
     "revenue": 6153000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": -1712999936.0,
-  "ev": 15181940224.0,
+  "ev": 15505621504.0,
   "gross_profit": 1812993771.7862399,
   "fcf_margin": 0.0697016463614964,
   "ebitda_margin": 0.07010582274354653
@@ -11476,8 +11476,8 @@
  "TREE": {
   "ticker": "TREE",
   "name": "LendingTree, Inc.",
-  "price": 24.55,
-  "market_cap": 344671200.0,
+  "price": 24.64,
+  "market_cap": 345934784.0,
   "shares": 14039561.0,
   "revenue": 1268168960.0,
   "rev_growth": 0.253,
@@ -11507,9 +11507,9 @@
     "revenue": 1117324000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 325296016.0,
-  "ev": 669967216.0,
+  "ev": 671230800.0,
   "gross_profit": 1222616330.9568,
   "fcf_margin": 0.04976259314847132,
   "ebitda_margin": 0.09275420208991711
@@ -11517,8 +11517,8 @@
  "TROW": {
   "ticker": "TROW",
   "name": "T. Rowe Price Group, Inc.",
-  "price": 105.83,
-  "market_cap": 22575216640.0,
+  "price": 104.62,
+  "market_cap": 22317105152.0,
   "shares": 213315850.0,
   "revenue": 7592000000.0,
   "rev_growth": 0.107,
@@ -11548,9 +11548,9 @@
     "revenue": 7314800000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": -2783699904.0,
-  "ev": 19791516736.0,
+  "ev": 19533405248.0,
   "gross_profit": 3918534880.0000005,
   "fcf_margin": 0.266584885142255,
   "ebitda_margin": 0.39038462381454164
@@ -11558,8 +11558,8 @@
  "TRU": {
   "ticker": "TRU",
   "name": "TransUnion",
-  "price": 62.18,
-  "market_cap": 11913688064.0,
+  "price": 63.44,
+  "market_cap": 12155103232.0,
   "shares": 191600000.0,
   "revenue": 4896099840.0,
   "rev_growth": 0.149,
@@ -11589,9 +11589,9 @@
     "revenue": 4576300000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 4819499776.0,
-  "ev": 16733187840.0,
+  "ev": 16974603008.0,
   "gross_profit": 2875479436.032,
   "fcf_margin": 0.1651569719624018,
   "ebitda_margin": 0.31186046402191014
@@ -11599,8 +11599,8 @@
  "TSLA": {
   "ticker": "TSLA",
   "name": "Tesla, Inc.",
-  "price": 354.11,
-  "market_cap": 1398574153728.0,
+  "price": 370.59,
+  "market_cap": 1463662804992.0,
   "shares": 3949547394.0,
   "revenue": 103619002368.0,
   "rev_growth": 0.255,
@@ -11630,9 +11630,9 @@
     "revenue": 94827000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": -27444001792.0,
-  "ev": 1371130151936.0,
+  "ev": 1436218803200.0,
   "gross_profit": 19534254326.41536,
   "fcf_margin": 0.046670973793253495,
   "ebitda_margin": 0.10379370650379277
@@ -11640,8 +11640,8 @@
  "TTD": {
   "ticker": "TTD",
   "name": "The Trade Desk, Inc.",
-  "price": 12.1,
-  "market_cap": 5720820736.0,
+  "price": 11.95,
+  "market_cap": 5649901568.0,
   "shares": 429686475.0,
   "revenue": 2990138112.0,
   "rev_growth": 0.03,
@@ -11652,7 +11652,7 @@
   "cash": 1485332992.0,
   "beta": 1.005,
   "hi52": 56.39,
-  "lo52": 11.85,
+  "lo52": 11.765,
   "history": [
    {
     "year": 2022,
@@ -11671,9 +11671,9 @@
     "revenue": 2896284000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": -1051222976.0,
-  "ev": 4669597760.0,
+  "ev": 4598678592.0,
   "gross_profit": 2298579059.1607833,
   "fcf_margin": 0.1949718528586816,
   "ebitda_margin": 0.23342801899312401
@@ -11681,8 +11681,8 @@
  "TW": {
   "ticker": "TW",
   "name": "Tradeweb Markets Inc.",
-  "price": 103.3,
-  "market_cap": 22315718656.0,
+  "price": 102.22,
+  "market_cap": 22082408448.0,
   "shares": 114038202.0,
   "revenue": 2204436992.0,
   "rev_growth": 0.09,
@@ -11712,9 +11712,9 @@
     "revenue": 2052429000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": -1907591968.0,
-  "ev": 20408126688.0,
+  "ev": 20174816480.0,
   "gross_profit": 2053521235.5276802,
   "fcf_margin": null,
   "ebitda_margin": null
@@ -11722,8 +11722,8 @@
  "TWLO": {
   "ticker": "TWLO",
   "name": "Twilio Inc.",
-  "price": 301.27,
-  "market_cap": 46267604992.0,
+  "price": 294.58,
+  "market_cap": 45240184832.0,
   "shares": 153575220.0,
   "revenue": 5572327936.0,
   "rev_growth": 0.22,
@@ -11753,9 +11753,9 @@
     "revenue": 5067220000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": -1590811008.0,
-  "ev": 44676793984.0,
+  "ev": 43649373824.0,
   "gross_profit": 2705978169.00096,
   "fcf_margin": 0.171324337505753,
   "ebitda_margin": 0.08969464929926192
@@ -11763,8 +11763,8 @@
  "TXN": {
   "ticker": "TXN",
   "name": "Texas Instruments Incorporated",
-  "price": 281.31,
-  "market_cap": 256905707520.0,
+  "price": 293.8,
+  "market_cap": 268312150016.0,
   "shares": 913247686.0,
   "revenue": 19452999680.0,
   "rev_growth": 0.228,
@@ -11794,9 +11794,9 @@
     "revenue": 17682000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 7050999808.0,
-  "ev": 263956707328.0,
+  "ev": 275363149824.0,
   "gross_profit": 11345962063.36,
   "fcf_margin": 0.18224695966272694,
   "ebitda_margin": 0.4893846787952037
@@ -11804,8 +11804,8 @@
  "TYL": {
   "ticker": "TYL",
   "name": "Tyler Technologies, Inc.",
-  "price": 330.18,
-  "market_cap": 13521620992.0,
+  "price": 322.81,
+  "market_cap": 13219803136.0,
   "shares": 40952274.0,
   "revenue": 2429657088.0,
   "rev_growth": 0.082,
@@ -11835,9 +11835,9 @@
     "revenue": 2332340000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 484995008.0,
-  "ev": 14006616000.0,
+  "ev": 13704798144.0,
   "gross_profit": 1146919628.3904002,
   "fcf_margin": 0.24465824866229025,
   "ebitda_margin": 0.18871880573790667
@@ -11876,7 +11876,7 @@
     "revenue": 1849648000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": -31095040.0,
   "ev": 19161184000.0,
   "gross_profit": 1544289373.1187198,
@@ -11886,8 +11886,8 @@
  "UNH": {
   "ticker": "UNH",
   "name": "UnitedHealth Group Incorporated",
-  "price": 365.2,
-  "market_cap": 327801634816.0,
+  "price": 371.9,
+  "market_cap": 333815513088.0,
   "shares": 897594847.0,
   "revenue": 450525986816.0,
   "rev_growth": 0.004,
@@ -11917,9 +11917,9 @@
     "revenue": 447567000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 41860001792.0,
-  "ev": 369661636608.0,
+  "ev": 375675514880.0,
   "gross_profit": 88857240379.71968,
   "fcf_margin": 0.05387536255464231,
   "ebitda_margin": 0.05922188889604903
@@ -11927,8 +11927,8 @@
  "UNP": {
   "ticker": "UNP",
   "name": "Union Pacific Corporation",
-  "price": 272.42,
-  "market_cap": 161838055424.0,
+  "price": 278.28,
+  "market_cap": 165319327744.0,
   "shares": 594075498.0,
   "revenue": 25410000896.0,
   "rev_growth": 0.115,
@@ -11958,9 +11958,9 @@
     "revenue": 24510000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 29054999424.0,
-  "ev": 190893054848.0,
+  "ev": 194374327168.0,
   "gross_profit": 14302019004.313599,
   "fcf_margin": 0.18578315283503719,
   "ebitda_margin": 0.5070444427268075
@@ -11968,8 +11968,8 @@
  "UPLD": {
   "ticker": "UPLD",
   "name": "Upland Software, Inc.",
-  "price": 3.68,
-  "market_cap": 10882463.0,
+  "price": 3.73,
+  "market_cap": 11030322.0,
   "shares": 2957191.0,
   "revenue": 197668992.0,
   "rev_growth": -0.079,
@@ -11999,9 +11999,9 @@
     "revenue": 216876000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 195214000.0,
-  "ev": 206096463.0,
+  "ev": 206244322.0,
   "gross_profit": 150789813.85728,
   "fcf_margin": 0.1814352551562564,
   "ebitda_margin": 0.2610981089031911
@@ -12009,8 +12009,8 @@
  "UPS": {
   "ticker": "UPS",
   "name": "United Parcel Service, Inc.",
-  "price": 93.89,
-  "market_cap": 79879880704.0,
+  "price": 93.02,
+  "market_cap": 79139700736.0,
   "shares": 749349405.0,
   "revenue": 89929998336.0,
   "rev_growth": 0.076,
@@ -12040,9 +12040,9 @@
     "revenue": 88661000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 24019999232.0,
-  "ev": 103899879936.0,
+  "ev": 103159699968.0,
   "gross_profit": 20156010527.04768,
   "fcf_margin": 0.06220393612262148,
   "ebitda_margin": 0.13437117722221326
@@ -12050,8 +12050,8 @@
  "UPST": {
   "ticker": "UPST",
   "name": "Upstart Holdings, Inc.",
-  "price": 22.95,
-  "market_cap": 2233334528.0,
+  "price": 22.81,
+  "market_cap": 2219710464.0,
   "shares": 97313046.0,
   "revenue": 1285890048.0,
   "rev_growth": 0.423,
@@ -12081,9 +12081,9 @@
     "revenue": 1023985000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 1599759936.0,
-  "ev": 3833094464.0,
+  "ev": 3819470400.0,
   "gross_profit": 1067841672.56064,
   "fcf_margin": -0.102950288950366,
   "ebitda_margin": 0.08947499063310271
@@ -12091,8 +12091,8 @@
  "USB": {
   "ticker": "USB",
   "name": "U.S. Bancorp",
-  "price": 57.36,
-  "market_cap": 89369829376.0,
+  "price": 57.51,
+  "market_cap": 89603538944.0,
   "shares": 1558051446.0,
   "revenue": 27320999936.0,
   "rev_growth": 0.104,
@@ -12122,9 +12122,9 @@
     "revenue": 28540000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 29316997120.0,
-  "ev": 118686826496.0,
+  "ev": 118920536064.0,
   "gross_profit": 0.0,
   "fcf_margin": null,
   "ebitda_margin": null
@@ -12132,8 +12132,8 @@
  "UWMC": {
   "ticker": "UWMC",
   "name": "UWM Holdings Corporation",
-  "price": 1.2,
-  "market_cap": 1928353920.0,
+  "price": 1.26,
+  "market_cap": 2024771584.0,
   "shares": 345098878.0,
   "revenue": 2925762048.0,
   "rev_growth": -0.706,
@@ -12163,9 +12163,9 @@
     "revenue": 1553302000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 15356460160.0,
-  "ev": 17284814080.0,
+  "ev": 17381231744.0,
   "gross_profit": 2925762048.0,
   "fcf_margin": -0.07093318889069136,
   "ebitda_margin": 0.1807576991305617
@@ -12173,8 +12173,8 @@
  "V": {
   "ticker": "V",
   "name": "Visa Inc.",
-  "price": 359.85,
-  "market_cap": 675566321664.0,
+  "price": 360.66,
+  "market_cap": 677086953472.0,
   "shares": 1704112694.0,
   "revenue": 44487999488.0,
   "rev_growth": 0.144,
@@ -12204,9 +12204,9 @@
     "revenue": 40000000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 10065999872.0,
-  "ev": 685632321536.0,
+  "ev": 687152953344.0,
   "gross_profit": 43475897499.647995,
   "fcf_margin": 0.45864055481981575,
   "ebitda_margin": 0.6989300479646687
@@ -12214,8 +12214,8 @@
  "VCTR": {
   "ticker": "VCTR",
   "name": "Victory Capital Holdings, Inc. ",
-  "price": 111.74,
-  "market_cap": 6873079296.0,
+  "price": 113.23,
+  "market_cap": 6964728832.0,
   "shares": 61509572.0,
   "revenue": 1558667008.0,
   "rev_growth": 0.24,
@@ -12245,9 +12245,9 @@
     "revenue": 1306131000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 942013008.0,
-  "ev": 7815092304.0,
+  "ev": 7906741840.0,
   "gross_profit": 893677268.9468699,
   "fcf_margin": 0.3338248370751426,
   "ebitda_margin": 0.5161686055268067
@@ -12255,8 +12255,8 @@
  "VEEV": {
   "ticker": "VEEV",
   "name": "Veeva Systems Inc.",
-  "price": 281.93,
-  "market_cap": 45646958592.0,
+  "price": 273.33,
+  "market_cap": 44254543872.0,
   "shares": 161908850.0,
   "revenue": 3458097920.0,
   "rev_growth": 0.176,
@@ -12286,9 +12286,9 @@
     "revenue": 3195311000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": -7091252064.0,
-  "ev": 38555706528.0,
+  "ev": 37163291808.0,
   "gross_profit": 2592224781.8112,
   "fcf_margin": 0.3636998873646701,
   "ebitda_margin": 0.310963159770791
@@ -12296,8 +12296,8 @@
  "VFS": {
   "ticker": "VFS",
   "name": "VinFast Auto Ltd.",
-  "price": 3.06,
-  "market_cap": 7158980608.0,
+  "price": 3.04,
+  "market_cap": 7112189952.0,
   "shares": 2339536010.0,
   "revenue": null,
   "rev_growth": 0.417,
@@ -12327,9 +12327,9 @@
     "revenue": 90178628000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 0.0,
-  "ev": 7158980608.0,
+  "ev": 7112189952.0,
   "gross_profit": null,
   "fcf_margin": null,
   "ebitda_margin": null
@@ -12337,8 +12337,8 @@
  "VIRT": {
   "ticker": "VIRT",
   "name": "Virtu Financial, Inc.",
-  "price": 55.62,
-  "market_cap": 4911283712.0,
+  "price": 58.79,
+  "market_cap": 5191197184.0,
   "shares": 88300678.0,
   "revenue": 3263578112.0,
   "rev_growth": 0.291,
@@ -12368,9 +12368,9 @@
     "revenue": 3632118000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": -12001270784.0,
-  "ev": -7089987072.0,
+  "ev": -6810073600.0,
   "gross_profit": 2147010295.7203455,
   "fcf_margin": null,
   "ebitda_margin": null
@@ -12378,8 +12378,8 @@
  "VRNS": {
   "ticker": "VRNS",
   "name": "Varonis Systems, Inc.",
-  "price": 47.45,
-  "market_cap": 5450130432.0,
+  "price": 47.57,
+  "market_cap": 5463913472.0,
   "shares": 114860485.0,
   "revenue": 688094976.0,
   "rev_growth": 0.183,
@@ -12409,9 +12409,9 @@
     "revenue": 623532000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": -169891968.0,
-  "ev": 5280238464.0,
+  "ev": 5294021504.0,
   "gross_profit": 530307917.05344,
   "fcf_margin": 0.20154631676892232,
   "ebitda_margin": -0.1899505221790778
@@ -12433,7 +12433,7 @@
   "hi52": 30.65,
   "lo52": 14.154,
   "history": [],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 274186992.0,
   "ev": 1516982384.0,
   "gross_profit": 633305648.02816,
@@ -12443,8 +12443,8 @@
  "VRSK": {
   "ticker": "VRSK",
   "name": "Verisk Analytics, Inc.",
-  "price": 168.38,
-  "market_cap": 21915670528.0,
+  "price": 163.88,
+  "market_cap": 21329969152.0,
   "shares": 130156012.0,
   "revenue": 3136000000.0,
   "rev_growth": 0.044,
@@ -12454,7 +12454,7 @@
   "debt": 4617099776.0,
   "cash": 552200000.0,
   "beta": 0.662,
-  "hi52": 250.2,
+  "hi52": 249.26,
   "lo52": 155.94,
   "history": [
    {
@@ -12474,9 +12474,9 @@
     "revenue": 3072700000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 4064899776.0,
-  "ev": 25980570304.0,
+  "ev": 25394868928.0,
   "gross_profit": 2200813534.08,
   "fcf_margin": 0.3365912040816327,
   "ebitda_margin": 0.48335461224489795
@@ -12484,8 +12484,8 @@
  "VRSN": {
   "ticker": "VRSN",
   "name": "VeriSign, Inc.",
-  "price": 286.9,
-  "market_cap": 25935759360.0,
+  "price": 288.32,
+  "market_cap": 26064128000.0,
   "shares": 90400000.0,
   "revenue": 1707900032.0,
   "rev_growth": 0.06,
@@ -12515,9 +12515,9 @@
     "revenue": 1656600000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 1306200064.0,
-  "ev": 27241959424.0,
+  "ev": 27370328064.0,
   "gross_profit": 1510893763.3088,
   "fcf_margin": 0.4876383209763884,
   "ebitda_margin": 0.6944200350012055
@@ -12525,8 +12525,8 @@
  "VWAGY": {
   "ticker": "VWAGY",
   "name": "Volkswagen AG",
-  "price": 7.66,
-  "market_cap": 38399217664.0,
+  "price": 7.57,
+  "market_cap": 37948051456.0,
   "shares": 2950898180.0,
   "revenue": 321651015680.0,
   "rev_growth": 0.02,
@@ -12537,7 +12537,7 @@
   "cash": 66773999616.0,
   "beta": 0.993,
   "hi52": 12.83,
-  "lo52": 7.61,
+  "lo52": 7.56,
   "history": [
    {
     "year": 2022,
@@ -12556,9 +12556,9 @@
     "revenue": 321913000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 214130008064.0,
-  "ev": 252529225728.0,
+  "ev": 252078059520.0,
   "gross_profit": 44278478818.508804,
   "fcf_margin": 0.04386479014895054,
   "ebitda_margin": 0.05995939286940417
@@ -12566,8 +12566,8 @@
  "VZ": {
   "ticker": "VZ",
   "name": "Verizon Communications Inc.",
-  "price": 45.98,
-  "market_cap": 191036571648.0,
+  "price": 45.92,
+  "market_cap": 190787272704.0,
   "shares": 4154775202.0,
   "revenue": 138894999552.0,
   "rev_growth": -0.007,
@@ -12597,9 +12597,9 @@
     "revenue": 138191000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 191850002176.0,
-  "ev": 382886573824.0,
+  "ev": 382637274880.0,
   "gross_profit": 82577244083.65056,
   "fcf_margin": 0.12575416002259163,
   "ebitda_margin": 0.3677742071403783
@@ -12607,8 +12607,8 @@
  "WDAY": {
   "ticker": "WDAY",
   "name": "Workday, Inc.",
-  "price": 186.75,
-  "market_cap": 45006749696.0,
+  "price": 186.14,
+  "market_cap": 44859740160.0,
   "shares": 196000000.0,
   "revenue": 10154999808.0,
   "rev_growth": 0.128,
@@ -12638,9 +12638,9 @@
     "revenue": 9552000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 368999936.0,
-  "ev": 45375749632.0,
+  "ev": 45228740096.0,
   "gross_profit": 7696982104.4736,
   "fcf_margin": 0.29998768779888096,
   "ebitda_margin": 0.15617922501097106
@@ -12648,8 +12648,8 @@
  "WEX": {
   "ticker": "WEX",
   "name": "WEX Inc.",
-  "price": 168.66,
-  "market_cap": 5748205056.0,
+  "price": 169.1,
+  "market_cap": 5763201024.0,
   "shares": 34081611.0,
   "revenue": 2792100096.0,
   "rev_growth": 0.142,
@@ -12679,9 +12679,9 @@
     "revenue": 2660800000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": -744400384.0,
-  "ev": 5003804672.0,
+  "ev": 5018800640.0,
   "gross_profit": 2044710742.3027198,
   "fcf_margin": 0.4768095420028953,
   "ebitda_margin": 0.3297876037177716
@@ -12689,8 +12689,8 @@
  "WFC": {
   "ticker": "WFC",
   "name": "Wells Fargo & Company",
-  "price": 80.25,
-  "market_cap": 242675941376.0,
+  "price": 80.45,
+  "market_cap": 243280723968.0,
   "shares": 3023999336.0,
   "revenue": 83026001920.0,
   "rev_growth": 0.095,
@@ -12720,9 +12720,9 @@
     "revenue": 83699000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": -17941987328.0,
-  "ev": 224733954048.0,
+  "ev": 225338736640.0,
   "gross_profit": 0.0,
   "fcf_margin": null,
   "ebitda_margin": null
@@ -12730,8 +12730,8 @@
  "WISE.L": {
   "ticker": "WISE.L",
   "name": "WISE GROUP PLC CLS A ORD USD0.0",
-  "price": 861.6,
-  "market_cap": 8475812352.0,
+  "price": 854.8,
+  "market_cap": 8408919040.0,
   "shares": 983729421.0,
   "revenue": 2502799872.0,
   "rev_growth": 0.268,
@@ -12761,9 +12761,9 @@
     "revenue": 2699700000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": -4902299872.0,
-  "ev": 3573512480.0,
+  "ev": 3506619168.0,
   "gross_profit": 2106206204.2828798,
   "fcf_margin": -0.1008820189039869,
   "ebitda_margin": 0.45325238054031675
@@ -12771,8 +12771,8 @@
  "WIX": {
   "ticker": "WIX",
   "name": "Wix.com Ltd.",
-  "price": 73.35,
-  "market_cap": 3069661696.0,
+  "price": 72.62,
+  "market_cap": 3039111680.0,
   "shares": 41849511.0,
   "revenue": 2133692032.0,
   "rev_growth": 0.149,
@@ -12802,9 +12802,9 @@
     "revenue": 1993044000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 1077873920.0,
-  "ev": 4147535616.0,
+  "ev": 4116985600.0,
   "gross_profit": 1421828423.374601,
   "fcf_margin": 0.20733973289731064,
   "ebitda_margin": -0.06927476214149353
@@ -12812,8 +12812,8 @@
  "WK": {
   "ticker": "WK",
   "name": "Workiva Inc.",
-  "price": 69.63,
-  "market_cap": 3789019904.0,
+  "price": 71.23,
+  "market_cap": 3876086528.0,
   "shares": 50846905.0,
   "revenue": 965697024.0,
   "rev_growth": 0.186,
@@ -12843,9 +12843,9 @@
     "revenue": 884568000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": -22563968.0,
-  "ev": 3766455936.0,
+  "ev": 3853522560.0,
   "gross_profit": 774585582.9504,
   "fcf_margin": 0.17510189199878906,
   "ebitda_margin": 0.04352814491017837
@@ -12853,8 +12853,8 @@
  "WKHS": {
   "ticker": "WKHS",
   "name": "Workhorse Group, Inc.",
-  "price": 2.94,
-  "market_cap": 32130040.0,
+  "price": 2.97,
+  "market_cap": 32457898.0,
   "shares": 10928585.0,
   "revenue": 27206000.0,
   "rev_growth": 3.749,
@@ -12864,7 +12864,7 @@
   "debt": 76129000.0,
   "cash": 9629000.0,
   "beta": null,
-  "hi52": 14.88,
+  "hi52": 14.16,
   "lo52": 2.31,
   "history": [
    {
@@ -12884,9 +12884,9 @@
     "revenue": 21211000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 66500000.0,
-  "ev": 98630040.0,
+  "ev": 98957898.0,
   "gross_profit": -22070867.5,
   "fcf_margin": -1.4886782327427772,
   "ebitda_margin": -2.1636036168492243
@@ -12894,8 +12894,8 @@
  "WM": {
   "ticker": "WM",
   "name": "Waste Management, Inc.",
-  "price": 201.9,
-  "market_cap": 80702496768.0,
+  "price": 204.45,
+  "market_cap": 81721769984.0,
   "shares": 399715184.0,
   "revenue": 25667000320.0,
   "rev_growth": 0.04,
@@ -12925,9 +12925,9 @@
     "revenue": 25204000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 22799000256.0,
-  "ev": 103501497024.0,
+  "ev": 104520770240.0,
   "gross_profit": 10421059569.93321,
   "fcf_margin": 0.09149394205485403,
   "ebitda_margin": 0.30287918459806995
@@ -12966,7 +12966,7 @@
     "revenue": 713163000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 63563000832.0,
   "ev": 893272353792.0,
   "gross_profit": 182760567846.32086,
@@ -12976,8 +12976,8 @@
  "WOLF": {
   "ticker": "WOLF",
   "name": "Wolfspeed, Inc.",
-  "price": 31.17,
-  "market_cap": 1649845760.0,
+  "price": 35.28,
+  "market_cap": 1867390336.0,
   "shares": 52930569.0,
   "revenue": 665100032.0,
   "rev_growth": -0.241,
@@ -12999,9 +12999,9 @@
     "revenue": 757600000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 707599872.0,
-  "ev": 2357445632.0,
+  "ev": 2574990208.0,
   "gross_profit": -187797645.03552,
   "fcf_margin": 0.49050892843739935,
   "ebitda_margin": -0.4863930002036145
@@ -13009,8 +13009,8 @@
  "WU": {
   "ticker": "WU",
   "name": "Western Union Company (The)",
-  "price": 6.02,
-  "market_cap": 1877511424.0,
+  "price": 6.0,
+  "market_cap": 1871273856.0,
   "shares": 311878981.0,
   "revenue": 4036900096.0,
   "rev_growth": -0.013,
@@ -13040,9 +13040,9 @@
     "revenue": 4050700000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 1777400128.0,
-  "ev": 3654911552.0,
+  "ev": 3648673984.0,
   "gross_profit": 1416709800.428242,
   "fcf_margin": 0.08850231601074529,
   "ebitda_margin": 0.206222583715879
@@ -13050,8 +13050,8 @@
  "XOM": {
   "ticker": "XOM",
   "name": "ExxonMobil Holdings Corporation",
-  "price": 163.82,
-  "market_cap": 673613414400.0,
+  "price": 164.01,
+  "market_cap": 674394669056.0,
   "shares": 4111911960.0,
   "revenue": 361060007936.0,
   "rev_growth": 0.441,
@@ -13081,9 +13081,9 @@
     "revenue": 323905000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 31779999744.0,
-  "ev": 705393414144.0,
+  "ev": 706174668800.0,
   "gross_profit": 107476732562.30911,
   "fcf_margin": 0.05725087276811908,
   "ebitda_margin": 0.1881598625678927
@@ -13091,8 +13091,8 @@
  "XPEV": {
   "ticker": "XPEV",
   "name": "XPeng Inc.",
-  "price": 9.42,
-  "market_cap": 9024140288.0,
+  "price": 9.25,
+  "market_cap": 8861284352.0,
   "shares": 783622601.0,
   "revenue": 75412086784.0,
   "rev_growth": 0.08,
@@ -13103,7 +13103,7 @@
   "cash": 28042694656.0,
   "beta": 1.101,
   "hi52": 28.235,
-  "lo52": 9.42,
+  "lo52": 9.185,
   "history": [
    {
     "year": 2022,
@@ -13122,9 +13122,9 @@
     "revenue": 76719742000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": -1183729664.0,
-  "ev": 7840410624.0,
+  "ev": 7677554688.0,
   "gross_profit": 15721911852.72832,
   "fcf_margin": null,
   "ebitda_margin": -0.017624794866199046
@@ -13132,8 +13132,8 @@
  "XYZ": {
   "ticker": "XYZ",
   "name": "Block, Inc.",
-  "price": 74.04,
-  "market_cap": 44482863104.0,
+  "price": 74.33,
+  "market_cap": 44657094656.0,
   "shares": 540816000.0,
   "revenue": 25041963008.0,
   "rev_growth": 0.093,
@@ -13163,9 +13163,9 @@
     "revenue": 24193683000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 433136128.0,
-  "ev": 44915999232.0,
+  "ev": 45090230784.0,
   "gross_profit": 11662543012.08576,
   "fcf_margin": -0.0010824181790916572,
   "ebitda_margin": 0.061812605964855834
@@ -13173,8 +13173,8 @@
  "YEXT": {
   "ticker": "YEXT",
   "name": "Yext, Inc.",
-  "price": 6.62,
-  "market_cap": 655239040.0,
+  "price": 6.51,
+  "market_cap": 644351360.0,
   "shares": 98978704.0,
   "revenue": 443020992.0,
   "rev_growth": -0.018,
@@ -13204,9 +13204,9 @@
     "revenue": 446579000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 134846000.0,
-  "ev": 790085040.0,
+  "ev": 779197360.0,
   "gross_profit": 331636671.9121997,
   "fcf_margin": 0.09463800758226824,
   "ebitda_margin": 0.08994381918588634
@@ -13214,8 +13214,8 @@
  "ZETA": {
   "ticker": "ZETA",
   "name": "Zeta Global Holdings Corp.",
-  "price": 32.4,
-  "market_cap": 8075947008.0,
+  "price": 32.63,
+  "market_cap": 8133276160.0,
   "shares": 225619195.0,
   "revenue": 1570877056.0,
   "rev_growth": 0.435,
@@ -13245,9 +13245,9 @@
     "revenue": 1304668000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": -89704000.0,
-  "ev": 7986243008.0,
+  "ev": 8043572160.0,
   "gross_profit": 934326255.36768,
   "fcf_margin": 0.16051901136176502,
   "ebitda_margin": 0.07380590324186388
@@ -13255,8 +13255,8 @@
  "ZM": {
   "ticker": "ZM",
   "name": "Zoom Communications, Inc.",
-  "price": 93.8,
-  "market_cap": 27369312256.0,
+  "price": 92.88,
+  "market_cap": 27100870656.0,
   "shares": 263233141.0,
   "revenue": 4993050112.0,
   "rev_growth": 0.049,
@@ -13286,9 +13286,9 @@
     "revenue": 4868769000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": -7189448832.0,
-  "ev": 20179863424.0,
+  "ev": 19911421824.0,
   "gross_profit": 3877752708.2045646,
   "fcf_margin": 0.3956556164441716,
   "ebitda_margin": 0.2671230903119764
@@ -13296,8 +13296,8 @@
  "ZS": {
   "ticker": "ZS",
   "name": "Zscaler, Inc.",
-  "price": 198.78,
-  "market_cap": 32412014592.0,
+  "price": 196.6,
+  "market_cap": 32056555520.0,
   "shares": 163054698.0,
   "revenue": 3352523008.0,
   "rev_growth": 0.249,
@@ -13327,9 +13327,9 @@
     "revenue": 3352523000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": -1606166912.0,
-  "ev": 30805847680.0,
+  "ev": 30450388608.0,
   "gross_profit": 2577151587.2854505,
   "fcf_margin": 0.3206289225860549,
   "ebitda_margin": 0.013079701435415175
@@ -13337,8 +13337,8 @@
  "ZTS": {
   "ticker": "ZTS",
   "name": "Zoetis Inc.",
-  "price": 69.1,
-  "market_cap": 28553750528.0,
+  "price": 69.69,
+  "market_cap": 28797554688.0,
   "shares": 413223602.0,
   "revenue": 9525000192.0,
   "rev_growth": -0.002,
@@ -13349,7 +13349,7 @@
   "cash": 1676000000.0,
   "beta": 0.729,
   "hi52": 148.79,
-  "lo52": 68.92,
+  "lo52": 68.78,
   "history": [
    {
     "year": 2022,
@@ -13368,9 +13368,9 @@
     "revenue": 9467000000.0
    }
   ],
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "net_debt": 7579000064.0,
-  "ev": 36132750592.0,
+  "ev": 36376554752.0,
   "gross_profit": 6833044637.73696,
   "fcf_margin": 0.21175851919604874,
   "ebitda_margin": 0.42687661837687024
