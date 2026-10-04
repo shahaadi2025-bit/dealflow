@@ -19,6 +19,8 @@ from app.memo.pdf import memo_to_pdf_bytes
 from app.memo.report import valuation_to_pdf_bytes
 from app.data.lookup import search_tickers
 from app.screening.sector_stats import all_sector_stats, sector_stats
+from app.screening.similar import find_similar
+from app.screening.deals_feed import list_deals
 
 logging.basicConfig(level=logging.INFO)
 limiter = Limiter(key_func=get_remote_address)
@@ -80,6 +82,21 @@ def screen_custom_endpoint(request: Request, body: CustomScreenRequest):
     if len(body.tickers) > 25:
         raise HTTPException(400, "Limit to 25 tickers per custom screen")
     return {"sector": "custom", "results": screen_custom(body.tickers)}
+
+
+@app.get("/company/{ticker}/similar")
+@limiter.limit("20/minute")
+def similar_endpoint(request: Request, ticker: str, limit: int = Query(5, le=10)):
+    results = find_similar(ticker, limit)
+    if not results:
+        raise HTTPException(404, f"No similar-company data available for {ticker.upper()}")
+    return {"ticker": ticker.upper(), "results": results}
+
+
+@app.get("/deals")
+@limiter.limit("20/minute")
+def deals_endpoint(request: Request):
+    return {"deals": list_deals()}
 
 
 @app.get("/company/{ticker}")

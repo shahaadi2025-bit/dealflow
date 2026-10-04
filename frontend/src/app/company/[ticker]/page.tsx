@@ -13,6 +13,8 @@ import { MemoPanel } from "@/components/MemoPanel";
 import { RevenueChart } from "@/components/RevenueChart";
 import { SectorBenchmark } from "@/components/SectorBenchmark";
 import { CompanyNotes } from "@/components/CompanyNotes";
+import { SimilarCompanies } from "@/components/SimilarCompanies";
+import { PipelineButton } from "@/components/PipelineButton";
 import { valuationToCsv, downloadCsv } from "@/lib/csv";
 import { CompanySkeleton } from "@/components/Skeleton";
 import { PageFade } from "@/components/PageFade";
@@ -158,6 +160,7 @@ function CompanyInner() {
               <FileDown size={12} />
               <span className="hidden sm:inline">Export CSV</span>
             </button>
+            <PipelineButton ticker={c.ticker} name={c.name} />
           </div>
         </div>
       </div>
@@ -272,6 +275,26 @@ function CompanyInner() {
               </ul>
             </details>
           )}
+        </div>
+      </div>
+
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
+        <SimilarCompanies ticker={c.ticker} />
+        <div className="border border-line p-5 flex flex-col justify-between">
+          <div>
+            <div className="text-dim text-[11px] mb-2">Official filings</div>
+            <p className="text-dim text-[12px] leading-relaxed">
+              DealFlow doesn&apos;t host filings directly - verify any figure against the primary source.
+            </p>
+          </div>
+          <a
+            href={`https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&company=${encodeURIComponent(c.ticker)}&type=10-K&dateb=&owner=include&count=40`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-4 inline-block border border-line px-3 py-2 text-[12px] text-ink hover:border-signal transition-colors w-fit"
+          >
+            View SEC EDGAR filings for {c.ticker} -&gt;
+          </a>
         </div>
       </div>
 

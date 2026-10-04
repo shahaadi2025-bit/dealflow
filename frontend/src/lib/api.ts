@@ -51,6 +51,9 @@ export type SectorStats = {
   median_rule_of_40: number | null; median_ev_rev: number | null;
 };
 
+export type SimilarCompany = { ticker: string; name: string; distance: number; growth: number; gross_margin: number; ev_rev: number };
+export type HistoricalDeal = { ticker: string; ev_rev: number; growth: number; confidence: string; note: string };
+
 export type Memo = {
   executive_summary: string; business_overview: string; financial_analysis: string;
   valuation_summary: string; key_risks: string; recommendation: string; _grounded?: boolean;
@@ -81,4 +84,7 @@ export const api = {
   reportPdfUrl: (ticker: string) => `${BASE}/valuate/${ticker}/report`,
   searchTickers: (q: string) => req<{ results: { ticker: string; name: string }[] }>(`/tickers/search?q=${encodeURIComponent(q)}`),
   sectorStats: () => req<{ sectors: SectorStats[] }>("/sectors/stats"),
+  similarCompanies: (ticker: string) =>
+    req<{ ticker: string; results: SimilarCompany[] }>(`/company/${ticker}/similar`),
+  deals: () => req<{ deals: HistoricalDeal[] }>("/deals"),
 };

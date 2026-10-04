@@ -21,7 +21,9 @@ export function SiteHeader() {
             Screener
           </Link>
           <Link href="/sectors" className="hover:text-ink transition-colors">Sectors</Link>
-          <Link href="/methodology" className="hover:text-ink transition-colors hidden sm:inline">Methodology</Link>
+          <Link href="/pipeline" className="hover:text-ink transition-colors">Pipeline</Link>
+          <Link href="/deals" className="hover:text-ink transition-colors hidden sm:inline">Deals</Link>
+          <Link href="/methodology" className="hover:text-ink transition-colors hidden md:inline">Methodology</Link>
           <span className="text-line hidden md:inline">/</span>
           <span className="hidden md:inline">DCF - Comps - Memo</span>
         </nav>
