@@ -124,7 +124,7 @@ function ScreenerInner() {
       <section className="relative mb-10 flex flex-col md:flex-row md:items-end md:justify-between gap-6 overflow-hidden">
         <div
           className="pointer-events-none absolute -top-24 -left-24 w-72 h-72 rounded-full opacity-[0.07] blur-3xl"
-          style={{ background: "radial-gradient(circle, #C08A2E 0%, transparent 70%)" }}
+          style={{ background: "radial-gradient(circle, rgb(var(--color-signal)) 0%, transparent 70%)" }}
         />
         <motion.div
           initial={{ opacity: 0, y: 10 }}
@@ -312,7 +312,7 @@ function ScreenerInner() {
                         type="checkbox"
                         checked={selected.has(r.ticker)}
                         onChange={() => toggleSelect(r.ticker)}
-                        className="accent-[#C08A2E]"
+                        className="accent-[rgb(var(--color-signal))]"
                       />
                     </td>
                     <td className="py-3 pr-4">
@@ -328,13 +328,13 @@ function ScreenerInner() {
                     </td>
                     <td className="py-3 pr-4 text-right text-ink tabular-nums">{fmtMoney(r.market_cap)}</td>
                     <td className="py-3 pr-4 text-right tabular-nums">
-                      <span className="inline-flex items-center gap-1" style={{ color: r.growth >= 0.15 ? "#4C9A6A" : r.growth < 0 ? "#C0553A" : "#EDEEF0" }}>
+                      <span className="inline-flex items-center gap-1" style={{ color: r.growth >= 0.15 ? "rgb(var(--color-up))" : r.growth < 0 ? "rgb(var(--color-down))" : "rgb(var(--color-ink))" }}>
                         {r.growth >= 0.15 ? <TrendingUp size={11} /> : r.growth < 0 ? <TrendingDown size={11} /> : null}
                         {fmtPct(r.growth)}
                       </span>
                     </td>
                     <td className="py-3 pr-4 text-right text-ink tabular-nums">{fmtPct(r.gross_margin)}</td>
-                    <td className="py-3 pr-4 text-right tabular-nums" style={{ color: r.fcf_margin >= 0 ? "#EDEEF0" : "#C0553A" }}>
+                    <td className="py-3 pr-4 text-right tabular-nums" style={{ color: r.fcf_margin >= 0 ? "rgb(var(--color-ink))" : "rgb(var(--color-down))" }}>
                       {fmtPct(r.fcf_margin)}
                     </td>
                     <td className="py-3 pr-4 text-right text-ink tabular-nums">{fmtPct(r.rule_of_40)}</td>

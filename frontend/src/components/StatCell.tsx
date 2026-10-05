@@ -11,7 +11,7 @@ export function StatCell({ label, value, sub, delay = 0, numeric, format }: {
       initial={{ opacity: 0, y: 6 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.3, delay }}
-      whileHover={{ borderColor: "#C08A2E" }}
+      whileHover={{ borderColor: "rgb(var(--color-signal))" }}
       className="border border-line p-4 transition-colors"
     >
       <div className="text-dim text-[11px] mb-1.5">{label}</div>

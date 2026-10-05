@@ -5,14 +5,14 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        bg: "#0B0E11",
-        surface: "#12161B",
-        line: "#242B33",
-        ink: "#EDEEF0",
-        dim: "#8B94A0",
-        signal: "#C08A2E",
-        up: "#4C9A6A",
-        down: "#C0553A",
+        bg: "rgb(var(--color-bg) / <alpha-value>)",
+        surface: "rgb(var(--color-surface) / <alpha-value>)",
+        line: "rgb(var(--color-line) / <alpha-value>)",
+        ink: "rgb(var(--color-ink) / <alpha-value>)",
+        dim: "rgb(var(--color-dim) / <alpha-value>)",
+        signal: "rgb(var(--color-signal) / <alpha-value>)",
+        up: "rgb(var(--color-up) / <alpha-value>)",
+        down: "rgb(var(--color-down) / <alpha-value>)",
       },
       fontFamily: {
         serif: ["var(--font-serif)", "Georgia", "serif"],

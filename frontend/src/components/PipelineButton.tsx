@@ -6,16 +6,16 @@ import { addToPipeline, isInPipeline, removeFromPipeline } from "@/lib/pipeline"
 export function PipelineButton({ ticker, name }: { ticker: string; name: string }) {
   const [added, setAdded] = useState(false);
 
-  useEffect(() => setAdded(isInPipeline(ticker)), [ticker]);
+  useEffect(() => {
+    const sync = () => setAdded(isInPipeline(ticker));
+    sync();
+    window.addEventListener("dealflow:pipeline-changed", sync);
+    return () => window.removeEventListener("dealflow:pipeline-changed", sync);
+  }, [ticker]);
 
   const toggle = () => {
-    if (added) {
-      removeFromPipeline(ticker);
-      setAdded(false);
-    } else {
-      addToPipeline(ticker, name);
-      setAdded(true);
-    }
+    if (added) removeFromPipeline(ticker);
+    else addToPipeline(ticker, name);
   };
 
   return (

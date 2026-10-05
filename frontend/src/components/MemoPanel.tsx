@@ -1,6 +1,7 @@
-﻿"use client";
+"use client";
+import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Sparkles, Download, Loader2, AlertTriangle } from "lucide-react";
+import { Sparkles, Download, Loader2, AlertTriangle, Copy, Check } from "lucide-react";
 import { Memo } from "@/lib/api";
 
 const SECTIONS: { key: keyof Memo; label: string }[] = [
@@ -16,6 +17,21 @@ export function MemoPanel({ onGenerate, isPending, isError, error, memo, company
   onGenerate: () => void; isPending: boolean; isError: boolean; error: Error | null;
   memo?: Memo; companyName: string;
 }) {
+  const [copied, setCopied] = useState(false);
+
+  const copyMarkdown = () => {
+    if (!memo) return;
+    const md = [
+      `# Investment Memo: ${companyName}`,
+      "",
+      ...SECTIONS.flatMap(({ key, label }) => [`## ${label}`, "", (memo[key] as string) || "", ""]),
+    ].join("\n");
+    navigator.clipboard.writeText(md).then(() => {
+      setCopied(true);
+      setTimeout(() => setCopied(false), 1500);
+    });
+  };
+
   const downloadPdf = async () => {
     if (!memo) return;
     const base = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
@@ -52,16 +68,22 @@ export function MemoPanel({ onGenerate, isPending, isError, error, memo, company
         </div>
         <div className="flex gap-2">
           {memo && (
-            <button onClick={downloadPdf} className="border border-line px-4 py-2 text-[12px] text-ink hover:border-signal transition-colors focus-ring flex items-center gap-1.5">
-              <Download size={13} />
-              Download PDF
-            </button>
+            <>
+              <button onClick={copyMarkdown} className="border border-line px-4 py-2 text-[12px] text-ink hover:border-signal transition-colors focus-ring flex items-center gap-1.5">
+                {copied ? <Check size={13} className="text-up" /> : <Copy size={13} />}
+                <span className="hidden sm:inline">{copied ? "Copied!" : "Copy as Markdown"}</span>
+              </button>
+              <button onClick={downloadPdf} className="border border-line px-4 py-2 text-[12px] text-ink hover:border-signal transition-colors focus-ring flex items-center gap-1.5">
+                <Download size={13} />
+                <span className="hidden sm:inline">Download PDF</span>
+              </button>
+            </>
           )}
-          <button onClick={onGenerate} disabled={isPending}
+          <motion.button whileTap={{ scale: 0.96 }} onClick={onGenerate} disabled={isPending}
             className="bg-signal text-bg px-4 py-2 text-[12px] font-medium hover:opacity-90 transition-opacity disabled:opacity-50 focus-ring flex items-center gap-1.5">
             {isPending ? <Loader2 size={13} className="animate-spin" /> : <Sparkles size={13} />}
             {isPending ? "Drafting..." : memo ? "Regenerate memo" : "Generate memo"}
-          </button>
+          </motion.button>
         </div>
       </div>
 

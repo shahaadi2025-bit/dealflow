@@ -3,17 +3,38 @@
 @tailwind utilities;
 
 :root {
+  --color-bg: 11 14 17;
+  --color-surface: 18 22 27;
+  --color-line: 36 43 51;
+  --color-ink: 237 238 240;
+  --color-dim: 139 148 160;
+  --color-signal: 192 138 46;
+  --color-up: 76 154 106;
+  --color-down: 192 85 58;
   color-scheme: dark;
 }
 
+:root[data-theme="light"] {
+  --color-bg: 250 250 249;
+  --color-surface: 255 255 255;
+  --color-line: 226 224 220;
+  --color-ink: 26 26 26;
+  --color-dim: 107 111 118;
+  --color-signal: 160 107 31;
+  --color-up: 61 122 84;
+  --color-down: 162 63 46;
+  color-scheme: light;
+}
+
 body {
-  background: #0B0E11;
-  color: #EDEEF0;
+  background: rgb(var(--color-bg));
+  color: rgb(var(--color-ink));
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 ::selection {
-  background: #C08A2E;
-  color: #0B0E11;
+  background: rgb(var(--color-signal));
+  color: rgb(var(--color-bg));
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -21,6 +42,6 @@ body {
 }
 
 .focus-ring:focus-visible {
-  outline: 2px solid #C08A2E;
+  outline: 2px solid rgb(var(--color-signal));
   outline-offset: 2px;
 }
