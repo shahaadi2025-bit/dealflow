@@ -5,7 +5,10 @@ import { api } from "@/lib/api";
 import { fmtPct, fmtX } from "@/lib/format";
 import { PageFade } from "@/components/PageFade";
 
-const LABELS: Record<string, string> = { saas: "SaaS", fintech: "Fintech", ev: "Electric Vehicles" };
+const LABELS: Record<string, string> = {
+  saas: "SaaS", fintech: "Fintech", ev: "Electric Vehicles", healthcare: "Healthcare",
+  cyber: "Cybersecurity", cloud_infra: "Cloud Infra", consumer: "Consumer", media: "Media",
+};
 
 export default function SectorsPage() {
   const { data, isLoading, isError } = useQuery({

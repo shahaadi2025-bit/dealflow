@@ -32,7 +32,7 @@ export function SiteHeader() {
           <span className="text-dim text-[11px] tracking-wide hidden sm:inline">deal screener</span>
         </Link>
         <nav className="flex items-center gap-6 text-[12px] text-dim shrink-0">
-          <Link href="/" className="hover:text-ink transition-colors flex items-center gap-1.5">
+          <Link href="/screener" className="hover:text-ink transition-colors flex items-center gap-1.5">
             <LayoutGrid size={13} />
             Screener
           </Link>

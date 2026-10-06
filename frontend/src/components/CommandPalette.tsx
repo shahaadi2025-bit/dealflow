@@ -43,7 +43,7 @@ export function CommandPalette() {
   const go = (path: string) => { router.push(path); setOpen(false); };
 
   const navItems: Item[] = [
-    { label: "Screener", sub: "Browse and filter companies", action: () => go("/") },
+    { label: "Screener", sub: "Browse and filter companies", action: () => go("/screener") },
     { label: "Sector comparison", sub: "Median stats by sector", action: () => go("/sectors") },
     { label: "Methodology", sub: "How the numbers are calculated", action: () => go("/methodology") },
   ];

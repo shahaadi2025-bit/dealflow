@@ -15,7 +15,6 @@ import { SectorBenchmark } from "@/components/SectorBenchmark";
 import { CompanyNotes } from "@/components/CompanyNotes";
 import { SimilarCompanies } from "@/components/SimilarCompanies";
 import { PipelineButton } from "@/components/PipelineButton";
-import { addToPipeline, removeFromPipeline, isInPipeline } from "@/lib/pipeline";
 import { valuationToCsv, downloadCsv } from "@/lib/csv";
 import { CompanySkeleton } from "@/components/Skeleton";
 import { PageFade } from "@/components/PageFade";
@@ -102,21 +101,6 @@ function CompanyInner() {
     window.open(api.reportPdfUrl(ticker), "_blank");
   };
 
-  useEffect(() => {
-    const onKey = (e: KeyboardEvent) => {
-      const tag = (e.target as HTMLElement)?.tagName;
-      if (tag === "INPUT" || tag === "TEXTAREA" || e.metaKey || e.ctrlKey) return;
-      if (e.key.toLowerCase() === "s" && valuation.data) {
-        e.preventDefault();
-        const c = valuation.data.company;
-        if (isInPipeline(c.ticker)) removeFromPipeline(c.ticker);
-        else addToPipeline(c.ticker, c.name);
-      }
-    };
-    document.addEventListener("keydown", onKey);
-    return () => document.removeEventListener("keydown", onKey);
-  }, [valuation.data]);
-
   if (valuation.isLoading) return <CompanySkeleton />;
   if (valuation.isError)
     return <p className="text-down py-12">{(valuation.error as Error).message}</p>;
@@ -137,7 +121,7 @@ function CompanyInner() {
       </div>
       <input type="range" min={min} max={max} step={step} value={value}
         onChange={(e) => onChange(Number(e.target.value))}
-        className="w-full accent-[rgb(var(--color-signal))]" />
+        className="w-full accent-[#C08A2E]" />
     </div>
   );
 
@@ -178,7 +162,6 @@ function CompanyInner() {
             </button>
             <PipelineButton ticker={c.ticker} name={c.name} />
           </div>
-          <p className="text-dim text-[10px] mt-1.5 hidden sm:block">Press S to save to pipeline</p>
         </div>
       </div>
 

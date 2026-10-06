@@ -1,369 +1,240 @@
 "use client";
-import { Suspense, useEffect, useMemo, useState } from "react";
-import { useMutation, useQuery } from "@tanstack/react-query";
 import Link from "next/link";
-import { useRouter, useSearchParams } from "next/navigation";
-import { motion, AnimatePresence } from "framer-motion";
-import { TrendingUp, TrendingDown, ArrowRight } from "lucide-react";
-import { api, ScreenRow } from "@/lib/api";
-import { fmtMoney, fmtPct, fmtX } from "@/lib/format";
-import { ScoreBar } from "@/components/ScoreBar";
-import { TickerSearch } from "@/components/TickerSearch";
-import { ScreenerSkeleton } from "@/components/Skeleton";
-import { PageFade } from "@/components/PageFade";
-import { Term } from "@/components/Term";
+import { motion } from "framer-motion";
+import { TrendingUp, LineChart, FileText, Layers, Sparkles, Target, Check, Lock, Loader2 } from "lucide-react";
+import { useState } from "react";
+import { api } from "@/lib/api";
+import { Logo } from "@/components/Logo";
 
-const SECTOR_LABELS: Record<string, string> = { saas: "SaaS", fintech: "Fintech", ev: "Electric Vehicles" };
-type SortKey = "score" | "market_cap" | "growth" | "gross_margin" | "fcf_margin" | "rule_of_40" | "ev_rev";
-type Mode = "saas" | "fintech" | "ev" | "custom";
+const FEATURES = [
+  { icon: Target, title: "Explainable screening", desc: "Every fit score breaks down into the exact criteria that produced it - growth, margin, leverage, deal size fit. No black box." },
+  { icon: LineChart, title: "Full DCF workbench", desc: "Adjustable growth, margin, and WACC assumptions with a live sensitivity grid and football-field valuation range." },
+  { icon: Layers, title: "Comparable companies", desc: "Peer multiples pulled from the same sector, with transparent exclusion reasons for anything left out." },
+  { icon: Sparkles, title: "AI investment memos", desc: "A six-section memo grounded in the numbers you just computed - the model writes prose, it doesn't invent figures." },
+  { icon: FileText, title: "Export everything", desc: "CSV workbooks, styled PDF reports, and markdown-ready memos you can paste straight into your own docs." },
+  { icon: TrendingUp, title: "Deal pipeline", desc: "Track targets from Watching through Shortlisted with a Kanban board, saved locally in your browser." },
+];
 
-export default function ScreenerPage() {
-  return (
-    <Suspense fallback={<p className="text-dim py-12">Loading...</p>}>
-      <ScreenerInner />
-    </Suspense>
-  );
-}
+const FREE_FEATURES = ["SaaS, Fintech, and EV sectors", "Full DCF and comps valuation", "CSV and PDF export", "Deal pipeline tracker", "Unlimited ticker search"];
+const PRO_FEATURES = ["Everything in Free", "5 additional sectors - Healthcare, Cybersecurity, Cloud Infra, Consumer, Media", "AI-generated investment memos", "Priority data refresh"];
 
-function ScreenerInner() {
-  const router = useRouter();
-  const searchParams = useSearchParams();
-  const [mode, setMode] = useState<Mode>(() => (searchParams.get("sector") as Mode) || "saas");
-  const [minGrowth, setMinGrowth] = useState(() => searchParams.get("minGrowth") || "");
-  const [minFcf, setMinFcf] = useState(() => searchParams.get("minFcf") || "");
-  const [minMcap, setMinMcap] = useState(() => searchParams.get("minMcap") || "");
-  const [maxMcap, setMaxMcap] = useState(() => searchParams.get("maxMcap") || "");
-  const [sortKey, setSortKey] = useState<SortKey>("score");
-  const [sortDir, setSortDir] = useState<"asc" | "desc">("desc");
-  const [customInput, setCustomInput] = useState("");
-  const [customTickers, setCustomTickers] = useState<string[]>([]);
-  const [selected, setSelected] = useState<Set<string>>(new Set());
+export default function LandingPage() {
+  const [loadingCheckout, setLoadingCheckout] = useState(false);
+  const [checkoutError, setCheckoutError] = useState("");
 
-  useEffect(() => {
-    if (mode === "custom") return;
-    const qs = new URLSearchParams();
-    if (mode !== "saas") qs.set("sector", mode);
-    if (minGrowth) qs.set("minGrowth", minGrowth);
-    if (minFcf) qs.set("minFcf", minFcf);
-    if (minMcap) qs.set("minMcap", minMcap);
-    if (maxMcap) qs.set("maxMcap", maxMcap);
-    const qsStr = qs.toString();
-    router.replace(qsStr ? `/?${qsStr}` : "/", { scroll: false });
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [mode, minGrowth, minFcf, minMcap, maxMcap]);
-
-  const sectorQuery = useQuery({
-    queryKey: ["screen", mode, minGrowth, minFcf, minMcap, maxMcap],
-    queryFn: () =>
-      api.screen({
-        sector: mode,
-        min_growth: minGrowth ? Number(minGrowth) / 100 : undefined,
-        min_fcf_margin: minFcf ? Number(minFcf) / 100 : undefined,
-        min_mcap: minMcap ? Number(minMcap) * 1e6 : undefined,
-        max_mcap: maxMcap ? Number(maxMcap) * 1e6 : undefined,
-        limit: 40,
-      }),
-    enabled: mode !== "custom",
-  });
-
-  const customMutation = useMutation({
-    mutationFn: (tickers: string[]) => api.screenCustom(tickers),
-  });
-
-  const isLoading = mode === "custom" ? customMutation.isPending : sectorQuery.isLoading;
-  const isError = mode === "custom" ? customMutation.isError : sectorQuery.isError;
-  const error = mode === "custom" ? customMutation.error : sectorQuery.error;
-  const data = mode === "custom" ? customMutation.data : sectorQuery.data;
-
-  const rows = useMemo(() => {
-    const base = data?.results ?? [];
-    return [...base].sort((a, b) => {
-      const va = a[sortKey] as number, vb = b[sortKey] as number;
-      return sortDir === "desc" ? vb - va : va - vb;
-    });
-  }, [data, sortKey, sortDir]);
-
-  const toggleSort = (key: SortKey) => {
-    if (key === sortKey) setSortDir((d) => (d === "desc" ? "asc" : "desc"));
-    else { setSortKey(key); setSortDir("desc"); }
+  const upgrade = async () => {
+    setCheckoutError("");
+    setLoadingCheckout(true);
+    try {
+      const { url } = await api.createCheckoutSession();
+      window.location.href = url;
+    } catch (e) {
+      setCheckoutError((e as Error).message || "Could not start checkout.");
+      setLoadingCheckout(false);
+    }
   };
-
-  const runCustom = () => {
-    const list = customInput.split(/[\s,]+/).map((t) => t.trim().toUpperCase()).filter(Boolean);
-    if (list.length === 0) return;
-    setCustomTickers(list);
-    customMutation.mutate(list);
-  };
-
-  const toggleSelect = (ticker: string) => {
-    setSelected((prev) => {
-      const next = new Set(prev);
-      if (next.has(ticker)) next.delete(ticker);
-      else if (next.size < 4) next.add(ticker);
-      return next;
-    });
-  };
-
-  const compare = () => {
-    if (selected.size < 2) return;
-    router.push(`/compare?tickers=${Array.from(selected).join(",")}`);
-  };
-
-  const Header = ({ label, k }: { label: string; k: SortKey }) => (
-    <th
-      onClick={() => toggleSort(k)}
-      className="py-2 pr-4 font-normal text-right cursor-pointer select-none hover:text-ink transition-colors"
-    >
-      <span onClick={(e) => e.stopPropagation()}><Term>{label}</Term></span>
-      <span onClick={() => toggleSort(k)}>{sortKey === k && <span className="text-signal ml-1">{sortDir === "desc" ? "v" : "^"}</span>}</span>
-    </th>
-  );
 
   return (
-    <PageFade>
-      <section className="relative mb-10 flex flex-col md:flex-row md:items-end md:justify-between gap-6 overflow-hidden">
+    <div>
+      {/* Hero */}
+      <section className="relative overflow-hidden py-16 sm:py-24">
         <div
-          className="pointer-events-none absolute -top-24 -left-24 w-72 h-72 rounded-full opacity-[0.07] blur-3xl"
+          className="pointer-events-none absolute -top-32 left-1/2 -translate-x-1/2 w-[600px] h-[600px] rounded-full opacity-[0.06] blur-3xl"
           style={{ background: "radial-gradient(circle, rgb(var(--color-signal)) 0%, transparent 70%)" }}
         />
-        <motion.div
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4 }}
-          className="max-w-[640px] relative"
-        >
-          <h1 className="font-serif text-4xl leading-tight text-ink mb-3">
-            Screen acquisition targets, backed by numbers you can trace.
-          </h1>
-          <p className="text-dim leading-relaxed">
-            Every score breaks down into the criteria that produced it - growth, margin,
-            leverage, deal size fit. Pick a name below, or look up any company directly.
-          </p>
-        </motion.div>
-        <motion.div
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4, delay: 0.1 }}
-        >
-          <div className="text-dim text-[11px] mb-1.5">Or analyze any ticker on the market</div>
-          <TickerSearch variant="hero" />
-        </motion.div>
-      </section>
-
-      <section className="mb-6 pb-6 border-b border-line space-y-4">
-        <div className="flex flex-wrap items-end gap-6">
-          <div>
-            <label className="block text-dim text-[11px] mb-1.5">Sector</label>
-            <div className="flex border border-line relative">
-              {([...(["saas", "fintech", "ev"] as const), "custom" as const]).map((key, i) => (
-                <motion.button
-                  key={key}
-                  onClick={() => setMode(key)}
-                  whileTap={{ scale: 0.96 }}
-                  className={`relative px-3 py-2 text-[12px] transition-colors focus-ring ${i > 0 ? "border-l border-line" : ""} ${
-                    mode === key ? "text-bg" : "text-dim hover:text-ink"
-                  }`}
-                >
-                  {mode === key && (
-                    <motion.div
-                      layoutId="sector-pill"
-                      className="absolute inset-0 bg-signal -z-10"
-                      transition={{ type: "spring", stiffness: 400, damping: 30 }}
-                    />
-                  )}
-                  {key === "custom" ? "Custom list" : SECTOR_LABELS[key]}
-                </motion.button>
-              ))}
-            </div>
-          </div>
-
-          {rows.length > 0 && (
-            <div>
-              <label className="block text-dim text-[11px] mb-1.5 invisible">Surprise</label>
-              <button
-                onClick={() => router.push(`/company/${rows[Math.floor(Math.random() * rows.length)].ticker}`)}
-                className="border border-line px-3 py-2 text-[12px] text-dim hover:text-ink hover:border-signal transition-colors"
-              >
-                Surprise me
-              </button>
-            </div>
-          )}
-
-          {mode !== "custom" && (
-            <>
-              <div>
-                <label className="block text-dim text-[11px] mb-1.5">Min. revenue growth %</label>
-                <input value={minGrowth} onChange={(e) => setMinGrowth(e.target.value)} placeholder="e.g. 10"
-                  className="w-28 bg-surface border border-line px-3 py-2 text-ink placeholder:text-dim/60 focus-ring" />
-              </div>
-              <div>
-                <label className="block text-dim text-[11px] mb-1.5">Min. FCF margin %</label>
-                <input value={minFcf} onChange={(e) => setMinFcf(e.target.value)} placeholder="e.g. 0"
-                  className="w-28 bg-surface border border-line px-3 py-2 text-ink placeholder:text-dim/60 focus-ring" />
-              </div>
-              <div>
-                <label className="block text-dim text-[11px] mb-1.5">Min. market cap $M</label>
-                <input value={minMcap} onChange={(e) => setMinMcap(e.target.value)} placeholder="e.g. 500"
-                  className="w-28 bg-surface border border-line px-3 py-2 text-ink placeholder:text-dim/60 focus-ring" />
-              </div>
-              <div>
-                <label className="block text-dim text-[11px] mb-1.5">Max. market cap $M</label>
-                <input value={maxMcap} onChange={(e) => setMaxMcap(e.target.value)} placeholder="e.g. 20000"
-                  className="w-28 bg-surface border border-line px-3 py-2 text-ink placeholder:text-dim/60 focus-ring" />
-              </div>
-            </>
-          )}
-
-          {rows.length > 0 && (
-            <p className="text-dim text-[11px] ml-auto">
-              {rows.length} candidates{mode !== "custom" ? ` in ${SECTOR_LABELS[mode]}` : ""}
-            </p>
-          )}
+        <div className="relative max-w-3xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5 }}
+            className="flex justify-center mb-6"
+          >
+            <Logo size={44} />
+          </motion.div>
+          <motion.h1
+            initial={{ opacity: 0, y: 14 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="font-serif text-4xl sm:text-5xl text-ink leading-tight mb-5"
+          >
+            Screen, value, and memo an acquisition target in minutes.
+          </motion.h1>
+          <motion.p
+            initial={{ opacity: 0, y: 14 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="text-dim text-[15px] leading-relaxed mb-8 max-w-xl mx-auto"
+          >
+            DealFlow is a research-grade M&amp;A screener: explainable fit scores, a full
+            DCF and comps workbench, and AI investment memos grounded in numbers you can trace.
+          </motion.p>
+          <motion.div
+            initial={{ opacity: 0, y: 14 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            className="flex items-center justify-center gap-3 flex-wrap"
+          >
+            <Link href="/screener" className="bg-signal text-bg px-6 py-3 text-[13px] font-medium hover:opacity-90 transition-opacity">
+              Launch the screener
+            </Link>
+            <a href="#pricing" className="border border-line text-ink px-6 py-3 text-[13px] hover:border-signal transition-colors">
+              See pricing
+            </a>
+          </motion.div>
         </div>
 
-        {mode === "custom" && (
-          <div className="flex gap-2 items-start">
-            <textarea
-              value={customInput}
-              onChange={(e) => setCustomInput(e.target.value)}
-              placeholder="Enter tickers separated by commas or spaces, e.g. AAPL MSFT NVDA (up to 25)"
-              rows={2}
-              className="flex-1 bg-surface border border-line px-3 py-2 text-ink placeholder:text-dim/60 focus-ring text-[12px] max-w-xl"
+        {/* Animated bar-chart motif */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          className="relative mt-16 max-w-2xl mx-auto flex items-end justify-center gap-3 h-28"
+        >
+          {[40, 65, 50, 80, 60, 95, 70, 55, 85, 45].map((h, i) => (
+            <motion.div
+              key={i}
+              initial={{ height: 0 }}
+              animate={{ height: `${h}%` }}
+              transition={{ duration: 0.6, delay: 0.5 + i * 0.05, ease: "easeOut" }}
+              className="w-6 sm:w-8 rounded-t-sm"
+              style={{ background: i === 5 ? "rgb(var(--color-signal))" : "rgb(var(--color-line))" }}
             />
-            <motion.button whileTap={{ scale: 0.96 }} onClick={runCustom} className="bg-signal text-bg px-4 py-2 text-[12px] font-medium hover:opacity-90 transition-opacity focus-ring">
-              Screen list
-            </motion.button>
-          </div>
-        )}
-
-        {selected.size > 0 && (
-          <div className="flex items-center gap-3">
-            <p className="text-dim text-[11px]">{selected.size} selected for comparison</p>
-            <button
-              onClick={compare}
-              disabled={selected.size < 2}
-              className="border border-signal text-signal px-3 py-1.5 text-[11px] hover:bg-signal hover:text-bg transition-colors disabled:opacity-40 disabled:hover:bg-transparent disabled:hover:text-signal focus-ring"
-            >
-              Compare selected (2-4 companies)
-            </button>
-          </div>
-        )}
+          ))}
+        </motion.div>
       </section>
 
-      {isLoading && (
-        <div>
-          <p className="text-dim text-[12px] mb-4">
-            {mode === "custom" ? "Screening your list..." : `Loading ${SECTOR_LABELS[mode]} universe...`}
-          </p>
-          <ScreenerSkeleton />
+      {/* Features */}
+      <section className="py-16 border-t border-line">
+        <motion.h2
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="font-serif text-2xl text-ink text-center mb-12"
+        >
+          Everything a screening workflow needs
+        </motion.h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-5xl mx-auto px-4">
+          {FEATURES.map((f, i) => (
+            <motion.div
+              key={f.title}
+              initial={{ opacity: 0, y: 14 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-40px" }}
+              transition={{ duration: 0.4, delay: (i % 3) * 0.08 }}
+              whileHover={{ borderColor: "rgb(var(--color-signal))" }}
+              className="border border-line p-5 transition-colors"
+            >
+              <f.icon size={18} className="text-signal mb-3" />
+              <div className="text-ink text-[13px] mb-1.5">{f.title}</div>
+              <div className="text-dim text-[12px] leading-relaxed">{f.desc}</div>
+            </motion.div>
+          ))}
         </div>
-      )}
+      </section>
 
-      {isError && (
-        <div className="py-16 text-center border border-down/30 bg-down/5">
-          <p className="text-down mb-1">Couldn&apos;t load the screener</p>
-          <p className="text-dim text-[12px]">{(error as Error)?.message}</p>
+      {/* Sectors */}
+      <section className="py-16 border-t border-line">
+        <motion.h2
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="font-serif text-2xl text-ink text-center mb-3"
+        >
+          Eight sectors, one screener
+        </motion.h2>
+        <p className="text-dim text-[13px] text-center mb-10">Three free to start, five unlocked with Pro.</p>
+        <div className="flex flex-wrap justify-center gap-2 max-w-3xl mx-auto px-4">
+          {[
+            { label: "SaaS", pro: false }, { label: "Fintech", pro: false }, { label: "Electric Vehicles", pro: false },
+            { label: "Healthcare", pro: true }, { label: "Cybersecurity", pro: true }, { label: "Cloud Infra", pro: true },
+            { label: "Consumer", pro: true }, { label: "Media", pro: true },
+          ].map((s, i) => (
+            <motion.span
+              key={s.label}
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.3, delay: i * 0.05 }}
+              className="border border-line px-3 py-1.5 text-[12px] text-dim flex items-center gap-1.5"
+            >
+              {s.label}
+              {s.pro && <Lock size={10} className="text-signal" />}
+            </motion.span>
+          ))}
         </div>
-      )}
+      </section>
 
-      {!isLoading && !isError && rows.length === 0 && mode !== "custom" && (
-        <div className="py-16 text-center">
-          <p className="text-dim">No companies matched these filters.</p>
-          <p className="text-dim text-[12px] mt-1">Try loosening the filters, or search a specific ticker above.</p>
-        </div>
-      )}
+      {/* Pricing */}
+      <section id="pricing" className="py-16 border-t border-line">
+        <motion.h2
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="font-serif text-2xl text-ink text-center mb-12"
+        >
+          Simple pricing
+        </motion.h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-2xl mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 14 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.4 }}
+            className="border border-line p-6"
+          >
+            <div className="text-dim text-[11px] mb-1">Free</div>
+            <div className="font-serif text-3xl text-ink mb-5">$0</div>
+            <ul className="space-y-2.5 mb-6">
+              {FREE_FEATURES.map((f) => (
+                <li key={f} className="flex items-start gap-2 text-[12px] text-dim">
+                  <Check size={13} className="text-up mt-0.5 shrink-0" />
+                  {f}
+                </li>
+              ))}
+            </ul>
+            <Link href="/screener" className="block text-center border border-line px-4 py-2.5 text-[12px] text-ink hover:border-signal transition-colors">
+              Start free
+            </Link>
+          </motion.div>
 
-      {!isLoading && !isError && rows.length === 0 && mode === "custom" && customTickers.length === 0 && (
-        <div className="py-16 text-center">
-          <p className="text-dim">Enter tickers above and click &quot;Screen list&quot; to analyze any custom set of companies.</p>
+          <motion.div
+            initial={{ opacity: 0, y: 14 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.4, delay: 0.1 }}
+            className="border-2 border-signal p-6 relative"
+          >
+            <div className="absolute -top-3 left-6 bg-signal text-bg text-[10px] px-2 py-0.5 font-medium">POPULAR</div>
+            <div className="text-dim text-[11px] mb-1">Pro</div>
+            <div className="font-serif text-3xl text-ink mb-5">Monthly</div>
+            <ul className="space-y-2.5 mb-6">
+              {PRO_FEATURES.map((f) => (
+                <li key={f} className="flex items-start gap-2 text-[12px] text-dim">
+                  <Check size={13} className="text-up mt-0.5 shrink-0" />
+                  {f}
+                </li>
+              ))}
+            </ul>
+            <button
+              onClick={upgrade}
+              disabled={loadingCheckout}
+              className="w-full bg-signal text-bg px-4 py-2.5 text-[12px] font-medium hover:opacity-90 transition-opacity disabled:opacity-50 flex items-center justify-center gap-2"
+            >
+              {loadingCheckout && <Loader2 size={13} className="animate-spin" />}
+              {loadingCheckout ? "Starting checkout..." : "Upgrade to Pro"}
+            </button>
+            {checkoutError && <p className="text-down text-[11px] mt-2 text-center">{checkoutError}</p>}
+          </motion.div>
         </div>
-      )}
+      </section>
 
-      {rows.length > 0 && (
-        <div className="overflow-x-auto">
-          <table className="w-full text-left border-collapse min-w-[860px]">
-            <thead>
-              <tr className="text-dim text-[11px] border-b border-line">
-                <th className="py-2 pr-2 font-normal w-8"></th>
-                <th className="py-2 pr-4 font-normal">Company</th>
-                <Header label="Market cap" k="market_cap" />
-                <Header label="Growth" k="growth" />
-                <Header label="Gross margin" k="gross_margin" />
-                <Header label="FCF margin" k="fcf_margin" />
-                <Header label="Rule of 40" k="rule_of_40" />
-                <Header label="EV/Rev" k="ev_rev" />
-                <th className="py-2 font-normal cursor-pointer hover:text-ink transition-colors" onClick={() => toggleSort("score")}>
-                  Fit score{sortKey === "score" && <span className="text-signal ml-1">{sortDir === "desc" ? "v" : "^"}</span>}
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              <AnimatePresence initial={false}>
-                {rows.map((r: ScreenRow, i: number) => (
-                  <motion.tr
-                    key={r.ticker}
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ duration: 0.25, delay: Math.min(i * 0.02, 0.4) }}
-                    className="border-b border-line/60 hover:bg-surface transition-colors group"
-                  >
-                    <td className="py-3 pr-2">
-                      <input
-                        type="checkbox"
-                        checked={selected.has(r.ticker)}
-                        onChange={() => toggleSelect(r.ticker)}
-                        className="accent-[rgb(var(--color-signal))]"
-                      />
-                    </td>
-                    <td className="py-3 pr-4">
-                      <Link href={`/company/${r.ticker}`} className="focus-ring flex items-center gap-2">
-                        <div>
-                          <div className="text-ink group-hover:text-signal transition-colors flex items-center gap-1.5">
-                            {r.ticker}
-                            <ArrowRight size={11} className="opacity-0 group-hover:opacity-100 -translate-x-1 group-hover:translate-x-0 transition-all text-signal" />
-                          </div>
-                          <div className="text-dim text-[11px]">{r.name}</div>
-                        </div>
-                      </Link>
-                    </td>
-                    <td className="py-3 pr-4 text-right text-ink tabular-nums">{fmtMoney(r.market_cap)}</td>
-                    <td className="py-3 pr-4 text-right tabular-nums">
-                      <span className="inline-flex items-center gap-1" style={{ color: r.growth >= 0.15 ? "rgb(var(--color-up))" : r.growth < 0 ? "rgb(var(--color-down))" : "rgb(var(--color-ink))" }}>
-                        {r.growth >= 0.15 ? <TrendingUp size={11} /> : r.growth < 0 ? <TrendingDown size={11} /> : null}
-                        {fmtPct(r.growth)}
-                      </span>
-                    </td>
-                    <td className="py-3 pr-4 text-right text-ink tabular-nums">{fmtPct(r.gross_margin)}</td>
-                    <td className="py-3 pr-4 text-right tabular-nums" style={{ color: r.fcf_margin >= 0 ? "rgb(var(--color-ink))" : "rgb(var(--color-down))" }}>
-                      {fmtPct(r.fcf_margin)}
-                    </td>
-                    <td className="py-3 pr-4 text-right text-ink tabular-nums">{fmtPct(r.rule_of_40)}</td>
-                    <td className="py-3 pr-4 text-right text-ink tabular-nums">{fmtX(r.ev_rev)}</td>
-                    <td className="py-3">
-                      <ScoreBar score={r.score} drivers={r.drivers} />
-                    </td>
-                  </motion.tr>
-                ))}
-              </AnimatePresence>
-            </tbody>
-          </table>
-        </div>
-      )}
-
-      {rows.length > 0 && (
-        <div className="mt-4 space-y-1.5">
-          <p className="text-dim text-[11px]">
-            Fit score method: <span className="text-ink">{rows[0].method}</span> - hover a score bar for its drivers - check rows to compare.
-          </p>
-          {rows[0].method === "xgboost" && (
-            <p className="text-signal text-[11px]">
-              Experimental: this score comes from a model trained on a small set of historical deals (20 examples).
-              Treat relative ranking as a rough signal, not a precise probability.
-              {mode === "ev" && " The training data had no electric-vehicle acquisitions, so EV scores here are unvalidated extrapolation - weight them least."}
-            </p>
-          )}
-        </div>
-      )}
-    </PageFade>
+      {/* Final CTA */}
+      <section className="py-16 border-t border-line text-center">
+        <p className="text-dim text-[12px] mb-4">Figures are modeled estimates from public market data. Not investment advice.</p>
+        <Link href="/screener" className="text-signal text-[13px] hover:underline">
+          Go to the screener -&gt;
+        </Link>
+      </section>
+    </div>
   );
 }

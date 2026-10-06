@@ -87,4 +87,6 @@ export const api = {
   similarCompanies: (ticker: string) =>
     req<{ ticker: string; results: SimilarCompany[] }>(`/company/${ticker}/similar`),
   deals: () => req<{ deals: HistoricalDeal[] }>("/deals"),
+  createCheckoutSession: () => req<{ url: string }>("/billing/create-checkout-session", { method: "POST" }),
+  verifySession: (sessionId: string) => req<{ paid: boolean }>(`/billing/verify-session?session_id=${encodeURIComponent(sessionId)}`),
 };

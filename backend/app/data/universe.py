@@ -34,6 +34,39 @@ UNIVERSES = {
         "AEHR","ON","WOLF","ALGM","MBLY","APTV","LEA","BWA","MGA","DAN","LI",
         "ABAT","AMPX","EOSE","STEM","FLNC","NOVA","RUN","ENPH","SEDG","FSLR","CSIQ",
     ],
+    "healthcare": [
+        "UNH","JNJ","LLY","ABBV","MRK","TMO","ABT","DHR","PFE","BMY","AMGN","GILD",
+        "ISRG","VRTX","REGN","MDT","SYK","BSX","ZTS","HCA","CI","ELV","CVS","HUM",
+        "CNC","MOH","DXCM","IDXX","IQV","A","MTD","WST","RMD","ALGN","PODD","TECH",
+        "BIO","CRL","INCY","UTHR","JAZZ","HOLX","COO","BAX","EW","GEHC","SOLV","ZBH",
+        "DOCS","TDOC","HIMS","OSCR","GH","NTRA","EXAS","CRBU","RXRX","DNA","BEAM",
+        "NVAX","MRNA","BNTX","CRSP","NTLA","EDIT","VRNA","ALNY","SRPT","BMRN",
+    ],
+    "cyber": [
+        "CRWD","PANW","FTNT","ZS","S","OKTA","CYBR","TENB","RPD","QLYS","VRNS","NET",
+        "CHKP","FFIV","JNPR","AKAM","DDOG","SPLK","VRNT","MNDT","SAIL","PING","FORG",
+        "SCWX","VRSN","GEN","NLOK","KD","OSPN","AVPT","ESTC","MIME","BB","TENB",
+        "RBRK","ZSCALER","SNYK","TUFN","INPX","FEYE","CACI","LDOS","BAH","SAIC",
+    ],
+    "cloud_infra": [
+        "MSFT","AMZN","GOOGL","ORCL","IBM","CSCO","DELL","HPE","NTAP","PSTG","ANET",
+        "SMCI","VRT","DT","NEWR","ESTC","MDB","SNOW","CFLT","GTLB","HUBS","DBX","BOX",
+        "FSLY","AKAM","NET","TWLO","ZM","RNG","EGHT","FIVN","DOCN","DOMO","PD","FROG",
+        "WDC","STX","CIEN","COMM","INFN","NOK","ERIC","AMD","NVDA","MU","QCOM",
+    ],
+    "consumer": [
+        "AMZN","WMT","COST","HD","TJX","LOW","TGT","ROST","DG","DLTR","BBY","ULTA",
+        "ORLY","AZO","TSCO","LULU","NKE","DECK","CROX","ONON","SKX","BIRD","YETI",
+        "ETSY","CHWY","W","CVNA","CPNG","MELI","SE","BABA","JD","PDD","CHDN","CZR",
+        "RCL","CCL","NCLH","MAR","HLT","H","ABNB","BKNG","EXPE","TRIP","DASH","UBER",
+        "LYFT","GRUB","CAKE","CMG","SBUX","YUM","DPZ","WING","SHAK","TXRH","DRI",
+    ],
+    "media": [
+        "DIS","NFLX","WBD","PARA","CMCSA","FOXA","LYV","SPOT","EA","TTWO",
+        "ATVI","RBLX","MTCH","PINS","SNAP","META","GOOGL","TTD","ROKU","FUBO","CHTR",
+        "LBRDA","SIRI","IHRT","NYT","NWSA","OMC","IPG","WPP","PUBM","MGNI","DV","IAS",
+        "CRTO","APP","U","SCPL","CNK","AMC","IMAX","LGF-A","MSGE","MSGS","WWE","TKO",
+    ],
 }
 
 # Broad reference pool of well-known large caps -- not shown in any sector screener,

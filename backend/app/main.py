@@ -21,6 +21,7 @@ from app.data.lookup import search_tickers
 from app.screening.sector_stats import all_sector_stats, sector_stats
 from app.screening.similar import find_similar
 from app.screening.deals_feed import list_deals
+from app.billing.service import create_checkout_session, verify_session, BillingNotConfigured
 
 logging.basicConfig(level=logging.INFO)
 limiter = Limiter(key_func=get_remote_address)
@@ -39,6 +40,30 @@ def health():
 @app.get("/sectors")
 def sectors():
     return {"sectors": list(UNIVERSES.keys())}
+
+
+@app.post("/billing/create-checkout-session")
+@limiter.limit("10/minute")
+def billing_checkout_endpoint(request: Request):
+    try:
+        url = create_checkout_session()
+        return {"url": url}
+    except BillingNotConfigured as e:
+        raise HTTPException(503, str(e))
+    except Exception as e:
+        raise HTTPException(502, f"Could not start checkout: {e}")
+
+
+@app.get("/billing/verify-session")
+@limiter.limit("20/minute")
+def billing_verify_endpoint(request: Request, session_id: str):
+    try:
+        paid = verify_session(session_id)
+        return {"paid": paid}
+    except BillingNotConfigured as e:
+        raise HTTPException(503, str(e))
+    except Exception as e:
+        raise HTTPException(502, f"Could not verify session: {e}")
 
 
 @app.get("/tickers/search")
