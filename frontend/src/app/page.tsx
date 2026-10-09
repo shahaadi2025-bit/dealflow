@@ -1,10 +1,16 @@
 "use client";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { TrendingUp, LineChart, FileText, Layers, Sparkles, Target, Check } from "lucide-react";
+import { TrendingUp, LineChart, FileText, Layers, Sparkles, Target, Check, Newspaper, Radio } from "lucide-react";
+import { useQuery } from "@tanstack/react-query";
+import { api } from "@/lib/api";
+import { SECTOR_ORDER, SECTOR_LABELS } from "@/lib/sectors";
+import { fmtDealValue, timeAgo } from "@/lib/time";
 import { Logo } from "@/components/Logo";
 
 const FEATURES = [
+  { icon: Radio, title: "Live deal wire", desc: "M&A headlines across every sector the moment they are reported, with parties, size and status pulled out - plus official SEC tender-offer and merger filings." },
+  { icon: Newspaper, title: "News dashboard", desc: "Market and per-company headlines from Yahoo Finance, CNBC, MarketWatch and Google News, tagged by sector and tone, refreshed every minute." },
   { icon: Target, title: "Explainable screening", desc: "Every fit score breaks down into the exact criteria that produced it - growth, margin, leverage, deal size fit. No black box." },
   { icon: LineChart, title: "Full DCF workbench", desc: "Adjustable growth, margin, and WACC assumptions with a live sensitivity grid and football-field valuation range." },
   { icon: Layers, title: "Comparable companies", desc: "Peer multiples pulled from the same sector, with transparent exclusion reasons for anything left out." },
@@ -13,7 +19,7 @@ const FEATURES = [
   { icon: TrendingUp, title: "Deal pipeline", desc: "Track targets from Watching through Shortlisted with a Kanban board, saved locally in your browser." },
 ];
 
-const FREE_FEATURES = ["All 8 sectors - SaaS, Fintech, EV, Healthcare, Cybersecurity, Cloud Infra, Consumer, Media", "Full DCF and comps valuation", "AI-generated investment memos", "CSV and PDF export", "Deal pipeline tracker", "Unlimited ticker search"];
+const FREE_FEATURES = ["All 29 sectors, from SaaS and semiconductors to insurance and agriculture", "Live M&A deal wire and SEC filings", "Market and company news dashboard", "Full DCF and comps valuation", "AI-generated investment memos", "CSV and PDF export", "Deal pipeline tracker", "Unlimited ticker search"];
 
 export default function LandingPage() {
   return (
@@ -37,7 +43,7 @@ export default function LandingPage() {
             initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="font-serif text-4xl sm:text-5xl text-ink leading-tight mb-5"
+            className="font-serif text-4xl sm:text-6xl leading-tight mb-5 text-gradient"
           >
             Screen, value, and memo an acquisition target in minutes.
           </motion.h1>
@@ -47,8 +53,8 @@ export default function LandingPage() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-dim text-[15px] leading-relaxed mb-8 max-w-xl mx-auto"
           >
-            DealFlow is a research-grade M&amp;A screener: explainable fit scores, a full
-            DCF and comps workbench, and AI investment memos grounded in numbers you can trace.
+            DealFlow is a research-grade M&amp;A screener with a live deal wire: explainable fit scores, a full
+            DCF and comps workbench, real-time news, and AI memos grounded in numbers you can trace.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 14 }}
@@ -84,6 +90,9 @@ export default function LandingPage() {
           ))}
         </motion.div>
       </section>
+
+      {/* Live deal wire */}
+      <LiveWire />
 
       {/* Features */}
       <section className="py-16 border-t border-line">
@@ -122,26 +131,21 @@ export default function LandingPage() {
           viewport={{ once: true }}
           className="font-serif text-2xl text-ink text-center mb-3"
         >
-          Fourteen sectors, one screener
+          {SECTOR_ORDER.length} sectors, one screener
         </motion.h2>
         <p className="text-dim text-[13px] text-center mb-10">All free during the current beta.</p>
-        <div className="flex flex-wrap justify-center gap-2 max-w-3xl mx-auto px-4">
-          {[
-            { label: "SaaS", pro: false }, { label: "Fintech", pro: false }, { label: "Electric Vehicles", pro: false },
-            { label: "Healthcare", pro: false }, { label: "Cybersecurity", pro: false }, { label: "Cloud Infra", pro: false },
-            { label: "Consumer", pro: false }, { label: "Media", pro: false }, { label: "Semiconductors", pro: false },
-            { label: "Real Estate", pro: false }, { label: "Industrials", pro: false }, { label: "Energy", pro: false },
-            { label: "Aerospace & Defense", pro: false }, { label: "Telecom", pro: false },
-          ].map((s, i) => (
+        <div className="flex flex-wrap justify-center gap-2 max-w-4xl mx-auto px-4">
+          {SECTOR_ORDER.map((key, i) => (
             <motion.span
-              key={s.label}
+              key={key}
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.3, delay: i * 0.05 }}
-              className="border border-line px-3 py-1.5 text-[12px] text-dim flex items-center gap-1.5"
+              transition={{ duration: 0.3, delay: Math.min(i * 0.03, 0.6) }}
             >
-              {s.label}
+              <Link href={`/screener?sector=${key}`} className="glass block px-3 py-1.5 text-[12px] text-dim hover:text-ink hover:border-signal transition-colors">
+                {SECTOR_LABELS[key]}
+              </Link>
             </motion.span>
           ))}
         </div>
@@ -189,5 +193,33 @@ export default function LandingPage() {
         </Link>
       </section>
     </div>
+  );
+}
+
+function LiveWire() {
+  const { data } = useQuery({ queryKey: ["landing-deals"], queryFn: () => api.liveDeals(undefined, 7), staleTime: 60_000, refetchInterval: 90_000, retry: 1 });
+  const items = (data?.items ?? []).filter((i) => i.deal).slice(0, 5);
+  if (items.length === 0) return null;
+  return (
+    <section className="py-14 border-t border-line">
+      <div className="max-w-3xl mx-auto px-4">
+        <div className="flex items-center justify-between mb-5">
+          <h2 className="font-serif text-2xl text-ink flex items-center gap-2.5"><span className="live-dot" /> On the wire right now</h2>
+          <Link href="/deals" className="text-signal text-[12px] hover:underline">All deals</Link>
+        </div>
+        <div className="space-y-2.5">
+          {items.map((it) => (
+            <a key={it.link} href={it.link} target="_blank" rel="noopener noreferrer" className="glow-card glass flex items-start gap-3 p-3.5">
+              <span className="text-[10.5px] border border-signal text-signal px-1.5 py-0.5 capitalize shrink-0 mt-0.5">{it.deal?.status}</span>
+              <span className="text-ink text-[12.5px] leading-snug flex-1">{it.title}</span>
+              <span className="text-dim text-[11px] shrink-0 text-right">
+                {fmtDealValue(it.deal?.value_musd) && <span className="block text-ink">{fmtDealValue(it.deal?.value_musd)}</span>}
+                {timeAgo(it.published)}
+              </span>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
   );
 }

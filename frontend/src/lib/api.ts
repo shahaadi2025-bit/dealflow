@@ -59,6 +59,28 @@ export type Memo = {
   valuation_summary: string; key_risks: string; recommendation: string; _grounded?: boolean;
 };
 
+export type Sentiment = { score: number; label: "bullish" | "bearish" | "neutral" };
+export type DealMeta = {
+  status: "announced" | "rumor" | "completed" | "terminated"; type: string;
+  value_musd: number | null; acquirer: string | null; target: string | null;
+};
+export type NewsItem = {
+  title: string; link: string; source: string; published: string | null; summary: string;
+  sentiment: Sentiment; tags: string[]; tickers: string[]; sectors: string[];
+  is_deal: boolean; deal?: DealMeta; also_reported_by: string[]; age_minutes: number | null;
+};
+export type Mood = { score: number; label: "bullish" | "bearish" | "neutral"; bullish: number; bearish: number; neutral: number };
+export type NewsResponse = { updated: string; count: number; items: NewsItem[]; mood: Mood; ticker?: string };
+export type LiveDeals = {
+  updated: string; days: number; count: number; items: NewsItem[];
+  stats: { by_sector: { sector: string; count: number }[]; disclosed_value_musd: number; status: Record<string, number> };
+};
+export type SecFiling = {
+  form: string; form_label: string; company: string; role: string | null; link: string;
+  published: string | null; age_minutes: number | null;
+};
+export type TapeItem = { symbol: string; label: string; price: number; change_pct: number };
+
 export const api = {
   sectors: () => req<{ sectors: string[] }>("/sectors"),
   screen: (params: Record<string, string | number | undefined>) => {
@@ -86,6 +108,18 @@ export const api = {
   sectorStats: () => req<{ sectors: SectorStats[] }>("/sectors/stats"),
   similarCompanies: (ticker: string) =>
     req<{ ticker: string; results: SimilarCompany[] }>(`/company/${ticker}/similar`),
+  newsMarket: (params: Record<string, string | number | boolean | undefined> = {}) => {
+    const qs = new URLSearchParams(
+      Object.entries(params).filter(([, v]) => v !== undefined && v !== "" && v !== false).map(([k, v]) => [k, String(v)]) as [string, string][]
+    );
+    return req<NewsResponse>(`/news/market?${qs.toString()}`);
+  },
+  newsTicker: (ticker: string) => req<NewsResponse>(`/news/ticker/${encodeURIComponent(ticker)}`),
+  newsTrending: () => req<{ updated: string; tickers: { ticker: string; mentions: number; sentiment: number }[] }>("/news/trending"),
+  liveDeals: (sector?: string, days = 7) =>
+    req<LiveDeals>(`/deals/live?days=${days}${sector ? `&sector=${encodeURIComponent(sector)}` : ""}`),
+  dealFilings: () => req<{ updated: string; count: number; items: SecFiling[] }>("/deals/filings"),
+  marketTape: () => req<{ updated: string | null; items: TapeItem[] }>("/market/tape"),
   deals: () => req<{ deals: HistoricalDeal[] }>("/deals"),
   createCheckoutSession: () => req<{ url: string }>("/billing/create-checkout-session", { method: "POST" }),
   verifySession: (sessionId: string) => req<{ paid: boolean }>(`/billing/verify-session?session_id=${encodeURIComponent(sessionId)}`),

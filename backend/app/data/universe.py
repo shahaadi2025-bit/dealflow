@@ -103,6 +103,87 @@ UNIVERSES = {
     ],
 }
 
+
+# ---- Extra sectors (v2). Dead/renamed tickers are pruned automatically by build_snapshot. ----
+_EXTRA_SECTORS = {
+    "renewables": [
+        "ENPH","SEDG","FSLR","RUN","ARRY","SHLS","PLUG","BE","FLNC","CSIQ","EOSE","ENVX",
+        "STEM","CWEN","BLDP","NEE","NXT","ORA","AES","BEPC","CEG","VST","TLN","OKLO",
+        "NNE","SMR",
+    ],
+    "financials": [
+        "JPM","BAC","WFC","C","GS","MS","USB","PNC","TFC","SCHW","BLK","BX",
+        "KKR","APO","ARES","OWL","TROW","BEN","IVZ","AMP","RJF","LPLA","IBKR","ICE",
+        "CME","NDAQ","CBOE","MCO","SPGI","MSCI","FDS","MKTX","VIRT","JXN","ALLY","SYF",
+        "COF","AXP","FITB","RF","KEY","HBAN","MTB","CFG","NTRS","STT","BK",
+    ],
+    "logistics": [
+        "UPS","FDX","UNP","CSX","NSC","ODFL","JBHT","CHRW","EXPD","XPO","SAIA","KNX",
+        "LSTR","GXO","ZIM","MATX","DAL","UAL","LUV","AAL","ALK","RXO","WERN","HTLD",
+        "ARCB","SNDR","R","URI",
+    ],
+    "ecommerce": [
+        "AMZN","WMT","COST","TGT","HD","LOW","TJX","ROST","DG","DLTR","BBY","ULTA",
+        "ETSY","EBAY","CHWY","W","CPNG","MELI","SE","JD","PDD","BABA","SHOP","WSM",
+        "RH","LULU","CVNA","OPEN","Z","ZG","RMAX","GLBE","JMIA","VIPS","LI","GRAB",
+        "BKNG",
+    ],
+    "medtech": [
+        "ISRG","SYK","BSX","MDT","EW","ZBH","BDX","DXCM","PODD","ABT","RMD","ALGN",
+        "TFX","STE","COO","IDXX","GEHC","BAX","TECH","MTD","WST","IQV","CRL","DHR",
+        "TMO","A","NTRA","GH","TDOC","HIMS","PEN","GMED","INSP","TMDX","NVST","LIVN",
+    ],
+    "biotech": [
+        "VRTX","REGN","GILD","AMGN","MRNA","BNTX","ALNY","INCY","BMRN","SRPT","NTLA","CRSP",
+        "BEAM","EDIT","UTHR","JAZZ","NBIX","EXEL","RXRX","NVAX","DNA","CRBU","ABBV","BMY",
+        "PFE","LLY","MRK","JNJ","ARGX","BBIO","IONS","HALO","ACAD","VKTX","MDGL","CYTK",
+    ],
+    "materials": [
+        "LIN","APD","SHW","ECL","DD","DOW","LYB","NUE","STLD","FCX","NEM","SCCO",
+        "ALB","LAC","MP","SQM","MLM","VMC","CF","MOS","CTVA","LEU","OC","BLDR",
+        "PPG","RPM","IFF","EMN","AVY","BALL","PKG","IP","AA","X","CLF","RS",
+    ],
+    "travel": [
+        "BKNG","ABNB","EXPE","MAR","HLT","H","RCL","CCL","NCLH","LVS","WYNN","MGM",
+        "CZR","TRIP","CHDN","LYV","VFS","SAIL","HST","DKNG","PENN","VAC","TNL","WH",
+        "CUK",
+    ],
+    "staples": [
+        "KO","PEP","MDLZ","GIS","KHC","HSY","CPB","SJM","CAG","HRL","MKC","STZ",
+        "TAP","MNST","KDP","CELH","PG","CL","KMB","CHD","CLX","MO","PM","SOLV",
+        "KR","SYY","ADM","BG","TSN","POST","FLO","LW",
+    ],
+    "insurance": [
+        "CB","PGR","TRV","AIG","MET","PRU","ALL","AFL","HIG","CINF","L","WRB",
+        "AJG","AON","BRO","ERIE","KNSL","RLI","ACGL","EG","LMND","ROOT","HCI","GL",
+        "PFG","LNC","UNM","RGA","AIZ","SIGI",
+    ],
+    "utilities": [
+        "NEE","DUK","SO","D","AEP","EXC","XEL","ED","PEG","WEC","ES","EIX",
+        "PCG","SRE","DTE","ETR","FE","PPL","CMS","AEE","CNP","ATO","NI","LNT",
+        "EVRG","PNW","OGE","NRG","AWK",
+    ],
+    "autos": [
+        "F","GM","TSLA","STLA","TM","HMC","RACE","APTV","BWA","LEA","MGA","ALV",
+        "GNTX","AN","KMX","LAD","PAG","GPC","ORLY","AZO","AAP","HOG","PII","THO",
+        "WGO","LKQ",
+    ],
+    "gaming": [
+        "EA","TTWO","RBLX","U","DKNG","PENN","CZR","MGM","LNW","NTES","SE","SONY",
+        "CRSR","LOGI","GME","PLTK","SRAD","GENI","RSI",
+    ],
+    "edtech": [
+        "DUOL","COUR","CHGG","UDMY","LRN","PRDO","LOPE","STRA","ATGE","GHC","LAUR","APEI",
+        "EDU",
+    ],
+    "agriculture": [
+        "DE","CTVA","CF","MOS","FMC","ADM","BG","TSN","CALM","AGCO","CNHI","NTR",
+        "TTC","LNN","AVD","FDP",
+    ],
+}
+for _k, _v in _EXTRA_SECTORS.items():
+    UNIVERSES.setdefault(_k, _v)
+
 # Broad reference pool of well-known large caps -- not shown in any sector screener,
 # used only to widen snapshot fallback coverage so arbitrary ticker searches (via the
 # search bar) still resolve to something if a live Yahoo fetch is briefly rate-limited.

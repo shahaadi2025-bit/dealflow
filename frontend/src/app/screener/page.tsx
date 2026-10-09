@@ -14,20 +14,10 @@ import { PageFade } from "@/components/PageFade";
 import { Term } from "@/components/Term";
 import { Lock } from "lucide-react";
 import { isPro, PRO_ONLY_SECTORS } from "@/lib/billing";
+import { SECTOR_LABELS, SECTOR_ORDER, SectorKey } from "@/lib/sectors";
 
-const SECTOR_LABELS: Record<string, string> = {
-  saas: "SaaS", fintech: "Fintech", ev: "Electric Vehicles", healthcare: "Healthcare",
-  cyber: "Cybersecurity", cloud_infra: "Cloud Infra", consumer: "Consumer", media: "Media",
-  semis: "Semiconductors", real_estate: "Real Estate", industrials: "Industrials",
-  energy: "Energy", aerospace_defense: "Aerospace & Defense", telecom: "Telecom",
-};
-const SECTOR_ORDER = [
-  "saas", "fintech", "ev", "healthcare", "cyber", "cloud_infra", "consumer", "media",
-  "semis", "real_estate", "industrials", "energy", "aerospace_defense", "telecom",
-] as const;
 type SortKey = "score" | "market_cap" | "growth" | "gross_margin" | "fcf_margin" | "rule_of_40" | "ev_rev";
-type Mode = "saas" | "fintech" | "ev" | "healthcare" | "cyber" | "cloud_infra" | "consumer" | "media"
-  | "semis" | "real_estate" | "industrials" | "energy" | "aerospace_defense" | "telecom" | "custom";
+type Mode = SectorKey | "custom";
 
 export default function ScreenerPage() {
   return (

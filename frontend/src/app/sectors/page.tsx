@@ -4,13 +4,9 @@ import { motion } from "framer-motion";
 import { api } from "@/lib/api";
 import { fmtPct, fmtX } from "@/lib/format";
 import { PageFade } from "@/components/PageFade";
+import { SECTOR_LABELS } from "@/lib/sectors";
 
-const LABELS: Record<string, string> = {
-  saas: "SaaS", fintech: "Fintech", ev: "Electric Vehicles", healthcare: "Healthcare",
-  cyber: "Cybersecurity", cloud_infra: "Cloud Infra", consumer: "Consumer", media: "Media",
-  semis: "Semiconductors", real_estate: "Real Estate", industrials: "Industrials",
-  energy: "Energy", aerospace_defense: "Aerospace & Defense", telecom: "Telecom",
-};
+const LABELS = SECTOR_LABELS;
 
 export default function SectorsPage() {
   const { data, isLoading, isError } = useQuery({

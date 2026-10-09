@@ -14,6 +14,7 @@ import { RevenueChart } from "@/components/RevenueChart";
 import { SectorBenchmark } from "@/components/SectorBenchmark";
 import { CompanyNotes } from "@/components/CompanyNotes";
 import { SimilarCompanies } from "@/components/SimilarCompanies";
+import { NewsPanel } from "@/components/NewsPanel";
 import { PipelineButton } from "@/components/PipelineButton";
 import { addToPipeline, removeFromPipeline, isInPipeline } from "@/lib/pipeline";
 import { valuationToCsv, downloadCsv } from "@/lib/csv";
@@ -318,6 +319,9 @@ function CompanyInner() {
       <div className="mb-6">
         <CompanyNotes ticker={c.ticker} />
       </div>
+
+      <NewsPanel ticker={c.ticker} name={c.name} />
+
 
       <MemoPanel
         onGenerate={() => memoMutation.mutate()}

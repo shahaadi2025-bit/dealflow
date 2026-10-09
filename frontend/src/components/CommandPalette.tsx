@@ -44,6 +44,9 @@ export function CommandPalette() {
 
   const navItems: Item[] = [
     { label: "Screener", sub: "Browse and filter companies", action: () => go("/screener") },
+    { label: "Live deal wire", sub: "M&A as it is reported", action: () => go("/deals") },
+    { label: "Market news", sub: "Headlines by company and sector", action: () => go("/news") },
+    { label: "Pipeline", sub: "Your tracked targets", action: () => go("/pipeline") },
     { label: "Sector comparison", sub: "Median stats by sector", action: () => go("/sectors") },
     { label: "Methodology", sub: "How the numbers are calculated", action: () => go("/methodology") },
   ];

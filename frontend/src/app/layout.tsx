@@ -10,8 +10,8 @@ const serif = Source_Serif_4({ subsets: ["latin"], variable: "--font-serif", wei
 const mono = IBM_Plex_Mono({ subsets: ["latin"], variable: "--font-mono", weight: ["400", "500", "600"] });
 
 export const metadata: Metadata = {
-  title: "DealFlow - M&A Deal Screener & Valuation",
-  description: "Screen acquisition targets, run DCF and comps valuation, and generate investment memos.",
+  title: "DealFlow - M&A Screener, Live Deals & News",
+  description: "Screen acquisition targets across 29 sectors, track live M&A deals and news, run DCF and comps valuation, and generate investment memos.",
   icons: { icon: "/favicon.svg" },
 };
 

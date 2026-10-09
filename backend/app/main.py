@@ -21,6 +21,8 @@ from app.data.lookup import search_tickers
 from app.screening.sector_stats import all_sector_stats, sector_stats
 from app.screening.similar import find_similar
 from app.screening.deals_feed import list_deals
+from app.data.sectors import SECTOR_META
+from app.news import service as news_service
 from app.billing.service import create_checkout_session, verify_session, BillingNotConfigured
 
 logging.basicConfig(level=logging.INFO)
@@ -116,6 +118,63 @@ def similar_endpoint(request: Request, ticker: str, limit: int = Query(5, le=10)
     if not results:
         raise HTTPException(404, f"No similar-company data available for {ticker.upper()}")
     return {"ticker": ticker.upper(), "results": results}
+
+
+@app.get("/sectors/meta")
+def sectors_meta():
+    return {"sectors": [{"key": k, "label": v["label"], "blurb": v["blurb"]} for k, v in SECTOR_META.items()]}
+
+
+# ---------------- news, live deals, market tape (all free RSS/EDGAR, cached) ----------------
+@app.get("/news/market")
+@limiter.limit("60/minute")
+def news_market(request: Request, limit: int = Query(60, ge=1, le=150), sector: str | None = None,
+                sentiment: str | None = Query(None, pattern="^(bullish|bearish|neutral)$"),
+                deals_only: bool = False, q: str | None = Query(None, max_length=60)):
+    if sector and sector not in UNIVERSES:
+        raise HTTPException(400, f"Unknown sector '{sector}'")
+    return news_service.market_news(limit, sector, sentiment, deals_only, q)
+
+
+@app.get("/news/trending")
+@limiter.limit("30/minute")
+def news_trending(request: Request):
+    return news_service.trending_tickers()
+
+
+@app.get("/news/ticker/{ticker}")
+@limiter.limit("40/minute")
+def news_ticker(request: Request, ticker: str, limit: int = Query(25, ge=1, le=60)):
+    t = ticker.upper()
+    if not t.replace("-", "").replace(".", "").replace("=", "").replace("^", "").isalnum() or len(t) > 12:
+        raise HTTPException(400, "Invalid ticker")
+    name = None
+    try:
+        name = get_financials(t).name
+    except Exception:
+        pass
+    return news_service.ticker_news(t, name, limit)
+
+
+@app.get("/deals/live")
+@limiter.limit("30/minute")
+def deals_live(request: Request, sector: str | None = None, days: int = Query(7, ge=1, le=30),
+               limit: int = Query(80, ge=1, le=150)):
+    if sector and sector not in UNIVERSES:
+        raise HTTPException(400, f"Unknown sector '{sector}'")
+    return news_service.live_deals(sector, days, limit)
+
+
+@app.get("/deals/filings")
+@limiter.limit("30/minute")
+def deals_filings(request: Request, limit: int = Query(60, ge=1, le=150)):
+    return news_service.sec_deal_filings(limit)
+
+
+@app.get("/market/tape")
+@limiter.limit("60/minute")
+def market_tape(request: Request):
+    return news_service.market_tape()
 
 
 @app.get("/deals")
