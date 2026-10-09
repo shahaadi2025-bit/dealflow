@@ -58,6 +58,16 @@ def fetch_live(ticker: str) -> Financials:
                     history.sort(key=lambda r: r["year"])
             except Exception:
                 pass
+            price_history = []
+            try:
+                hist = tk.history(period="6mo", interval="1wk")
+                if hist is not None and not hist.empty:
+                    for idx, row in hist.iterrows():
+                        c = _num(row.get("Close"))
+                        if c:
+                            price_history.append({"date": idx.strftime("%Y-%m-%d"), "close": round(c, 2)})
+            except Exception:
+                pass
             return Financials(
                 ticker=t, name=info.get("shortName") or t, price=price, market_cap=mcap,
                 shares=_num(info.get("sharesOutstanding")) or mcap / price,
@@ -66,7 +76,7 @@ def fetch_live(ticker: str) -> Financials:
                 fcf=_num(info.get("freeCashflow")), debt=_num(info.get("totalDebt")) or 0.0,
                 cash=_num(info.get("totalCash")) or 0.0, beta=_num(info.get("beta")),
                 hi52=_num(info.get("fiftyTwoWeekHigh")), lo52=_num(info.get("fiftyTwoWeekLow")),
-                history=history, as_of=date.today().isoformat(),
+                history=history, price_history=price_history, as_of=date.today().isoformat(),
             )
         except DataError:
             raise

@@ -1,4 +1,4 @@
-﻿export const fmtMoney = (n: number | null | undefined, digits = 1): string => {
+export const fmtMoney = (n: number | null | undefined, digits = 1): string => {
   if (n === null || n === undefined || Number.isNaN(n)) return "-";
   const abs = Math.abs(n);
   if (abs >= 1e12) return `$${(n / 1e12).toFixed(digits)}T`;

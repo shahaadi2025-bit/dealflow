@@ -11,4 +11,5 @@ export function setPro(value: boolean) {
   window.dispatchEvent(new Event("dealflow:pro-changed"));
 }
 
-export const PRO_ONLY_SECTORS = ["healthcare", "cyber", "cloud_infra", "consumer", "media"];
+// Empty for now -- everything is free. Add sector keys back here to re-enable gating later.
+export const PRO_ONLY_SECTORS: string[] = [];

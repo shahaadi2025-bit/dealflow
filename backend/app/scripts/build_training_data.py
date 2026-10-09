@@ -17,7 +17,7 @@ Writes backend/data/labeled_features.csv, ready for:
 import csv
 from pathlib import Path
 
-from app.data.fetch import get_many
+from app.data.fetch import get_many, load_snapshot
 from app.data.universe import UNIVERSES
 from app.screening.features import compute_features, FEATURE_KEYS
 
@@ -38,21 +38,49 @@ def load_historical() -> list[dict]:
 
 
 def build_negatives() -> list[dict]:
+    """Prefer the committed snapshot over fresh live fetches: it's already validated,
+    avoids Yahoo rate-limiting from firing many concurrent requests at once, and is
+    what the deployed app itself falls back to. Only tickers missing from the snapshot
+    get a (slower, sequential, rate-limit-friendly) live fetch attempt."""
     historical_tickers = {r["ticker"] for r in load_historical()}
     all_tickers = set()
     for tickers in UNIVERSES.values():
         all_tickers.update(tickers)
     candidates = [t for t in all_tickers if t not in historical_tickers]
 
-    print(f"Fetching live data for {len(candidates)} candidate negative examples...")
-    fins = get_many(candidates)
+    snapshot = load_snapshot()
+    print(f"Loaded snapshot with {len(snapshot)} companies.")
+
     rows = []
-    for t, f in fins.items():
-        feat = compute_features(f)
-        if not feat:
+    from_snapshot = 0
+    missing = []
+    for t in candidates:
+        f = snapshot.get(t)
+        if f is None:
+            missing.append(t)
             continue
-        rows.append({"ticker": t, "label": 0, **{k: feat[k] for k in FEATURE_KEYS}})
-    print(f"Got usable features for {len(rows)} negative examples.")
+        feat = compute_features(f)
+        if feat:
+            rows.append({"ticker": t, "label": 0, **{k: feat[k] for k in FEATURE_KEYS}})
+            from_snapshot += 1
+
+    print(f"Usable negative examples from snapshot: {from_snapshot}")
+
+    if missing:
+        print(f"{len(missing)} candidates not in snapshot; trying a slow sequential live fetch for them...")
+        live_rows = []
+        for t in missing:
+            try:
+                fins = get_many([t], workers=1)
+                f = fins.get(t)
+                feat = compute_features(f) if f else None
+                if feat:
+                    live_rows.append({"ticker": t, "label": 0, **{k: feat[k] for k in FEATURE_KEYS}})
+            except Exception:
+                pass
+        print(f"Additional usable negative examples from live fallback: {len(live_rows)}")
+        rows += live_rows
+
     return rows
 
 

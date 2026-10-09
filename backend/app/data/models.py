@@ -20,6 +20,7 @@ class Financials:
     hi52: float | None = None
     lo52: float | None = None
     history: list = field(default_factory=list)  # [{"year": 2023, "revenue": ...}]
+    price_history: list = field(default_factory=list)  # [{"date": "2026-01-15", "close": 123.45}]
     as_of: str = ""
 
     @property

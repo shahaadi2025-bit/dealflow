@@ -1,4 +1,4 @@
-﻿import { Valuation } from "./api";
+import { Valuation } from "./api";
 
 export function valuationToCsv(v: Valuation): string {
   const c = v.company;

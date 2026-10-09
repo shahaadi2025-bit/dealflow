@@ -1,6 +1,7 @@
-﻿"use client";
+"use client";
 import { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
+import { motion } from "framer-motion";
 import { api } from "@/lib/api";
 
 const RECENTS_KEY = "dealflow:recent-tickers";
@@ -103,9 +104,9 @@ export function TickerSearch({ variant = "header" }: { variant?: "header" | "her
             placeholder="Look up any ticker - AAPL, MSFT..."
             className="flex-1 bg-surface border border-line px-3 py-2.5 text-ink placeholder:text-dim/60 focus-ring"
           />
-          <button type="submit" className="bg-signal text-bg px-4 py-2.5 text-[12px] font-medium hover:opacity-90 transition-opacity focus-ring">
+          <motion.button whileTap={{ scale: 0.96 }} type="submit" className="bg-signal text-bg px-4 py-2.5 text-[12px] font-medium hover:opacity-90 transition-opacity focus-ring">
             Analyze
-          </button>
+          </motion.button>
         </form>
         {dropdown}
         {error && <p className="text-down text-[11px] mt-1">{error}</p>}

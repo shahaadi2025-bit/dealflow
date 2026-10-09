@@ -27,6 +27,7 @@ export function getPipeline(): PipelineEntry[] {
 
 export function setPipeline(entries: PipelineEntry[]) {
   localStorage.setItem(KEY, JSON.stringify(entries));
+  if (typeof window !== "undefined") window.dispatchEvent(new Event("dealflow:pipeline-changed"));
 }
 
 export function addToPipeline(ticker: string, name: string, stage: PipelineStage = "watching") {

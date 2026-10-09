@@ -1,9 +1,7 @@
 "use client";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { TrendingUp, LineChart, FileText, Layers, Sparkles, Target, Check, Lock, Loader2 } from "lucide-react";
-import { useState } from "react";
-import { api } from "@/lib/api";
+import { TrendingUp, LineChart, FileText, Layers, Sparkles, Target, Check } from "lucide-react";
 import { Logo } from "@/components/Logo";
 
 const FEATURES = [
@@ -15,25 +13,9 @@ const FEATURES = [
   { icon: TrendingUp, title: "Deal pipeline", desc: "Track targets from Watching through Shortlisted with a Kanban board, saved locally in your browser." },
 ];
 
-const FREE_FEATURES = ["SaaS, Fintech, and EV sectors", "Full DCF and comps valuation", "CSV and PDF export", "Deal pipeline tracker", "Unlimited ticker search"];
-const PRO_FEATURES = ["Everything in Free", "5 additional sectors - Healthcare, Cybersecurity, Cloud Infra, Consumer, Media", "AI-generated investment memos", "Priority data refresh"];
+const FREE_FEATURES = ["All 8 sectors - SaaS, Fintech, EV, Healthcare, Cybersecurity, Cloud Infra, Consumer, Media", "Full DCF and comps valuation", "AI-generated investment memos", "CSV and PDF export", "Deal pipeline tracker", "Unlimited ticker search"];
 
 export default function LandingPage() {
-  const [loadingCheckout, setLoadingCheckout] = useState(false);
-  const [checkoutError, setCheckoutError] = useState("");
-
-  const upgrade = async () => {
-    setCheckoutError("");
-    setLoadingCheckout(true);
-    try {
-      const { url } = await api.createCheckoutSession();
-      window.location.href = url;
-    } catch (e) {
-      setCheckoutError((e as Error).message || "Could not start checkout.");
-      setLoadingCheckout(false);
-    }
-  };
-
   return (
     <div>
       {/* Hero */}
@@ -140,14 +122,16 @@ export default function LandingPage() {
           viewport={{ once: true }}
           className="font-serif text-2xl text-ink text-center mb-3"
         >
-          Eight sectors, one screener
+          Fourteen sectors, one screener
         </motion.h2>
-        <p className="text-dim text-[13px] text-center mb-10">Three free to start, five unlocked with Pro.</p>
+        <p className="text-dim text-[13px] text-center mb-10">All free during the current beta.</p>
         <div className="flex flex-wrap justify-center gap-2 max-w-3xl mx-auto px-4">
           {[
             { label: "SaaS", pro: false }, { label: "Fintech", pro: false }, { label: "Electric Vehicles", pro: false },
-            { label: "Healthcare", pro: true }, { label: "Cybersecurity", pro: true }, { label: "Cloud Infra", pro: true },
-            { label: "Consumer", pro: true }, { label: "Media", pro: true },
+            { label: "Healthcare", pro: false }, { label: "Cybersecurity", pro: false }, { label: "Cloud Infra", pro: false },
+            { label: "Consumer", pro: false }, { label: "Media", pro: false }, { label: "Semiconductors", pro: false },
+            { label: "Real Estate", pro: false }, { label: "Industrials", pro: false }, { label: "Energy", pro: false },
+            { label: "Aerospace & Defense", pro: false }, { label: "Telecom", pro: false },
           ].map((s, i) => (
             <motion.span
               key={s.label}
@@ -158,7 +142,6 @@ export default function LandingPage() {
               className="border border-line px-3 py-1.5 text-[12px] text-dim flex items-center gap-1.5"
             >
               {s.label}
-              {s.pro && <Lock size={10} className="text-signal" />}
             </motion.span>
           ))}
         </div>
@@ -170,62 +153,32 @@ export default function LandingPage() {
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="font-serif text-2xl text-ink text-center mb-12"
+          className="font-serif text-2xl text-ink text-center mb-3"
         >
-          Simple pricing
+          Free during the beta
         </motion.h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-2xl mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 14 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.4 }}
-            className="border border-line p-6"
-          >
-            <div className="text-dim text-[11px] mb-1">Free</div>
-            <div className="font-serif text-3xl text-ink mb-5">$0</div>
-            <ul className="space-y-2.5 mb-6">
-              {FREE_FEATURES.map((f) => (
-                <li key={f} className="flex items-start gap-2 text-[12px] text-dim">
-                  <Check size={13} className="text-up mt-0.5 shrink-0" />
-                  {f}
-                </li>
-              ))}
-            </ul>
-            <Link href="/screener" className="block text-center border border-line px-4 py-2.5 text-[12px] text-ink hover:border-signal transition-colors">
-              Start free
-            </Link>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 14 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.4, delay: 0.1 }}
-            className="border-2 border-signal p-6 relative"
-          >
-            <div className="absolute -top-3 left-6 bg-signal text-bg text-[10px] px-2 py-0.5 font-medium">POPULAR</div>
-            <div className="text-dim text-[11px] mb-1">Pro</div>
-            <div className="font-serif text-3xl text-ink mb-5">Monthly</div>
-            <ul className="space-y-2.5 mb-6">
-              {PRO_FEATURES.map((f) => (
-                <li key={f} className="flex items-start gap-2 text-[12px] text-dim">
-                  <Check size={13} className="text-up mt-0.5 shrink-0" />
-                  {f}
-                </li>
-              ))}
-            </ul>
-            <button
-              onClick={upgrade}
-              disabled={loadingCheckout}
-              className="w-full bg-signal text-bg px-4 py-2.5 text-[12px] font-medium hover:opacity-90 transition-opacity disabled:opacity-50 flex items-center justify-center gap-2"
-            >
-              {loadingCheckout && <Loader2 size={13} className="animate-spin" />}
-              {loadingCheckout ? "Starting checkout..." : "Upgrade to Pro"}
-            </button>
-            {checkoutError && <p className="text-down text-[11px] mt-2 text-center">{checkoutError}</p>}
-          </motion.div>
-        </div>
+        <p className="text-dim text-[13px] text-center mb-12">Paid tiers may come later - everything below is free to use right now.</p>
+        <motion.div
+          initial={{ opacity: 0, y: 14 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.4 }}
+          className="border border-line p-6 max-w-sm mx-auto"
+        >
+          <div className="text-dim text-[11px] mb-1">Everything</div>
+          <div className="font-serif text-3xl text-ink mb-5">$0</div>
+          <ul className="space-y-2.5 mb-6">
+            {FREE_FEATURES.map((f) => (
+              <li key={f} className="flex items-start gap-2 text-[12px] text-dim">
+                <Check size={13} className="text-up mt-0.5 shrink-0" />
+                {f}
+              </li>
+            ))}
+          </ul>
+          <Link href="/screener" className="block text-center border border-line px-4 py-2.5 text-[12px] text-ink hover:border-signal transition-colors">
+            Start now
+          </Link>
+        </motion.div>
       </section>
 
       {/* Final CTA */}

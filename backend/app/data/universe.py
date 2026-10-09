@@ -67,6 +67,40 @@ UNIVERSES = {
         "LBRDA","SIRI","IHRT","NYT","NWSA","OMC","IPG","WPP","PUBM","MGNI","DV","IAS",
         "CRTO","APP","U","SCPL","CNK","AMC","IMAX","LGF-A","MSGE","MSGS","WWE","TKO",
     ],
+    "semis": [
+        "NVDA","AVGO","AMD","QCOM","TXN","INTC","AMAT","LRCX","KLAC","ADI","MU",
+        "MRVL","NXPI","MCHP","ON","SWKS","QRVO","MPWR","TER","ENTG","ASML","TSM",
+        "UMC","ARM","SMCI","WOLF","AEHR","ALGM","CRUS","DIOD","LSCC","POWI","SITM",
+        "SYNA","FORM","ONTO","UCTT","AMKR","COHU","ICHR","CEVA","AXTI","RMBS",
+    ],
+    "real_estate": [
+        "PLD","AMT","EQIX","PSA","O","WELL","SPG","DLR","CCI","VICI","EXR","AVB",
+        "EQR","MAA","INVH","ESS","UDR","CPT","SUI","ELS","ARE","BXP","VTR","PEAK",
+        "HST","REG","KIM","FRT","MAC","SKT","CUBE","LSI","NSA","IRM","CSGP","Z",
+        "ZG","RDFN","OPEN","COMP","EXPI","RMAX","RLGY","JLL","CBRE","CWK",
+    ],
+    "industrials": [
+        "GE","HON","UNP","RTX","CAT","DE","LMT","BA","UPS","ETN","ITW","EMR",
+        "PH","CMI","ROK","CARR","OTIS","PCAR","FAST","PAYX","WM","RSG","XYL",
+        "AME","DOV","IEX","SWK","FTV","IR","GWW","NDSN","PNR","FLS","CFX",
+        "TT","JCI","LII","ALLE","AOS","MAS","BLDR","OC","VMC","MLM","EXP",
+    ],
+    "energy": [
+        "XOM","CVX","COP","EOG","SLB","MPC","PSX","VLO","WMB","OKE","KMI","OXY",
+        "PXD","DVN","HES","FANG","BKR","HAL","TRGP","CTRA","EQT","APA","MRO",
+        "NOV","FTI","RRC","AR","SM","MTDR","CHRD","PR","CIVI","OVV","NEE","DUK",
+        "SO","D","AEP","EXC","XEL","ED","PEG","WEC","ES","FE","AEE","CMS","PPL",
+    ],
+    "aerospace_defense": [
+        "LMT","RTX","BA","NOC","GD","LHX","TDG","HWM","HEI","TXT","AXON","LDOS",
+        "SAIC","BAH","CACI","KTOS","AVAV","MRCY","CW","WWD","MOG-A","ATRO","SPR",
+        "HXL","PKE","DCO","RGR","SWBI","OSIS","VSEC","ERJ",
+    ],
+    "telecom": [
+        "T","VZ","TMUS","CMCSA","CHTR","LUMN","VOD","TU","BCE","TEF","ORAN",
+        "AMX","TIGO","LBRDA","LBRDK","WBD","DISH","USM","ATEX","SHEN","CCOI",
+        "IRDM","GSAT","VSAT","GOGO","ANET","JNPR","CIEN","NOK","ERIC","INFN",
+    ],
 }
 
 # Broad reference pool of well-known large caps -- not shown in any sector screener,

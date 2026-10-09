@@ -8,6 +8,8 @@ import { PageFade } from "@/components/PageFade";
 const LABELS: Record<string, string> = {
   saas: "SaaS", fintech: "Fintech", ev: "Electric Vehicles", healthcare: "Healthcare",
   cyber: "Cybersecurity", cloud_infra: "Cloud Infra", consumer: "Consumer", media: "Media",
+  semis: "Semiconductors", real_estate: "Real Estate", industrials: "Industrials",
+  energy: "Energy", aerospace_defense: "Aerospace & Defense", telecom: "Telecom",
 };
 
 export default function SectorsPage() {

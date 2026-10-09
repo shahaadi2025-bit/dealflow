@@ -7,7 +7,7 @@ from app.config import settings
 
 SYSTEM = """You are a senior M&A analyst writing an investment memo. You will be given a JSON \
 payload of ALREADY-COMPUTED financial, valuation and screening data. Use ONLY the numbers in \
-that JSON — never invent, estimate, or recall outside figures. If a number is not present, say \
+that JSON - never invent, estimate, or recall outside figures. If a number is not present, say \
 data is unavailable rather than guessing. Write in a sober, analytical tone with no hype.
 
 Return the memo as JSON with these string fields: executive_summary, business_overview, \

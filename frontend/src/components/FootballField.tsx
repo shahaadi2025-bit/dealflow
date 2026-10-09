@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 import { ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip, Cell, ReferenceLine } from "recharts";
 import { motion } from "framer-motion";
 import { FootballBar } from "@/lib/api";
