@@ -5,7 +5,7 @@ from collections import Counter
 from datetime import datetime, timezone
 
 from app.data.sectors import SECTOR_META
-from app.news import feeds
+from app.news import feeds, gdelt
 from app.news.analysis import enrich, strip_source_suffix
 
 log = logging.getLogger("news")
@@ -56,6 +56,14 @@ def dedupe(items: list[dict]) -> list[dict]:
     return kept
 
 
+def _gdelt_fallback(query: str, timespan: str) -> list[dict]:
+    try:
+        return gdelt.gdelt_news(query, timespan)
+    except Exception as e:  # pragma: no cover
+        log.warning("gdelt fallback failed: %s", e)
+        return []
+
+
 def _finish(items: list[dict]) -> list[dict]:
     out = []
     for it in items:
@@ -75,6 +83,8 @@ def market_news(limit: int = 60, sector: str | None = None, sentiment: str | Non
     if sector and sector in SECTOR_META:
         jobs.append(lambda: feeds.google_news(f"({SECTOR_META[sector]['q']}) AND (stocks OR earnings OR acquisition)", "3d", 600))
     flat = [i for lst in feeds.fetch_many(jobs) for i in lst]
+    if not flat:  # every RSS source unreachable: fall back to GDELT
+        flat = _gdelt_fallback("stock market OR earnings OR acquisition", "1d")
     items = _finish(dedupe(flat))
     if sector:
         items = [i for i in items if sector in i["sectors"]]
@@ -142,6 +152,8 @@ def live_deals(sector: str | None = None, days: int = 7, limit: int = 80) -> dic
             queries.append(f"({m['q']}) AND (acquire OR acquisition OR merger OR takeover)")
     jobs = [lambda q=q: feeds.google_news(q, when, 600) for q in queries]
     flat = [i for lst in feeds.fetch_many(jobs) for i in lst]
+    if not flat:
+        flat = _gdelt_fallback('(acquire OR acquisition OR merger OR takeover OR buyout) (billion OR million)', f"{max(1, min(days, 30))}d")
     items = [i for i in _finish(dedupe(flat)) if i["is_deal"]]
     if sector:
         for i in items:

@@ -14,6 +14,9 @@ import { RevenueChart } from "@/components/RevenueChart";
 import { SectorBenchmark } from "@/components/SectorBenchmark";
 import { CompanyNotes } from "@/components/CompanyNotes";
 import { SimilarCompanies } from "@/components/SimilarCompanies";
+import { PriceChart } from "@/components/PriceChart";
+import { PotentialBuyers } from "@/components/PotentialBuyers";
+import { LboPanel } from "@/components/LboPanel";
 import { NewsPanel } from "@/components/NewsPanel";
 import { PipelineButton } from "@/components/PipelineButton";
 import { addToPipeline, removeFromPipeline, isInPipeline } from "@/lib/pipeline";
@@ -237,6 +240,7 @@ function CompanyInner() {
             <StatCell label="Enterprise value" value={fmtMoney(v.dcf.ev)} numeric={v.dcf.ev} format={(x) => fmtMoney(x)} />
             <StatCell label="Terminal value share of EV" value={v.dcf.tv_share != null ? fmtPct(v.dcf.tv_share) : "-"} />
           </div>
+          <PriceChart ticker={c.ticker} />
           <FootballField bars={v.football} currentPrice={c.price} />
           <RevenueChart history={c.history} />
           {c.sector && (
@@ -314,6 +318,11 @@ function CompanyInner() {
             View SEC EDGAR filings for {c.ticker} -&gt;
           </a>
         </div>
+      </div>
+
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
+        <PotentialBuyers ticker={c.ticker} />
+        <LboPanel ticker={c.ticker} />
       </div>
 
       <div className="mb-6">

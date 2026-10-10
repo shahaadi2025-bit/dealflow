@@ -1,36 +1,32 @@
-name: Refresh data snapshot
+name: Collect deals
 
 on:
   schedule:
-    - cron: "0 6 * * *"
+    - cron: "15 */4 * * *"
   workflow_dispatch: {}
 
 permissions:
   contents: write
 
 jobs:
-  refresh:
+  collect:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-
-      - name: Install backend dependencies
+      - name: Install
         working-directory: backend
         run: pip install -r requirements.txt
-
-      - name: Build snapshot (aborts without writing if Yahoo is blocking)
+      - name: Collect deals into history
         working-directory: backend
-        run: python -m app.scripts.build_snapshot
-
-      - name: Commit and push if changed
+        run: python -m app.scripts.collect_deals
+      - name: Commit if changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add backend/data/snapshot.json
-          git diff --cached --quiet || git commit -m "Auto-refresh data snapshot [skip ci]"
+          git add backend/data/deals_history.json
+          git diff --cached --quiet || git commit -m "Update deal history [skip ci]"
           git pull --rebase origin main
           git push

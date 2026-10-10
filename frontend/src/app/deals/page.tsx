@@ -4,6 +4,7 @@ import { useQuery } from "@tanstack/react-query";
 import { motion } from "framer-motion";
 import { Bar, BarChart, Cell, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
 import { ExternalLink } from "lucide-react";
+import Link from "next/link";
 import { PageFade } from "@/components/PageFade";
 import { DealCard } from "@/components/DealCard";
 import { LiveBadge } from "@/components/LiveBadge";
@@ -12,7 +13,7 @@ import { fmtPct, fmtX } from "@/lib/format";
 import { SECTOR_ORDER, sectorLabel } from "@/lib/sectors";
 import { fmtDealValue, timeAgo } from "@/lib/time";
 
-type Tab = "live" | "filings" | "comps";
+type Tab = "live" | "filings" | "league" | "comps";
 const STATUSES = ["all", "announced", "rumor", "completed", "terminated"] as const;
 
 export default function DealsPage() {
@@ -22,10 +23,11 @@ export default function DealsPage() {
       <h1 className="font-serif text-3xl text-ink mb-1.5">Deal wire</h1>
       <p className="text-dim text-[12px] mb-6 max-w-2xl">
         M&amp;A headlines across all sectors as they are reported, official SEC filings that signal a deal,
-        and the historical comparables behind the scoring model.
+        and the historical comparables behind the scoring model.{" "}
+        <Link href="/alerts" className="text-signal hover:underline">Set up deal alerts</Link>
       </p>
       <div className="flex border border-line w-fit mb-6">
-        {([["live", "Live deals"], ["filings", "SEC filings"], ["comps", "Comparables"]] as [Tab, string][]).map(([k, label]) => (
+        {([["live", "Live deals"], ["filings", "SEC filings"], ["league", "League table"], ["comps", "Comparables"]] as [Tab, string][]).map(([k, label]) => (
           <button key={k} onClick={() => setTab(k)}
             className={`px-4 py-2 text-[12px] transition-colors focus-ring ${tab === k ? "bg-signal text-bg" : "text-dim hover:text-ink"}`}>
             {label}
@@ -34,6 +36,7 @@ export default function DealsPage() {
       </div>
       {tab === "live" && <LiveDealsTab />}
       {tab === "filings" && <FilingsTab />}
+      {tab === "league" && <LeagueTab />}
       {tab === "comps" && <ComparablesTab />}
     </PageFade>
   );
@@ -237,6 +240,52 @@ function ComparablesTab() {
               </div>
             </motion.div>
           ))}
+        </div>
+      )}
+    </div>
+  );
+}
+
+
+function LeagueTab() {
+  const [by, setBy] = useState<"acquirer" | "target">("acquirer");
+  const hist = useQuery({ queryKey: ["deal-history"], queryFn: () => api.dealsHistory(), staleTime: 300_000 });
+  const league = useQuery({ queryKey: ["deal-league", by], queryFn: () => api.dealsLeague(by), staleTime: 300_000 });
+  const total = hist.data?.summary.total ?? 0;
+  const max = Math.max(1, ...(league.data?.rows ?? []).map((r) => r.value_musd || r.count));
+  return (
+    <div>
+      <p className="text-dim text-[12px] mb-4 max-w-2xl">
+        Every deal the wire has detected is archived automatically every few hours, building a searchable record over time.
+        {total > 0 ? ` ${total} deals archived so far.` : " The archive fills as the collector runs."}
+      </p>
+      <div className="flex border border-line w-fit mb-4">
+        {(["acquirer", "target"] as const).map((k) => (
+          <button key={k} onClick={() => setBy(k)} aria-pressed={by === k}
+            className={`px-4 py-2 text-[12px] capitalize focus-ring ${by === k ? "bg-surface text-ink" : "text-dim hover:text-ink"}`}>Top {k}s</button>
+        ))}
+      </div>
+      {league.data && league.data.rows.length === 0 && <div className="glass p-6 text-[12px] text-dim">No archived deals with named parties yet.</div>}
+      <div className="grid gap-2 mb-8">
+        {league.data?.rows.map((r, i) => (
+          <div key={r.name} className="glass p-3 flex items-center gap-3">
+            <span className="text-dim text-[11px] w-5 tabular-nums">{i + 1}</span>
+            <div className="min-w-0 flex-1">
+              <div className="flex justify-between gap-2 text-[13px]"><span className="text-ink truncate">{r.name}</span>
+                <span className="text-dim tabular-nums shrink-0">{r.count} deal{r.count > 1 ? "s" : ""}{r.value_musd ? ` - ${fmtDealValue(r.value_musd)}` : ""}</span></div>
+              <div className="h-1.5 mt-1.5 rounded-full bg-line/40 overflow-hidden"><div className="h-full rounded-full bg-signal" style={{ width: `${((r.value_musd || r.count) / max) * 100}%` }} /></div>
+            </div>
+          </div>
+        ))}
+      </div>
+      {hist.data && hist.data.items.length > 0 && (
+        <div className="glass overflow-x-auto">
+          <table className="w-full min-w-[560px] text-[12px]"><thead><tr className="text-dim text-[11px] border-b border-line">
+            <th className="text-left font-normal p-3">Date</th><th className="text-left font-normal p-3">Deal</th><th className="text-left font-normal p-3">Status</th><th className="text-right font-normal p-3">Value</th></tr></thead>
+            <tbody>{hist.data.items.slice(0, 60).map((d) => (
+              <tr key={d.id} className="border-b border-line/50"><td className="p-3 text-dim whitespace-nowrap">{(d.published || "").slice(0, 10)}</td>
+                <td className="p-3"><a href={d.link} target="_blank" rel="noopener noreferrer" className="text-ink hover:text-signal">{d.acquirer && d.target ? `${d.acquirer} \u2192 ${d.target}` : d.title}</a></td>
+                <td className="p-3 text-dim capitalize">{d.status}</td><td className="p-3 text-right tabular-nums">{fmtDealValue(d.value_musd)}</td></tr>))}</tbody></table>
         </div>
       )}
     </div>

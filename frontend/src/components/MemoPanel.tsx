@@ -3,6 +3,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Sparkles, Download, Loader2, AlertTriangle, Copy, Check } from "lucide-react";
 import { Memo } from "@/lib/api";
+import { encodeMemo } from "@/lib/share";
 
 const SECTIONS: { key: keyof Memo; label: string }[] = [
   { key: "executive_summary", label: "Executive summary" },
@@ -30,6 +31,13 @@ export function MemoPanel({ onGenerate, isPending, isError, error, memo, company
       setCopied(true);
       setTimeout(() => setCopied(false), 1500);
     });
+  };
+
+  const [linked, setLinked] = useState(false);
+  const copyLink = () => {
+    if (!memo) return;
+    const url = window.location.origin + encodeMemo({ company: companyName, memo: memo as unknown as Record<string, string> });
+    navigator.clipboard.writeText(url).then(() => { setLinked(true); setTimeout(() => setLinked(false), 1500); });
   };
 
   const downloadPdf = async () => {
@@ -72,6 +80,10 @@ export function MemoPanel({ onGenerate, isPending, isError, error, memo, company
               <button onClick={copyMarkdown} className="border border-line px-4 py-2 text-[12px] text-ink hover:border-signal transition-colors focus-ring flex items-center gap-1.5">
                 {copied ? <Check size={13} className="text-up" /> : <Copy size={13} />}
                 <span className="hidden sm:inline">{copied ? "Copied!" : "Copy as Markdown"}</span>
+              </button>
+              <button onClick={copyLink} className="border border-line px-4 py-2 text-[12px] text-ink hover:border-signal transition-colors focus-ring flex items-center gap-1.5">
+                {linked ? <Check size={13} className="text-up" /> : <Copy size={13} />}
+                <span className="hidden sm:inline">{linked ? "Link copied!" : "Share link"}</span>
               </button>
               <button onClick={downloadPdf} className="border border-line px-4 py-2 text-[12px] text-ink hover:border-signal transition-colors focus-ring flex items-center gap-1.5">
                 <Download size={13} />

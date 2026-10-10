@@ -2,9 +2,9 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
-import { X, Download } from "lucide-react";
+import { X, Download, Upload } from "lucide-react";
 import { PageFade } from "@/components/PageFade";
-import { getPipeline, updateStage, removeFromPipeline, STAGES, PipelineEntry, PipelineStage } from "@/lib/pipeline";
+import { getPipeline, setPipeline, updateStage, removeFromPipeline, STAGES, PipelineEntry, PipelineStage } from "@/lib/pipeline";
 
 export default function PipelinePage() {
   const [entries, setEntries] = useState<PipelineEntry[]>([]);
@@ -33,6 +33,25 @@ export default function PipelinePage() {
     URL.revokeObjectURL(url);
   };
 
+  const exportJson = () => {
+    const blob = new Blob([JSON.stringify({ app: "dealflow", version: 1, pipeline: entries }, null, 1)], { type: "application/json" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url; a.download = "dealflow_pipeline.json"; a.click();
+    URL.revokeObjectURL(url);
+  };
+  const importJson = async (file: File | undefined) => {
+    if (!file) return;
+    try {
+      const data = JSON.parse(await file.text());
+      const list: PipelineEntry[] = (data.pipeline ?? data).filter((e: PipelineEntry) => e && typeof e.ticker === "string" && typeof e.stage === "string");
+      const merged = [...getPipeline()];
+      list.forEach((e) => { if (!merged.some((m) => m.ticker === e.ticker)) merged.push({ ticker: e.ticker, name: e.name || e.ticker, stage: e.stage, addedAt: e.addedAt || new Date().toISOString() }); });
+      setPipeline(merged);
+      setEntries(getPipeline());
+    } catch { alert("That file is not a DealFlow pipeline export."); }
+  };
+
   return (
     <PageFade>
       <div className="flex items-center justify-between mb-2">
@@ -40,6 +59,17 @@ export default function PipelinePage() {
           <h1 className="font-serif text-3xl text-ink mb-2">Your pipeline</h1>
           <p className="text-dim text-[12px]">Saved locally in this browser. Add companies from any company page.</p>
         </div>
+        <div className="flex gap-2 flex-wrap">
+          <label className="border border-line px-3 py-2 text-[12px] text-dim hover:text-ink hover:border-signal transition-colors flex items-center gap-1.5 cursor-pointer">
+            <Upload size={13} />Import JSON
+            <input type="file" accept="application/json,.json" className="sr-only" onChange={(e) => { importJson(e.target.files?.[0]); e.target.value = ""; }} />
+          </label>
+          {entries.length > 0 && (
+            <button onClick={exportJson}
+              className="border border-line px-3 py-2 text-[12px] text-dim hover:text-ink hover:border-signal transition-colors flex items-center gap-1.5">
+              <Download size={13} />Backup JSON
+            </button>
+          )}
         {entries.length > 0 && (
           <button
             onClick={exportCsv}
@@ -49,6 +79,7 @@ export default function PipelinePage() {
             Export CSV
           </button>
         )}
+        </div>
       </div>
 
       {entries.length === 0 && (

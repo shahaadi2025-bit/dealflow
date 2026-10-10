@@ -12,8 +12,6 @@ import { TickerSearch } from "@/components/TickerSearch";
 import { ScreenerSkeleton } from "@/components/Skeleton";
 import { PageFade } from "@/components/PageFade";
 import { Term } from "@/components/Term";
-import { Lock } from "lucide-react";
-import { isPro, PRO_ONLY_SECTORS } from "@/lib/billing";
 import { SECTOR_LABELS, SECTOR_ORDER, SectorKey } from "@/lib/sectors";
 
 type SortKey = "score" | "market_cap" | "growth" | "gross_margin" | "fcf_margin" | "rule_of_40" | "ev_rev";
@@ -54,15 +52,6 @@ function ScreenerInner() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [mode, minGrowth, minFcf, minMcap, maxMcap]);
 
-  const [pro, setProState] = useState(false);
-  useEffect(() => {
-    const sync = () => setProState(isPro());
-    sync();
-    window.addEventListener("dealflow:pro-changed", sync);
-    return () => window.removeEventListener("dealflow:pro-changed", sync);
-  }, []);
-  const sectorLocked = PRO_ONLY_SECTORS.includes(mode) && !pro;
-
   const sectorQuery = useQuery({
     queryKey: ["screen", mode, minGrowth, minFcf, minMcap, maxMcap],
     queryFn: () =>
@@ -74,7 +63,7 @@ function ScreenerInner() {
         max_mcap: maxMcap ? Number(maxMcap) * 1e6 : undefined,
         limit: 40,
       }),
-    enabled: mode !== "custom" && !sectorLocked,
+    enabled: mode !== "custom",
   });
 
   const customMutation = useMutation({
@@ -184,7 +173,6 @@ function ScreenerInner() {
                   )}
                   <span className="flex items-center gap-1">
                     {key === "custom" ? "Custom list" : SECTOR_LABELS[key]}
-                    {PRO_ONLY_SECTORS.includes(key) && !pro && <Lock size={10} />}
                   </span>
                 </motion.button>
               ))}
@@ -264,18 +252,7 @@ function ScreenerInner() {
         )}
       </section>
 
-      {sectorLocked && (
-        <div className="py-16 text-center border border-signal/30 bg-signal/5 max-w-md mx-auto">
-          <Lock size={20} className="text-signal mx-auto mb-3" />
-          <p className="text-ink text-[14px] mb-1">{SECTOR_LABELS[mode]} is a Pro sector</p>
-          <p className="text-dim text-[12px] mb-4">Upgrade to unlock Healthcare, Cybersecurity, Cloud Infra, Consumer, and Media.</p>
-          <Link href="/#pricing" className="inline-block bg-signal text-bg px-4 py-2 text-[12px] font-medium hover:opacity-90 transition-opacity">
-            See Pro pricing
-          </Link>
-        </div>
-      )}
-
-      {!sectorLocked && isLoading && (
+      {isLoading && (
         <div>
           <p className="text-dim text-[12px] mb-4">
             {mode === "custom" ? "Screening your list..." : `Loading ${SECTOR_LABELS[mode]} universe...`}
@@ -284,14 +261,14 @@ function ScreenerInner() {
         </div>
       )}
 
-      {!sectorLocked && isError && (
+      {isError && (
         <div className="py-16 text-center border border-down/30 bg-down/5">
           <p className="text-down mb-1">Couldn&apos;t load the screener</p>
           <p className="text-dim text-[12px]">{(error as Error)?.message}</p>
         </div>
       )}
 
-      {!sectorLocked && !isLoading && !isError && rows.length === 0 && mode !== "custom" && (
+      {!isLoading && !isError && rows.length === 0 && mode !== "custom" && (
         <div className="py-16 text-center">
           <p className="text-dim">No companies matched these filters.</p>
           <p className="text-dim text-[12px] mt-1">Try loosening the filters, or search a specific ticker above.</p>

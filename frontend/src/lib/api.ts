@@ -123,4 +123,32 @@ export const api = {
   deals: () => req<{ deals: HistoricalDeal[] }>("/deals"),
   createCheckoutSession: () => req<{ url: string }>("/billing/create-checkout-session", { method: "POST" }),
   verifySession: (sessionId: string) => req<{ paid: boolean }>(`/billing/verify-session?session_id=${encodeURIComponent(sessionId)}`),
+  pricesFor: (ticker: string, period = "1y") =>
+    req<{ ticker: string; period: string; prices: { date: string; close: number }[] }>(`/company/${ticker}/prices?period=${period}`),
+  buyers: (ticker: string) => req<{ ticker: string; ev: number; buyers: Buyer[] }>(`/company/${ticker}/buyers`),
+  lbo: (ticker: string, body: Record<string, number | null>) =>
+    req<LboResult>(`/valuate/${ticker}/lbo`, { method: "POST", body: JSON.stringify(body) }),
+  dealsHistory: (sector?: string) =>
+    req<DealHistory>(`/deals/history?limit=200${sector ? `&sector=${encodeURIComponent(sector)}` : ""}`),
+  dealsLeague: (by: "acquirer" | "target") => req<{ by: string; rows: LeagueRow[] }>(`/deals/league?by=${by}`),
+  dataHealth: () => req<{ companies: number; snapshot_as_of: string | null; snapshot_file_age_hours: number | null; deals_history: number }>("/health/data"),
 };
+
+export type Buyer = {
+  ticker: string; name: string; score: number; market_cap: number; cash: number;
+  affordability: number; size_ratio: number; reasons: string[];
+};
+export type LboResult = {
+  feasible: boolean; reason?: string; entry_multiple?: number; exit_multiple?: number; debt?: number; equity?: number;
+  exit_ev?: number; exit_equity?: number; moic?: number; irr?: number; max_ev_for_20pct_irr?: number | null;
+  meets_20pct?: boolean; entry_ev?: number; ebitda?: number; schedule?: { year: number; ebitda: number; debt: number; interest: number }[];
+};
+export type DealRecord = {
+  id: string; title: string; link: string; source: string | null; published: string | null; status: string | null;
+  type: string | null; value_musd: number | null; acquirer: string | null; target: string | null; tickers: string[]; sectors: string[];
+};
+export type DealHistory = {
+  summary: { total: number; disclosed_value_musd: number; by_sector: { sector: string; count: number; value_musd: number }[] };
+  items: DealRecord[];
+};
+export type LeagueRow = { name: string; count: number; value_musd: number };

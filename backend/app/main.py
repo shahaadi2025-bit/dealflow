@@ -9,7 +9,10 @@ from slowapi.errors import RateLimitExceeded
 from starlette.requests import Request
 
 from app.config import settings
-from app.data.fetch import DataError, get_financials
+from app.data.fetch import DataError, get_financials, price_history, load_snapshot, SNAPSHOT_PATH
+from app.news import history as deal_history
+from app.valuation.lbo import lbo as run_lbo
+from app.valuation.buyers import potential_buyers
 from app.data.universe import UNIVERSES, sector_of
 from app.screening.service import screen
 from app.screening.custom import screen_custom
@@ -32,6 +35,18 @@ app.state.limiter = limiter
 app.add_exception_handler(RateLimitExceeded, _rate_limit_exceeded_handler)
 app.add_middleware(CORSMiddleware, allow_origins=settings.cors_origins, allow_credentials=True,
                     allow_methods=["*"], allow_headers=["*"])
+
+
+@app.middleware("http")
+async def cache_headers(request, call_next):
+    resp = await call_next(request)
+    path = request.url.path
+    if request.method == "GET" and resp.status_code == 200 and "cache-control" not in resp.headers:
+        if path.startswith(("/news", "/deals", "/market")):
+            resp.headers["Cache-Control"] = "public, max-age=30, stale-while-revalidate=120"
+        elif path.startswith(("/sectors", "/screen", "/tickers")):
+            resp.headers["Cache-Control"] = "public, max-age=300"
+    return resp
 
 
 @app.api_route("/health", methods=["GET", "HEAD"])
@@ -175,6 +190,78 @@ def deals_filings(request: Request, limit: int = Query(60, ge=1, le=150)):
 @limiter.limit("60/minute")
 def market_tape(request: Request):
     return news_service.market_tape()
+
+
+@app.get("/deals/history")
+@limiter.limit("30/minute")
+def deals_history(request: Request, limit: int = Query(100, ge=1, le=500), sector: str | None = None):
+    recs = deal_history.load()
+    if sector:
+        recs = [r for r in recs if sector in (r.get("sectors") or [])]
+    return {"summary": deal_history.summary(recs), "items": recs[:limit]}
+
+
+@app.get("/deals/league")
+@limiter.limit("30/minute")
+def deals_league(request: Request, by: str = Query("acquirer", pattern="^(acquirer|target)$")):
+    return {"by": by, "rows": deal_history.league(deal_history.load(), by)}
+
+
+@app.get("/health/data")
+def health_data():
+    import os, time as _t
+    snap = load_snapshot()
+    age = None
+    try:
+        age = round((_t.time() - os.stat(SNAPSHOT_PATH).st_mtime) / 3600, 1)
+    except OSError:
+        pass
+    dates = sorted({f.as_of for f in snap.values() if f.as_of})
+    return {"companies": len(snap), "snapshot_as_of": dates[-1] if dates else None, "snapshot_file_age_hours": age,
+            "deals_history": len(deal_history.load())}
+
+
+@app.get("/company/{ticker}/prices")
+@limiter.limit("30/minute")
+def company_prices(request: Request, ticker: str, period: str = Query("1y", pattern="^(3mo|6mo|1y|2y|5y)$")):
+    return {"ticker": ticker.upper(), "period": period, "prices": price_history(ticker, period)}
+
+
+@app.get("/company/{ticker}/buyers")
+@limiter.limit("15/minute")
+def company_buyers(request: Request, ticker: str):
+    try:
+        f = get_financials(ticker)
+    except DataError as e:
+        raise HTTPException(404, str(e))
+    return {"ticker": f.ticker, "ev": f.ev, "buyers": potential_buyers(f)}
+
+
+class LboRequest(BaseModel):
+    leverage: float = 5.0
+    growth: float = 0.08
+    margin_expansion: float = 0.0
+    exit_multiple: float | None = None
+    years: int = 5
+    interest: float = 0.09
+    premium: float = 0.30
+
+
+@app.post("/valuate/{ticker}/lbo")
+@limiter.limit("20/minute")
+def lbo_endpoint(request: Request, ticker: str, body: LboRequest = LboRequest()):
+    try:
+        f = get_financials(ticker)
+    except DataError as e:
+        raise HTTPException(404, str(e))
+    if not f.ebitda or f.ebitda <= 0 or not f.revenue:
+        raise HTTPException(422, "LBO needs positive EBITDA; this company is not a typical LBO candidate")
+    ev = f.ev + f.market_cap * body.premium
+    res = run_lbo(f.ebitda, f.revenue, ev, leverage=max(0.5, min(body.leverage, 8)), growth=max(-0.2, min(body.growth, 0.4)),
+                  margin_expansion=body.margin_expansion, exit_multiple=body.exit_multiple,
+                  years=max(3, min(body.years, 7)), interest=max(0.03, min(body.interest, 0.2)))
+    res.update(ticker=f.ticker, entry_ev=ev, premium=body.premium, ebitda=f.ebitda)
+    return res
 
 
 @app.get("/deals")

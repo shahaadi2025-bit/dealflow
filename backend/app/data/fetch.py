@@ -29,11 +29,26 @@ def _num(x):
         return None
 
 
+_SNAP: dict = {"key": None, "data": {}}
+
+
 def load_snapshot() -> dict[str, Financials]:
-    if not SNAPSHOT_PATH.exists():
+    """Parsed snapshot, cached until the file's mtime changes; a corrupt file degrades to empty."""
+    try:
+        st = SNAPSHOT_PATH.stat()
+    except OSError:
         return {}
-    raw = json.loads(SNAPSHOT_PATH.read_text())
-    return {k: Financials.from_dict(v) for k, v in raw.items()}
+    key = (st.st_mtime_ns, st.st_size)
+    if _SNAP["key"] == key:
+        return _SNAP["data"]
+    try:
+        raw = json.loads(SNAPSHOT_PATH.read_text(encoding="utf-8-sig"))
+        data = {k: Financials.from_dict(v) for k, v in raw.items()}
+    except Exception as e:
+        log.error("snapshot unreadable: %s", e)
+        data = {}
+    _SNAP.update(key=key, data=data)
+    return data
 
 
 def fetch_live(ticker: str) -> Financials:
@@ -58,16 +73,6 @@ def fetch_live(ticker: str) -> Financials:
                     history.sort(key=lambda r: r["year"])
             except Exception:
                 pass
-            price_history = []
-            try:
-                hist = tk.history(period="6mo", interval="1wk")
-                if hist is not None and not hist.empty:
-                    for idx, row in hist.iterrows():
-                        c = _num(row.get("Close"))
-                        if c:
-                            price_history.append({"date": idx.strftime("%Y-%m-%d"), "close": round(c, 2)})
-            except Exception:
-                pass
             return Financials(
                 ticker=t, name=info.get("shortName") or t, price=price, market_cap=mcap,
                 shares=_num(info.get("sharesOutstanding")) or mcap / price,
@@ -76,7 +81,7 @@ def fetch_live(ticker: str) -> Financials:
                 fcf=_num(info.get("freeCashflow")), debt=_num(info.get("totalDebt")) or 0.0,
                 cash=_num(info.get("totalCash")) or 0.0, beta=_num(info.get("beta")),
                 hi52=_num(info.get("fiftyTwoWeekHigh")), lo52=_num(info.get("fiftyTwoWeekLow")),
-                history=history, price_history=price_history, as_of=date.today().isoformat(),
+                history=history, as_of=date.today().isoformat(),
             )
         except DataError:
             raise
@@ -84,6 +89,31 @@ def fetch_live(ticker: str) -> Financials:
             last = e
             time.sleep(1.5 * (attempt + 1))
     raise DataError(f"Live fetch failed for {t}: {last}")
+
+
+_PH: dict = {}
+
+
+def price_history(ticker: str, period: str = "1y") -> list[dict]:
+    """Daily closes for the chart; lazy, cached 1h, fail-soft (returns [] when Yahoo is unreachable)."""
+    t = ticker.upper()
+    hit = _PH.get((t, period))
+    if hit and time.time() - hit[0] < 3600:
+        return hit[1]
+    out: list[dict] = []
+    try:
+        import yfinance as yf
+        h = yf.Ticker(t).history(period=period, interval="1d")
+        if h is not None and not h.empty:
+            for idx, row in h.iterrows():
+                c = _num(row.get("Close"))
+                if c:
+                    out.append({"date": idx.strftime("%Y-%m-%d"), "close": round(c, 2)})
+    except Exception as e:
+        log.info("price history failed %s: %s", t, e)
+    if out:
+        _PH[(t, period)] = (time.time(), out)
+    return out
 
 
 def get_financials(ticker: str) -> Financials:
