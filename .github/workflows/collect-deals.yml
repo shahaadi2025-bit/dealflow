@@ -22,6 +22,14 @@ jobs:
       - name: Collect deals into history
         working-directory: backend
         run: python -m app.scripts.collect_deals
+      - name: Email digest (skipped unless SMTP secrets are set)
+        working-directory: backend
+        run: python -m app.scripts.email_digest
+        env:
+          SMTP_HOST: ${{ secrets.SMTP_HOST }}
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASS: ${{ secrets.SMTP_PASS }}
+          DIGEST_TO: ${{ secrets.DIGEST_TO }}
       - name: Commit if changed
         run: |
           git config user.name "github-actions[bot]"

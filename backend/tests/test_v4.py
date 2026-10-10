@@ -59,3 +59,26 @@ def test_endpoints():
     assert c.get("/deals/history").status_code == 200
     assert c.get("/deals/league?by=target").status_code == 200
     assert c.get("/deals/league?by=bad").status_code == 422
+
+
+def test_digest_skips_without_config(monkeypatch):
+    from app.scripts import email_digest as d
+    for k in ("SMTP_HOST", "SMTP_USER", "SMTP_PASS", "DIGEST_TO"):
+        monkeypatch.delenv(k, raising=False)
+    assert d.main() == 0
+    assert d.build([]) == ""
+    assert "http://x" in d.build([{"title": "t", "link": "http://x", "status": "announced"}])
+
+
+def test_breaker_skips_live_when_cooling(monkeypatch):
+    import time
+    from app.data import fetch as F
+    snap = F.Financials(ticker="ZZZ", name="Z", price=1.0, market_cap=10.0, shares=10.0)
+    monkeypatch.setattr(F, "load_snapshot", lambda: {"ZZZ": snap})
+    F._CACHE.pop("ZZZ", None)
+    F._BREAKER.update(fails=5, until=time.time() + 60)
+    called = []
+    monkeypatch.setattr(F, "fetch_live", lambda t: called.append(t))
+    assert F.get_financials("ZZZ") is snap and not called
+    F._BREAKER.update(fails=0, until=0.0)
+    F._CACHE.pop("ZZZ", None)

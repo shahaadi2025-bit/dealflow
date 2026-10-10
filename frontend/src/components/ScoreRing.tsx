@@ -12,7 +12,7 @@ export function ScoreRing({ score, size = 96, label = "Fit score" }: { score: nu
       <svg viewBox="0 0 100 100" width={size} height={size} className="-rotate-90">
         <defs>
           <linearGradient id={`s${id}`} x1="0" y1="0" x2="1" y2="1">
-            <stop stopColor="rgb(56 189 248)" /><stop offset="0.5" stopColor="rgb(139 124 255)" /><stop offset="1" stopColor="rgb(255 138 61)" />
+            <stop stopColor="rgb(255 236 170)" /><stop offset="0.5" stopColor="rgb(230 190 80)" /><stop offset="1" stopColor="rgb(176 124 24)" />
           </linearGradient>
         </defs>
         <circle cx="50" cy="50" r={r} fill="none" stroke="rgb(var(--color-line))" strokeOpacity="0.7" strokeWidth="8" />

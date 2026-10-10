@@ -6,7 +6,9 @@ import { useQuery } from "@tanstack/react-query";
 import { api } from "@/lib/api";
 import { SECTOR_ORDER, SECTOR_LABELS, SECTOR_BLURBS } from "@/lib/sectors";
 import { fmtDealValue, timeAgo } from "@/lib/time";
-import { DealNetwork } from "@/components/DealNetwork";
+import { CandleField } from "@/components/CandleField";
+import { SectorHeatmap } from "@/components/SectorHeatmap";
+import { DealVolume } from "@/components/DealVolume";
 import { ScoreRing } from "@/components/ScoreRing";
 import { SectorIcon, sectorHue } from "@/components/SectorIcon";
 import { AnimatedNumber } from "@/components/AnimatedNumber";
@@ -35,8 +37,10 @@ export default function LandingPage() {
       <Hero />
       <Ribbon />
       <Bento />
+      <SectorHeatmap />
       <Sectors />
       <LiveWire />
+      <HowItWorks />
       <Pricing />
       <FinalCta />
     </div>
@@ -48,7 +52,7 @@ function Hero() {
   return (
     <section className="relative -mx-4 sm:-mx-6 px-4 sm:px-6 pt-10 pb-4 sm:pt-16 overflow-hidden">
       <div className="absolute inset-x-0 top-0 h-[560px] sm:h-[620px] opacity-90 [mask-image:radial-gradient(ellipse_75%_70%_at_50%_45%,#000_35%,transparent_85%)]">
-        <DealNetwork />
+        <CandleField />
       </div>
       <div className="pointer-events-none absolute inset-x-0 top-0 h-[560px] sm:h-[620px] bg-[radial-gradient(ellipse_42%_40%_at_50%_54%,rgb(var(--color-bg)/0.9),rgb(var(--color-bg)/0.55)_55%,transparent_80%)]" />
       <div className="relative mx-auto max-w-4xl text-center pt-24 sm:pt-32 pb-16 sm:pb-24">
@@ -74,7 +78,7 @@ function Hero() {
             <Radio size={15} className="text-signal" /> Watch live deals
           </Link>
         </motion.div>
-        <p className="text-dim/70 text-[10.5px] mt-10">Hero animation is illustrative, not live data.</p>
+        <p className="text-dim/70 text-[10.5px] mt-10">The chart behind the headline is illustrative, not live data.</p>
       </div>
     </section>
   );
@@ -241,6 +245,7 @@ function LiveWire() {
         <h2 className="font-serif text-2xl sm:text-3xl text-ink flex items-center gap-3"><span className="live-dot" /> On the wire right now</h2>
         <Link href="/deals" className="text-signal text-[13px] hover:underline inline-flex items-center gap-1">All deals <ArrowRight size={13} /></Link>
       </div>
+      <DealVolume />
       <div className="space-y-2.5">
         {items.map((it) => (
           <a key={it.link} href={it.link} target="_blank" rel="noopener noreferrer" className="glow-card glass flex items-start gap-3 p-4">
@@ -254,6 +259,30 @@ function LiveWire() {
         ))}
       </div>
     </motion.section>
+  );
+}
+
+/* ----------------------------------------------------------- how it works */
+function HowItWorks() {
+  const steps = [
+    ["1", "Screen", "Pick a sector and rank every company by growth, margins and valuation."],
+    ["2", "Value", "Run a DCF, comps and an LBO check, then see who could realistically afford it."],
+    ["3", "Track", "Follow live deals and news, set alerts, and keep a pipeline of targets."],
+    ["4", "Share", "Generate an investment memo and send it as a link or PDF."],
+  ];
+  return (
+    <section className="mb-24" aria-labelledby="how-h">
+      <motion.h2 {...reveal} id="how-h" className="font-serif text-3xl sm:text-5xl text-ink text-center mb-10">How it works</motion.h2>
+      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        {steps.map(([n, t, d]) => (
+          <motion.div key={n} {...reveal} className="glass p-5">
+            <div className="font-serif text-4xl text-signal mb-2">{n}</div>
+            <div className="text-ink text-[15px] mb-1">{t}</div>
+            <p className="text-dim text-[12.5px] leading-relaxed">{d}</p>
+          </motion.div>
+        ))}
+      </div>
+    </section>
   );
 }
 

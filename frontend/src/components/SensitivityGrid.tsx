@@ -9,9 +9,9 @@ export function SensitivityGrid({ waccs, tgs, grid, base }: {
   const min = Math.min(...flat), max = Math.max(...flat);
   const heat = (v: number) => {
     const t = (v - min) / (max - min || 1);
-    const r = Math.round(18 + t * (192 - 18));
-    const g = Math.round(22 + t * (138 - 22));
-    const b = Math.round(27 + t * (46 - 27));
+    const r = Math.round(40 + t * (230 - 40));
+    const g = Math.round(34 + t * (190 - 34));
+    const b = Math.round(18 + t * (80 - 18));
     return `rgb(${r},${g},${b})`;
   };
 
@@ -39,7 +39,7 @@ export function SensitivityGrid({ waccs, tgs, grid, base }: {
               <tr key={w}>
                 <td className="p-2 text-dim text-right pr-3 tabular-nums">{(w * 100).toFixed(1)}%</td>
                 {grid[i].map((v, j) => (
-                  <td key={j} className="p-2 tabular-nums border border-bg" style={{ background: v ? heat(v) : "#0B0E11", color: v ? "#0B0E11" : "#8B94A0" }}>
+                  <td key={j} className="p-2 tabular-nums border border-bg" style={{ background: v ? heat(v) : "rgb(var(--color-bg))", color: v ? "#0b0b0b" : "rgb(var(--color-dim))" }}>
                     {v ? fmtPrice(v) : "-"}
                   </td>
                 ))}

@@ -8,6 +8,8 @@ import { TrendingUp, TrendingDown, ArrowRight } from "lucide-react";
 import { api, ScreenRow } from "@/lib/api";
 import { fmtMoney, fmtPct, fmtX } from "@/lib/format";
 import { ScoreBar } from "@/components/ScoreBar";
+import { ScoreRing } from "@/components/ScoreRing";
+import { ValuationMap } from "@/components/ValuationMap";
 import { TickerSearch } from "@/components/TickerSearch";
 import { ScreenerSkeleton } from "@/components/Skeleton";
 import { PageFade } from "@/components/PageFade";
@@ -281,6 +283,9 @@ function ScreenerInner() {
         </div>
       )}
 
+      {rows.length > 0 && <ScreenerSummary rows={rows} />}
+      {rows.length > 0 && <ValuationMap rows={rows} />}
+
       {rows.length > 0 && (
         <div className="overflow-x-auto">
           <table className="w-full text-left border-collapse min-w-[860px]">
@@ -367,5 +372,30 @@ function ScreenerInner() {
         </div>
       )}
     </PageFade>
+  );
+}
+
+function median(v: number[]): number {
+  const a = [...v].sort((x, y) => x - y);
+  return a.length ? (a.length % 2 ? a[(a.length - 1) / 2] : (a[a.length / 2 - 1] + a[a.length / 2]) / 2) : 0;
+}
+
+function ScreenerSummary({ rows }: { rows: ScreenRow[] }) {
+  const top = [...rows].sort((a, b) => b.score - a.score)[0];
+  const g = median(rows.map((r) => r.growth)), m = median(rows.map((r) => r.ev_rev));
+  const K = ({ label, value }: { label: string; value: string }) => (
+    <div className="glass p-4"><div className="text-dim text-[11px] mb-1">{label}</div><div className="font-serif text-2xl text-ink tabular-nums">{value}</div></div>
+  );
+  return (
+    <div className="grid gap-3 grid-cols-2 lg:grid-cols-5 mb-6">
+      <Link href={`/company/${top.ticker}`} className="glass p-4 col-span-2 lg:col-span-2 flex items-center gap-4 hover:border-signal transition-colors">
+        <ScoreRing score={top.score} size={84} label="score" />
+        <div className="min-w-0"><div className="text-dim text-[11px]">Top-ranked target</div><div className="font-serif text-2xl text-ink">{top.ticker}</div>
+          <div className="text-dim text-[12px] truncate">{top.name}</div></div>
+      </Link>
+      <K label="Companies" value={String(rows.length)} />
+      <K label="Median growth" value={fmtPct(g)} />
+      <K label="Median EV/Revenue" value={fmtX(m)} />
+    </div>
   );
 }

@@ -32,3 +32,24 @@ jobs:
         working-directory: frontend
         env:
           NEXT_PUBLIC_API_URL: https://dealflow-d366.onrender.com
+  smoke:
+    runs-on: ubuntu-latest
+    needs: [frontend]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: npm install && npm run build
+        working-directory: frontend
+        env:
+          NEXT_PUBLIC_API_URL: http://localhost:9
+      - run: pip install playwright && playwright install --with-deps chromium
+      - run: |
+          (npx next start -p 3000 &) 
+          sleep 6
+          python tests/smoke.py
+        working-directory: frontend

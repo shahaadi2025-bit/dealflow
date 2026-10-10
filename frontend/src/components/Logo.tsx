@@ -13,9 +13,9 @@ export function Logo({ size = 22 }: { size?: number }) {
     >
       <defs>
         <linearGradient id={`g${id}`} x1="4" y1="4" x2="36" y2="36" gradientUnits="userSpaceOnUse">
-          <stop stopColor="rgb(56 189 248)" />
-          <stop offset="0.55" stopColor="rgb(139 124 255)" />
-          <stop offset="1" stopColor="rgb(255 138 61)" />
+          <stop stopColor="rgb(255 236 170)" />
+          <stop offset="0.55" stopColor="rgb(230 190 80)" />
+          <stop offset="1" stopColor="rgb(168 118 8)" />
         </linearGradient>
       </defs>
       <rect x="1.5" y="1.5" width="37" height="37" rx="11" fill={`url(#g${id})`} />

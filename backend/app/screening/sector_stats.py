@@ -1,5 +1,5 @@
-import statistics
-from app.data.fetch import get_many, load_snapshot
+import statistics, time
+from app.data.fetch import load_snapshot
 from app.data.universe import UNIVERSES
 from app.screening.features import compute_features
 
@@ -22,12 +22,8 @@ def sector_stats(sector: str) -> dict:
         if feat:
             feats.append(feat)
 
-    if missing:
-        live = get_many(missing)
-        for f in live.values():
-            feat = compute_features(f)
-            if feat:
-                feats.append(feat)
+    # Tickers absent from the snapshot are skipped, never fetched live: a sector-wide live fetch can
+    # block for minutes when Yahoo throttles, and the nightly snapshot refresh fills them in.
 
     def med(key):
         vals = [f[key] for f in feats if f.get(key) is not None]
@@ -44,5 +40,15 @@ def sector_stats(sector: str) -> dict:
     }
 
 
+_ALL: dict = {"t": 0.0, "key": None, "data": []}
+
+
 def all_sector_stats() -> list[dict]:
-    return [sector_stats(s) for s in UNIVERSES.keys()]
+    """Cached for 10 minutes (keyed on the loaded snapshot) since it only reads the snapshot."""
+    snap = load_snapshot()
+    key = id(snap)
+    if _ALL["key"] == key and time.time() - _ALL["t"] < 600:
+        return _ALL["data"]
+    data = [sector_stats(s) for s in UNIVERSES.keys()]
+    _ALL.update(t=time.time(), key=key, data=data)
+    return data

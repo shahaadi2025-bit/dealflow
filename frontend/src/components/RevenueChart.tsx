@@ -16,15 +16,15 @@ export function RevenueChart({ history }: { history: { year: number; revenue: nu
       <div className="text-dim text-[11px] mb-4">Revenue history</div>
       <ResponsiveContainer width="100%" height={160}>
         <BarChart data={history} margin={{ left: 0, right: 10 }}>
-          <XAxis dataKey="year" stroke="#8B94A0" tick={{ fontSize: 11, fontFamily: "var(--font-mono)" }} axisLine={{ stroke: "#242B33" }} tickLine={false} />
-          <YAxis stroke="#8B94A0" tick={{ fontSize: 11, fontFamily: "var(--font-mono)" }} axisLine={false} tickLine={false}
+          <XAxis dataKey="year" stroke="rgb(var(--color-dim))" tick={{ fontSize: 11, fontFamily: "var(--font-mono)" }} axisLine={{ stroke: "rgb(var(--color-line))" }} tickLine={false} />
+          <YAxis stroke="rgb(var(--color-dim))" tick={{ fontSize: 11, fontFamily: "var(--font-mono)" }} axisLine={false} tickLine={false}
             tickFormatter={(v) => fmtMoney(v, 0)} width={60} />
           <Tooltip
-            contentStyle={{ background: "#12161B", border: "1px solid #242B33", fontSize: 12, fontFamily: "var(--font-mono)" }}
-            labelStyle={{ color: "#EDEEF0" }}
+            contentStyle={{ background: "#12161B", border: "1px solid rgb(var(--color-line))", fontSize: 12, fontFamily: "var(--font-mono)" }}
+            labelStyle={{ color: "rgb(var(--color-ink))" }}
             formatter={(v: number) => [fmtMoney(v), "Revenue"]}
           />
-          <Bar dataKey="revenue" fill="#C08A2E" radius={[2, 2, 0, 0]} animationDuration={700} />
+          <Bar dataKey="revenue" fill="rgb(var(--color-signal))" radius={[2, 2, 0, 0]} animationDuration={700} />
         </BarChart>
       </ResponsiveContainer>
     </motion.div>

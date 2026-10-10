@@ -2,38 +2,38 @@
 @tailwind components;
 @tailwind utilities;
 
-/* DealFlow visual system: deep ultramarine base, tangerine signal, cyan/violet flows. */
+/* DealFlow visual system: true black, champagne-gold signal, warm ivory ink. */
 :root {
-  --color-bg: 8 13 44;
-  --color-surface: 17 26 70;
-  --color-line: 45 60 128;
-  --color-ink: 238 242 255;
-  --color-dim: 146 160 214;
-  --color-signal: 255 138 61;
+  --color-bg: 8 8 8;
+  --color-surface: 22 20 15;
+  --color-line: 66 57 36;
+  --color-ink: 250 246 234;
+  --color-dim: 172 162 136;
+  --color-signal: 230 190 80;
   --color-up: 52 211 153;
   --color-down: 255 107 107;
-  --color-cyan: 56 189 248;
-  --color-violet: 139 124 255;
-  --aurora-a: 56 120 255;
-  --aurora-b: 255 138 61;
-  --aurora-c: 139 92 246;
+  --color-cyan: 244 218 150;
+  --color-violet: 182 130 56;
+  --aurora-a: 200 150 40;
+  --aurora-b: 255 214 120;
+  --aurora-c: 120 80 20;
   color-scheme: dark;
 }
 
 :root[data-theme="light"] {
-  --color-bg: 242 245 255;
-  --color-surface: 255 255 255;
-  --color-line: 208 217 246;
-  --color-ink: 10 16 52;
-  --color-dim: 94 106 158;
-  --color-signal: 232 93 12;
+  --color-bg: 250 247 238;
+  --color-surface: 255 255 252;
+  --color-line: 226 213 176;
+  --color-ink: 26 21 10;
+  --color-dim: 120 106 72;
+  --color-signal: 168 118 8;
   --color-up: 5 150 105;
   --color-down: 220 38 38;
-  --color-cyan: 2 132 199;
-  --color-violet: 91 76 230;
-  --aurora-a: 120 160 255;
-  --aurora-b: 255 190 130;
-  --aurora-c: 190 160 255;
+  --color-cyan: 190 140 30;
+  --color-violet: 140 92 24;
+  --aurora-a: 230 190 90;
+  --aurora-b: 255 225 150;
+  --aurora-c: 210 170 90;
   color-scheme: light;
 }
 
@@ -49,7 +49,7 @@ body {
 h1, h2, h3, .font-serif { font-weight: 650; letter-spacing: -0.025em; }
 .tabular-nums { font-family: var(--font-mono), ui-monospace, monospace; font-variant-numeric: tabular-nums; letter-spacing: -0.02em; }
 
-.focus-ring:focus-visible, :focus-visible { outline: 2px solid rgb(var(--color-cyan)); outline-offset: 2px; }
+.focus-ring:focus-visible, :focus-visible { outline: 2px solid rgb(var(--color-signal)); outline-offset: 2px; }
 
 /* ---------- shape language: every bordered box is softly rounded ---------- */
 [class~="border"] { border-radius: 12px; }
@@ -64,7 +64,7 @@ main [class~="border"][class~="border-line"]:not(input):not(select):not(textarea
 
 /* primary buttons get the signal gradient */
 button.bg-signal, a.bg-signal {
-  background-image: linear-gradient(135deg, rgb(var(--color-signal)), rgb(255 84 120));
+  background-image: linear-gradient(135deg, rgb(250 224 140), rgb(var(--color-signal)) 55%, rgb(176 124 24));
   box-shadow: 0 10px 30px -12px rgb(var(--color-signal) / 0.8), inset 0 1px 0 rgb(255 255 255 / 0.25);
   border-radius: 999px;
   font-weight: 650;
@@ -161,3 +161,11 @@ button.bg-signal, a.bg-signal { transition: filter 0.15s ease, transform 0.15s e
   * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; animation-iteration-count: 1 !important; }
   .backdrop .blob { animation: none; }
 }
+
+
+/* finance: faint price wave drawn along the bottom of every page */
+.backdrop .pricewave { position: absolute; left: 0; right: 0; bottom: 0; width: 100%; height: 22vh; opacity: 0.55;
+  mask-image: linear-gradient(90deg, transparent, #000 15%, #000 85%, transparent); }
+.backdrop .pw-line { stroke-dasharray: 2400; stroke-dashoffset: 2400; animation: pwdraw 9s ease-out 0.4s forwards; opacity: 0.5; }
+@keyframes pwdraw { to { stroke-dashoffset: 0; } }
+@media (prefers-reduced-motion: reduce) { .backdrop .pw-line { animation: none; stroke-dashoffset: 0; } }

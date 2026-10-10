@@ -14,6 +14,8 @@ import { RevenueChart } from "@/components/RevenueChart";
 import { SectorBenchmark } from "@/components/SectorBenchmark";
 import { CompanyNotes } from "@/components/CompanyNotes";
 import { SimilarCompanies } from "@/components/SimilarCompanies";
+import { RangeBar } from "@/components/RangeBar";
+import { VerdictGauge } from "@/components/VerdictGauge";
 import { PriceChart } from "@/components/PriceChart";
 import { PotentialBuyers } from "@/components/PotentialBuyers";
 import { LboPanel } from "@/components/LboPanel";
@@ -184,6 +186,11 @@ function CompanyInner() {
           </div>
           <p className="text-dim text-[10px] mt-1.5 hidden sm:block">Press S to save to pipeline</p>
         </div>
+      </div>
+
+      <div className="grid gap-4 md:grid-cols-[1fr_auto] items-stretch mt-5">
+        <VerdictGauge price={c.price} fair={v.dcf.per_share} />
+        {c.lo52 && c.hi52 ? <div className="glass p-5 flex items-center"><RangeBar low={c.lo52} high={c.hi52} price={c.price} /></div> : null}
       </div>
 
       <div className="grid grid-cols-2 md:grid-cols-5 gap-3 my-6">

@@ -92,6 +92,7 @@ def fetch_live(ticker: str) -> Financials:
 
 
 _PH: dict = {}
+_BREAKER = {"fails": 0, "until": 0.0}  # circuit breaker: stop hammering Yahoo when it is blocking us
 
 
 def price_history(ticker: str, period: str = "1y") -> list[dict]:
@@ -122,8 +123,15 @@ def get_financials(ticker: str) -> Financials:
     if hit and time.time() - hit[0] < settings.cache_ttl:
         return hit[1]
     try:
+        if time.time() < _BREAKER["until"] and t in load_snapshot():
+            raise DataError("live source cooling down")
         f = fetch_live(t)
+        _BREAKER["fails"] = 0
     except DataError as e:
+        if "Live fetch failed" in str(e):
+            _BREAKER["fails"] += 1
+            if _BREAKER["fails"] >= 5:
+                _BREAKER["until"] = time.time() + 120
         snap = load_snapshot().get(t)
         if not snap:
             raise

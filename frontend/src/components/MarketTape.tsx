@@ -17,7 +17,7 @@ export function MarketTape() {
       <span className="text-dim">{q.label}</span>
       <span className="text-ink">{q.price.toLocaleString(undefined, { maximumFractionDigits: 2 })}</span>
       <span className={q.change_pct >= 0 ? "text-up" : "text-down"}>
-        {q.change_pct >= 0 ? "+" : ""}{q.change_pct.toFixed(2)}%
+        {q.change_pct >= 0 ? "\u25B2" : "\u25BC"} {Math.abs(q.change_pct).toFixed(2)}%
       </span>
     </span>
   ));
