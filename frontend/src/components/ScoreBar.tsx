@@ -12,9 +12,10 @@ export function ScoreBar({ score, drivers }: { score: number; drivers?: Driver[]
       onMouseEnter={() => setOpen(true)}
       onMouseLeave={() => setOpen(false)}
     >
-      <div className="h-1.5 flex-1 bg-line overflow-hidden rounded-sm">
+      <div className="h-1.5 flex-1 bg-line/60 overflow-hidden rounded-full">
         <motion.div
-          className="h-full bg-signal"
+          className="h-full rounded-full"
+          style={{ background: "linear-gradient(90deg, rgb(var(--color-cyan)), rgb(var(--color-violet)), rgb(var(--color-signal)))", boxShadow: "0 0 10px rgb(var(--color-signal) / 0.5)" }}
           initial={{ width: 0 }}
           animate={{ width: `${pct}%` }}
           transition={{ duration: 0.6, ease: "easeOut" }}

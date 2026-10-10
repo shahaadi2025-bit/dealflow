@@ -148,7 +148,7 @@ function LiveDealsTab() {
       {data && items.length === 0 && !isLoading && (
         <div className="glass p-6 text-[12px] text-dim">No deals match these filters. Try a longer window or clear the size filter.</div>
       )}
-      <div className="space-y-3 max-w-4xl">
+      <div className="grid gap-3 lg:grid-cols-2">
         {items.map((it) => <DealCard key={it.link} item={it} isNew={fresh.has(it.link)} />)}
       </div>
       <p className="text-dim text-[11px] mt-6 max-w-2xl leading-relaxed">

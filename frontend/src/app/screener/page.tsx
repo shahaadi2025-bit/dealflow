@@ -178,7 +178,7 @@ function ScreenerInner() {
                   {mode === key && (
                     <motion.div
                       layoutId="sector-pill"
-                      className="absolute inset-0 bg-signal -z-10"
+                      className="absolute inset-0 bg-signal rounded-[11px] -z-10"
                       transition={{ type: "spring", stiffness: 400, damping: 30 }}
                     />
                   )}

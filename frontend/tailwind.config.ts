@@ -13,9 +13,12 @@ const config: Config = {
         signal: "rgb(var(--color-signal) / <alpha-value>)",
         up: "rgb(var(--color-up) / <alpha-value>)",
         down: "rgb(var(--color-down) / <alpha-value>)",
+        cyan: "rgb(var(--color-cyan) / <alpha-value>)",
+        violet: "rgb(var(--color-violet) / <alpha-value>)",
       },
       fontFamily: {
-        serif: ["var(--font-serif)", "Georgia", "serif"],
+        sans: ["var(--font-sans)", "ui-sans-serif", "system-ui", "sans-serif"],
+        serif: ["var(--font-display)", "ui-sans-serif", "system-ui", "sans-serif"],
         mono: ["var(--font-mono)", "ui-monospace", "monospace"],
       },
     },

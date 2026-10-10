@@ -1,13 +1,15 @@
 import type { Metadata } from "next";
-import { Source_Serif_4, IBM_Plex_Mono } from "next/font/google";
+import { Bricolage_Grotesque, Manrope, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { Providers } from "./providers";
 import { SiteHeader } from "@/components/SiteHeader";
 import { ErrorBoundary } from "@/components/ErrorBoundary";
 import { CommandPalette } from "@/components/CommandPalette";
+import { Backdrop } from "@/components/Backdrop";
 
-const serif = Source_Serif_4({ subsets: ["latin"], variable: "--font-serif", weight: ["400", "600", "700"] });
-const mono = IBM_Plex_Mono({ subsets: ["latin"], variable: "--font-mono", weight: ["400", "500", "600"] });
+const display = Bricolage_Grotesque({ subsets: ["latin"], variable: "--font-display", weight: ["500", "600", "700", "800"] });
+const sans = Manrope({ subsets: ["latin"], variable: "--font-sans", weight: ["400", "500", "600", "700"] });
+const mono = JetBrains_Mono({ subsets: ["latin"], variable: "--font-mono", weight: ["400", "500", "600"] });
 
 export const metadata: Metadata = {
   title: "DealFlow - M&A Screener, Live Deals & News",
@@ -26,15 +28,16 @@ const THEME_INIT_SCRIPT = `
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${serif.variable} ${mono.variable}`}>
+    <html lang="en" className={`${display.variable} ${sans.variable} ${mono.variable}`}>
       <head>
         <script dangerouslySetInnerHTML={{ __html: THEME_INIT_SCRIPT }} />
       </head>
-      <body className="min-h-screen font-mono text-[13px] antialiased">
+      <body className="min-h-screen font-sans text-[14px] antialiased">
         <Providers>
+          <Backdrop />
           <CommandPalette />
           <SiteHeader />
-          <main className="mx-auto max-w-[1400px] px-6 py-8">
+          <main className="mx-auto max-w-[1400px] px-4 sm:px-6 py-8 relative">
             <ErrorBoundary>{children}</ErrorBoundary>
           </main>
           <footer className="mx-auto max-w-[1400px] px-6 py-10 text-dim text-xs border-t border-line mt-16">
