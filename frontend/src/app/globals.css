@@ -169,3 +169,11 @@ button.bg-signal, a.bg-signal { transition: filter 0.15s ease, transform 0.15s e
 .backdrop .pw-line { stroke-dasharray: 2400; stroke-dashoffset: 2400; animation: pwdraw 9s ease-out 0.4s forwards; opacity: 0.5; }
 @keyframes pwdraw { to { stroke-dashoffset: 0; } }
 @media (prefers-reduced-motion: reduce) { .backdrop .pw-line { animation: none; stroke-dashoffset: 0; } }
+
+/* never let an off-screen chart tooltip create sideways page scroll on phones */
+html, body { overflow-x: clip; }
+.recharts-tooltip-wrapper { max-width: min(320px, 92vw); }
+
+/* inputs show their own border highlight instead of a second outline ring */
+input:focus-visible, select:focus-visible, textarea:focus-visible { outline: none; }
+input:focus-visible[class*="border"], select:focus-visible, textarea:focus-visible { border-color: rgb(var(--color-signal)); }

@@ -116,8 +116,8 @@ function ScreenerInner() {
       onClick={() => toggleSort(k)}
       className="py-2 pr-4 font-normal text-right cursor-pointer select-none hover:text-ink transition-colors"
     >
-      <span onClick={(e) => e.stopPropagation()}><Term>{label}</Term></span>
-      <span onClick={() => toggleSort(k)}>{sortKey === k && <span className="text-signal ml-1">{sortDir === "desc" ? "v" : "^"}</span>}</span>
+      <Term align="right">{label}</Term>
+      {sortKey === k && <span className="text-signal ml-1">{sortDir === "desc" ? "\u25BC" : "\u25B2"}</span>}
     </th>
   );
 
@@ -300,7 +300,7 @@ function ScreenerInner() {
                 <Header label="Rule of 40" k="rule_of_40" />
                 <Header label="EV/Rev" k="ev_rev" />
                 <th className="py-2 font-normal cursor-pointer hover:text-ink transition-colors" onClick={() => toggleSort("score")}>
-                  Fit score{sortKey === "score" && <span className="text-signal ml-1">{sortDir === "desc" ? "v" : "^"}</span>}
+                  Fit score{sortKey === "score" && <span className="text-signal ml-1">{sortDir === "desc" ? "\u25BC" : "\u25B2"}</span>}
                 </th>
               </tr>
             </thead>

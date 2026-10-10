@@ -20,7 +20,7 @@ export function RevenueChart({ history }: { history: { year: number; revenue: nu
           <YAxis stroke="rgb(var(--color-dim))" tick={{ fontSize: 11, fontFamily: "var(--font-mono)" }} axisLine={false} tickLine={false}
             tickFormatter={(v) => fmtMoney(v, 0)} width={60} />
           <Tooltip
-            contentStyle={{ background: "#12161B", border: "1px solid rgb(var(--color-line))", fontSize: 12, fontFamily: "var(--font-mono)" }}
+            contentStyle={{ background: "rgb(var(--color-surface))", border: "1px solid rgb(var(--color-line))", fontSize: 12, fontFamily: "var(--font-mono)" }}
             labelStyle={{ color: "rgb(var(--color-ink))" }}
             formatter={(v: number) => [fmtMoney(v), "Revenue"]}
           />

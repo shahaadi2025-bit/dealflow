@@ -256,7 +256,7 @@ def lbo_endpoint(request: Request, ticker: str, body: LboRequest = LboRequest())
         raise HTTPException(404, str(e))
     if not f.ebitda or f.ebitda <= 0 or not f.revenue:
         raise HTTPException(422, "LBO needs positive EBITDA; this company is not a typical LBO candidate")
-    ev = f.ev + f.market_cap * body.premium
+    ev = f.ev + f.market_cap * max(0.0, min(body.premium, 1.0))
     res = run_lbo(f.ebitda, f.revenue, ev, leverage=max(0.5, min(body.leverage, 8)), growth=max(-0.2, min(body.growth, 0.4)),
                   margin_expansion=body.margin_expansion, exit_multiple=body.exit_multiple,
                   years=max(3, min(body.years, 7)), interest=max(0.03, min(body.interest, 0.2)))
