@@ -19,6 +19,9 @@ import { VerdictGauge } from "@/components/VerdictGauge";
 import { PriceChart } from "@/components/PriceChart";
 import { PotentialBuyers } from "@/components/PotentialBuyers";
 import { LboPanel } from "@/components/LboPanel";
+import { PrecedentsPanel } from "@/components/PrecedentsPanel";
+import { SignalsPanel } from "@/components/SignalsPanel";
+import { ValuationMap } from "@/components/ValuationMap";
 import { NewsPanel } from "@/components/NewsPanel";
 import { PipelineButton } from "@/components/PipelineButton";
 import { addToPipeline, removeFromPipeline, isInPipeline } from "@/lib/pipeline";
@@ -332,6 +335,12 @@ function CompanyInner() {
         <LboPanel ticker={c.ticker} />
       </div>
 
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
+        <PrecedentsPanel ticker={c.ticker} />
+        <SignalsPanel ticker={c.ticker} />
+      </div>
+      {c.sector && <PeerMap sector={c.sector} ticker={c.ticker} />}
+
       <div className="mb-6">
         <CompanyNotes ticker={c.ticker} />
       </div>
@@ -349,4 +358,8 @@ function CompanyInner() {
       />
     </PageFade>
   );
+}
+function PeerMap({ sector, ticker }: { sector: string; ticker: string }) {
+  const q = useQuery({ queryKey: ["screen", sector], queryFn: () => api.screen({ sector, limit: 60 }), staleTime: 300_000, retry: false });
+  return <ValuationMap rows={q.data?.results ?? []} highlight={ticker} />;
 }

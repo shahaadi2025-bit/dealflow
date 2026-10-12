@@ -1,5 +1,6 @@
 "use client";
 import { useQuery } from "@tanstack/react-query";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { api } from "@/lib/api";
 import { fmtPct, fmtX } from "@/lib/format";
@@ -45,7 +46,7 @@ export default function SectorsPage() {
                 transition={{ duration: 0.3, delay: i * 0.08 }}
                 className="border-b border-line/60"
               >
-                <td className="py-3 pr-6 text-ink">{LABELS[s.sector] || s.sector}</td>
+                <td className="py-3 pr-6 text-ink"><Link href={`/sector/${s.sector}`} className="hover:text-signal">{LABELS[s.sector] || s.sector}</Link></td>
                 <td className="py-3 pr-6 text-right text-ink tabular-nums">{s.company_count}</td>
                 <td className="py-3 pr-6 text-right text-ink tabular-nums">{fmtPct(s.median_growth)}</td>
                 <td className="py-3 pr-6 text-right text-ink tabular-nums">{fmtPct(s.median_gross_margin)}</td>

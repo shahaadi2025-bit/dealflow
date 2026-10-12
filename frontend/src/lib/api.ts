@@ -67,7 +67,7 @@ export type DealMeta = {
 export type NewsItem = {
   title: string; link: string; source: string; published: string | null; summary: string;
   sentiment: Sentiment; tags: string[]; tickers: string[]; sectors: string[];
-  is_deal: boolean; deal?: DealMeta; also_reported_by: string[]; age_minutes: number | null;
+  is_deal: boolean; deal?: DealMeta; also_reported_by: string[]; age_minutes: number | null; deal_id?: string;
 };
 export type Mood = { score: number; label: "bullish" | "bearish" | "neutral"; bullish: number; bearish: number; neutral: number };
 export type NewsResponse = { updated: string; count: number; items: NewsItem[]; mood: Mood; ticker?: string };
@@ -131,6 +131,15 @@ export const api = {
   dealsHistory: (sector?: string) =>
     req<DealHistory>(`/deals/history?limit=200${sector ? `&sector=${encodeURIComponent(sector)}` : ""}`),
   dealsLeague: (by: "acquirer" | "target") => req<{ by: string; rows: LeagueRow[] }>(`/deals/league?by=${by}`),
+  dealItem: (id: string) => req<DealDetail>(`/deals/item/${encodeURIComponent(id)}`),
+  precedents: (sector?: string) => req<Precedents>(`/deals/precedents${sector ? `?sector=${encodeURIComponent(sector)}` : ""}`),
+  companyPrecedents: (t: string) => req<Precedents & { company_ev_rev: number | null; implied_ev_at_median: number | null }>(`/company/${t}/precedents`),
+  companyFilings: (t: string, kind: "insider" | "activist" | "passive") =>
+    req<{ ticker: string; kind: string; count: number; items: FilingItem[] }>(`/company/${t}/filings?kind=${kind}`),
+  activist: () => req<{ count: number; items: { form: string | null; company: string; role: string | null; link: string; published: string | null }[] }>("/signals/activist"),
+  earnings: (tickers: string[]) => req<{ items: { ticker: string; date: string; days: number }[] }>(`/earnings?tickers=${encodeURIComponent(tickers.join(","))}`),
+  movers: () => req<Movers>("/market/movers"),
+  feedHealth: () => req<FeedHealth>("/health/feeds"),
   dataHealth: () => req<{ companies: number; snapshot_as_of: string | null; snapshot_file_age_hours: number | null; deals_history: number }>("/health/data"),
 };
 
@@ -152,3 +161,17 @@ export type DealHistory = {
   items: DealRecord[];
 };
 export type LeagueRow = { name: string; count: number; value_musd: number };
+
+export type DealDetail = {
+  deal: DealRecord;
+  implied: { ticker: string; name: string; deal_value: number; revenue: number; ev_rev: number; market_cap: number; premium_to_market_cap?: number; ev_ebitda?: number } | null;
+  tickers: string[]; related: NewsItem[];
+};
+export type PrecedentRow = {
+  id: string; title: string; link: string; published: string | null; acquirer: string | null; target: string | null; status: string;
+  sectors: string[]; ticker: string; name: string; ev_rev: number; ev_ebitda?: number; premium_to_market_cap?: number; deal_value: number;
+};
+export type Precedents = { sector: string | null; stats: { n: number; median: number; p25: number; p75: number } | null; items: PrecedentRow[] };
+export type FilingItem = { form: string; title: string; summary: string; link: string; published: string | null };
+export type Movers = { updated: string | null; gainers: { ticker: string; price: number; change_pct: number }[]; losers: { ticker: string; price: number; change_pct: number }[] };
+export type FeedHealth = { checked: string; all_ok: boolean; sources: Record<string, { ok: boolean; items?: number; error?: string; ms: number }> };

@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, Download, Upload } from "lucide-react";
+import { EarningsList } from "@/components/EarningsList";
 import { PageFade } from "@/components/PageFade";
 import { getPipeline, setPipeline, updateStage, removeFromPipeline, STAGES, PipelineEntry, PipelineStage } from "@/lib/pipeline";
 
@@ -82,6 +83,7 @@ export default function PipelinePage() {
         </div>
       </div>
 
+      {entries.length > 0 && <div className="mt-4"><EarningsList tickers={entries.map((e) => e.ticker)} /></div>}
       {entries.length === 0 && (
         <p className="text-dim text-[13px] py-16 text-center">
           Nothing here yet. Open any company and click &quot;Add to pipeline&quot; to start tracking it.

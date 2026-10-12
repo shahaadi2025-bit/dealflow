@@ -5,7 +5,7 @@ from collections import Counter
 from datetime import datetime, timezone
 
 from app.data.sectors import SECTOR_META
-from app.news import feeds, gdelt
+from app.news import feeds, gdelt, history
 from app.news.analysis import enrich, strip_source_suffix
 
 log = logging.getLogger("news")
@@ -155,6 +155,8 @@ def live_deals(sector: str | None = None, days: int = 7, limit: int = 80) -> dic
     if not flat:
         flat = _gdelt_fallback('(acquire OR acquisition OR merger OR takeover OR buyout) (billion OR million)', f"{max(1, min(days, 30))}d")
     items = [i for i in _finish(dedupe(flat)) if i["is_deal"]]
+    for i in items:
+        i["deal_id"] = history.deal_id(i)
     if sector:
         for i in items:
             if sector not in i["sectors"]:

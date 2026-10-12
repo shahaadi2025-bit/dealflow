@@ -8,6 +8,7 @@ import { SECTOR_ORDER, SECTOR_LABELS, SECTOR_BLURBS } from "@/lib/sectors";
 import { fmtDealValue, timeAgo } from "@/lib/time";
 import { CandleField } from "@/components/CandleField";
 import { SectorHeatmap } from "@/components/SectorHeatmap";
+import { MoversStrip } from "@/components/MoversStrip";
 import { DealVolume } from "@/components/DealVolume";
 import { ScoreRing } from "@/components/ScoreRing";
 import { SectorIcon, sectorHue } from "@/components/SectorIcon";
@@ -38,6 +39,7 @@ export default function LandingPage() {
       <Ribbon />
       <Bento />
       <SectorHeatmap />
+      <div className="mb-8"><MoversStrip /></div>
       <Sectors />
       <LiveWire />
       <HowItWorks />

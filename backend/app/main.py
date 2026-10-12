@@ -10,7 +10,7 @@ from starlette.requests import Request
 
 from app.config import settings
 from app.data.fetch import DataError, get_financials, price_history, load_snapshot, SNAPSHOT_PATH
-from app.news import history as deal_history
+from app.news import history as deal_history, dealdetail, signals
 from app.valuation.lbo import lbo as run_lbo
 from app.valuation.buyers import potential_buyers
 from app.data.universe import UNIVERSES, sector_of
@@ -227,6 +227,59 @@ def company_prices(request: Request, ticker: str, period: str = Query("1y", patt
     return {"ticker": ticker.upper(), "period": period, "prices": price_history(ticker, period)}
 
 
+@app.get("/company/{ticker}/precedents")
+@limiter.limit("20/minute")
+def company_precedents(request: Request, ticker: str):
+    try:
+        f = get_financials(ticker)
+    except DataError as e:
+        raise HTTPException(404, str(e))
+    sec = sector_of(f.ticker)
+    data = dealdetail.precedents(deal_history.load(), sec)
+    mine = round(f.ev / f.revenue, 2) if f.revenue else None
+    st = data["stats"]
+    implied_ev = round(st["median"] * f.revenue) if st and f.revenue else None
+    return {**data, "sector": sec, "company_ev_rev": mine, "implied_ev_at_median": implied_ev}
+
+
+@app.get("/company/{ticker}/filings")
+@limiter.limit("20/minute")
+def company_filings_endpoint(request: Request, ticker: str, kind: str = Query("insider", pattern="^(insider|activist|passive)$")):
+    t = ticker.upper()
+    if not t.replace("-", "").replace(".", "").isalnum() or len(t) > 10:
+        raise HTTPException(400, "Invalid ticker")
+    items = signals.company_filings(t, signals.FORM_ALIASES[kind])
+    return {"ticker": t, "kind": kind, "count": len(items), "items": items}
+
+
+@app.get("/signals/activist")
+@limiter.limit("20/minute")
+def signals_activist(request: Request):
+    items = signals.activist_feed()
+    return {"count": len(items), "items": items}
+
+
+@app.get("/earnings")
+@limiter.limit("20/minute")
+def earnings_endpoint(request: Request, tickers: str = Query("", max_length=200)):
+    ts = [t.strip().upper() for t in tickers.split(",") if t.strip()][:20]
+    if any(not t.replace("-", "").replace(".", "").isalnum() or len(t) > 10 for t in ts):
+        raise HTTPException(400, "Invalid ticker")
+    return {"items": signals.earnings(ts) if ts else []}
+
+
+@app.get("/market/movers")
+@limiter.limit("30/minute")
+def market_movers(request: Request):
+    return signals.movers()
+
+
+@app.get("/health/feeds")
+@limiter.limit("6/minute")
+def health_feeds(request: Request):
+    return signals.feed_health()
+
+
 @app.get("/company/{ticker}/buyers")
 @limiter.limit("15/minute")
 def company_buyers(request: Request, ticker: str):
@@ -262,6 +315,37 @@ def lbo_endpoint(request: Request, ticker: str, body: LboRequest = LboRequest())
                   years=max(3, min(body.years, 7)), interest=max(0.03, min(body.interest, 0.2)))
     res.update(ticker=f.ticker, entry_ev=ev, premium=body.premium, ebitda=f.ebitda)
     return res
+
+
+@app.get("/deals/precedents")
+@limiter.limit("30/minute")
+def deals_precedents(request: Request, sector: str | None = None):
+    if sector and sector not in UNIVERSES:
+        raise HTTPException(400, f"Unknown sector '{sector}'")
+    return dealdetail.precedents(deal_history.load(), sector)
+
+
+@app.get("/deals/item/{deal_id}")
+@limiter.limit("40/minute")
+def deal_item(request: Request, deal_id: str):
+    if not deal_id.isalnum() or len(deal_id) > 20:
+        raise HTTPException(400, "Invalid deal id")
+    rec = next((r for r in deal_history.load() if r["id"] == deal_id), None)
+    if rec is None:  # not archived yet: look in the live wire
+        live = news_service.live_deals(None, 30, 150)
+        it = next((i for i in live["items"] if i.get("deal_id") == deal_id), None)
+        if it is None:
+            raise HTTPException(404, "Deal not found; it may have aged out of the feed")
+        rec = deal_history.to_record(it)
+    imp = dealdetail.implied(rec)
+    tickers = [t for t in dict.fromkeys(([imp["ticker"]] if imp else []) + (rec.get("tickers") or []))][:3]
+    related = []
+    if tickers:
+        try:
+            related = news_service.ticker_news(tickers[0], None, 8)["items"]
+        except Exception:
+            related = []
+    return {"deal": rec, "implied": imp, "tickers": tickers, "related": related}
 
 
 @app.get("/deals")

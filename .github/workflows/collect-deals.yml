@@ -30,11 +30,18 @@ jobs:
           SMTP_USER: ${{ secrets.SMTP_USER }}
           SMTP_PASS: ${{ secrets.SMTP_PASS }}
           DIGEST_TO: ${{ secrets.DIGEST_TO }}
+      - name: Telegram alerts (skipped unless secrets are set)
+        working-directory: backend
+        run: python -m app.scripts.notify
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
       - name: Commit if changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add backend/data/deals_history.json
+          [ -f backend/data/notified.json ] && git add backend/data/notified.json || true
           git diff --cached --quiet || git commit -m "Update deal history [skip ci]"
           git pull --rebase origin main
           git push

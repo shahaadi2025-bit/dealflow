@@ -36,6 +36,7 @@ export function DealCard({ item, isNew = false }: { item: NewsItem; isNew?: bool
       </a>
       <div className="flex flex-wrap items-center gap-x-3 gap-y-1.5 mt-2.5 text-[11px] text-dim">
         <span className="text-ink/80">{item.source}</span>
+        {item.deal_id && <Link href={`/deals/${item.deal_id}`} className="text-signal hover:underline inline-flex items-center gap-1">Analyze deal <ArrowRight size={10} /></Link>}
         {item.also_reported_by.length > 0 && <span title={item.also_reported_by.join(", ")}>+{item.also_reported_by.length} outlets</span>}
         {item.sectors.slice(0, 2).map((s) => (
           <Link key={s} href={`/screener?sector=${s}`} className="hover:text-ink">{sectorLabel(s)}</Link>

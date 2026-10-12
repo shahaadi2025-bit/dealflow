@@ -4,7 +4,7 @@ import os, sys
 from playwright.sync_api import sync_playwright
 
 BASE = os.environ.get("BASE", "http://localhost:3000")
-PAGES = ["/", "/screener", "/sectors", "/deals", "/news", "/alerts", "/pipeline", "/compare", "/methodology", "/memo"]
+PAGES = ["/", "/screener", "/sectors", "/deals", "/news", "/alerts", "/pipeline", "/compare", "/methodology", "/memo", "/status", "/sector/saas", "/sector/nope", "/deals/abc123"]
 bad = []
 with sync_playwright() as p:
     b = p.chromium.launch()

@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import { X, Bell } from "lucide-react";
 import { api } from "@/lib/api";
-import { getRules, getSeen, newMatches, setSeen } from "@/lib/alerts";
+import { getMetricRules, getRules, getSeen, metricHit, newMatches, setMetricRules, setSeen } from "@/lib/alerts";
 
 type Toast = { link: string; title: string };
 
@@ -27,9 +27,31 @@ export function DealAlerts() {
         }
       } catch { /* try again next tick */ }
     };
-    const id = setInterval(check, 90_000);
+    const checkMetrics = async () => {
+      const mr = getMetricRules();
+      if (!mr.length || document.hidden) return;
+      try {
+        const tickers = Array.from(new Set(mr.map((r) => r.ticker)));
+        const res = await api.screenCustom(tickers);
+        const by = new Map(res.results.map((x) => [x.ticker, x]));
+        const hits: Toast[] = [];
+        const next = mr.map((r) => {
+          const row = by.get(r.ticker); if (!row) return r;
+          const cur = r.metric === "score" ? row.score : row.price;
+          const hit = metricHit(r, cur);
+          if (hit && !r.fired) hits.push({ link: `/company/${r.ticker}`, title: `${r.ticker} ${r.metric} is ${cur.toFixed(r.metric === "score" ? 0 : 2)} (${r.op} ${r.value})` });
+          return { ...r, fired: hit };
+        });
+        setMetricRules(next);
+        if (stop || !hits.length) return;
+        setToasts((t) => [...hits, ...t].slice(0, 4));
+        if (typeof Notification !== "undefined" && Notification.permission === "granted") hits.slice(0, 2).forEach((h) => new Notification("DealFlow: watchlist alert", { body: h.title }));
+      } catch { /* try again next tick */ }
+    };
+    const id = setInterval(() => { check(); checkMetrics(); }, 90_000);
+    const t1 = setTimeout(checkMetrics, 6000);
     const t0 = setTimeout(check, 4000);
-    return () => { stop = true; clearInterval(id); clearTimeout(t0); };
+    return () => { stop = true; clearInterval(id); clearTimeout(t0); clearTimeout(t1); };
   }, []);
   if (!toasts.length) return null;
   return (
@@ -37,7 +59,7 @@ export function DealAlerts() {
       {toasts.map((t) => (
         <div key={t.link} className="glass p-3 flex gap-2 items-start shadow-xl">
           <Bell size={14} className="text-signal mt-0.5 shrink-0" />
-          <a href={t.link} target="_blank" rel="noopener noreferrer" className="text-[12px] text-ink hover:text-signal leading-snug flex-1">{t.title}</a>
+          <a href={t.link} {...(t.link.startsWith("http") ? { target: "_blank", rel: "noopener noreferrer" } : {})} className="text-[12px] text-ink hover:text-signal leading-snug flex-1">{t.title}</a>
           <button aria-label="Dismiss" onClick={() => setToasts((x) => x.filter((y) => y.link !== t.link))} className="text-dim hover:text-ink"><X size={13} /></button>
         </div>
       ))}

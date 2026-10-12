@@ -26,7 +26,7 @@ export function SectorHeatmap() {
             <motion.div key={r.sector} initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }}
               transition={{ delay: i * 0.025, duration: 0.35 }}
               className={big ? "col-span-2 row-span-2" : mid ? "col-span-2" : ""}>
-              <Link href={`/screener?sector=${r.sector}`} aria-label={`${sectorLabel(r.sector)}, median growth ${(g * 100).toFixed(1)} percent`}
+              <Link href={`/sector/${r.sector}`} aria-label={`${sectorLabel(r.sector)}, median growth ${(g * 100).toFixed(1)} percent`}
                 className="h-full rounded-xl border border-line/60 p-2.5 flex flex-col justify-between hover:scale-[1.03] hover:z-10 transition-transform focus-ring"
                 style={{ background: `linear-gradient(135deg, rgb(${rgb} / ${0.12 + a * 0.5}), rgb(${rgb} / ${0.05 + a * 0.2}))` }}>
                 <span className="text-ink text-[11.5px] sm:text-[12.5px] leading-tight font-medium">{sectorLabel(r.sector)}</span>

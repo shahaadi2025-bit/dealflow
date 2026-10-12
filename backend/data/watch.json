@@ -1,0 +1,7 @@
+{
+  "_help": "Rules for Telegram alerts. A deal is sent if it matches ANY rule. Fields (all optional, all must match within a rule): tickers, sectors, min_value_musd, keyword.",
+  "rules": [
+    { "min_value_musd": 1000 },
+    { "keyword": "take-private" }
+  ]
+}

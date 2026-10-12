@@ -7,13 +7,14 @@ import { ExternalLink } from "lucide-react";
 import Link from "next/link";
 import { PageFade } from "@/components/PageFade";
 import { DealCard } from "@/components/DealCard";
+import { PrecedentsPanel } from "@/components/PrecedentsPanel";
 import { LiveBadge } from "@/components/LiveBadge";
 import { api } from "@/lib/api";
 import { fmtPct, fmtX } from "@/lib/format";
 import { SECTOR_ORDER, sectorLabel } from "@/lib/sectors";
 import { fmtDealValue, timeAgo } from "@/lib/time";
 
-type Tab = "live" | "filings" | "league" | "comps";
+type Tab = "live" | "filings" | "league" | "comps" | "precedents" | "activists";
 const STATUSES = ["all", "announced", "rumor", "completed", "terminated"] as const;
 
 export default function DealsPage() {
@@ -27,7 +28,7 @@ export default function DealsPage() {
         <Link href="/alerts" className="text-signal hover:underline">Set up deal alerts</Link>
       </p>
       <div className="flex border border-line w-fit mb-6">
-        {([["live", "Live deals"], ["filings", "SEC filings"], ["league", "League table"], ["comps", "Comparables"]] as [Tab, string][]).map(([k, label]) => (
+        {([["live", "Live deals"], ["filings", "SEC filings"], ["league", "League table"], ["comps", "Comparables"], ["precedents", "Precedents"], ["activists", "Activists"]] as [Tab, string][]).map(([k, label]) => (
           <button key={k} onClick={() => setTab(k)}
             className={`px-4 py-2 text-[12px] transition-colors focus-ring ${tab === k ? "bg-signal text-bg" : "text-dim hover:text-ink"}`}>
             {label}
@@ -38,6 +39,8 @@ export default function DealsPage() {
       {tab === "filings" && <FilingsTab />}
       {tab === "league" && <LeagueTab />}
       {tab === "comps" && <ComparablesTab />}
+      {tab === "precedents" && <div className="max-w-3xl"><PrecedentsPanel /></div>}
+      {tab === "activists" && <ActivistsTab />}
     </PageFade>
   );
 }
@@ -289,5 +292,23 @@ function LeagueTab() {
         </div>
       )}
     </div>
+  );
+}
+
+function ActivistsTab() {
+  const q = useQuery({ queryKey: ["activist"], queryFn: () => api.activist(), staleTime: 600_000, retry: false });
+  return (
+    <section className="glass p-5 max-w-3xl">
+      <div className="text-dim text-[11px] mb-1">Recent Schedule 13D filings (SEC EDGAR)</div>
+      <p className="text-dim text-[11px] mb-3">A 13D means someone crossed 5% ownership and may push for change or a sale, which is an early takeover signal.</p>
+      {q.isLoading && <div className="shimmer h-20 rounded-lg" />}
+      {q.data?.items.length === 0 && <p className="text-dim text-[12px]">No filings returned right now.</p>}
+      {q.data?.items.map((i) => (
+        <a key={i.link} href={i.link} target="_blank" rel="noopener noreferrer" className="flex gap-3 py-1.5 border-b border-line/50 text-[12px] hover:text-signal">
+          <span className="text-signal w-24 shrink-0">{i.form}</span><span className="flex-1 truncate text-ink">{i.company}</span>
+          <span className="text-dim hidden sm:inline">{i.role}</span><span className="text-dim shrink-0">{timeAgo(i.published)}</span>
+        </a>
+      ))}
+    </section>
   );
 }

@@ -30,3 +30,16 @@ export function newMatches(rules: AlertRule[], items: Item[], seen: string[]): I
   const s = new Set(seen);
   return items.filter((i) => !s.has(i.link) && rules.some((r) => matches(r, i)));
 }
+
+/** Watchlist rules on a company's fit score or share price. */
+export type MetricRule = { id: string; ticker: string; metric: "score" | "price"; op: "above" | "below"; value: number; fired?: boolean };
+const MRULES = "dealflow:metric-rules";
+export function getMetricRules(): MetricRule[] {
+  try { return JSON.parse(localStorage.getItem(MRULES) || "[]"); } catch { return []; }
+}
+export function setMetricRules(r: MetricRule[]) {
+  try { localStorage.setItem(MRULES, JSON.stringify(r)); window.dispatchEvent(new Event("dealflow:alerts-changed")); } catch { /* storage unavailable */ }
+}
+export function metricHit(r: MetricRule, current: number): boolean {
+  return r.op === "above" ? current >= r.value : current <= r.value;
+}

@@ -4,7 +4,7 @@ import type { ScreenRow } from "@/lib/api";
 import { fmtMoney } from "@/lib/format";
 
 /** Bubble chart: growth (x) vs EV/Revenue (y); bubble size is market cap, gold intensity is the fit score. */
-export function ValuationMap({ rows }: { rows: ScreenRow[] }) {
+export function ValuationMap({ rows, highlight }: { rows: ScreenRow[]; highlight?: string }) {
   const data = rows.filter((r) => r.ev_rev > 0 && r.ev_rev < 60 && Math.abs(r.growth) < 1.5)
     .map((r) => ({ x: +(r.growth * 100).toFixed(1), y: +r.ev_rev.toFixed(2), z: r.market_cap, ticker: r.ticker, score: r.score }));
   if (data.length < 5) return null;
@@ -28,8 +28,10 @@ export function ValuationMap({ rows }: { rows: ScreenRow[] }) {
                 <div className="text-dim">Growth {d.x}% - EV/Rev {d.y}x</div><div className="text-dim">{fmtMoney(d.z)} - score {Math.round(d.score)}</div></div>;
             }} />
             <Scatter data={data} isAnimationActive animationDuration={900}
-              shape={(p: { cx?: number; cy?: number; payload?: { score: number; z: number }; size?: number }) => {
+              shape={(p: { cx?: number; cy?: number; payload?: { score: number; z: number; ticker?: string }; size?: number }) => {
                 const s = Math.max(0, Math.min(1, (p.payload?.score ?? 0) / 100));
+                const hl = !!highlight && (p.payload as { ticker?: string })?.ticker === highlight;
+                if (hl) return <g><circle cx={p.cx} cy={p.cy} r={9} fill="rgb(var(--color-up))" fillOpacity={0.9} stroke="rgb(var(--color-ink))" strokeWidth={2} /><text x={p.cx} y={(p.cy ?? 0) - 13} textAnchor="middle" fontSize={10} fill="rgb(var(--color-ink))">{highlight}</text></g>;
                 return <circle cx={p.cx} cy={p.cy} r={Math.sqrt((p.size ?? 60) / Math.PI)} fill="rgb(var(--color-signal))" fillOpacity={0.15 + s * 0.65} stroke="rgb(var(--color-signal))" strokeOpacity={0.9} />;
               }} />
           </ScatterChart>
