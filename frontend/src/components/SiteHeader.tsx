@@ -14,6 +14,7 @@ const LINKS = [
   { href: "/deals", label: "Deals", live: true },
   { href: "/news", label: "News" },
   { href: "/sectors", label: "Sectors" },
+  { href: "/ask", label: "Ask" },
   { href: "/pipeline", label: "Pipeline", badge: true },
   { href: "/methodology", label: "Methodology" },
 ];

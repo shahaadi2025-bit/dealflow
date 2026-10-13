@@ -13,6 +13,9 @@ from app.data.fetch import DataError, get_financials, price_history, load_snapsh
 from app.news import history as deal_history, dealdetail, signals
 from app.valuation.lbo import lbo as run_lbo
 from app.valuation.buyers import potential_buyers
+from app import ask as ask_mod
+from app.valuation.merger import merge as run_merge
+from app.valuation.takeover import takeover_score
 from app.data.universe import UNIVERSES, sector_of
 from app.screening.service import screen
 from app.screening.custom import screen_custom
@@ -435,3 +438,49 @@ def memo_pdf_endpoint(request: Request, body: PdfRequest):
     pdf = memo_to_pdf_bytes(body.company_name, body.memo)
     return Response(content=pdf, media_type="application/pdf",
                      headers={"Content-Disposition": f'attachment; filename="{body.company_name}_memo.pdf"'})
+
+class MergerRequest(BaseModel):
+    buyer: str
+    premium: float = 0.30
+    stock_pct: float = 0.5
+    synergies_pct_rev: float = 0.02
+    debt_rate: float = 0.06
+
+
+@app.post("/valuate/{ticker}/merger")
+@limiter.limit("20/minute")
+def merger_endpoint(request: Request, ticker: str, body: MergerRequest):
+    try:
+        target, buyer = get_financials(ticker), get_financials(body.buyer.strip().upper()[:12])
+    except DataError as e:
+        raise HTTPException(404, str(e))
+    res = run_merge(buyer, target, premium=body.premium, stock_pct=body.stock_pct,
+                    synergies_pct_rev=body.synergies_pct_rev, debt_rate=max(0.02, min(body.debt_rate, 0.2)))
+    res.update(target=target.ticker, buyer=buyer.ticker, buyer_name=buyer.name)
+    return res
+
+
+@app.get("/company/{ticker}/takeover")
+@limiter.limit("30/minute")
+def company_takeover(request: Request, ticker: str):
+    try:
+        f = get_financials(ticker)
+    except DataError as e:
+        raise HTTPException(404, str(e))
+    return {"ticker": f.ticker, **takeover_score(f)}
+
+
+class AskRequest(BaseModel):
+    question: str
+
+
+@app.post("/ask")
+@limiter.limit("6/minute")
+async def ask_endpoint(request: Request, body: AskRequest):
+    q = body.question.strip()
+    if len(q) < 3 or len(q) > 400:
+        raise HTTPException(422, "Question must be 3 to 400 characters")
+    try:
+        return await ask_mod.answer(q)
+    except Exception:
+        raise HTTPException(502, "The AI service is unavailable right now. Try again shortly.")

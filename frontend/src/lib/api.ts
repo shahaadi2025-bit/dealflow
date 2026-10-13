@@ -138,6 +138,10 @@ export const api = {
     req<{ ticker: string; kind: string; count: number; items: FilingItem[] }>(`/company/${t}/filings?kind=${kind}`),
   activist: () => req<{ count: number; items: { form: string | null; company: string; role: string | null; link: string; published: string | null }[] }>("/signals/activist"),
   earnings: (tickers: string[]) => req<{ items: { ticker: string; date: string; days: number }[] }>(`/earnings?tickers=${encodeURIComponent(tickers.join(","))}`),
+  merger: (ticker: string, body: { buyer: string; premium: number; stock_pct: number; synergies_pct_rev: number }) =>
+    req<MergerResult>(`/valuate/${ticker}/merger`, { method: "POST", body: JSON.stringify(body) }),
+  takeover: (ticker: string) => req<{ ticker: string; score: number | null; factors: { name: string; value: number; note: string }[] }>(`/company/${ticker}/takeover`),
+  ask: (question: string) => req<{ answer: string; ai: boolean; context: Record<string, unknown> }>("/ask", { method: "POST", body: JSON.stringify({ question }) }),
   movers: () => req<Movers>("/market/movers"),
   feedHealth: () => req<FeedHealth>("/health/feeds"),
   dataHealth: () => req<{ companies: number; snapshot_as_of: string | null; snapshot_file_age_hours: number | null; deals_history: number }>("/health/data"),
@@ -175,3 +179,9 @@ export type Precedents = { sector: string | null; stats: { n: number; median: nu
 export type FilingItem = { form: string; title: string; summary: string; link: string; published: string | null };
 export type Movers = { updated: string | null; gainers: { ticker: string; price: number; change_pct: number }[]; losers: { ticker: string; price: number; change_pct: number }[] };
 export type FeedHealth = { checked: string; all_ok: boolean; sources: Record<string, { ok: boolean; items?: number; error?: string; ms: number }> };
+export type MergerResult = {
+  feasible: boolean; reason?: string; buyer?: string; buyer_name?: string; offer_equity?: number; offer_per_share?: number;
+  stock_part?: number; cash_part?: number; new_debt?: number; cash_used?: number; ownership_to_target?: number; synergies?: number;
+  base_fcf_per_share?: number; pf_fcf_per_share?: number; accretion?: number | null; accretive?: boolean;
+  breakeven_synergies?: number; pf_leverage?: number | null; basis?: string;
+};

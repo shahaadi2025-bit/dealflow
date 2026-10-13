@@ -23,6 +23,9 @@ frontend/   Next.js 14 (App Router, TypeScript, Tailwind) - installable PWA, bla
 | Deal pages | `/deals/[id]`: parties, reported value, implied EV/Revenue and premium to market cap, related coverage |
 | News | Market and per-company news with sentiment and ticker/sector tagging |
 | Alerts | Deal rules (ticker, sector, size, keyword) and watchlist rules (fit score or price crosses a level); in-app toasts and optional browser notifications |
+| Merger model | Pick a likely buyer, set premium, cash/stock mix and synergies; see FCF-per-share accretion, new debt, pro-forma leverage |
+| Takeover score | 0-100 heuristic (cheap vs sector, off highs, growth, size, debt) with the reasons |
+| Ask DealFlow | `/ask`: chat answers grounded in snapshot, sector medians and the deal archive (Groq, free) |
 | Pipeline | Local deal pipeline with stages, import/export, upcoming earnings for your names |
 | Memos | AI memo (Groq) with number check, PDF export, shareable link (data lives in the URL fragment) |
 | Market | Index tape, top movers, earnings calendar |
@@ -66,8 +69,8 @@ Never commit keys; set them in Render / Vercel / GitHub secrets.
 ## API overview
 
 `/screen`, `/screen/custom`, `/sectors`, `/sectors/stats`, `/company/{t}` (+ `/prices`, `/similar`, `/buyers`, `/precedents`, `/filings`),
-`/valuate/{t}` (+ `/lbo`, `/report`), `/memo`, `/memo/pdf`, `/news/*`, `/deals/live`, `/deals/filings`, `/deals/history`, `/deals/league`,
-`/deals/precedents`, `/deals/item/{id}`, `/signals/activist`, `/earnings`, `/market/tape`, `/market/movers`, `/health/data`, `/health/feeds`.
+`/valuate/{t}` (+ `/lbo`, `/merger`, `/report`), `/company/{t}/takeover`, `/memo`, `/memo/pdf`, `/news/*`, `/deals/live`, `/deals/filings`, `/deals/history`, `/deals/league`,
+`/deals/precedents`, `/deals/item/{id}`, `/signals/activist`, `/earnings`, `/ask`, `/market/tape`, `/market/movers`, `/health/data`, `/health/feeds`.
 Interactive docs at `/docs`.
 
 ## Docs

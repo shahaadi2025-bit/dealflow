@@ -22,6 +22,8 @@ import { LboPanel } from "@/components/LboPanel";
 import { PrecedentsPanel } from "@/components/PrecedentsPanel";
 import { SignalsPanel } from "@/components/SignalsPanel";
 import { ValuationMap } from "@/components/ValuationMap";
+import { MergerPanel } from "@/components/MergerPanel";
+import { TakeoverScore } from "@/components/TakeoverScore";
 import { NewsPanel } from "@/components/NewsPanel";
 import { PipelineButton } from "@/components/PipelineButton";
 import { addToPipeline, removeFromPipeline, isInPipeline } from "@/lib/pipeline";
@@ -333,6 +335,10 @@ function CompanyInner() {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
         <PotentialBuyers ticker={c.ticker} />
         <LboPanel ticker={c.ticker} />
+      </div>
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
+        <MergerPanel ticker={c.ticker} />
+        <TakeoverScore ticker={c.ticker} />
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
