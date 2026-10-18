@@ -4,7 +4,7 @@ Yahoo sometimes blocks cloud IPs. The snapshot (data/snapshot.json, built by
 `python -m app.scripts.build_snapshot`) keeps the deployed app working when that happens.
 """
 from __future__ import annotations
-import json, logging, time
+import json, logging, os, threading, time
 from concurrent.futures import ThreadPoolExecutor
 from datetime import date
 from pathlib import Path
@@ -117,11 +117,53 @@ def price_history(ticker: str, period: str = "1y") -> list[dict]:
     return out
 
 
-def get_financials(ticker: str) -> Financials:
+_BG = ThreadPoolExecutor(max_workers=3, thread_name_prefix="refresh")
+_INFLIGHT: set[str] = set()
+_INFLIGHT_LOCK = threading.Lock()
+
+
+def _refresh_bg(t: str) -> None:
+    try:
+        if time.time() < _BREAKER["until"]:
+            return
+        f = fetch_live(t)
+        _BREAKER["fails"] = 0
+        _CACHE[t] = (time.time(), f)
+    except Exception as e:  # background only: never raise
+        if "Live fetch failed" in str(e):
+            _BREAKER["fails"] += 1
+            if _BREAKER["fails"] >= 5:
+                _BREAKER["until"] = time.time() + 120
+        log.info("background refresh failed %s: %s", t, e)
+    finally:
+        with _INFLIGHT_LOCK:
+            _INFLIGHT.discard(t)
+
+
+def _schedule_refresh(t: str) -> None:
+    with _INFLIGHT_LOCK:
+        if t in _INFLIGHT or len(_INFLIGHT) >= 150:
+            return
+        _INFLIGHT.add(t)
+    _BG.submit(_refresh_bg, t)
+
+
+def get_financials(ticker: str, fast: bool = False) -> Financials:
+    """fast=True (used for fan-outs over many tickers): answer instantly from the cache or the snapshot and refresh
+    live data in the background, so one request never waits on dozens of Yahoo calls."""
     t = ticker.upper().strip()
     hit = _CACHE.get(t)
-    if hit and time.time() - hit[0] < settings.cache_ttl:
+    fresh = bool(hit and time.time() - hit[0] < settings.cache_ttl)
+    if fresh:
         return hit[1]
+    if fast and os.getenv("SWR", "1") != "0":
+        if hit:
+            _schedule_refresh(t)
+            return hit[1]
+        snap = load_snapshot().get(t)
+        if snap:
+            _schedule_refresh(t)
+            return snap
     try:
         if time.time() < _BREAKER["until"] and t in load_snapshot():
             raise DataError("live source cooling down")
@@ -141,12 +183,12 @@ def get_financials(ticker: str) -> Financials:
     return f
 
 
-def get_many(tickers: list[str], workers: int = 6) -> dict[str, Financials]:
+def get_many(tickers: list[str], workers: int = 6, fast: bool = True) -> dict[str, Financials]:
     out: dict[str, Financials] = {}
 
     def one(t):
         try:
-            return t, get_financials(t)
+            return t, get_financials(t, fast=fast)
         except Exception as e:
             log.info("skip %s: %s", t, e)
             return t, None

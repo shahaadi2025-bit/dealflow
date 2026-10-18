@@ -9,12 +9,13 @@ import { api, ScreenRow } from "@/lib/api";
 import { fmtMoney, fmtPct, fmtX } from "@/lib/format";
 import { ScoreBar } from "@/components/ScoreBar";
 import { ScoreRing } from "@/components/ScoreRing";
-import { ValuationMap } from "@/components/ValuationMap";
 import { TickerSearch } from "@/components/TickerSearch";
 import { ScreenerSkeleton } from "@/components/Skeleton";
 import { PageFade } from "@/components/PageFade";
 import { Term } from "@/components/Term";
 import { SECTOR_LABELS, SECTOR_ORDER, SectorKey } from "@/lib/sectors";
+import dynamic from "next/dynamic";
+const ValuationMap = dynamic(() => import("@/components/ValuationMap").then((m) => m.ValuationMap), { ssr: false, loading: () => <div className="shimmer h-[240px] rounded-xl mb-6" /> });
 
 type SortKey = "score" | "market_cap" | "growth" | "gross_margin" | "fcf_margin" | "rule_of_40" | "ev_rev";
 type Mode = SectorKey | "custom";

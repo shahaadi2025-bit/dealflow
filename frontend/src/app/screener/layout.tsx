@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/screener" },
   title: "Acquisition Target Screener | DealFlow",
   description: "Score and rank acquisition targets in any of 29 sectors by growth, margins and valuation.",
 };

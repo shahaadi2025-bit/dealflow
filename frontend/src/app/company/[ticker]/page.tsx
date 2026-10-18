@@ -7,29 +7,31 @@ import { Share2, FileDown, Check } from "lucide-react";
 import { api, Memo } from "@/lib/api";
 import { fmtMoney, fmtPct, fmtPrice, fmtX } from "@/lib/format";
 import { StatCell } from "@/components/StatCell";
-import { FootballField } from "@/components/FootballField";
 import { SensitivityGrid } from "@/components/SensitivityGrid";
 import { MemoPanel } from "@/components/MemoPanel";
-import { RevenueChart } from "@/components/RevenueChart";
 import { SectorBenchmark } from "@/components/SectorBenchmark";
 import { CompanyNotes } from "@/components/CompanyNotes";
 import { SimilarCompanies } from "@/components/SimilarCompanies";
 import { RangeBar } from "@/components/RangeBar";
 import { VerdictGauge } from "@/components/VerdictGauge";
-import { PriceChart } from "@/components/PriceChart";
 import { PotentialBuyers } from "@/components/PotentialBuyers";
 import { LboPanel } from "@/components/LboPanel";
 import { PrecedentsPanel } from "@/components/PrecedentsPanel";
 import { SignalsPanel } from "@/components/SignalsPanel";
-import { ValuationMap } from "@/components/ValuationMap";
 import { MergerPanel } from "@/components/MergerPanel";
 import { TakeoverScore } from "@/components/TakeoverScore";
+import { LazyMount } from "@/components/LazyMount";
 import { NewsPanel } from "@/components/NewsPanel";
 import { PipelineButton } from "@/components/PipelineButton";
 import { addToPipeline, removeFromPipeline, isInPipeline } from "@/lib/pipeline";
 import { valuationToCsv, downloadCsv } from "@/lib/csv";
 import { CompanySkeleton } from "@/components/Skeleton";
 import { PageFade } from "@/components/PageFade";
+import dynamic from "next/dynamic";
+const FootballField = dynamic(() => import("@/components/FootballField").then((m) => m.FootballField), { ssr: false, loading: () => <div className="shimmer h-[240px] rounded-xl mb-6" /> });
+const RevenueChart = dynamic(() => import("@/components/RevenueChart").then((m) => m.RevenueChart), { ssr: false, loading: () => <div className="shimmer h-[240px] rounded-xl mb-6" /> });
+const PriceChart = dynamic(() => import("@/components/PriceChart").then((m) => m.PriceChart), { ssr: false, loading: () => <div className="shimmer h-[240px] rounded-xl mb-6" /> });
+const ValuationMap = dynamic(() => import("@/components/ValuationMap").then((m) => m.ValuationMap), { ssr: false, loading: () => <div className="shimmer h-[240px] rounded-xl mb-6" /> });
 
 function num(v: string | null): number | null {
   if (v === null || v === "") return null;
@@ -313,7 +315,7 @@ function CompanyInner() {
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
-        <SimilarCompanies ticker={c.ticker} />
+        <LazyMount><SimilarCompanies ticker={c.ticker} /></LazyMount>
         <div className="border border-line p-5 flex flex-col justify-between">
           <div>
             <div className="text-dim text-[11px] mb-2">Official filings</div>
@@ -333,25 +335,25 @@ function CompanyInner() {
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
-        <PotentialBuyers ticker={c.ticker} />
-        <LboPanel ticker={c.ticker} />
+        <LazyMount><PotentialBuyers ticker={c.ticker} /></LazyMount>
+        <LazyMount><LboPanel ticker={c.ticker} /></LazyMount>
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
-        <MergerPanel ticker={c.ticker} />
-        <TakeoverScore ticker={c.ticker} />
+        <LazyMount><MergerPanel ticker={c.ticker} /></LazyMount>
+        <LazyMount><TakeoverScore ticker={c.ticker} /></LazyMount>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
-        <PrecedentsPanel ticker={c.ticker} />
-        <SignalsPanel ticker={c.ticker} />
+        <LazyMount><PrecedentsPanel ticker={c.ticker} /></LazyMount>
+        <LazyMount><SignalsPanel ticker={c.ticker} /></LazyMount>
       </div>
-      {c.sector && <PeerMap sector={c.sector} ticker={c.ticker} />}
+      {c.sector && <LazyMount minHeight={280}><PeerMap sector={c.sector} ticker={c.ticker} /></LazyMount>}
 
       <div className="mb-6">
-        <CompanyNotes ticker={c.ticker} />
+        <LazyMount><CompanyNotes ticker={c.ticker} /></LazyMount>
       </div>
 
-      <NewsPanel ticker={c.ticker} name={c.name} />
+      <LazyMount minHeight={300}><NewsPanel ticker={c.ticker} name={c.name} /></LazyMount>
 
 
       <MemoPanel

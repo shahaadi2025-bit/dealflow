@@ -18,6 +18,11 @@ export const metadata: Metadata = {
   title: "DealFlow - M&A Screener, Live Deals & News",
   description: "Screen acquisition targets across 29 sectors, track live M&A deals and news, run DCF and comps valuation, and generate investment memos.",
   icons: { icon: "/favicon.svg" },
+  alternates: { canonical: "/" },
+  applicationName: "DealFlow",
+  keywords: ["M&A screener", "acquisition targets", "deal flow", "DCF valuation", "precedent transactions", "merger model", "LBO", "take-private", "live M&A deals"],
+  verification: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION ? { google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION } : undefined,
+  robots: { index: true, follow: true, googleBot: { index: true, follow: true, "max-snippet": -1, "max-image-preview": "large" } },
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://dealflow-rho.vercel.app"),
   openGraph: { title: "DealFlow - M&A Screener, Live Deals & News", description: "Screen targets across 29 sectors, track live M&A deals, value companies and draft memos. Free.", type: "website", images: ["/og.png"] },
   twitter: { card: "summary_large_image", images: ["/og.png"] },
@@ -26,6 +31,15 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = { themeColor: "#080808" };
+
+const SITE = process.env.NEXT_PUBLIC_SITE_URL || "https://dealflow-rho.vercel.app";
+const SITE_LD = {
+  "@context": "https://schema.org",
+  "@graph": [
+    { "@type": "WebSite", name: "DealFlow", url: SITE, description: "Free M&A screener, live deal wire and valuation tools across 29 sectors." },
+    { "@type": "WebApplication", name: "DealFlow", url: SITE, applicationCategory: "FinanceApplication", operatingSystem: "Any", offers: { "@type": "Offer", price: "0", priceCurrency: "USD" } },
+  ],
+};
 
 const THEME_INIT_SCRIPT = `
 (function() {
@@ -41,6 +55,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en" className={`${display.variable} ${sans.variable} ${mono.variable}`}>
       <head>
         <script dangerouslySetInnerHTML={{ __html: THEME_INIT_SCRIPT }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SITE_LD) }} />
       </head>
       <body className="min-h-screen font-sans text-[14px] antialiased">
         <Providers>

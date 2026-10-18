@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/ask" },
   title: "Ask DealFlow | DealFlow",
   description: "Ask questions about companies, sectors and deals and get answers grounded in DealFlow data.",
 };

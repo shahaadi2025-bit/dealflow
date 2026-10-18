@@ -9,10 +9,11 @@ import { fmtDealValue, timeAgo } from "@/lib/time";
 import { CandleField } from "@/components/CandleField";
 import { SectorHeatmap } from "@/components/SectorHeatmap";
 import { MoversStrip } from "@/components/MoversStrip";
-import { DealVolume } from "@/components/DealVolume";
 import { ScoreRing } from "@/components/ScoreRing";
 import { SectorIcon, sectorHue } from "@/components/SectorIcon";
 import { AnimatedNumber } from "@/components/AnimatedNumber";
+import dynamic from "next/dynamic";
+const DealVolume = dynamic(() => import("@/components/DealVolume").then((m) => m.DealVolume), { ssr: false, loading: () => <div className="shimmer h-[240px] rounded-xl mb-6" /> });
 
 const FREE_FEATURES = [
   "All 29 sectors, from SaaS and semiconductors to insurance and agriculture",

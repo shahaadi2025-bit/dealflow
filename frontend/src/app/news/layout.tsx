@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/news" },
   title: "Market News Dashboard | DealFlow",
   description: "Financial news for every tracked company with sentiment, trending tickers and deal detection.",
 };

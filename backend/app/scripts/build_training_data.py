@@ -71,7 +71,7 @@ def build_negatives() -> list[dict]:
         live_rows = []
         for t in missing:
             try:
-                fins = get_many([t], workers=1)
+                fins = get_many([t], workers=1, fast=False)
                 f = fins.get(t)
                 feat = compute_features(f) if f else None
                 if feat:

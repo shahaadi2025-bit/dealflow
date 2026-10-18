@@ -6,10 +6,11 @@ import { PageFade } from "@/components/PageFade";
 import { DealCard } from "@/components/DealCard";
 import { NewsCard } from "@/components/NewsCard";
 import { PrecedentsPanel } from "@/components/PrecedentsPanel";
-import { ValuationMap } from "@/components/ValuationMap";
 import { api } from "@/lib/api";
 import { fmtMoney, fmtPct, fmtX } from "@/lib/format";
 import { SECTOR_LABELS } from "@/lib/sectors";
+import dynamic from "next/dynamic";
+const ValuationMap = dynamic(() => import("@/components/ValuationMap").then((m) => m.ValuationMap), { ssr: false, loading: () => <div className="shimmer h-[240px] rounded-xl mb-6" /> });
 
 export default function SectorPage() {
   const { key } = useParams<{ key: string }>();

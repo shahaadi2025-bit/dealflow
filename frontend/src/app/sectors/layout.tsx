@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/sectors" },
   title: "Sector Benchmarks | DealFlow",
   description: "Compare growth, margins and valuation multiples across 29 sectors.",
 };

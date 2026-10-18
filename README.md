@@ -38,6 +38,7 @@ Yahoo Finance (`yfinance`) live -> 6 hour cache -> committed `backend/data/snaps
 A circuit breaker drops to snapshot-only after repeated live failures, so the app never hangs.
 News: Yahoo, CNBC, MarketWatch, Google News and SEC EDGAR feeds, with GDELT as fallback.
 Deal archive: `backend/data/deals_history.json`, appended by a scheduled GitHub Action.
+Speed: multi-company requests (screener, buyers, similar) answer instantly from cache or the snapshot and refresh live data in the background; responses are gzip-compressed; chart-heavy components load on demand and below-the-fold company panels only fetch when scrolled into view; the site pings the API on load to wake the free-tier server. Set `SWR=0` to disable background refresh.
 Sector statistics are computed from the snapshot only (fast and offline-safe).
 Everything outside SEC and market data is estimated; verify at the primary source. Not investment advice.
 
@@ -82,3 +83,8 @@ Interactive docs at `/docs`.
 1. In Telegram talk to `@BotFather`, send `/newbot`, copy the token. Send any message to your new bot, then open `https://api.telegram.org/bot<TOKEN>/getUpdates` and copy `chat.id`.
 2. In GitHub: Settings -> Secrets and variables -> Actions, add `TELEGRAM_BOT_TOKEN` and `TELEGRAM_CHAT_ID`.
 3. Edit `backend/data/watch.json` (tickers, sectors, `min_value_musd`, `keyword`). The "Collect deals" job runs every 4 hours and messages you new matching deals.
+
+## SEO and Google
+
+The site generates per-page titles, descriptions, canonical URLs and social cards, JSON-LD (website, breadcrumbs), a sitemap with every sector and tracked company (about 680 URLs) and a robots file. Private pages (pipeline, alerts, memo, status) are `noindex`.
+To get indexed: add the site in Google Search Console, verify it (set `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION` in Vercel to the token Google gives you, then redeploy), submit `/sitemap.xml`, and request indexing for the home page. Set `NEXT_PUBLIC_SITE_URL` to your real domain once you have one.
