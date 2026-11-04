@@ -3,9 +3,10 @@ import { useRef, useState } from "react";
 import Link from "next/link";
 import { Send } from "lucide-react";
 import { PageFade } from "@/components/PageFade";
-import { api } from "@/lib/api";
+import { api, AskSource } from "@/lib/api";
+import { timeAgo } from "@/lib/time";
 
-type Msg = { role: "user" | "bot"; text: string; ai?: boolean; tickers?: string[] };
+type Msg = { role: "user" | "bot"; text: string; ai?: boolean; tickers?: string[]; sources?: AskSource[] };
 const EXAMPLES = ["Is CRWD an attractive takeover target?", "What multiples have acquirers paid in cybersecurity?", "Recent deals in semiconductors", "How does NVDA compare on growth and margins?"];
 
 export default function AskPage() {
@@ -21,7 +22,7 @@ export default function AskPage() {
     try {
       const r = await api.ask(question);
       const companies = ((r.context as { companies?: { ticker: string }[] }).companies ?? []).map((c) => c.ticker);
-      setMsgs((m) => [...m, { role: "bot", text: r.answer, ai: r.ai, tickers: companies }]);
+      setMsgs((m) => [...m, { role: "bot", text: r.answer, ai: r.ai, tickers: companies, sources: r.sources }]);
     } catch (e) {
       setMsgs((m) => [...m, { role: "bot", text: (e as Error).message || "Something went wrong. Try again." }]);
     } finally {
@@ -44,6 +45,17 @@ export default function AskPage() {
           {msgs.map((m, i) => (
             <div key={i} className={m.role === "user" ? "text-right" : ""}>
               <div className={`inline-block max-w-[92%] text-left rounded-xl px-3.5 py-2.5 text-[13px] leading-relaxed whitespace-pre-wrap ${m.role === "user" ? "bg-signal text-bg" : "border border-line text-ink"}`}>{m.text}</div>
+              {m.sources && m.sources.length > 0 && (
+                <details className="mt-1.5 text-[11px] text-dim">
+                  <summary className="cursor-pointer hover:text-ink">Sources ({m.sources.length})</summary>
+                  <ol className="mt-1 space-y-1">
+                    {m.sources.map((x) => (
+                      <li key={x.n}>[{x.n}] <a href={x.link} target="_blank" rel="noopener noreferrer" className="text-signal hover:underline">{x.title}</a>{" "}
+                        <span>- {x.source ?? x.kind}{x.published ? `, ${timeAgo(x.published)}` : ""}</span></li>
+                    ))}
+                  </ol>
+                </details>
+              )}
               {m.tickers && m.tickers.length > 0 && (
                 <div className="mt-1.5 flex gap-2 text-[11px]">{m.tickers.map((t) => <Link key={t} href={`/company/${t}`} className="text-signal hover:underline">Open {t}</Link>)}</div>
               )}

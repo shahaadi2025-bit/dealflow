@@ -141,7 +141,7 @@ export const api = {
   merger: (ticker: string, body: { buyer: string; premium: number; stock_pct: number; synergies_pct_rev: number }) =>
     req<MergerResult>(`/valuate/${ticker}/merger`, { method: "POST", body: JSON.stringify(body) }),
   takeover: (ticker: string) => req<{ ticker: string; score: number | null; factors: { name: string; value: number; note: string }[] }>(`/company/${ticker}/takeover`),
-  ask: (question: string) => req<{ answer: string; ai: boolean; context: Record<string, unknown> }>("/ask", { method: "POST", body: JSON.stringify({ question }) }),
+  ask: (question: string) => req<{ answer: string; ai: boolean; context: Record<string, unknown>; sources?: AskSource[] }>("/ask", { method: "POST", body: JSON.stringify({ question }) }),
   movers: () => req<Movers>("/market/movers"),
   feedHealth: () => req<FeedHealth>("/health/feeds"),
   dataHealth: () => req<{ companies: number; snapshot_as_of: string | null; snapshot_file_age_hours: number | null; deals_history: number }>("/health/data"),
@@ -185,3 +185,4 @@ export type MergerResult = {
   base_fcf_per_share?: number; pf_fcf_per_share?: number; accretion?: number | null; accretive?: boolean;
   breakeven_synergies?: number; pf_leverage?: number | null; basis?: string;
 };
+export type AskSource = { n: number; title: string; source: string | null; published: string | null; link: string; kind: "deal" | "news" };

@@ -25,7 +25,7 @@ frontend/   Next.js 14 (App Router, TypeScript, Tailwind) - installable PWA, bla
 | Alerts | Deal rules (ticker, sector, size, keyword) and watchlist rules (fit score or price crosses a level); in-app toasts and optional browser notifications |
 | Merger model | Pick a likely buyer, set premium, cash/stock mix and synergies; see FCF-per-share accretion, new debt, pro-forma leverage |
 | Takeover score | 0-100 heuristic (cheap vs sector, off highs, growth, size, debt) with the reasons |
-| Ask DealFlow | `/ask`: chat answers grounded in snapshot, sector medians and the deal archive (Groq, free) |
+| Ask DealFlow | `/ask`: chat answers grounded in snapshot, sector medians and the deal archive (Groq, free). RAG: BM25 retrieval over a rolling 90-day news archive and the deal archive, answers cite numbered sources |
 | Pipeline | Local deal pipeline with stages, import/export, upcoming earnings for your names |
 | Memos | AI memo (Groq) with number check, PDF export, shareable link (data lives in the URL fragment) |
 | Market | Index tape, top movers, earnings calendar |
@@ -46,6 +46,7 @@ Everything outside SEC and market data is estimated; verify at the primary sourc
 
 - `refresh-snapshot.yml` - rebuilds `snapshot.json` (aborts safely on upstream outage, merges, atomic write)
 - `collect-deals.yml` - every 4 hours adds new deals to the archive; sends an email digest if `SMTP_*` and `DIGEST_TO` secrets exist
+- the same job also archives headlines to `backend/data/news_archive.json`, the retrieval corpus for Ask DealFlow
 - `ci.yml` - backend tests, frontend type-check, lint and build
 
 ## Run locally
